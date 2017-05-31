@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RunList Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.text.runlist" href="../pyglet.text.runlist.html" />
+    <link rel="next" title="ZipRunIterator Class" href="pyglet.text.runlist.ZipRunIterator.html" />
+    <link rel="prev" title="RunIterator Class" href="pyglet.text.runlist.RunIterator.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.runlist.ZipRunIterator.html" title="ZipRunIterator Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.runlist.RunIterator.html" title="RunIterator Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.runlist.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text.runlist</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="runlist-class">
+<h1><cite>RunList</cite> Class<a class="headerlink" href="#runlist-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-f4b9a737864e4b2fd8c8d62af7c3526e39729299.png" alt="Inheritance diagram of RunList" usemap="#inheritanceca72b1ba45" class="inheritance"/>
+<map id="inheritanceca72b1ba45" name="inheritanceca72b1ba45">
+<area shape="rect" id="node1" href="#pyglet.text.runlist.RunList" target="_top" title="List of contiguous runs of values." alt="" coords="5,5,176,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.text.runlist.RunList">
+<em class="property">class </em><code class="descname">RunList</code><span class="sig-paren">(</span><em>size</em>, <em>initial</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.runlist.RunList" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of contiguous runs of values.</p>
+<p>A <cite>RunList</cite> is an efficient encoding of a sequence of values.  For
+example, the sequence <code class="docutils literal"><span class="pre">aaaabbccccc</span></code> is encoded as <code class="docutils literal"><span class="pre">(4,</span> <span class="pre">a),</span> <span class="pre">(2,</span> <span class="pre">b),</span>
+<span class="pre">(5,</span> <span class="pre">c)</span></code>.  The class provides methods for modifying and querying the
+run list without needing to deal with the tricky cases of splitting and
+merging the run list entries.</p>
+<p>Run lists are used to represent formatted character data in pyglet.  A
+separate run list is maintained for each style attribute, for example,
+bold, italic, font size, and so on.  Unless you are overriding the
+document interfaces, the only interaction with run lists is via
+<cite>RunIterator</cite>.</p>
+<p>The length and ranges of a run list always refer to the character
+positions in the decoded list.  For example, in the above sequence,
+<code class="docutils literal"><span class="pre">set_run(2,</span> <span class="pre">5,</span> <span class="pre">'x')</span></code> would change the sequence to <code class="docutils literal"><span class="pre">aaxxxbccccc</span></code>.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.text.runlist.RunIterator.html"
+                        title="previous chapter"><cite>RunIterator</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.text.runlist.ZipRunIterator.html"
+                        title="next chapter"><cite>ZipRunIterator</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.runlist.ZipRunIterator.html" title="ZipRunIterator Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.runlist.RunIterator.html" title="RunIterator Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.runlist.html" ><code class="docutils literal"><span class="pre">pyglet.text.runlist</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

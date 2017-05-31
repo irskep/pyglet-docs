@@ -1,0 +1,84 @@
+``pyglet.image.atlas``
+===============================================================
+
+.. automodule:: pyglet.image.atlas
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: atlas/
+   :template: class.rst
+
+
+   Allocator
+   TextureAtlas
+   TextureBin
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: atlas/
+   :template: exception.rst
+
+
+   AllocatorException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: atlas/
+   :template: function.rst
+
+
+   get_max_texture_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+
+
+
+
+.. template module.rst
+

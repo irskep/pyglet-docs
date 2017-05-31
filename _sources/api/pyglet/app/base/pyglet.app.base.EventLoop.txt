@@ -1,0 +1,106 @@
+`EventLoop` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.app.base
+
+.. inheritance-diagram:: EventLoop
+
+.. autoclass:: EventLoop
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~EventLoop.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~EventLoop.event_types
+         ~EventLoop.has_exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: EventLoop.event_types
+
+.. autoattribute:: EventLoop.has_exit
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: EventLoop.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

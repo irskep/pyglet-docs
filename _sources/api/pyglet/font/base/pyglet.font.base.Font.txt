@@ -1,0 +1,98 @@
+`Font` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.font.base
+
+.. inheritance-diagram:: Font
+
+.. autoclass:: Font
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Font.add_font_data
+         ~Font.have_font
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Font.ascent
+         ~Font.descent
+         ~Font.texture_height
+         ~Font.texture_internalformat
+         ~Font.texture_width
+
+
+
+
+
+
+
+
+Methods
+-------
+
+
+
+.. automethod:: Font.add_font_data
+
+.. automethod:: Font.have_font
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Font.ascent
+
+.. autoattribute:: Font.descent
+
+.. autoattribute:: Font.texture_height
+
+.. autoattribute:: Font.texture_internalformat
+
+.. autoattribute:: Font.texture_width
+
+
+
+
+
+
+
+

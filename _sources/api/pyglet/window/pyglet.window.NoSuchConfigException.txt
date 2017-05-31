@@ -1,0 +1,12 @@
+`NoSuchConfigException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.window.NoSuchConfigException
+
+Exception defined in :mod:`pyglet.window`
+
+.. currentmodule:: pyglet.window
+
+.. autoexception:: NoSuchConfigException

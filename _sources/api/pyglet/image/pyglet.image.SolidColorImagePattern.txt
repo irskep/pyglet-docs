@@ -1,0 +1,53 @@
+`SolidColorImagePattern` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: SolidColorImagePattern
+
+.. autoclass:: SolidColorImagePattern
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

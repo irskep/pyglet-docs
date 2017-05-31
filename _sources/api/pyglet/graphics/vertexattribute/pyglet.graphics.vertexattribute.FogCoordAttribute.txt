@@ -1,0 +1,68 @@
+`FogCoordAttribute` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexattribute
+
+.. inheritance-diagram:: FogCoordAttribute
+
+.. autoclass:: FogCoordAttribute
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~FogCoordAttribute.plural
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: FogCoordAttribute.plural
+
+
+
+
+
+
+
+

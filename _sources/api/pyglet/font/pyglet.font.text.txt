@@ -1,0 +1,77 @@
+``pyglet.font.text``
+===============================================================
+
+.. automodule:: pyglet.font.text
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: text/
+   :template: class.rst
+
+
+   GlyphString
+   Text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``lib``
+   * ``lib_agl``
+   * ``pyglet``
+   * ``warnings``
+
+
+
+
+.. template module.rst
+

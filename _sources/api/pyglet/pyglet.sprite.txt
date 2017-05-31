@@ -1,0 +1,82 @@
+``pyglet.sprite``
+===============================================================
+
+.. automodule:: pyglet.sprite
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: sprite/
+   :template: class.rst
+
+
+   Sprite
+   SpriteGroup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``clock``
+   * ``event``
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``graphics``
+   * ``image``
+   * ``lib``
+   * ``lib_agl``
+   * ``math``
+   * ``sys``
+   * ``warnings``
+
+
+
+
+.. template module.rst
+

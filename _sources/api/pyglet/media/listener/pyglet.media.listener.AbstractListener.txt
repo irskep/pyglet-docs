@@ -1,0 +1,77 @@
+`AbstractListener` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.listener
+
+.. inheritance-diagram:: AbstractListener
+
+.. autoclass:: AbstractListener
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~AbstractListener.forward_orientation
+         ~AbstractListener.position
+         ~AbstractListener.up_orientation
+         ~AbstractListener.volume
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: AbstractListener.forward_orientation
+
+.. autoattribute:: AbstractListener.position
+
+.. autoattribute:: AbstractListener.up_orientation
+
+.. autoattribute:: AbstractListener.volume
+
+
+
+
+
+
+
+

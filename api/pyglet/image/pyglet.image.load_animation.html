@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>load_animation Function &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.image" href="../pyglet.image.html" />
+    <link rel="next" title="pyglet.info" href="../pyglet.info.html" />
+    <link rel="prev" title="load Function" href="pyglet.image.load.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.info.html" title="pyglet.info"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.load.html" title="load Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="load-animation-function">
+<h1><cite>load_animation</cite> Function<a class="headerlink" href="#load-animation-function" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <a class="reference internal" href="../pyglet.image.html#module-pyglet.image" title="pyglet.image"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.image</span></code></a></p>
+<dl class="function">
+<dt id="pyglet.image.load_animation">
+<code class="descname">load_animation</code><span class="sig-paren">(</span><em>filename</em>, <em>file=None</em>, <em>decoder=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.load_animation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an animation from a file.</p>
+<p>Currently, the only supported format is GIF.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filename</strong> (<em>str</em>) – Used to guess the animation format, and to load the file if <cite>file</cite>
+is unspecified.</li>
+<li><strong>file</strong> (<em>file-like object</em><em> or </em><em>None</em>) – File object containing the animation stream.</li>
+<li><strong>decoder</strong> (<a class="reference internal" href="codecs/pyglet.image.codecs.ImageDecoder.html#pyglet.image.codecs.ImageDecoder" title="pyglet.image.codecs.ImageDecoder"><em>ImageDecoder</em></a><em> or </em><em>None</em>) – If unspecified, all decoders that are registered for the filename
+extension are tried.  If none succeed, the exception from the
+first decoder is raised.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="pyglet.image.Animation.html#pyglet.image.Animation" title="pyglet.image.Animation">Animation</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.image.load.html"
+                        title="previous chapter"><cite>load</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../pyglet.info.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.info</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.info.html" title="pyglet.info"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.load.html" title="load Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" ><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

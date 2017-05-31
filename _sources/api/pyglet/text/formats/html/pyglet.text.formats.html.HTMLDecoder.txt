@@ -1,0 +1,100 @@
+`HTMLDecoder` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.formats.html
+
+.. inheritance-diagram:: HTMLDecoder
+
+.. autoclass:: HTMLDecoder
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~HTMLDecoder.CDATA_CONTENT_ELEMENTS
+         ~HTMLDecoder.default_style
+         ~HTMLDecoder.font_sizes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: HTMLDecoder.default_style
+
+.. autoattribute:: HTMLDecoder.font_sizes
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: HTMLDecoder.CDATA_CONTENT_ELEMENTS
+      :noindex:
+
+
+
+

@@ -1,0 +1,8 @@
+`test_clock` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.clock`
+
+.. autofunction:: pyglet.clock.test_clock

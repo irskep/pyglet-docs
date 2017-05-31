@@ -1,0 +1,8 @@
+`get_devices` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.input`
+
+.. autofunction:: pyglet.input.get_devices

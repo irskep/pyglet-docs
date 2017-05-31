@@ -1,0 +1,68 @@
+`Animation` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: Animation
+
+.. autoclass:: Animation
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Animation.from_image_sequence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Methods
+-------
+
+
+
+.. automethod:: Animation.from_image_sequence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

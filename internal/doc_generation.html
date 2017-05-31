@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Pyglet documentation system &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../index.html" />
+    <link rel="up" title="Documentation" href="doc.html" />
+    <link rel="next" title="Making a pyglet release" href="dist.html" />
+    <link rel="prev" title="Documentation" href="doc.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dist.html" title="Making a pyglet release"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="doc.html" title="Documentation"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="doc.html" accesskey="U">Documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pyglet-documentation-system">
+<h1>Pyglet documentation system<a class="headerlink" href="#pyglet-documentation-system" title="Permalink to this headline">¶</a></h1>
+<p>The documentation build configuration file is <code class="docutils literal"><span class="pre">pyglet/doc/conf.py</span></code>.</p>
+<p>It is a <code class="docutils literal"><span class="pre">sphinx</span></code> standard configuration file, but adds some requirements of <code class="docutils literal"><span class="pre">pyglet</span></code> package.</p>
+<p>All the modifications to <code class="docutils literal"><span class="pre">sphinx</span></code> patching are in the <code class="docutils literal"><span class="pre">ext</span></code> folder.</p>
+<ul class="simple">
+<li>Separate Events from regular methods.</li>
+<li><code class="docutils literal"><span class="pre">autosummary</span></code> extension: Adds the hidden property and the capability to skip some modules and members</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The patching requires a standard <code class="docutils literal"><span class="pre">sphinx</span></code> version 1.1.3</p>
+</div>
+<div class="section" id="api-templates">
+<h2>API Templates<a class="headerlink" href="#api-templates" title="Permalink to this headline">¶</a></h2>
+<p>All the <code class="docutils literal"><span class="pre">*.rst</span></code> files in the <code class="docutils literal"><span class="pre">_template</span></code> folder configure the layout of the API documentation.</p>
+<p>The entry point is <code class="docutils literal"><span class="pre">_template/package.rst</span></code>.</p>
+</div>
+<div class="section" id="html-theme">
+<h2>HTML Theme<a class="headerlink" href="#html-theme" title="Permalink to this headline">¶</a></h2>
+<p>The custom sphinx theme is in the <code class="docutils literal"><span class="pre">ext/theme</span></code> folder.</p>
+</div>
+<div class="section" id="rest-files">
+<h2>ReST files<a class="headerlink" href="#rest-files" title="Permalink to this headline">¶</a></h2>
+<p>The literature is a set of <code class="docutils literal"><span class="pre">*.txt</span></code> files.</p>
+<p>The entry point is <code class="docutils literal"><span class="pre">index.txt</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">autosummary</span></code> directive at <code class="docutils literal"><span class="pre">index.txt</span></code> directive
+is mandatory, it generates all the API documentation files.</p>
+</div>
+<div class="section" id="omisions">
+<h2>Omisions<a class="headerlink" href="#omisions" title="Permalink to this headline">¶</a></h2>
+<p>Some things can not be imported when documenting, or are not to be documented,</p>
+<div class="section" id="skipped-members">
+<h3>Skipped members<a class="headerlink" href="#skipped-members" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">skip_member</span></code> function in <code class="docutils literal"><span class="pre">conf.py</span></code> contains rules to
+prevent certain members to appear in the documentation</p>
+<p>Due to the large number of members that were listed when generating,
+a modification in  <code class="docutils literal"><span class="pre">autosummary</span></code> prevents all members that are not
+defined in the current module to appear in the member lists.</p>
+<p>This means that if a module imports members like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>That members are not listed in the module documentation.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>There is one exception to the rule, for clarity sake:</p>
+<ul class="last simple">
+<li>If a member is defined in <code class="docutils literal"><span class="pre">module.base</span></code>, and imported by <code class="docutils literal"><span class="pre">module</span></code>, it does appear in the <code class="docutils literal"><span class="pre">module</span></code> page lists.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="skipped-modules">
+<h3>Skipped modules<a class="headerlink" href="#skipped-modules" title="Permalink to this headline">¶</a></h3>
+<p>Some modules in <code class="docutils literal"><span class="pre">pyglet</span></code> can not be imported when documenting,
+so a black list in <code class="docutils literal"><span class="pre">conf.py</span></code> contains all the modules that are
+not to be documented:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pyglet.app.carbon</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.app.cocoa</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.app.win32</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.app.xlib</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.canvas.carbon</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.canvas.cocoa</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.canvas.win32</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.canvas.xlib</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.canvas.xlib_vidmoderestore</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.com</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.compat</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.extlibs</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.font.carbon</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.font.fontconfig</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.font.freetype</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.font.freetype_lib</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.font.quartz</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.font.win32</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.font.win32query</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.agl</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.carbon</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.cocoa</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.glext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.glext_nv</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.glx</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.glx_info</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.glxext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.glxext_mesa</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.glxext_nv</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.lib_agl</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.lib_glx</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.lib_wgl</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.wgl</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.wgl_info</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.wglext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.wglext_nv</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.win32</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.gl.xlib</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.image.codecs.gdiplus</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.image.codecs.gdkpixbuf2</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.image.codecs.pil</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.image.codecs.quartz</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.image.codecs.quicktime</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.carbon_hid</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.carbon_tablet</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.darwin_hid</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.directinput</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.evdev</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.wintab</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.x11_xinput</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.input.x11_xinput_tablet</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.lib</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.libs</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.media.drivers.directsound</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.media.drivers.openal</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.media.drivers.pulse</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.media.sources.avbin</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.window.carbon</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.window.cocoa</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.window.win32</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet.window.xlib</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To be able to document a module, it has to be importable when <code class="docutils literal"><span class="pre">sys._is_epydoc</span></code> is <code class="docutils literal"><span class="pre">True</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="known-bugs">
+<h2>Known bugs<a class="headerlink" href="#known-bugs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The Window class attributes are not documented because they are defined at BaseWindow class.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pyglet documentation system</a><ul>
+<li><a class="reference internal" href="#api-templates">API Templates</a></li>
+<li><a class="reference internal" href="#html-theme">HTML Theme</a></li>
+<li><a class="reference internal" href="#rest-files">ReST files</a></li>
+<li><a class="reference internal" href="#omisions">Omisions</a><ul>
+<li><a class="reference internal" href="#skipped-members">Skipped members</a></li>
+<li><a class="reference internal" href="#skipped-modules">Skipped modules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-bugs">Known bugs</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="doc.html"
+                        title="previous chapter">Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="dist.html"
+                        title="next chapter">Making a pyglet release</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dist.html" title="Making a pyglet release"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="doc.html" title="Documentation"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="doc.html" >Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

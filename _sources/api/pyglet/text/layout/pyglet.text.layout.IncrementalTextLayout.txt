@@ -1,0 +1,184 @@
+`IncrementalTextLayout` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.layout
+
+.. inheritance-diagram:: IncrementalTextLayout
+
+.. autoclass:: IncrementalTextLayout
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~IncrementalTextLayout.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~IncrementalTextLayout.anchor_x
+         ~IncrementalTextLayout.anchor_y
+         ~IncrementalTextLayout.background_group
+         ~IncrementalTextLayout.batch
+         ~IncrementalTextLayout.content_valign
+         ~IncrementalTextLayout.document
+         ~IncrementalTextLayout.dpi
+         ~IncrementalTextLayout.event_types
+         ~IncrementalTextLayout.foreground_decoration_group
+         ~IncrementalTextLayout.foreground_group
+         ~IncrementalTextLayout.height
+         ~IncrementalTextLayout.multiline
+         ~IncrementalTextLayout.selection_background_color
+         ~IncrementalTextLayout.selection_color
+         ~IncrementalTextLayout.selection_end
+         ~IncrementalTextLayout.selection_start
+         ~IncrementalTextLayout.top_group
+         ~IncrementalTextLayout.view_x
+         ~IncrementalTextLayout.view_y
+         ~IncrementalTextLayout.width
+         ~IncrementalTextLayout.x
+         ~IncrementalTextLayout.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: IncrementalTextLayout.event_types
+
+.. autoattribute:: IncrementalTextLayout.height
+
+.. autoattribute:: IncrementalTextLayout.multiline
+
+.. autoattribute:: IncrementalTextLayout.selection_background_color
+
+.. autoattribute:: IncrementalTextLayout.selection_color
+
+.. autoattribute:: IncrementalTextLayout.selection_end
+
+.. autoattribute:: IncrementalTextLayout.selection_start
+
+.. autoattribute:: IncrementalTextLayout.view_y
+
+.. autoattribute:: IncrementalTextLayout.width
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: IncrementalTextLayout.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: IncrementalTextLayout.anchor_x
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.anchor_y
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.background_group
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.batch
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.content_valign
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.document
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.dpi
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.foreground_decoration_group
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.foreground_group
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.top_group
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.view_x
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.x
+      :noindex:
+
+   .. autoattribute:: IncrementalTextLayout.y
+      :noindex:
+
+
+
+

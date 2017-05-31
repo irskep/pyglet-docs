@@ -1,0 +1,88 @@
+`TextureSequence` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: TextureSequence
+
+.. autoclass:: TextureSequence
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~TextureSequence.texture_sequence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: TextureSequence.texture_sequence
+      :noindex:
+
+
+
+

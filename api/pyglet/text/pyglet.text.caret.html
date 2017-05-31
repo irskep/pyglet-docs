@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.text.caret &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.text" href="../pyglet.text.html" />
+    <link rel="next" title="Caret Class" href="caret/pyglet.text.caret.Caret.html" />
+    <link rel="prev" title="pyglet.text" href="../pyglet.text.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="caret/pyglet.text.caret.Caret.html" title="Caret Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.text.html" title="pyglet.text"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.text.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.text.caret">
+<span id="pyglet-text-caret"></span><h1><code class="docutils literal"><span class="pre">pyglet.text.caret</span></code><a class="headerlink" href="#module-pyglet.text.caret" title="Permalink to this headline">¶</a></h1>
+<p>Provides keyboard and mouse editing procedures for text layout.</p>
+<p>Example usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet</span> <span class="k">import</span> <span class="n">window</span>
+<span class="kn">from</span> <span class="nn">pyglet.text</span> <span class="k">import</span> <span class="n">layout</span><span class="p">,</span> <span class="n">caret</span>
+
+<span class="n">my_window</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">my_layout</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">IncrementalTextLayout</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">my_caret</span> <span class="o">=</span> <span class="n">caret</span><span class="o">.</span><span class="n">Caret</span><span class="p">(</span><span class="n">my_layout</span><span class="p">)</span>
+<span class="n">my_window</span><span class="o">.</span><span class="n">push_handlers</span><span class="p">(</span><span class="n">my_caret</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.1</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="caret/pyglet.text.caret.Caret.html#pyglet.text.caret.Caret" title="pyglet.text.caret.Caret"><code class="xref py py-obj docutils literal"><span class="pre">Caret</span></code></a></td>
+<td>Visible text insertion marker for  <cite>pyglet.text.layout.IncrementalTextLayout</cite>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">clock</span></code></li>
+<li><code class="docutils literal"><span class="pre">event</span></code></li>
+<li><code class="docutils literal"><span class="pre">key</span></code></li>
+<li><code class="docutils literal"><span class="pre">re</span></code></li>
+<li><code class="docutils literal"><span class="pre">time</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.text.caret</span></code></a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.text.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.text</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="caret/pyglet.text.caret.Caret.html"
+                        title="next chapter"><cite>Caret</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="caret/pyglet.text.caret.Caret.html" title="Caret Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.text.html" title="pyglet.text"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

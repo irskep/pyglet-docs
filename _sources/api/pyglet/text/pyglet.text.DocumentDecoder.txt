@@ -1,0 +1,53 @@
+`DocumentDecoder` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text
+
+.. inheritance-diagram:: DocumentDecoder
+
+.. autoclass:: DocumentDecoder
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

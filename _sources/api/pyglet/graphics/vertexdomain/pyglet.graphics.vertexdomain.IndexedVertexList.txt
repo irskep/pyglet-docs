@@ -1,0 +1,125 @@
+`IndexedVertexList` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexdomain
+
+.. inheritance-diagram:: IndexedVertexList
+
+.. autoclass:: IndexedVertexList
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~IndexedVertexList.colors
+         ~IndexedVertexList.edge_flags
+         ~IndexedVertexList.fog_coords
+         ~IndexedVertexList.indices
+         ~IndexedVertexList.multi_tex_coords
+         ~IndexedVertexList.normals
+         ~IndexedVertexList.secondary_colors
+         ~IndexedVertexList.tex_coords
+         ~IndexedVertexList.vertices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: IndexedVertexList.indices
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: IndexedVertexList.colors
+      :noindex:
+
+   .. autoattribute:: IndexedVertexList.edge_flags
+      :noindex:
+
+   .. autoattribute:: IndexedVertexList.fog_coords
+      :noindex:
+
+   .. autoattribute:: IndexedVertexList.multi_tex_coords
+      :noindex:
+
+   .. autoattribute:: IndexedVertexList.normals
+      :noindex:
+
+   .. autoattribute:: IndexedVertexList.secondary_colors
+      :noindex:
+
+   .. autoattribute:: IndexedVertexList.tex_coords
+      :noindex:
+
+   .. autoattribute:: IndexedVertexList.vertices
+      :noindex:
+
+
+
+

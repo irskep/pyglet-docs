@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Context Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.gl.base" href="../pyglet.gl.base.html" />
+    <link rel="next" title="ObjectSpace Class" href="pyglet.gl.base.ObjectSpace.html" />
+    <link rel="prev" title="Config Class" href="pyglet.gl.base.Config.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.base.ObjectSpace.html" title="ObjectSpace Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.base.Config.html" title="Config Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.gl.html" ><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.gl.base.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.gl.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="context-class">
+<h1><cite>Context</cite> Class<a class="headerlink" href="#context-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-b10825ca62a9bf88cf5811751d71f54a043c1524.png" alt="Inheritance diagram of Context" usemap="#inheritance4604c22496" class="inheritance"/>
+<map id="inheritance4604c22496" name="inheritance4604c22496">
+<area shape="rect" id="node1" href="#pyglet.gl.base.Context" target="_top" title="OpenGL context for drawing." alt="" coords="5,5,159,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.gl.base.Context">
+<em class="property">class </em><code class="descname">Context</code><span class="sig-paren">(</span><em>config</em>, <em>context_share=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.base.Context" title="Permalink to this definition">¶</a></dt>
+<dd><p>OpenGL context for drawing.</p>
+<p>Use <cite>CanvasConfig.create_context</cite> to create a context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>object_space</strong> – An object which is shared between all contexts that share
+GL objects.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.gl.base.Context.CONTEXT_SHARE_EXISTING" title="pyglet.gl.base.Context.CONTEXT_SHARE_EXISTING"><code class="xref py py-obj docutils literal"><span class="pre">CONTEXT_SHARE_EXISTING</span></code></a></td>
+<td>Context share behaviour indicating that objects are shared with the most recently created context (the default).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.gl.base.Context.CONTEXT_SHARE_NONE" title="pyglet.gl.base.Context.CONTEXT_SHARE_NONE"><code class="xref py py-obj docutils literal"><span class="pre">CONTEXT_SHARE_NONE</span></code></a></td>
+<td>Context share behaviour indicating that objects should not be shared with existing contexts.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.gl.base.Context.CONTEXT_SHARE_EXISTING">
+<code class="descclassname">Context.</code><code class="descname">CONTEXT_SHARE_EXISTING</code><em class="property"> = 1</em><a class="headerlink" href="#pyglet.gl.base.Context.CONTEXT_SHARE_EXISTING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context share behaviour indicating that objects are shared with
+the most recently created context (the default).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.base.Context.CONTEXT_SHARE_NONE">
+<code class="descclassname">Context.</code><code class="descname">CONTEXT_SHARE_NONE</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.base.Context.CONTEXT_SHARE_NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context share behaviour indicating that objects should not be
+shared with existing contexts.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Context</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.gl.base.Config.html"
+                        title="previous chapter"><cite>Config</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.gl.base.ObjectSpace.html"
+                        title="next chapter"><cite>ObjectSpace</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.base.ObjectSpace.html" title="ObjectSpace Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.base.Config.html" title="Config Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.gl.html" ><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.gl.base.html" ><code class="docutils literal"><span class="pre">pyglet.gl.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+`SecondaryColorAttribute` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexattribute
+
+.. inheritance-diagram:: SecondaryColorAttribute
+
+.. autoclass:: SecondaryColorAttribute
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~SecondaryColorAttribute.plural
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: SecondaryColorAttribute.plural
+
+
+
+
+
+
+
+

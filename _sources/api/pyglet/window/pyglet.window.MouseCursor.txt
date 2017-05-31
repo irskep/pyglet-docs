@@ -1,0 +1,68 @@
+`MouseCursor` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.window
+
+.. inheritance-diagram:: MouseCursor
+
+.. autoclass:: MouseCursor
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~MouseCursor.drawable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: MouseCursor.drawable
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+`Location` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.resource
+
+.. inheritance-diagram:: Location
+
+.. autoclass:: Location
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

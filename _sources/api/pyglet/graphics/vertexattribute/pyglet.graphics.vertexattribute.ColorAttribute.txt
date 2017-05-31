@@ -1,0 +1,68 @@
+`ColorAttribute` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexattribute
+
+.. inheritance-diagram:: ColorAttribute
+
+.. autoclass:: ColorAttribute
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ColorAttribute.plural
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ColorAttribute.plural
+
+
+
+
+
+
+
+

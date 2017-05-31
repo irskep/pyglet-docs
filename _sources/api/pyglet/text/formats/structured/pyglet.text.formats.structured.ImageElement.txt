@@ -1,0 +1,88 @@
+`ImageElement` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.formats.structured
+
+.. inheritance-diagram:: ImageElement
+
+.. autoclass:: ImageElement
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ImageElement.position
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: ImageElement.position
+      :noindex:
+
+
+
+

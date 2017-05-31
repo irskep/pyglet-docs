@@ -1,0 +1,5 @@
+<map id="inheritanced39d304422" name="inheritanced39d304422">
+<area shape="rect" id="node1" href="../../graphics/pyglet.graphics.Group.html#pyglet.graphics.Group" target="_top" title="Group of common OpenGL state." alt="" coords="5,5,157,29"/>
+<area shape="rect" id="node2" href="../../graphics/pyglet.graphics.OrderedGroup.html#pyglet.graphics.OrderedGroup" target="_top" title="A group with partial order." alt="" coords="205,5,406,29"/>
+<area shape="rect" id="node3" href="#pyglet.text.layout.TextLayoutForegroundGroup" target="_top" title="Rendering group for foreground elements (glyphs) in all text layouts." alt="" coords="454,5,749,29"/>
+</map>

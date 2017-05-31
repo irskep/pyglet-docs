@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.image &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="pyglet.image.atlas" href="image/pyglet.image.atlas.html" />
+    <link rel="prev" title="vertex_list_indexed Function" href="graphics/pyglet.graphics.vertex_list_indexed.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="image/pyglet.image.atlas.html" title="pyglet.image.atlas"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="graphics/pyglet.graphics.vertex_list_indexed.html" title="vertex_list_indexed Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.image">
+<span id="pyglet-image"></span><h1><code class="docutils literal"><span class="pre">pyglet.image</span></code><a class="headerlink" href="#module-pyglet.image" title="Permalink to this headline">¶</a></h1>
+<p>Image load, capture and high-level texture functions.</p>
+<p>Only basic functionality is described here; for full reference see the
+accompanying documentation.</p>
+<p>To load an image:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet</span> <span class="k">import</span> <span class="n">image</span>
+<span class="n">pic</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;picture.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The supported image file types include PNG, BMP, GIF, JPG, and many more,
+somewhat depending on the operating system.  To load an image from a file-like
+object instead of a filename:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pic</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;hint.jpg&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">fileobj</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The hint helps the module locate an appropriate decoder to use based on the
+file extension.  It is optional.</p>
+<p>Once loaded, images can be used directly by most other modules of pyglet.  All
+images have a width and height you can access:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">pic</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">pic</span><span class="o">.</span><span class="n">height</span>
+</pre></div>
+</div>
+<p>You can extract a region of an image (this keeps the original image intact;
+the memory is shared efficiently):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">subimage</span> <span class="o">=</span> <span class="n">pic</span><span class="o">.</span><span class="n">get_region</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Remember that y-coordinates are always increasing upwards.</p>
+<div class="section" id="drawing-images">
+<h2>Drawing images<a class="headerlink" href="#drawing-images" title="Permalink to this headline">¶</a></h2>
+<p>To draw an image at some point on the screen:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pic</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This assumes an appropriate view transform and projection have been applied.</p>
+<p>Some images have an intrinsic “anchor point”: this is the point which will be
+aligned to the <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> coordinates when the image is drawn.  By
+default the anchor point is the lower-left corner of the image.  You can use
+the anchor point to center an image at a given point, for example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pic</span><span class="o">.</span><span class="n">anchor_x</span> <span class="o">=</span> <span class="n">pic</span><span class="o">.</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">pic</span><span class="o">.</span><span class="n">anchor_y</span> <span class="o">=</span> <span class="n">pic</span><span class="o">.</span><span class="n">height</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">pic</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="texture-access">
+<h2>Texture access<a class="headerlink" href="#texture-access" title="Permalink to this headline">¶</a></h2>
+<p>If you are using OpenGL directly, you can access the image as a texture:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">texture</span> <span class="o">=</span> <span class="n">pic</span><span class="o">.</span><span class="n">get_texture</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(This is the most efficient way to obtain a texture; some images are
+immediately loaded as textures, whereas others go through an intermediate
+form).  To use a texture with pyglet.gl:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="k">import</span> <span class="o">*</span>
+<span class="n">glEnable</span><span class="p">(</span><span class="n">texture</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>        <span class="c1"># typically target is GL_TEXTURE_2D</span>
+<span class="n">glBindTexture</span><span class="p">(</span><span class="n">texture</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">texture</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="c1"># ... draw with the texture</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pixel-access">
+<h2>Pixel access<a class="headerlink" href="#pixel-access" title="Permalink to this headline">¶</a></h2>
+<p>To access raw pixel data of an image:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rawimage</span> <span class="o">=</span> <span class="n">pic</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(If the image has just been loaded this will be a very quick operation;
+however if the image is a texture a relatively expensive readback operation
+will occur).  The pixels can be accessed as a string:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;RGBA&#39;</span>
+<span class="n">pitch</span> <span class="o">=</span> <span class="n">rawimage</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
+<span class="n">pixels</span> <span class="o">=</span> <span class="n">rawimage</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">pitch</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>“format” strings consist of characters that give the byte order of each color
+component.  For example, if rawimage.format is ‘RGBA’, there are four color
+components: red, green, blue and alpha, in that order.  Other common format
+strings are ‘RGB’, ‘LA’ (luminance, alpha) and ‘I’ (intensity).</p>
+<p>The “pitch” of an image is the number of bytes in a row (this may validly be
+more than the number required to make up the width of the image, it is common
+to see this for word alignment).  If “pitch” is negative the rows of the image
+are ordered from top to bottom, otherwise they are ordered from bottom to top.</p>
+<p>Retrieving data with the format and pitch given in <cite>ImageData.format</cite> and
+<cite>ImageData.pitch</cite> avoids the need for data conversion (assuming you can make
+use of the data in this arbitrary format).</p>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.atlas.html#module-pyglet.image.atlas" title="pyglet.image.atlas"><code class="xref py py-obj docutils literal"><span class="pre">atlas</span></code></a></td>
+<td>Group multiple small images into larger textures.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.codecs.html#module-pyglet.image.codecs" title="pyglet.image.codecs"><code class="xref py py-obj docutils literal"><span class="pre">codecs</span></code></a></td>
+<td>Collection of image encoders and decoders.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.AbstractImage.html#pyglet.image.AbstractImage" title="pyglet.image.AbstractImage"><code class="xref py py-obj docutils literal"><span class="pre">AbstractImage</span></code></a></td>
+<td>Abstract class representing an image.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.AbstractImageSequence.html#pyglet.image.AbstractImageSequence" title="pyglet.image.AbstractImageSequence"><code class="xref py py-obj docutils literal"><span class="pre">AbstractImageSequence</span></code></a></td>
+<td>Abstract sequence of images.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.Animation.html#pyglet.image.Animation" title="pyglet.image.Animation"><code class="xref py py-obj docutils literal"><span class="pre">Animation</span></code></a></td>
+<td>Sequence of images with timing information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.AnimationFrame.html#pyglet.image.AnimationFrame" title="pyglet.image.AnimationFrame"><code class="xref py py-obj docutils literal"><span class="pre">AnimationFrame</span></code></a></td>
+<td>A single frame of an animation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.BufferImage.html#pyglet.image.BufferImage" title="pyglet.image.BufferImage"><code class="xref py py-obj docutils literal"><span class="pre">BufferImage</span></code></a></td>
+<td>An abstract framebuffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.BufferImageMask.html#pyglet.image.BufferImageMask" title="pyglet.image.BufferImageMask"><code class="xref py py-obj docutils literal"><span class="pre">BufferImageMask</span></code></a></td>
+<td>A single bit of the stencil buffer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.BufferManager.html#pyglet.image.BufferManager" title="pyglet.image.BufferManager"><code class="xref py py-obj docutils literal"><span class="pre">BufferManager</span></code></a></td>
+<td>Manages the set of framebuffers for a context.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.CheckerImagePattern.html#pyglet.image.CheckerImagePattern" title="pyglet.image.CheckerImagePattern"><code class="xref py py-obj docutils literal"><span class="pre">CheckerImagePattern</span></code></a></td>
+<td>Create an image with a tileable checker image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.ColorBufferImage.html#pyglet.image.ColorBufferImage" title="pyglet.image.ColorBufferImage"><code class="xref py py-obj docutils literal"><span class="pre">ColorBufferImage</span></code></a></td>
+<td>A color framebuffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.CompressedImageData.html#pyglet.image.CompressedImageData" title="pyglet.image.CompressedImageData"><code class="xref py py-obj docutils literal"><span class="pre">CompressedImageData</span></code></a></td>
+<td>Image representing some compressed data suitable for direct uploading to driver.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.DepthBufferImage.html#pyglet.image.DepthBufferImage" title="pyglet.image.DepthBufferImage"><code class="xref py py-obj docutils literal"><span class="pre">DepthBufferImage</span></code></a></td>
+<td>The depth buffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.DepthTexture.html#pyglet.image.DepthTexture" title="pyglet.image.DepthTexture"><code class="xref py py-obj docutils literal"><span class="pre">DepthTexture</span></code></a></td>
+<td>A texture with depth samples (typically 24-bit).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.ImageData.html#pyglet.image.ImageData" title="pyglet.image.ImageData"><code class="xref py py-obj docutils literal"><span class="pre">ImageData</span></code></a></td>
+<td>An image represented as a string of unsigned bytes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.ImageDataRegion.html#pyglet.image.ImageDataRegion" title="pyglet.image.ImageDataRegion"><code class="xref py py-obj docutils literal"><span class="pre">ImageDataRegion</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.ImageGrid.html#pyglet.image.ImageGrid" title="pyglet.image.ImageGrid"><code class="xref py py-obj docutils literal"><span class="pre">ImageGrid</span></code></a></td>
+<td>An imaginary grid placed over an image allowing easy access to regular regions of that image.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.ImagePattern.html#pyglet.image.ImagePattern" title="pyglet.image.ImagePattern"><code class="xref py py-obj docutils literal"><span class="pre">ImagePattern</span></code></a></td>
+<td>Abstract image creation class.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.SolidColorImagePattern.html#pyglet.image.SolidColorImagePattern" title="pyglet.image.SolidColorImagePattern"><code class="xref py py-obj docutils literal"><span class="pre">SolidColorImagePattern</span></code></a></td>
+<td>Creates an image filled with a solid color.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.Texture.html#pyglet.image.Texture" title="pyglet.image.Texture"><code class="xref py py-obj docutils literal"><span class="pre">Texture</span></code></a></td>
+<td>An image loaded into video memory that can be efficiently drawn to the framebuffer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.Texture3D.html#pyglet.image.Texture3D" title="pyglet.image.Texture3D"><code class="xref py py-obj docutils literal"><span class="pre">Texture3D</span></code></a></td>
+<td>A texture with more than one image slice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.TextureGrid.html#pyglet.image.TextureGrid" title="pyglet.image.TextureGrid"><code class="xref py py-obj docutils literal"><span class="pre">TextureGrid</span></code></a></td>
+<td>A texture containing a regular grid of texture regions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.TextureRegion.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-obj docutils literal"><span class="pre">TextureRegion</span></code></a></td>
+<td>A rectangular region of a texture, presented as if it were a separate texture.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.TextureSequence.html#pyglet.image.TextureSequence" title="pyglet.image.TextureSequence"><code class="xref py py-obj docutils literal"><span class="pre">TextureSequence</span></code></a></td>
+<td>Interface for a sequence of textures.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.TileableTexture.html#pyglet.image.TileableTexture" title="pyglet.image.TileableTexture"><code class="xref py py-obj docutils literal"><span class="pre">TileableTexture</span></code></a></td>
+<td>A texture that can be tiled efficiently.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.UniformTextureSequence.html#pyglet.image.UniformTextureSequence" title="pyglet.image.UniformTextureSequence"><code class="xref py py-obj docutils literal"><span class="pre">UniformTextureSequence</span></code></a></td>
+<td>Interface for a sequence of textures, each with the same dimensions.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.ImageException.html#pyglet.image.ImageException" title="pyglet.image.ImageException"><code class="xref py py-obj docutils literal"><span class="pre">ImageException</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.color_as_bytes.html#pyglet.image.color_as_bytes" title="pyglet.image.color_as_bytes"><code class="xref py py-obj docutils literal"><span class="pre">color_as_bytes</span></code></a>(color)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.create.html#pyglet.image.create" title="pyglet.image.create"><code class="xref py py-obj docutils literal"><span class="pre">create</span></code></a>(width,&nbsp;height[,&nbsp;pattern])</td>
+<td>Create an image optionally filled with the given pattern.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.get_buffer_manager.html#pyglet.image.get_buffer_manager" title="pyglet.image.get_buffer_manager"><code class="xref py py-obj docutils literal"><span class="pre">get_buffer_manager</span></code></a>()</td>
+<td>Get the buffer manager for the current OpenGL context.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="image/pyglet.image.load.html#pyglet.image.load" title="pyglet.image.load"><code class="xref py py-obj docutils literal"><span class="pre">load</span></code></a>(filename[,&nbsp;file,&nbsp;decoder])</td>
+<td>Load an image from a file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="image/pyglet.image.load_animation.html#pyglet.image.load_animation" title="pyglet.image.load_animation"><code class="xref py py-obj docutils literal"><span class="pre">load_animation</span></code></a>(filename[,&nbsp;file,&nbsp;decoder])</td>
+<td>Load an animation from a file.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.image.absolute_import">
+<code class="descname">absolute_import</code><em class="property"> = _Feature((2, 5, 0, ‘alpha’, 1), (3, 0, 0, ‘alpha’, 0), 16384)</em><a class="headerlink" href="#pyglet.image.absolute_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pyglet.image.compat_platform">
+<code class="descname">compat_platform</code><em class="property"> = ‘darwin’</em><a class="headerlink" href="#pyglet.image.compat_platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=”) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">event</span></code></li>
+<li><code class="docutils literal"><span class="pre">gl</span></code></li>
+<li><code class="docutils literal"><span class="pre">glext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">glu</span></code></li>
+<li><code class="docutils literal"><span class="pre">key</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib_agl</span></code></li>
+<li><code class="docutils literal"><span class="pre">macholib</span></code></li>
+<li><code class="docutils literal"><span class="pre">mouse</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet</span></code></li>
+<li><code class="docutils literal"><span class="pre">re</span></code></li>
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+<li><code class="docutils literal"><span class="pre">util</span></code></li>
+<li><code class="docutils literal"><span class="pre">warnings</span></code></li>
+<li><code class="docutils literal"><span class="pre">weakref</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.image</span></code></a><ul>
+<li><a class="reference internal" href="#drawing-images">Drawing images</a></li>
+<li><a class="reference internal" href="#texture-access">Texture access</a></li>
+<li><a class="reference internal" href="#pixel-access">Pixel access</a></li>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="graphics/pyglet.graphics.vertex_list_indexed.html"
+                        title="previous chapter"><cite>vertex_list_indexed</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="image/pyglet.image.atlas.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.image.atlas</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="image/pyglet.image.atlas.html" title="pyglet.image.atlas"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="graphics/pyglet.graphics.vertex_list_indexed.html" title="vertex_list_indexed Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

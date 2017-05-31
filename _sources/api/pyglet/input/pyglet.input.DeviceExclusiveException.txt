@@ -1,0 +1,12 @@
+`DeviceExclusiveException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.input.DeviceExclusiveException
+
+Exception defined in :mod:`pyglet.input`
+
+.. currentmodule:: pyglet.input
+
+.. autoexception:: DeviceExclusiveException

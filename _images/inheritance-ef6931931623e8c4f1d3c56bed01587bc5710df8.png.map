@@ -1,0 +1,5 @@
+<map id="inheritance164977529a" name="inheritance164977529a">
+<area shape="rect" id="node1" href="pyglet.image.AbstractImage.html#pyglet.image.AbstractImage" target="_top" title="Abstract class representing an image." alt="" coords="5,5,192,29"/>
+<area shape="rect" id="node2" href="pyglet.image.BufferImage.html#pyglet.image.BufferImage" target="_top" title="An abstract framebuffer." alt="" coords="240,5,413,29"/>
+<area shape="rect" id="node3" href="#pyglet.image.ColorBufferImage" target="_top" title="A color framebuffer." alt="" coords="461,5,666,29"/>
+</map>

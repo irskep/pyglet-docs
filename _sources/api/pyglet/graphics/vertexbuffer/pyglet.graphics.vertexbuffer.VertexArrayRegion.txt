@@ -1,0 +1,53 @@
+`VertexArrayRegion` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexbuffer
+
+.. inheritance-diagram:: VertexArrayRegion
+
+.. autoclass:: VertexArrayRegion
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+`TextureAtlas` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image.atlas
+
+.. inheritance-diagram:: TextureAtlas
+
+.. autoclass:: TextureAtlas
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

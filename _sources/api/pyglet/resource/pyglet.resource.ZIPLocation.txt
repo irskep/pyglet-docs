@@ -1,0 +1,53 @@
+`ZIPLocation` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.resource
+
+.. inheritance-diagram:: ZIPLocation
+
+.. autoclass:: ZIPLocation
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+`load_animation` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.image`
+
+.. autofunction:: pyglet.image.load_animation

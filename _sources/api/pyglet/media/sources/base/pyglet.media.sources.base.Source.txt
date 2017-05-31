@@ -1,0 +1,77 @@
+`Source` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.base
+
+.. inheritance-diagram:: Source
+
+.. autoclass:: Source
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Source.audio_format
+         ~Source.duration
+         ~Source.info
+         ~Source.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Source.audio_format
+
+.. autoattribute:: Source.duration
+
+.. autoattribute:: Source.info
+
+.. autoattribute:: Source.video_format
+
+
+
+
+
+
+
+

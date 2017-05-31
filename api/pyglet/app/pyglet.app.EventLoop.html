@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EventLoop Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="eventloop-class">
+<h1><cite>EventLoop</cite> Class<a class="headerlink" href="#eventloop-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-4267eb2a24149e1dd388ffa81e05fc2ba116073a.png" alt="Inheritance diagram of EventLoop" usemap="#inheritance6500d20390" class="inheritance"/>
+<map id="inheritance6500d20390" name="inheritance6500d20390">
+<area shape="rect" id="node1" href="base/pyglet.app.base.EventLoop.html#pyglet.app.base.EventLoop" target="_top" title="The main run loop of the application." alt="" coords="248,5,431,29"/>
+<area shape="rect" id="node2" href="../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.app.EventLoop">
+<em class="property">class </em><code class="descname">EventLoop</code><a class="headerlink" href="#pyglet.app.EventLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main run loop of the application.</p>
+<p>Calling <cite>run</cite> begins the application event loop, which processes
+operating system events, calls <cite>pyglet.clock.tick</cite> to call scheduled
+functions and calls <cite>pyglet.window.Window.on_draw</cite> and
+<cite>pyglet.window.Window.flip</cite> to update window contents.</p>
+<p>Applications can subclass <cite>EventLoop</cite> and override certain methods
+to integrate another framework’s run loop, or to customise processing
+in some other way.  You should not in general override <cite>run</cite>, as
+this method contains platform-specific code that ensures the application
+remains responsive to the user while keeping CPU usage to a minimum.</p>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.app.EventLoop.event_types" title="pyglet.app.EventLoop.event_types"><code class="xref py py-obj docutils literal"><span class="pre">event_types</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.app.EventLoop.has_exit" title="pyglet.app.EventLoop.has_exit"><code class="xref py py-obj docutils literal"><span class="pre">has_exit</span></code></a></td>
+<td>Flag indicating if the event loop will exit in the next iteration.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.app.EventLoop.event_types">
+<code class="descclassname">EventLoop.</code><code class="descname">event_types</code><em class="property"> = [‘on_window_close’, ‘on_enter’, ‘on_exit’]</em><a class="headerlink" href="#pyglet.app.EventLoop.event_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.app.EventLoop.has_exit">
+<code class="descclassname">EventLoop.</code><code class="descname">has_exit</code><a class="headerlink" href="#pyglet.app.EventLoop.has_exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag indicating if the event loop will exit in
+the next iteration.  When set, all waiting threads are interrupted (see
+<cite>sleep</cite>).</p>
+<p>Thread-safe since pyglet 1.2.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">See:</th><td class="field-body"><cite>exit</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">EventLoop.</code><code class="descname">register_event_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
+<dd><p>Register an event type with the dispatcher.</p>
+<p>Registering event types allows the dispatcher to validate event
+handler names as they are attached, and to search attached objects for
+suitable handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of the event to register.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>EventLoop</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

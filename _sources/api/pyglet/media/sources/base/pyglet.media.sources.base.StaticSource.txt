@@ -1,0 +1,100 @@
+`StaticSource` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.base
+
+.. inheritance-diagram:: StaticSource
+
+.. autoclass:: StaticSource
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~StaticSource.audio_format
+         ~StaticSource.duration
+         ~StaticSource.info
+         ~StaticSource.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: StaticSource.audio_format
+      :noindex:
+
+   .. autoattribute:: StaticSource.duration
+      :noindex:
+
+   .. autoattribute:: StaticSource.info
+      :noindex:
+
+   .. autoattribute:: StaticSource.video_format
+      :noindex:
+
+
+
+

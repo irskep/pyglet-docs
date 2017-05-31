@@ -1,0 +1,68 @@
+`TexCoordAttribute` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexattribute
+
+.. inheritance-diagram:: TexCoordAttribute
+
+.. autoclass:: TexCoordAttribute
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~TexCoordAttribute.plural
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: TexCoordAttribute.plural
+
+
+
+
+
+
+
+

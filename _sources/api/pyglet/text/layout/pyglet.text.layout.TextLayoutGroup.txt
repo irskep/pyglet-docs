@@ -1,0 +1,53 @@
+`TextLayoutGroup` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.layout
+
+.. inheritance-diagram:: TextLayoutGroup
+
+.. autoclass:: TextLayoutGroup
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

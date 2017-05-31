@@ -1,0 +1,53 @@
+`AnimationFrame` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: AnimationFrame
+
+.. autoclass:: AnimationFrame
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

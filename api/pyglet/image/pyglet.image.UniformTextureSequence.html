@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>UniformTextureSequence Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.image" href="../pyglet.image.html" />
+    <link rel="next" title="ImageException" href="pyglet.image.ImageException.html" />
+    <link rel="prev" title="TileableTexture Class" href="pyglet.image.TileableTexture.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.ImageException.html" title="ImageException"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.TileableTexture.html" title="TileableTexture Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="uniformtexturesequence-class">
+<h1><cite>UniformTextureSequence</cite> Class<a class="headerlink" href="#uniformtexturesequence-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-0b996fb41c4ee65fff4ae6dbd39e27d688756807.png" alt="Inheritance diagram of UniformTextureSequence" usemap="#inheritancece055fcfe8" class="inheritance"/>
+<map id="inheritancece055fcfe8" name="inheritancece055fcfe8">
+<area shape="rect" id="node1" href="pyglet.image.AbstractImageSequence.html#pyglet.image.AbstractImageSequence" target="_top" title="Abstract sequence of images." alt="" coords="5,5,252,29"/>
+<area shape="rect" id="node2" href="pyglet.image.TextureSequence.html#pyglet.image.TextureSequence" target="_top" title="Interface for a sequence of textures." alt="" coords="300,5,504,29"/>
+<area shape="rect" id="node3" href="#pyglet.image.UniformTextureSequence" target="_top" title="Interface for a sequence of textures, each with the same dimensions." alt="" coords="552,5,803,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.image.UniformTextureSequence">
+<em class="property">class </em><code class="descname">UniformTextureSequence</code><a class="headerlink" href="#pyglet.image.UniformTextureSequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for a sequence of textures, each with the same dimensions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="pyglet.image.Texture3D.html#pyglet.image.Texture3D.item_width" title="pyglet.image.Texture3D.item_width"><strong>item_width</strong></a> – Width of each texture in the sequence.</li>
+<li><a class="reference internal" href="pyglet.image.Texture3D.html#pyglet.image.Texture3D.item_height" title="pyglet.image.Texture3D.item_height"><strong>item_height</strong></a> – Height of each texture in the sequence.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.image.UniformTextureSequence.item_height" title="pyglet.image.UniformTextureSequence.item_height"><code class="xref py py-obj docutils literal"><span class="pre">item_height</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.image.UniformTextureSequence.item_width" title="pyglet.image.UniformTextureSequence.item_width"><code class="xref py py-obj docutils literal"><span class="pre">item_width</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">texture_sequence</span></code></td>
+<td>Access this image sequence as a texture sequence.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.image.UniformTextureSequence.item_height">
+<code class="descclassname">UniformTextureSequence.</code><code class="descname">item_height</code><a class="headerlink" href="#pyglet.image.UniformTextureSequence.item_height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.image.UniformTextureSequence.item_width">
+<code class="descclassname">UniformTextureSequence.</code><code class="descname">item_width</code><a class="headerlink" href="#pyglet.image.UniformTextureSequence.item_width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">UniformTextureSequence.</code><code class="descname">texture_sequence</code></dt>
+<dd><p>Access this image sequence as a texture sequence.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>get_texture_sequence</cite></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>TextureSequence</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>UniformTextureSequence</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.image.TileableTexture.html"
+                        title="previous chapter"><cite>TileableTexture</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.image.ImageException.html"
+                        title="next chapter"><cite>ImageException</cite></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.ImageException.html" title="ImageException"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.TileableTexture.html" title="TileableTexture Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" ><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

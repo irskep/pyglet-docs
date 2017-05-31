@@ -1,0 +1,8 @@
+`vertex_list` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics`
+
+.. autofunction:: pyglet.graphics.vertex_list

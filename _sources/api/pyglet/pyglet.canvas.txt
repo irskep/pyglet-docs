@@ -1,0 +1,85 @@
+``pyglet.canvas``
+===============================================================
+
+.. automodule:: pyglet.canvas
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: canvas/
+   :template: module.rst
+
+
+   base
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: canvas/
+   :template: class.rst
+
+
+   Canvas
+   Display
+   Screen
+   ScreenMode
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: canvas/
+   :template: function.rst
+
+
+   get_display
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``sys``
+
+
+
+
+.. template module.rst
+

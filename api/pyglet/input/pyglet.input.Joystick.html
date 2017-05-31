@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Joystick Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="joystick-class">
+<h1><cite>Joystick</cite> Class<a class="headerlink" href="#joystick-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-e7da706c71ec82f1e8ad7e2a713c5b2097e05d55.png" alt="Inheritance diagram of Joystick" usemap="#inheritancefdc72b6887" class="inheritance"/>
+<map id="inheritancefdc72b6887" name="inheritancefdc72b6887">
+<area shape="rect" id="node1" href="../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+<area shape="rect" id="node2" href="base/pyglet.input.base.Joystick.html#pyglet.input.base.Joystick" target="_top" title="High&#45;level interface for joystick&#45;like devices. &#160;This includes analogue" alt="" coords="248,5,421,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.input.Joystick">
+<em class="property">class </em><code class="descname">Joystick</code><span class="sig-paren">(</span><em>device</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.Joystick" title="Permalink to this definition">¶</a></dt>
+<dd><p>High-level interface for joystick-like devices.  This includes analogue
+and digital joysticks, gamepads, game controllers, and possibly even
+steering wheels and other input devices.  There is unfortunately no way to
+distinguish between these different device types.</p>
+<p>To use a joystick, first call <cite>open</cite>, then in your game loop examine
+the values of <cite>x</cite>, <cite>y</cite>, and so on.  These values are normalized to the
+range [-1.0, 1.0].</p>
+<p>To receive events when the value of an axis changes, attach an 
+on_joyaxis_motion event handler to the joystick.  The <cite>Joystick</cite> instance,
+axis name, and current value are passed as parameters to this event.</p>
+<p>To handle button events, you should attach on_joybutton_press and 
+on_joy_button_release event handlers to the joystick.  Both the <cite>Joystick</cite>
+instance and the index of the changed button are passed as parameters to 
+these events.</p>
+<p>Alternately, you may attach event handlers to each individual button in 
+<cite>button_controls</cite> to receive on_press or on_release events.</p>
+<p>To use the hat switch, attach an on_joyhat_motion event handler to the
+joystick.  The handler will be called with both the hat_x and hat_y values
+whenever the value of the hat switch changes.</p>
+<p>The device name can be queried to get the name of the joystick.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>device</strong> – The underlying device used by this joystick interface.</li>
+<li><a class="reference internal" href="../canvas/base/pyglet.canvas.base.Screen.html#pyglet.canvas.base.Screen.x" title="pyglet.canvas.base.Screen.x"><strong>x</strong></a> – Current X (horizontal) value ranging from -1.0 (left) to 1.0
+(right).</li>
+<li><a class="reference internal" href="../canvas/pyglet.canvas.Screen.html#pyglet.canvas.Screen.y" title="pyglet.canvas.Screen.y"><strong>y</strong></a> – Current y (vertical) value ranging from -1.0 (top) to 1.0
+(bottom).</li>
+<li><a class="reference internal" href="../image/pyglet.image.Texture.html#pyglet.image.Texture.z" title="pyglet.image.Texture.z"><strong>z</strong></a> – Current Z value ranging from -1.0 to 1.0.  On joysticks the Z
+value is usually the throttle control.  On game controllers the Z
+value is usually the secondary thumb vertical axis.</li>
+<li><strong>rx</strong> – Current rotational X value ranging from -1.0 to 1.0.</li>
+<li><strong>ry</strong> – Current rotational Y value ranging from -1.0 to 1.0.</li>
+<li><strong>rz</strong> – Current rotational Z value ranging from -1.0 to 1.0.  On joysticks
+the RZ value is usually the twist of the stick.  On game
+controllers the RZ value is usually the secondary thumb horizontal
+axis.</li>
+<li><strong>hat_x</strong> – Current hat (POV) horizontal position; one of -1 (left), 0
+(centered) or 1 (right).</li>
+<li><strong>hat_y</strong> – Current hat (POV) vertical position; one of -1 (bottom), 0
+(centered) or 1 (top).</li>
+<li><strong>buttons</strong> – List of boolean values representing current states of the buttons.
+These are in order, so that button 1 has value at <code class="docutils literal"><span class="pre">buttons[0]</span></code>,
+and so on.</li>
+<li><strong>x_control</strong> – Underlying control for <cite>x</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>y_control</strong> – Underlying control for <cite>y</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>z_control</strong> – Underlying control for <cite>z</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>rx_control</strong> – Underlying control for <cite>rx</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>ry_control</strong> – Underlying control for <cite>ry</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>rz_control</strong> – Underlying control for <cite>rz</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>hat_x_control</strong> – Underlying control for <cite>hat_x</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>hat_y_control</strong> – Underlying control for <cite>hat_y</cite> value, or <code class="docutils literal"><span class="pre">None</span></code> if not available.</li>
+<li><strong>button_controls</strong> – Underlying controls for <cite>buttons</cite> values.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.Joystick.event_types" title="pyglet.input.Joystick.event_types"><code class="xref py py-obj docutils literal"><span class="pre">event_types</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.input.Joystick.event_types">
+<code class="descclassname">Joystick.</code><code class="descname">event_types</code><em class="property"> = [‘on_joyaxis_motion’, ‘on_joybutton_press’, ‘on_joybutton_release’, ‘on_joyhat_motion’]</em><a class="headerlink" href="#pyglet.input.Joystick.event_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">Joystick.</code><code class="descname">register_event_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
+<dd><p>Register an event type with the dispatcher.</p>
+<p>Registering event types allows the dispatcher to validate event
+handler names as they are attached, and to search attached objects for
+suitable handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of the event to register.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Joystick</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

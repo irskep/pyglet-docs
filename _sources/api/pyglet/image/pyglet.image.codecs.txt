@@ -1,0 +1,113 @@
+``pyglet.image.codecs``
+===============================================================
+
+.. automodule:: pyglet.image.codecs
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: codecs/
+   :template: module.rst
+
+
+   bmp
+   dds
+   gif
+   png
+   s3tc
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: codecs/
+   :template: class.rst
+
+
+   ImageDecoder
+   ImageEncoder
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: codecs/
+   :template: exception.rst
+
+
+   ImageDecodeException
+   ImageEncodeException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: codecs/
+   :template: function.rst
+
+
+   add_decoders
+   add_default_image_codecs
+   add_encoders
+   get_animation_decoders
+   get_decoders
+   get_encoders
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``os``
+   * ``quartz``
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,109 @@
+`ProceduralSource` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.procedural
+
+.. inheritance-diagram:: ProceduralSource
+
+.. autoclass:: ProceduralSource
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ProceduralSource.audio_format
+         ~ProceduralSource.duration
+         ~ProceduralSource.envelope
+         ~ProceduralSource.info
+         ~ProceduralSource.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ProceduralSource.envelope
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: ProceduralSource.audio_format
+      :noindex:
+
+   .. autoattribute:: ProceduralSource.duration
+      :noindex:
+
+   .. autoattribute:: ProceduralSource.info
+      :noindex:
+
+   .. autoattribute:: ProceduralSource.video_format
+      :noindex:
+
+
+
+

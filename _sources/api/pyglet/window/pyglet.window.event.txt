@@ -1,0 +1,63 @@
+``pyglet.window.event``
+===============================================================
+
+.. automodule:: pyglet.window.event
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: event/
+   :template: class.rst
+
+
+   WindowEventLogger
+   WindowExitHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``key``
+   * ``mouse``
+   * ``sys``
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,6 @@
+pyglet.graphics
+===============================================================
+
+.. automodule:: pyglet.graphics
+  :members:
+  :undoc-members:

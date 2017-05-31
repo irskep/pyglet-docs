@@ -1,0 +1,4 @@
+<map id="inheritance654c735e19" name="inheritance654c735e19">
+<area shape="rect" id="node1" href="#pyglet.window.NoSuchDisplayException" target="_top" title="An exception indicating the requested display is not available." alt="" coords="267,5,525,29"/>
+<area shape="rect" id="node2" href="pyglet.window.WindowException.html#pyglet.window.WindowException" target="_top" title="The root exception for all window&#45;related errors." alt="" coords="5,5,219,29"/>
+</map>

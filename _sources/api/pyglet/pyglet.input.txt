@@ -1,0 +1,114 @@
+``pyglet.input``
+===============================================================
+
+.. automodule:: pyglet.input
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: input/
+   :template: module.rst
+
+
+   base
+   evdev_constants
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: input/
+   :template: class.rst
+
+
+   AbsoluteAxis
+   AppleRemote
+   Button
+   Control
+   Device
+   Joystick
+   RelativeAxis
+   Tablet
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: input/
+   :template: exception.rst
+
+
+   DeviceException
+   DeviceExclusiveException
+   DeviceOpenException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: input/
+   :template: function.rst
+
+
+   get_apple_remote
+   get_devices
+   get_joysticks
+   get_tablets
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``sys``
+
+
+
+
+.. template module.rst
+

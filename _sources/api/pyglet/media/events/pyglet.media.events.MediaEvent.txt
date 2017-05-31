@@ -1,0 +1,53 @@
+`MediaEvent` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.events
+
+.. inheritance-diagram:: MediaEvent
+
+.. autoclass:: MediaEvent
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

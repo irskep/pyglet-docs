@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GLInfo Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.gl.gl_info" href="../pyglet.gl.gl_info.html" />
+    <link rel="next" title="have_context Function" href="pyglet.gl.gl_info.have_context.html" />
+    <link rel="prev" title="pyglet.gl.gl_info" href="../pyglet.gl.gl_info.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.gl_info.have_context.html" title="have_context Function"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.gl.gl_info.html" title="pyglet.gl.gl_info"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.gl.html" ><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.gl.gl_info.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.gl.gl_info</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="glinfo-class">
+<h1><cite>GLInfo</cite> Class<a class="headerlink" href="#glinfo-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-8ec8f5af684ddcc7ec90a02e9fbbc5ace5d5250f.png" alt="Inheritance diagram of GLInfo" usemap="#inheritance80f4b89657" class="inheritance"/>
+<map id="inheritance80f4b89657" name="inheritance80f4b89657">
+<area shape="rect" id="node1" href="#pyglet.gl.gl_info.GLInfo" target="_top" title="Information interface for a single GL context." alt="" coords="5,5,163,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.gl.gl_info.GLInfo">
+<em class="property">class </em><code class="descname">GLInfo</code><a class="headerlink" href="#pyglet.gl.gl_info.GLInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information interface for a single GL context.</p>
+<p>A default instance is created automatically when the first OpenGL context
+is created.  You can use the module functions as a convenience for 
+this default instance’s methods.</p>
+<p>If you are using more than one context, you must call <cite>set_active_context</cite>
+when the context is active for this <cite>GLInfo</cite> instance.</p>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.gl.gl_info.GLInfo.extensions" title="pyglet.gl.gl_info.GLInfo.extensions"><code class="xref py py-obj docutils literal"><span class="pre">extensions</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.gl.gl_info.GLInfo.have_context" title="pyglet.gl.gl_info.GLInfo.have_context"><code class="xref py py-obj docutils literal"><span class="pre">have_context</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.gl.gl_info.GLInfo.renderer" title="pyglet.gl.gl_info.GLInfo.renderer"><code class="xref py py-obj docutils literal"><span class="pre">renderer</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.gl.gl_info.GLInfo.vendor" title="pyglet.gl.gl_info.GLInfo.vendor"><code class="xref py py-obj docutils literal"><span class="pre">vendor</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.gl.gl_info.GLInfo.version" title="pyglet.gl.gl_info.GLInfo.version"><code class="xref py py-obj docutils literal"><span class="pre">version</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.gl.gl_info.GLInfo.extensions">
+<code class="descclassname">GLInfo.</code><code class="descname">extensions</code><em class="property"> = set()</em><a class="headerlink" href="#pyglet.gl.gl_info.GLInfo.extensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.gl_info.GLInfo.have_context">
+<code class="descclassname">GLInfo.</code><code class="descname">have_context</code><em class="property"> = False</em><a class="headerlink" href="#pyglet.gl.gl_info.GLInfo.have_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.gl_info.GLInfo.renderer">
+<code class="descclassname">GLInfo.</code><code class="descname">renderer</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.gl.gl_info.GLInfo.renderer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.gl_info.GLInfo.vendor">
+<code class="descclassname">GLInfo.</code><code class="descname">vendor</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.gl.gl_info.GLInfo.vendor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.gl_info.GLInfo.version">
+<code class="descclassname">GLInfo.</code><code class="descname">version</code><em class="property"> = ‘0.0.0’</em><a class="headerlink" href="#pyglet.gl.gl_info.GLInfo.version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>GLInfo</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.gl.gl_info.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.gl.gl_info</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.gl.gl_info.have_context.html"
+                        title="next chapter"><cite>have_context</cite> Function</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.gl_info.have_context.html" title="have_context Function"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.gl.gl_info.html" title="pyglet.gl.gl_info"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.gl.html" ><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.gl.gl_info.html" ><code class="docutils literal"><span class="pre">pyglet.gl.gl_info</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Text Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.font.text" href="../pyglet.font.text.html" />
+    <link rel="next" title="pyglet.font.ttf" href="../pyglet.font.ttf.html" />
+    <link rel="prev" title="GlyphString Class" href="pyglet.font.text.GlyphString.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.ttf.html" title="pyglet.font.ttf"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.font.text.GlyphString.html" title="GlyphString Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.font.html" ><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.font.text.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.font.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="text-class">
+<h1><cite>Text</cite> Class<a class="headerlink" href="#text-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-e71ad0077a9c035fec4f3105bc8a1fb0affd474e.png" alt="Inheritance diagram of Text" usemap="#inheritance7737f3874b" class="inheritance"/>
+<map id="inheritance7737f3874b" name="inheritance7737f3874b">
+<area shape="rect" id="node1" href="#pyglet.font.text.Text" target="_top" title="Simple displayable text." alt="" coords="5,5,142,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.font.text.Text">
+<em class="property">class </em><code class="descname">Text</code><span class="sig-paren">(</span><em>font</em>, <em>text=”</em>, <em>x=0</em>, <em>y=0</em>, <em>z=0</em>, <em>color=(1</em>, <em>1</em>, <em>1</em>, <em>1)</em>, <em>width=None</em>, <em>halign=’left’</em>, <em>valign=’baseline’</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.font.text.Text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple displayable text.</p>
+<p>This is a convenience class for rendering strings of text.  It takes
+care of caching the vertices so the text can be rendered every frame with
+little performance penalty.</p>
+<p>Text can be word-wrapped by specifying a <cite>width</cite> to wrap into.  If the
+width is not specified, it gives the width of the text as laid out.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="../../canvas/base/pyglet.canvas.base.Screen.html#pyglet.canvas.base.Screen.x" title="pyglet.canvas.base.Screen.x"><strong>x</strong></a> – X coordinate of the text</li>
+<li><a class="reference internal" href="../../canvas/pyglet.canvas.Screen.html#pyglet.canvas.Screen.y" title="pyglet.canvas.Screen.y"><strong>y</strong></a> – Y coordinate of the text</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>pyglet.text.Label</cite>.</p>
+</div>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.BASELINE" title="pyglet.font.text.Text.BASELINE"><code class="xref py py-obj docutils literal"><span class="pre">BASELINE</span></code></a></td>
+<td>Align the baseline of the first line of text with the given Y coordinate.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.BOTTOM" title="pyglet.font.text.Text.BOTTOM"><code class="xref py py-obj docutils literal"><span class="pre">BOTTOM</span></code></a></td>
+<td>Align the bottom of the descender of the final line of text with the given Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.CENTER" title="pyglet.font.text.Text.CENTER"><code class="xref py py-obj docutils literal"><span class="pre">CENTER</span></code></a></td>
+<td>Align the horizontal center of the text to the given X coordinate.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.LEFT" title="pyglet.font.text.Text.LEFT"><code class="xref py py-obj docutils literal"><span class="pre">LEFT</span></code></a></td>
+<td>Align the left edge of the text to the given X coordinate.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.RIGHT" title="pyglet.font.text.Text.RIGHT"><code class="xref py py-obj docutils literal"><span class="pre">RIGHT</span></code></a></td>
+<td>Align the right edge of the text to the given X coordinate.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.TOP" title="pyglet.font.text.Text.TOP"><code class="xref py py-obj docutils literal"><span class="pre">TOP</span></code></a></td>
+<td>Align the top of the ascender of the first line of text with the given Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.color" title="pyglet.font.text.Text.color"><code class="xref py py-obj docutils literal"><span class="pre">color</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.font" title="pyglet.font.text.Text.font"><code class="xref py py-obj docutils literal"><span class="pre">font</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.halign" title="pyglet.font.text.Text.halign"><code class="xref py py-obj docutils literal"><span class="pre">halign</span></code></a></td>
+<td>Horizontal alignment of the text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.height" title="pyglet.font.text.Text.height"><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></a></td>
+<td>Height of the text.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.leading" title="pyglet.font.text.Text.leading"><code class="xref py py-obj docutils literal"><span class="pre">leading</span></code></a></td>
+<td>Vertical space between adjacent lines, in pixels.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.line_height" title="pyglet.font.text.Text.line_height"><code class="xref py py-obj docutils literal"><span class="pre">line_height</span></code></a></td>
+<td>Vertical distance between adjacent baselines, in pixels.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.text" title="pyglet.font.text.Text.text"><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></a></td>
+<td>Text to render.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.valign" title="pyglet.font.text.Text.valign"><code class="xref py py-obj docutils literal"><span class="pre">valign</span></code></a></td>
+<td>Vertical alignment of the text.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.width" title="pyglet.font.text.Text.width"><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></a></td>
+<td>Width of the text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.x" title="pyglet.font.text.Text.x"><code class="xref py py-obj docutils literal"><span class="pre">x</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.text.Text.y" title="pyglet.font.text.Text.y"><code class="xref py py-obj docutils literal"><span class="pre">y</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.text.Text.z" title="pyglet.font.text.Text.z"><code class="xref py py-obj docutils literal"><span class="pre">z</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.BASELINE">
+<code class="descclassname">Text.</code><code class="descname">BASELINE</code><em class="property"> = ‘baseline’</em><a class="headerlink" href="#pyglet.font.text.Text.BASELINE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align the baseline of the first line of text with the given Y
+coordinate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.BOTTOM">
+<code class="descclassname">Text.</code><code class="descname">BOTTOM</code><em class="property"> = ‘bottom’</em><a class="headerlink" href="#pyglet.font.text.Text.BOTTOM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align the bottom of the descender of the final line of text with the
+given Y coordinate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.CENTER">
+<code class="descclassname">Text.</code><code class="descname">CENTER</code><em class="property"> = ‘center’</em><a class="headerlink" href="#pyglet.font.text.Text.CENTER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align the horizontal center of the text to the given X coordinate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.LEFT">
+<code class="descclassname">Text.</code><code class="descname">LEFT</code><em class="property"> = ‘left’</em><a class="headerlink" href="#pyglet.font.text.Text.LEFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align the left edge of the text to the given X coordinate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.RIGHT">
+<code class="descclassname">Text.</code><code class="descname">RIGHT</code><em class="property"> = ‘right’</em><a class="headerlink" href="#pyglet.font.text.Text.RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align the right edge of the text to the given X coordinate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.TOP">
+<code class="descclassname">Text.</code><code class="descname">TOP</code><em class="property"> = ‘top’</em><a class="headerlink" href="#pyglet.font.text.Text.TOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align the top of the ascender of the first line of text with the given
+Y coordinate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.color">
+<code class="descclassname">Text.</code><code class="descname">color</code><a class="headerlink" href="#pyglet.font.text.Text.color" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.font">
+<code class="descclassname">Text.</code><code class="descname">font</code><a class="headerlink" href="#pyglet.font.text.Text.font" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.halign">
+<code class="descclassname">Text.</code><code class="descname">halign</code><a class="headerlink" href="#pyglet.font.text.Text.halign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Horizontal alignment of the text.</p>
+<p>The text is positioned relative to <cite>x</cite> and <cite>width</cite> according to this
+property, which must be one of the alignment constants <cite>LEFT</cite>,
+<cite>CENTER</cite> or <cite>RIGHT</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.height">
+<code class="descclassname">Text.</code><code class="descname">height</code><a class="headerlink" href="#pyglet.font.text.Text.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Height of the text.</p>
+<p>This property is the ascent minus the descent of the font, unless
+there is more than one line of word-wrapped text, in which case
+the height takes into account the line leading.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.leading">
+<code class="descclassname">Text.</code><code class="descname">leading</code><a class="headerlink" href="#pyglet.font.text.Text.leading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertical space between adjacent lines, in pixels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.line_height">
+<code class="descclassname">Text.</code><code class="descname">line_height</code><a class="headerlink" href="#pyglet.font.text.Text.line_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertical distance between adjacent baselines, in pixels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.text">
+<code class="descclassname">Text.</code><code class="descname">text</code><a class="headerlink" href="#pyglet.font.text.Text.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text to render.</p>
+<p>The glyph vertices are only recalculated as needed, so multiple
+changes to the text can be performed with no performance penalty.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.valign">
+<code class="descclassname">Text.</code><code class="descname">valign</code><a class="headerlink" href="#pyglet.font.text.Text.valign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertical alignment of the text.</p>
+<p>The text is positioned relative to <cite>y</cite> according to this property,
+which must be one of the alignment constants <cite>BOTTOM</cite>, <cite>BASELINE</cite>,
+<cite>CENTER</cite> or <cite>TOP</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.width">
+<code class="descclassname">Text.</code><code class="descname">width</code><a class="headerlink" href="#pyglet.font.text.Text.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Width of the text.</p>
+<p>When set, this enables word-wrapping to the specified width.
+Otherwise, the width of the text as it will be rendered can be
+determined.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.x">
+<code class="descclassname">Text.</code><code class="descname">x</code><a class="headerlink" href="#pyglet.font.text.Text.x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.y">
+<code class="descclassname">Text.</code><code class="descname">y</code><a class="headerlink" href="#pyglet.font.text.Text.y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.text.Text.z">
+<code class="descclassname">Text.</code><code class="descname">z</code><a class="headerlink" href="#pyglet.font.text.Text.z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Text</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.font.text.GlyphString.html"
+                        title="previous chapter"><cite>GlyphString</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../pyglet.font.ttf.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.font.ttf</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.ttf.html" title="pyglet.font.ttf"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.font.text.GlyphString.html" title="GlyphString Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.font.html" ><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.font.text.html" ><code class="docutils literal"><span class="pre">pyglet.font.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

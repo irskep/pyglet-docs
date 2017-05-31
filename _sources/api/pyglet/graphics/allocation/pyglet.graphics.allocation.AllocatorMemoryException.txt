@@ -1,0 +1,12 @@
+`AllocatorMemoryException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.graphics.allocation.AllocatorMemoryException
+
+Exception defined in :mod:`pyglet.graphics.allocation`
+
+.. currentmodule:: pyglet.graphics.allocation
+
+.. autoexception:: AllocatorMemoryException

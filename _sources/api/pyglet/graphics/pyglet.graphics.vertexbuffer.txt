@@ -1,0 +1,96 @@
+``pyglet.graphics.vertexbuffer``
+===============================================================
+
+.. automodule:: pyglet.graphics.vertexbuffer
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: vertexbuffer/
+   :template: class.rst
+
+
+   AbstractBuffer
+   AbstractBufferRegion
+   AbstractMappable
+   IndirectArrayRegion
+   MappableVertexBufferObject
+   VertexArray
+   VertexArrayRegion
+   VertexBufferObject
+   VertexBufferObjectRegion
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: vertexbuffer/
+   :template: function.rst
+
+
+   create_buffer
+   create_mappable_buffer
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``lib``
+   * ``lib_agl``
+   * ``pyglet``
+   * ``sys``
+
+
+
+
+.. template module.rst
+

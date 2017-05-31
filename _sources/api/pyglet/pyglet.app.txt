@@ -1,0 +1,113 @@
+``pyglet.app``
+===============================================================
+
+.. automodule:: pyglet.app
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: app/
+   :template: module.rst
+
+
+   base
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: app/
+   :template: class.rst
+
+
+   EventLoop
+   PlatformEventLoop
+   WeakSet
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: app/
+   :template: exception.rst
+
+
+   AppException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: app/
+   :template: function.rst
+
+
+   exit
+   run
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: compat_platform
+
+.. autodata:: displays
+
+.. autodata:: event_loop
+
+.. autodata:: platform_event_loop
+
+.. autodata:: windows
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``sys``
+   * ``weakref``
+
+
+
+
+.. template module.rst
+

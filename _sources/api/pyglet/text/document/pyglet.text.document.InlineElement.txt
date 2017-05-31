@@ -1,0 +1,68 @@
+`InlineElement` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.document
+
+.. inheritance-diagram:: InlineElement
+
+.. autoclass:: InlineElement
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~InlineElement.position
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: InlineElement.position
+
+
+
+
+
+
+
+

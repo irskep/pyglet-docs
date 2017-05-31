@@ -1,0 +1,8 @@
+`get_fps` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.clock`
+
+.. autofunction:: pyglet.clock.get_fps

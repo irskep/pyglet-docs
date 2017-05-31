@@ -1,0 +1,71 @@
+`Context` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.gl.base
+
+.. inheritance-diagram:: Context
+
+.. autoclass:: Context
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Context.CONTEXT_SHARE_EXISTING
+         ~Context.CONTEXT_SHARE_NONE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Context.CONTEXT_SHARE_EXISTING
+
+.. autoattribute:: Context.CONTEXT_SHARE_NONE
+
+
+
+
+
+
+
+

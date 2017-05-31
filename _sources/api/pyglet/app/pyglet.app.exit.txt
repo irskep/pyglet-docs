@@ -1,0 +1,8 @@
+`exit` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.app`
+
+.. autofunction:: pyglet.app.exit

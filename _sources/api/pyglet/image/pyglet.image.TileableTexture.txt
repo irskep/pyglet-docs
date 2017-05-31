@@ -1,0 +1,160 @@
+`TileableTexture` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: TileableTexture
+
+.. autoclass:: TileableTexture
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~TileableTexture.create
+         ~TileableTexture.create_for_image
+         ~TileableTexture.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~TileableTexture.anchor_x
+         ~TileableTexture.anchor_y
+         ~TileableTexture.image_data
+         ~TileableTexture.images
+         ~TileableTexture.level
+         ~TileableTexture.mipmapped_texture
+         ~TileableTexture.tex_coords
+         ~TileableTexture.tex_coords_order
+         ~TileableTexture.texture
+         ~TileableTexture.x
+         ~TileableTexture.y
+         ~TileableTexture.z
+
+
+
+
+
+
+
+
+Methods
+-------
+
+
+
+.. automethod:: TileableTexture.create_for_image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: TileableTexture.create
+      :noindex:
+
+   .. automethod:: TileableTexture.create_for_size
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: TileableTexture.anchor_x
+      :noindex:
+
+   .. autoattribute:: TileableTexture.anchor_y
+      :noindex:
+
+   .. autoattribute:: TileableTexture.image_data
+      :noindex:
+
+   .. autoattribute:: TileableTexture.images
+      :noindex:
+
+   .. autoattribute:: TileableTexture.level
+      :noindex:
+
+   .. autoattribute:: TileableTexture.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: TileableTexture.tex_coords
+      :noindex:
+
+   .. autoattribute:: TileableTexture.tex_coords_order
+      :noindex:
+
+   .. autoattribute:: TileableTexture.texture
+      :noindex:
+
+   .. autoattribute:: TileableTexture.x
+      :noindex:
+
+   .. autoattribute:: TileableTexture.y
+      :noindex:
+
+   .. autoattribute:: TileableTexture.z
+      :noindex:
+
+
+
+

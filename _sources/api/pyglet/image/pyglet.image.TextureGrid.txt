@@ -1,0 +1,176 @@
+`TextureGrid` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: TextureGrid
+
+.. autoclass:: TextureGrid
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~TextureGrid.create
+         ~TextureGrid.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~TextureGrid.anchor_x
+         ~TextureGrid.anchor_y
+         ~TextureGrid.columns
+         ~TextureGrid.image_data
+         ~TextureGrid.images
+         ~TextureGrid.item_height
+         ~TextureGrid.item_width
+         ~TextureGrid.items
+         ~TextureGrid.level
+         ~TextureGrid.mipmapped_texture
+         ~TextureGrid.rows
+         ~TextureGrid.tex_coords
+         ~TextureGrid.tex_coords_order
+         ~TextureGrid.texture
+         ~TextureGrid.texture_sequence
+         ~TextureGrid.x
+         ~TextureGrid.y
+         ~TextureGrid.z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: TextureGrid.columns
+
+.. autoattribute:: TextureGrid.item_height
+
+.. autoattribute:: TextureGrid.item_width
+
+.. autoattribute:: TextureGrid.items
+
+.. autoattribute:: TextureGrid.rows
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: TextureGrid.create
+      :noindex:
+
+   .. automethod:: TextureGrid.create_for_size
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: TextureGrid.anchor_x
+      :noindex:
+
+   .. autoattribute:: TextureGrid.anchor_y
+      :noindex:
+
+   .. autoattribute:: TextureGrid.image_data
+      :noindex:
+
+   .. autoattribute:: TextureGrid.images
+      :noindex:
+
+   .. autoattribute:: TextureGrid.level
+      :noindex:
+
+   .. autoattribute:: TextureGrid.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: TextureGrid.tex_coords
+      :noindex:
+
+   .. autoattribute:: TextureGrid.tex_coords_order
+      :noindex:
+
+   .. autoattribute:: TextureGrid.texture
+      :noindex:
+
+   .. autoattribute:: TextureGrid.texture_sequence
+      :noindex:
+
+   .. autoattribute:: TextureGrid.x
+      :noindex:
+
+   .. autoattribute:: TextureGrid.y
+      :noindex:
+
+   .. autoattribute:: TextureGrid.z
+      :noindex:
+
+
+
+

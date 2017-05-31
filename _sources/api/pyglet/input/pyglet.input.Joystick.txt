@@ -1,0 +1,103 @@
+`Joystick` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input
+
+.. inheritance-diagram:: Joystick
+
+.. autoclass:: Joystick
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Joystick.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Joystick.event_types
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Joystick.event_types
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: Joystick.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+`WindowException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.window.WindowException
+
+Exception defined in :mod:`pyglet.window`
+
+.. currentmodule:: pyglet.window
+
+.. autoexception:: WindowException

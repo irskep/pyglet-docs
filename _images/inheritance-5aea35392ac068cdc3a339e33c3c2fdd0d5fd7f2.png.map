@@ -1,0 +1,6 @@
+<map id="inheritance6195c1eddb" name="inheritance6195c1eddb">
+<area shape="rect" id="node1" href="../../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="270,5,464,29"/>
+<area shape="rect" id="node2" href="#pyglet.text.layout.IncrementalTextLayout" target="_top" title="Displayed text suitable for interactive editing and/or scrolling" alt="" coords="539,29,798,53"/>
+<area shape="rect" id="node3" href="pyglet.text.layout.ScrollableTextLayout.html#pyglet.text.layout.ScrollableTextLayout" target="_top" title="Display text in a scrollable viewport." alt="" coords="243,53,491,77"/>
+<area shape="rect" id="node4" href="pyglet.text.layout.TextLayout.html#pyglet.text.layout.TextLayout" target="_top" title="Lay out and display documents." alt="" coords="5,53,195,77"/>
+</map>

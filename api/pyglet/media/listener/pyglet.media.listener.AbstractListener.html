@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AbstractListener Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.media.listener" href="../pyglet.media.listener.html" />
+    <link rel="next" title="pyglet.media.player" href="../pyglet.media.player.html" />
+    <link rel="prev" title="pyglet.media.listener" href="../pyglet.media.listener.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.player.html" title="pyglet.media.player"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.listener.html" title="pyglet.media.listener"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.listener.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.media.listener</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="abstractlistener-class">
+<h1><cite>AbstractListener</cite> Class<a class="headerlink" href="#abstractlistener-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-d9abdc9e1d825be7dbb3a37d8571bc89786c5b7f.png" alt="Inheritance diagram of AbstractListener" usemap="#inheritanced890ca65bb" class="inheritance"/>
+<map id="inheritanced890ca65bb" name="inheritanced890ca65bb">
+<area shape="rect" id="node1" href="#pyglet.media.listener.AbstractListener" target="_top" title="The listener properties for positional audio." alt="" coords="5,5,248,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.media.listener.AbstractListener">
+<em class="property">class </em><code class="descname">AbstractListener</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener" title="Permalink to this definition">¶</a></dt>
+<dd><p>The listener properties for positional audio.</p>
+<p>You can obtain the singleton instance of this class by calling
+<cite>AbstractAudioDriver.get_listener</cite>.</p>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.listener.AbstractListener.forward_orientation" title="pyglet.media.listener.AbstractListener.forward_orientation"><code class="xref py py-obj docutils literal"><span class="pre">forward_orientation</span></code></a></td>
+<td>A vector giving the direction the listener is facing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.listener.AbstractListener.position" title="pyglet.media.listener.AbstractListener.position"><code class="xref py py-obj docutils literal"><span class="pre">position</span></code></a></td>
+<td>The position of the listener in 3D space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.listener.AbstractListener.up_orientation" title="pyglet.media.listener.AbstractListener.up_orientation"><code class="xref py py-obj docutils literal"><span class="pre">up_orientation</span></code></a></td>
+<td>A vector giving the “up” orientation of the listener.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.listener.AbstractListener.volume" title="pyglet.media.listener.AbstractListener.volume"><code class="xref py py-obj docutils literal"><span class="pre">volume</span></code></a></td>
+<td>The master volume for sound playback.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.forward_orientation">
+<code class="descclassname">AbstractListener.</code><code class="descname">forward_orientation</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.forward_orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A vector giving the direction the
+listener is facing.</p>
+<p>The orientation is given as a tuple of floats (x, y, z), and has
+no unit.  The forward orientation should be orthagonal to the
+up orientation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">3-tuple of float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.position">
+<code class="descclassname">AbstractListener.</code><code class="descname">position</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>The position of the listener in 3D space.</p>
+<p>The position is given as a tuple of floats (x, y, z).  The unit
+defaults to meters, but can be modified with the listener
+properties.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">3-tuple of float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.up_orientation">
+<code class="descclassname">AbstractListener.</code><code class="descname">up_orientation</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.up_orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A vector giving the “up” orientation
+of the listener.</p>
+<p>The orientation is given as a tuple of floats (x, y, z), and has
+no unit.  The up orientation should be orthagonal to the
+forward orientation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">3-tuple of float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.volume">
+<code class="descclassname">AbstractListener.</code><code class="descname">volume</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>The master volume for sound playback.</p>
+<p>All sound volumes are multiplied by this master volume before being
+played.  A value of 0 will silence playback (but still consume
+resources).  The nominal volume is 1.0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>AbstractListener</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.media.listener.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.media.listener</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../pyglet.media.player.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.media.player</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.player.html" title="pyglet.media.player"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.listener.html" title="pyglet.media.listener"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.listener.html" ><code class="docutils literal"><span class="pre">pyglet.media.listener</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

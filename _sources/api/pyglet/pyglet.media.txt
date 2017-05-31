@@ -1,0 +1,67 @@
+``pyglet.media``
+===============================================================
+
+.. automodule:: pyglet.media
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: media/
+   :template: module.rst
+
+
+   drivers
+   events
+   exceptions
+   listener
+   player
+   sources
+   threads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``base``
+   * ``loader``
+   * ``procedural``
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.text &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="pyglet.text.caret" href="text/pyglet.text.caret.html" />
+    <link rel="prev" title="SpriteGroup Class" href="sprite/pyglet.sprite.SpriteGroup.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="text/pyglet.text.caret.html" title="pyglet.text.caret"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sprite/pyglet.sprite.SpriteGroup.html" title="SpriteGroup Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.text">
+<span id="pyglet-text"></span><h1><code class="docutils literal"><span class="pre">pyglet.text</span></code><a class="headerlink" href="#module-pyglet.text" title="Permalink to this headline">¶</a></h1>
+<p>Text formatting, layout and display.</p>
+<p>This module provides classes for loading styled documents from text files,
+HTML files and a pyglet-specific markup format.  Documents can be styled with
+multiple fonts, colours, styles, text sizes, margins, paragraph alignments,
+and so on.</p>
+<p>Using the layout classes, documents can be laid out on a single line or
+word-wrapped to fit a rectangle.  A layout can then be efficiently drawn in
+a window or updated incrementally (for example, to support interactive text
+editing).</p>
+<p>The label classes provide a simple interface for the common case where an
+application simply needs to display some text in a window.</p>
+<p>A plain text label can be created with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Hello, world&#39;</span><span class="p">,</span> 
+                          <span class="n">font_name</span><span class="o">=</span><span class="s1">&#39;Times New Roman&#39;</span><span class="p">,</span> 
+                          <span class="n">font_size</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span>
+                          <span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alternatively, a styled text label using HTML can be created with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">HTMLLabel</span><span class="p">(</span><span class="s1">&#39;&lt;b&gt;Hello&lt;/b&gt;, &lt;i&gt;world&lt;/i&gt;&#39;</span><span class="p">,</span>
+                              <span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Either label can then be drawn at any time with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">label</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>For details on the subset of HTML supported, see <cite>pyglet.text.formats.html</cite>.</p>
+<p>Refer to the Programming Guide for advanced usage of the document and layout
+classes, including interactive editing, embedding objects within documents and
+creating scrollable layouts.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.1</p>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.caret.html#module-pyglet.text.caret" title="pyglet.text.caret"><code class="xref py py-obj docutils literal"><span class="pre">caret</span></code></a></td>
+<td>Provides keyboard and mouse editing procedures for text layout.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="text/pyglet.text.document.html#module-pyglet.text.document" title="pyglet.text.document"><code class="xref py py-obj docutils literal"><span class="pre">document</span></code></a></td>
+<td>Formatted and unformatted document interfaces used by text layout.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.formats.html#module-pyglet.text.formats" title="pyglet.text.formats"><code class="xref py py-obj docutils literal"><span class="pre">formats</span></code></a></td>
+<td>Document formats.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="text/pyglet.text.layout.html#module-pyglet.text.layout" title="pyglet.text.layout"><code class="xref py py-obj docutils literal"><span class="pre">layout</span></code></a></td>
+<td>Render simple text and formatted documents efficiently.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.runlist.html#module-pyglet.text.runlist" title="pyglet.text.runlist"><code class="xref py py-obj docutils literal"><span class="pre">runlist</span></code></a></td>
+<td>Run list encoding utilities.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.DocumentDecoder.html#pyglet.text.DocumentDecoder" title="pyglet.text.DocumentDecoder"><code class="xref py py-obj docutils literal"><span class="pre">DocumentDecoder</span></code></a></td>
+<td>Abstract document decoder.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="text/pyglet.text.DocumentLabel.html#pyglet.text.DocumentLabel" title="pyglet.text.DocumentLabel"><code class="xref py py-obj docutils literal"><span class="pre">DocumentLabel</span></code></a></td>
+<td>Base label class.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.HTMLLabel.html#pyglet.text.HTMLLabel" title="pyglet.text.HTMLLabel"><code class="xref py py-obj docutils literal"><span class="pre">HTMLLabel</span></code></a></td>
+<td>HTML formatted text label.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="text/pyglet.text.Label.html#pyglet.text.Label" title="pyglet.text.Label"><code class="xref py py-obj docutils literal"><span class="pre">Label</span></code></a></td>
+<td>Plain text label.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.DocumentDecodeException.html#pyglet.text.DocumentDecodeException" title="pyglet.text.DocumentDecodeException"><code class="xref py py-obj docutils literal"><span class="pre">DocumentDecodeException</span></code></a></td>
+<td>An error occurred decoding document text.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.decode_attributed.html#pyglet.text.decode_attributed" title="pyglet.text.decode_attributed"><code class="xref py py-obj docutils literal"><span class="pre">decode_attributed</span></code></a>(text)</td>
+<td>Create a document directly from some attributed text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="text/pyglet.text.decode_html.html#pyglet.text.decode_html" title="pyglet.text.decode_html"><code class="xref py py-obj docutils literal"><span class="pre">decode_html</span></code></a>(text[,&nbsp;location])</td>
+<td>Create a document directly from some HTML formatted text.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.decode_text.html#pyglet.text.decode_text" title="pyglet.text.decode_text"><code class="xref py py-obj docutils literal"><span class="pre">decode_text</span></code></a>(text)</td>
+<td>Create a document directly from some plain text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="text/pyglet.text.get_decoder.html#pyglet.text.get_decoder" title="pyglet.text.get_decoder"><code class="xref py py-obj docutils literal"><span class="pre">get_decoder</span></code></a>(filename[,&nbsp;mimetype])</td>
+<td>Get a document decoder for the given filename and MIME type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="text/pyglet.text.load.html#pyglet.text.load" title="pyglet.text.load"><code class="xref py py-obj docutils literal"><span class="pre">load</span></code></a>(filename[,&nbsp;file,&nbsp;mimetype])</td>
+<td>Load a document from a file.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">os</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.text</span></code></a><ul>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sprite/pyglet.sprite.SpriteGroup.html"
+                        title="previous chapter"><cite>SpriteGroup</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="text/pyglet.text.caret.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.text.caret</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="text/pyglet.text.caret.html" title="pyglet.text.caret"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sprite/pyglet.sprite.SpriteGroup.html" title="SpriteGroup Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

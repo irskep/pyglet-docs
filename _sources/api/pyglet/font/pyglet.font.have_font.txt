@@ -1,0 +1,8 @@
+`have_font` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.font`
+
+.. autofunction:: pyglet.font.have_font

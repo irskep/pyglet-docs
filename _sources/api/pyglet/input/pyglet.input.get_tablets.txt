@@ -1,0 +1,8 @@
+`get_tablets` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.input`
+
+.. autofunction:: pyglet.input.get_tablets

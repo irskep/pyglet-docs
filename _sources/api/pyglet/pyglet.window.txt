@@ -1,0 +1,107 @@
+``pyglet.window``
+===============================================================
+
+.. automodule:: pyglet.window
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: window/
+   :template: module.rst
+
+
+   event
+   key
+   mouse
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: window/
+   :template: class.rst
+
+
+   DefaultMouseCursor
+   Display
+   FPSDisplay
+   ImageMouseCursor
+   MouseCursor
+   Platform
+   Window
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: window/
+   :template: exception.rst
+
+
+   MouseCursorException
+   NoSuchConfigException
+   NoSuchDisplayException
+   NoSuchScreenModeException
+   WindowException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: window/
+   :template: function.rst
+
+
+   get_platform
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``gl``
+   * ``pyglet``
+   * ``sys``
+
+
+
+
+.. template module.rst
+

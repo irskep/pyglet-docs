@@ -1,0 +1,12 @@
+`AllocatorException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.image.atlas.AllocatorException
+
+Exception defined in :mod:`pyglet.image.atlas`
+
+.. currentmodule:: pyglet.image.atlas
+
+.. autoexception:: AllocatorException

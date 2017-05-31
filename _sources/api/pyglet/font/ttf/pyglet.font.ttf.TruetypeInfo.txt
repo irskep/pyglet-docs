@@ -1,0 +1,53 @@
+`TruetypeInfo` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.font.ttf
+
+.. inheritance-diagram:: TruetypeInfo
+
+.. autoclass:: TruetypeInfo
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

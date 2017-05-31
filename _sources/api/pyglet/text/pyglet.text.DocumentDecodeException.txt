@@ -1,0 +1,12 @@
+`DocumentDecodeException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.text.DocumentDecodeException
+
+Exception defined in :mod:`pyglet.text`
+
+.. currentmodule:: pyglet.text
+
+.. autoexception:: DocumentDecodeException

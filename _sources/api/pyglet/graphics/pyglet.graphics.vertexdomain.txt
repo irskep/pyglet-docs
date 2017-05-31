@@ -1,0 +1,94 @@
+``pyglet.graphics.vertexdomain``
+===============================================================
+
+.. automodule:: pyglet.graphics.vertexdomain
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: vertexdomain/
+   :template: class.rst
+
+
+   IndexedVertexDomain
+   IndexedVertexList
+   VertexDomain
+   VertexList
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: vertexdomain/
+   :template: function.rst
+
+
+   create_attribute_usage
+   create_domain
+   create_indexed_domain
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``allocation``
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``lib``
+   * ``lib_agl``
+   * ``re``
+   * ``vertexattribute``
+   * ``vertexbuffer``
+
+
+
+
+.. template module.rst
+

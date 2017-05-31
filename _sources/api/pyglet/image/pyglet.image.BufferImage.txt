@@ -1,0 +1,116 @@
+`BufferImage` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: BufferImage
+
+.. autoclass:: BufferImage
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~BufferImage.anchor_x
+         ~BufferImage.anchor_y
+         ~BufferImage.format
+         ~BufferImage.image_data
+         ~BufferImage.mipmapped_texture
+         ~BufferImage.owner
+         ~BufferImage.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: BufferImage.format
+
+.. autoattribute:: BufferImage.owner
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: BufferImage.anchor_x
+      :noindex:
+
+   .. autoattribute:: BufferImage.anchor_y
+      :noindex:
+
+   .. autoattribute:: BufferImage.image_data
+      :noindex:
+
+   .. autoattribute:: BufferImage.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: BufferImage.texture
+      :noindex:
+
+
+
+

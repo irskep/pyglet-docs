@@ -1,0 +1,68 @@
+`SourceGroup` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources
+
+.. inheritance-diagram:: SourceGroup
+
+.. autoclass:: SourceGroup
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~SourceGroup.loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: SourceGroup.loop
+
+
+
+
+
+
+
+

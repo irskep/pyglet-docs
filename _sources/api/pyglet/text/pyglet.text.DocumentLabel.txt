@@ -1,0 +1,168 @@
+`DocumentLabel` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text
+
+.. inheritance-diagram:: DocumentLabel
+
+.. autoclass:: DocumentLabel
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~DocumentLabel.anchor_x
+         ~DocumentLabel.anchor_y
+         ~DocumentLabel.background_group
+         ~DocumentLabel.batch
+         ~DocumentLabel.bold
+         ~DocumentLabel.color
+         ~DocumentLabel.content_valign
+         ~DocumentLabel.document
+         ~DocumentLabel.dpi
+         ~DocumentLabel.font_name
+         ~DocumentLabel.font_size
+         ~DocumentLabel.foreground_decoration_group
+         ~DocumentLabel.foreground_group
+         ~DocumentLabel.height
+         ~DocumentLabel.italic
+         ~DocumentLabel.multiline
+         ~DocumentLabel.text
+         ~DocumentLabel.top_group
+         ~DocumentLabel.width
+         ~DocumentLabel.x
+         ~DocumentLabel.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: DocumentLabel.bold
+
+.. autoattribute:: DocumentLabel.color
+
+.. autoattribute:: DocumentLabel.font_name
+
+.. autoattribute:: DocumentLabel.font_size
+
+.. autoattribute:: DocumentLabel.italic
+
+.. autoattribute:: DocumentLabel.text
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: DocumentLabel.anchor_x
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.anchor_y
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.background_group
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.batch
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.content_valign
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.document
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.dpi
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.foreground_decoration_group
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.foreground_group
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.height
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.multiline
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.top_group
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.width
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.x
+      :noindex:
+
+   .. autoattribute:: DocumentLabel.y
+      :noindex:
+
+
+
+

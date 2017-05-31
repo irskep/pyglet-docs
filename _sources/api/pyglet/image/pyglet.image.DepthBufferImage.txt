@@ -1,0 +1,117 @@
+`DepthBufferImage` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: DepthBufferImage
+
+.. autoclass:: DepthBufferImage
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~DepthBufferImage.anchor_x
+         ~DepthBufferImage.anchor_y
+         ~DepthBufferImage.format
+         ~DepthBufferImage.image_data
+         ~DepthBufferImage.mipmapped_texture
+         ~DepthBufferImage.owner
+         ~DepthBufferImage.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: DepthBufferImage.format
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: DepthBufferImage.anchor_x
+      :noindex:
+
+   .. autoattribute:: DepthBufferImage.anchor_y
+      :noindex:
+
+   .. autoattribute:: DepthBufferImage.image_data
+      :noindex:
+
+   .. autoattribute:: DepthBufferImage.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: DepthBufferImage.owner
+      :noindex:
+
+   .. autoattribute:: DepthBufferImage.texture
+      :noindex:
+
+
+
+

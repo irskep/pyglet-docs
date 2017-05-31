@@ -1,0 +1,8 @@
+`get_sleep_time` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.clock`
+
+.. autofunction:: pyglet.clock.get_sleep_time

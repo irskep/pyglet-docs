@@ -1,0 +1,8 @@
+`set_default` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.clock`
+
+.. autofunction:: pyglet.clock.set_default

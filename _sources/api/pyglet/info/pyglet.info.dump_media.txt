@@ -1,0 +1,8 @@
+`dump_media` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.info`
+
+.. autofunction:: pyglet.info.dump_media

@@ -1,0 +1,12 @@
+`DeviceOpenException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.input.DeviceOpenException
+
+Exception defined in :mod:`pyglet.input`
+
+.. currentmodule:: pyglet.input
+
+.. autoexception:: DeviceOpenException

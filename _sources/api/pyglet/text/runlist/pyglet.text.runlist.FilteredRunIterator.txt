@@ -1,0 +1,53 @@
+`FilteredRunIterator` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.runlist
+
+.. inheritance-diagram:: FilteredRunIterator
+
+.. autoclass:: FilteredRunIterator
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

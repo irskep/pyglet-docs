@@ -1,0 +1,64 @@
+`Canvas` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.canvas
+
+.. inheritance-diagram:: Canvas
+
+.. autoclass:: Canvas
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Instance Attributes
+-------------------
+
+
+
+.. attribute:: Canvas.display
+
+   Display this canvas was created on.
+   
+
+
+
+

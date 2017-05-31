@@ -1,0 +1,53 @@
+`VertexBufferObjectRegion` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexbuffer
+
+.. inheritance-diagram:: VertexBufferObjectRegion
+
+.. autoclass:: VertexBufferObjectRegion
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

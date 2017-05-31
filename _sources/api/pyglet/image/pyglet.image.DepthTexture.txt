@@ -1,0 +1,151 @@
+`DepthTexture` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: DepthTexture
+
+.. autoclass:: DepthTexture
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~DepthTexture.create
+         ~DepthTexture.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~DepthTexture.anchor_x
+         ~DepthTexture.anchor_y
+         ~DepthTexture.image_data
+         ~DepthTexture.images
+         ~DepthTexture.level
+         ~DepthTexture.mipmapped_texture
+         ~DepthTexture.tex_coords
+         ~DepthTexture.tex_coords_order
+         ~DepthTexture.texture
+         ~DepthTexture.x
+         ~DepthTexture.y
+         ~DepthTexture.z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: DepthTexture.create
+      :noindex:
+
+   .. automethod:: DepthTexture.create_for_size
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: DepthTexture.anchor_x
+      :noindex:
+
+   .. autoattribute:: DepthTexture.anchor_y
+      :noindex:
+
+   .. autoattribute:: DepthTexture.image_data
+      :noindex:
+
+   .. autoattribute:: DepthTexture.images
+      :noindex:
+
+   .. autoattribute:: DepthTexture.level
+      :noindex:
+
+   .. autoattribute:: DepthTexture.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: DepthTexture.tex_coords
+      :noindex:
+
+   .. autoattribute:: DepthTexture.tex_coords_order
+      :noindex:
+
+   .. autoattribute:: DepthTexture.texture
+      :noindex:
+
+   .. autoattribute:: DepthTexture.x
+      :noindex:
+
+   .. autoattribute:: DepthTexture.y
+      :noindex:
+
+   .. autoattribute:: DepthTexture.z
+      :noindex:
+
+
+
+

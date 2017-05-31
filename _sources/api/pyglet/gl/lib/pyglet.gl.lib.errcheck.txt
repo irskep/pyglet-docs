@@ -1,0 +1,8 @@
+`errcheck` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.gl.lib`
+
+.. autofunction:: pyglet.gl.lib.errcheck

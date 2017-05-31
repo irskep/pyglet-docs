@@ -1,0 +1,104 @@
+`FM` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.procedural
+
+.. inheritance-diagram:: FM
+
+.. autoclass:: FM
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~FM.audio_format
+         ~FM.duration
+         ~FM.envelope
+         ~FM.info
+         ~FM.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: FM.audio_format
+      :noindex:
+
+   .. autoattribute:: FM.duration
+      :noindex:
+
+   .. autoattribute:: FM.envelope
+      :noindex:
+
+   .. autoattribute:: FM.info
+      :noindex:
+
+   .. autoattribute:: FM.video_format
+      :noindex:
+
+
+
+

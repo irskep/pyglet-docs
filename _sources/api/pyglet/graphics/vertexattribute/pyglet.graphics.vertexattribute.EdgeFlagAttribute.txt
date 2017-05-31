@@ -1,0 +1,68 @@
+`EdgeFlagAttribute` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexattribute
+
+.. inheritance-diagram:: EdgeFlagAttribute
+
+.. autoclass:: EdgeFlagAttribute
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~EdgeFlagAttribute.plural
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: EdgeFlagAttribute.plural
+
+
+
+
+
+
+
+

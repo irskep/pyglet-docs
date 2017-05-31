@@ -1,0 +1,8 @@
+`get_script_home` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.resource`
+
+.. autofunction:: pyglet.resource.get_script_home

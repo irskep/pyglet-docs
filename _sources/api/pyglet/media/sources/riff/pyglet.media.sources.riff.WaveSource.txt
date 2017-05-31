@@ -1,0 +1,104 @@
+`WaveSource` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.riff
+
+.. inheritance-diagram:: WaveSource
+
+.. autoclass:: WaveSource
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~WaveSource.audio_format
+         ~WaveSource.duration
+         ~WaveSource.info
+         ~WaveSource.is_queued
+         ~WaveSource.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: WaveSource.audio_format
+      :noindex:
+
+   .. autoattribute:: WaveSource.duration
+      :noindex:
+
+   .. autoattribute:: WaveSource.info
+      :noindex:
+
+   .. autoattribute:: WaveSource.is_queued
+      :noindex:
+
+   .. autoattribute:: WaveSource.video_format
+      :noindex:
+
+
+
+

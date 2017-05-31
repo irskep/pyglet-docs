@@ -1,0 +1,4 @@
+<map id="inheritance52b6385fc0" name="inheritance52b6385fc0">
+<area shape="rect" id="node1" href="pyglet.graphics.vertexbuffer.AbstractBufferRegion.html#pyglet.graphics.vertexbuffer.AbstractBufferRegion" target="_top" title="A mapped region of a buffer." alt="" coords="5,5,320,29"/>
+<area shape="rect" id="node2" href="#pyglet.graphics.vertexbuffer.IndirectArrayRegion" target="_top" title="A mapped region in which data elements are not necessarily contiguous." alt="" coords="368,5,673,29"/>
+</map>

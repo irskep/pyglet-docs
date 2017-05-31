@@ -1,0 +1,5 @@
+<map id="inheritance5d94a65bb5" name="inheritance5d94a65bb5">
+<area shape="rect" id="node1" href="pyglet.image.AbstractImage.html#pyglet.image.AbstractImage" target="_top" title="Abstract class representing an image." alt="" coords="5,5,192,29"/>
+<area shape="rect" id="node3" href="pyglet.image.Texture.html#pyglet.image.Texture" target="_top" title="An image loaded into video memory that can be efficiently drawn" alt="" coords="240,5,384,29"/>
+<area shape="rect" id="node2" href="#pyglet.image.DepthTexture" target="_top" title="A texture with depth samples (typically 24&#45;bit)." alt="" coords="432,5,612,29"/>
+</map>

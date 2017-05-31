@@ -1,0 +1,92 @@
+`WaveFormatChunk` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.riff
+
+.. inheritance-diagram:: WaveFormatChunk
+
+.. autoclass:: WaveFormatChunk
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~WaveFormatChunk.header_fmt
+         ~WaveFormatChunk.header_length
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: WaveFormatChunk.header_fmt
+      :noindex:
+
+   .. autoattribute:: WaveFormatChunk.header_length
+      :noindex:
+
+
+
+

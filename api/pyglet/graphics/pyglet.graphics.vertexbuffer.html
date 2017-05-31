@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.graphics.vertexbuffer &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.graphics" href="../pyglet.graphics.html" />
+    <link rel="next" title="AbstractBuffer Class" href="vertexbuffer/pyglet.graphics.vertexbuffer.AbstractBuffer.html" />
+    <link rel="prev" title="serialize_attributes Function" href="vertexattribute/pyglet.graphics.vertexattribute.serialize_attributes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vertexbuffer/pyglet.graphics.vertexbuffer.AbstractBuffer.html" title="AbstractBuffer Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vertexattribute/pyglet.graphics.vertexattribute.serialize_attributes.html" title="serialize_attributes Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.graphics.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.graphics.vertexbuffer">
+<span id="pyglet-graphics-vertexbuffer"></span><h1><code class="docutils literal"><span class="pre">pyglet.graphics.vertexbuffer</span></code><a class="headerlink" href="#module-pyglet.graphics.vertexbuffer" title="Permalink to this headline">¶</a></h1>
+<p>Byte abstractions of Vertex Buffer Objects and vertex arrays.</p>
+<p>Use <cite>create_buffer</cite> or <cite>create_mappable_buffer</cite> to create a Vertex Buffer
+Object, or a vertex array if VBOs are not supported by the current context.</p>
+<p>Buffers can optionally be created “mappable” (incorporating the
+<cite>AbstractMappable</cite> mix-in).  In this case the buffer provides a <code class="docutils literal"><span class="pre">get_region</span></code>
+method which provides the most efficient path for updating partial data within
+the buffer.</p>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.AbstractBuffer.html#pyglet.graphics.vertexbuffer.AbstractBuffer" title="pyglet.graphics.vertexbuffer.AbstractBuffer"><code class="xref py py-obj docutils literal"><span class="pre">AbstractBuffer</span></code></a></td>
+<td>Abstract buffer of byte data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.AbstractBufferRegion.html#pyglet.graphics.vertexbuffer.AbstractBufferRegion" title="pyglet.graphics.vertexbuffer.AbstractBufferRegion"><code class="xref py py-obj docutils literal"><span class="pre">AbstractBufferRegion</span></code></a></td>
+<td>A mapped region of a buffer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.AbstractMappable.html#pyglet.graphics.vertexbuffer.AbstractMappable" title="pyglet.graphics.vertexbuffer.AbstractMappable"><code class="xref py py-obj docutils literal"><span class="pre">AbstractMappable</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.IndirectArrayRegion.html#pyglet.graphics.vertexbuffer.IndirectArrayRegion" title="pyglet.graphics.vertexbuffer.IndirectArrayRegion"><code class="xref py py-obj docutils literal"><span class="pre">IndirectArrayRegion</span></code></a></td>
+<td>A mapped region in which data elements are not necessarily contiguous.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.MappableVertexBufferObject.html#pyglet.graphics.vertexbuffer.MappableVertexBufferObject" title="pyglet.graphics.vertexbuffer.MappableVertexBufferObject"><code class="xref py py-obj docutils literal"><span class="pre">MappableVertexBufferObject</span></code></a></td>
+<td>A VBO with system-memory backed store.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.VertexArray.html#pyglet.graphics.vertexbuffer.VertexArray" title="pyglet.graphics.vertexbuffer.VertexArray"><code class="xref py py-obj docutils literal"><span class="pre">VertexArray</span></code></a></td>
+<td>A ctypes implementation of a vertex array.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.VertexArrayRegion.html#pyglet.graphics.vertexbuffer.VertexArrayRegion" title="pyglet.graphics.vertexbuffer.VertexArrayRegion"><code class="xref py py-obj docutils literal"><span class="pre">VertexArrayRegion</span></code></a></td>
+<td>A mapped region of a vertex array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.VertexBufferObject.html#pyglet.graphics.vertexbuffer.VertexBufferObject" title="pyglet.graphics.vertexbuffer.VertexBufferObject"><code class="xref py py-obj docutils literal"><span class="pre">VertexBufferObject</span></code></a></td>
+<td>Lightweight representation of an OpenGL VBO.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.VertexBufferObjectRegion.html#pyglet.graphics.vertexbuffer.VertexBufferObjectRegion" title="pyglet.graphics.vertexbuffer.VertexBufferObjectRegion"><code class="xref py py-obj docutils literal"><span class="pre">VertexBufferObjectRegion</span></code></a></td>
+<td>A mapped region of a VBO.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.create_buffer.html#pyglet.graphics.vertexbuffer.create_buffer" title="pyglet.graphics.vertexbuffer.create_buffer"><code class="xref py py-obj docutils literal"><span class="pre">create_buffer</span></code></a>(size[,&nbsp;target,&nbsp;usage,&nbsp;vbo])</td>
+<td>Create a buffer of vertex data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexbuffer/pyglet.graphics.vertexbuffer.create_mappable_buffer.html#pyglet.graphics.vertexbuffer.create_mappable_buffer" title="pyglet.graphics.vertexbuffer.create_mappable_buffer"><code class="xref py py-obj docutils literal"><span class="pre">create_mappable_buffer</span></code></a>(size[,&nbsp;target,&nbsp;…])</td>
+<td>Create a mappable buffer of vertex data.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.graphics.vertexbuffer.absolute_import">
+<code class="descname">absolute_import</code><em class="property"> = _Feature((2, 5, 0, ‘alpha’, 1), (3, 0, 0, ‘alpha’, 0), 16384)</em><a class="headerlink" href="#pyglet.graphics.vertexbuffer.absolute_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pyglet.graphics.vertexbuffer.compat_platform">
+<code class="descname">compat_platform</code><em class="property"> = ‘darwin’</em><a class="headerlink" href="#pyglet.graphics.vertexbuffer.compat_platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=”) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">gl</span></code></li>
+<li><code class="docutils literal"><span class="pre">glext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">glu</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib_agl</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet</span></code></li>
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.graphics.vertexbuffer</span></code></a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="vertexattribute/pyglet.graphics.vertexattribute.serialize_attributes.html"
+                        title="previous chapter"><cite>serialize_attributes</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vertexbuffer/pyglet.graphics.vertexbuffer.AbstractBuffer.html"
+                        title="next chapter"><cite>AbstractBuffer</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vertexbuffer/pyglet.graphics.vertexbuffer.AbstractBuffer.html" title="AbstractBuffer Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vertexattribute/pyglet.graphics.vertexattribute.serialize_attributes.html" title="serialize_attributes Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.graphics.html" ><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

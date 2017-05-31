@@ -1,0 +1,130 @@
+``pyglet.resource``
+===============================================================
+
+.. automodule:: pyglet.resource
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: resource/
+   :template: class.rst
+
+
+   FileLocation
+   Loader
+   Location
+   URLLocation
+   ZIPLocation
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: resource/
+   :template: exception.rst
+
+
+   ResourceNotFoundException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: resource/
+   :template: function.rst
+
+
+   get_script_home
+   get_settings_path
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: add_font
+
+.. autodata:: animation
+
+.. autodata:: attributed
+
+.. autodata:: file
+
+.. autodata:: get_cached_animation_names
+
+.. autodata:: get_cached_image_names
+
+.. autodata:: get_cached_texture_names
+
+.. autodata:: get_texture_bins
+
+.. autodata:: html
+
+.. autodata:: image
+
+.. autodata:: location
+
+.. autodata:: media
+
+.. autodata:: path
+
+.. autodata:: reindex
+
+.. autodata:: text
+
+.. autodata:: texture
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``os``
+   * ``pyglet``
+   * ``standard_library``
+   * ``sys``
+   * ``weakref``
+   * ``zipfile``
+
+
+
+
+.. template module.rst
+

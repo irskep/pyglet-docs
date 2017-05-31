@@ -1,0 +1,53 @@
+`TabletCursor` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input.base
+
+.. inheritance-diagram:: TabletCursor
+
+.. autoclass:: TabletCursor
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

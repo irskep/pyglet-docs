@@ -1,0 +1,12 @@
+`ImageException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.image.ImageException
+
+Exception defined in :mod:`pyglet.image`
+
+.. currentmodule:: pyglet.image
+
+.. autoexception:: ImageException

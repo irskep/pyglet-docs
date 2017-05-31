@@ -1,0 +1,145 @@
+``pyglet.image``
+===============================================================
+
+.. automodule:: pyglet.image
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: image/
+   :template: module.rst
+
+
+   atlas
+   codecs
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: image/
+   :template: class.rst
+
+
+   AbstractImage
+   AbstractImageSequence
+   Animation
+   AnimationFrame
+   BufferImage
+   BufferImageMask
+   BufferManager
+   CheckerImagePattern
+   ColorBufferImage
+   CompressedImageData
+   DepthBufferImage
+   DepthTexture
+   ImageData
+   ImageDataRegion
+   ImageGrid
+   ImagePattern
+   SolidColorImagePattern
+   Texture
+   Texture3D
+   TextureGrid
+   TextureRegion
+   TextureSequence
+   TileableTexture
+   UniformTextureSequence
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: image/
+   :template: exception.rst
+
+
+   ImageException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: image/
+   :template: function.rst
+
+
+   color_as_bytes
+   create
+   get_buffer_manager
+   load
+   load_animation
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``event``
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``key``
+   * ``lib``
+   * ``lib_agl``
+   * ``macholib``
+   * ``mouse``
+   * ``pyglet``
+   * ``re``
+   * ``sys``
+   * ``util``
+   * ``warnings``
+   * ``weakref``
+
+
+
+
+.. template module.rst
+

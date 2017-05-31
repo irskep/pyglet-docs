@@ -1,0 +1,117 @@
+`ColorBufferImage` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: ColorBufferImage
+
+.. autoclass:: ColorBufferImage
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ColorBufferImage.anchor_x
+         ~ColorBufferImage.anchor_y
+         ~ColorBufferImage.format
+         ~ColorBufferImage.image_data
+         ~ColorBufferImage.mipmapped_texture
+         ~ColorBufferImage.owner
+         ~ColorBufferImage.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ColorBufferImage.format
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: ColorBufferImage.anchor_x
+      :noindex:
+
+   .. autoattribute:: ColorBufferImage.anchor_y
+      :noindex:
+
+   .. autoattribute:: ColorBufferImage.image_data
+      :noindex:
+
+   .. autoattribute:: ColorBufferImage.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: ColorBufferImage.owner
+      :noindex:
+
+   .. autoattribute:: ColorBufferImage.texture
+      :noindex:
+
+
+
+

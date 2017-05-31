@@ -1,0 +1,12 @@
+`EventException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.event.EventException
+
+Exception defined in :mod:`pyglet.event`
+
+.. currentmodule:: pyglet.event
+
+.. autoexception:: EventException

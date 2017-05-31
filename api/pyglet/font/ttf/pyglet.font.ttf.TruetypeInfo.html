@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>TruetypeInfo Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.font.ttf" href="../pyglet.font.ttf.html" />
+    <link rel="next" title="add_directory Function" href="../pyglet.font.add_directory.html" />
+    <link rel="prev" title="pyglet.font.ttf" href="../pyglet.font.ttf.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.add_directory.html" title="add_directory Function"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.ttf.html" title="pyglet.font.ttf"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.font.html" ><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.font.ttf.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.font.ttf</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="truetypeinfo-class">
+<h1><cite>TruetypeInfo</cite> Class<a class="headerlink" href="#truetypeinfo-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-6e0b71d11e5277b13106ac4fde540093936b6b6a.png" alt="Inheritance diagram of TruetypeInfo" usemap="#inheritance18aed44cb9" class="inheritance"/>
+<map id="inheritance18aed44cb9" name="inheritance18aed44cb9">
+<area shape="rect" id="node1" href="#pyglet.font.ttf.TruetypeInfo" target="_top" title="Information about a single Truetype face." alt="" coords="5,5,181,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.font.ttf.TruetypeInfo">
+<em class="property">class </em><code class="descname">TruetypeInfo</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.font.ttf.TruetypeInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about a single Truetype face.</p>
+<p>The class memory-maps the font file to read the tables, so
+it is vital that you call the <cite>close</cite> method to avoid large memory
+leaks.  Once closed, you cannot call any of the <code class="docutils literal"><span class="pre">get_*</span></code> methods.</p>
+<p>Not all tables have been implemented yet (or likely ever will).
+Currently only the name and metric tables are read; in particular
+there is no glyph or hinting information.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.font.ttf.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.font.ttf</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../pyglet.font.add_directory.html"
+                        title="next chapter"><cite>add_directory</cite> Function</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.add_directory.html" title="add_directory Function"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.ttf.html" title="pyglet.font.ttf"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.font.html" ><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.font.ttf.html" ><code class="docutils literal"><span class="pre">pyglet.font.ttf</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

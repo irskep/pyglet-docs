@@ -1,0 +1,106 @@
+`AbstractDocument` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.document
+
+.. inheritance-diagram:: AbstractDocument
+
+.. autoclass:: AbstractDocument
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~AbstractDocument.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~AbstractDocument.event_types
+         ~AbstractDocument.text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: AbstractDocument.event_types
+
+.. autoattribute:: AbstractDocument.text
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: AbstractDocument.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

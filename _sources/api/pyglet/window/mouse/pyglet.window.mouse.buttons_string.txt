@@ -1,0 +1,8 @@
+`buttons_string` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.window.mouse`
+
+.. autofunction:: pyglet.window.mouse.buttons_string

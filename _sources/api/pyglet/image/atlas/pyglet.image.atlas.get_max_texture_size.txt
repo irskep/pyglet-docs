@@ -1,0 +1,8 @@
+`get_max_texture_size` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.image.atlas`
+
+.. autofunction:: pyglet.image.atlas.get_max_texture_size

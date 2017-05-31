@@ -1,0 +1,139 @@
+`Player` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.player
+
+.. inheritance-diagram:: Player
+
+.. autoclass:: Player
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Player.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Player.cone_inner_angle
+         ~Player.cone_orientation
+         ~Player.cone_outer_angle
+         ~Player.cone_outer_gain
+         ~Player.event_types
+         ~Player.max_distance
+         ~Player.min_distance
+         ~Player.pitch
+         ~Player.playing
+         ~Player.position
+         ~Player.source
+         ~Player.time
+         ~Player.volume
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Player.cone_inner_angle
+
+.. autoattribute:: Player.cone_orientation
+
+.. autoattribute:: Player.cone_outer_angle
+
+.. autoattribute:: Player.cone_outer_gain
+
+.. autoattribute:: Player.event_types
+
+.. autoattribute:: Player.max_distance
+
+.. autoattribute:: Player.min_distance
+
+.. autoattribute:: Player.pitch
+
+.. autoattribute:: Player.playing
+
+.. autoattribute:: Player.position
+
+.. autoattribute:: Player.source
+
+.. autoattribute:: Player.time
+
+.. autoattribute:: Player.volume
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: Player.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

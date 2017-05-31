@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.app &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="pyglet.app.base" href="app/pyglet.app.base.html" />
+    <link rel="prev" title="pyglet" href="../pyglet.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app/pyglet.app.base.html" title="pyglet.app.base"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.html" title="pyglet"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.app">
+<span id="pyglet-app"></span><h1><code class="docutils literal"><span class="pre">pyglet.app</span></code><a class="headerlink" href="#module-pyglet.app" title="Permalink to this headline">¶</a></h1>
+<p>Application-wide functionality.</p>
+<div class="section" id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
+<p>Most applications need only call <a class="reference internal" href="../../modules/app.html#pyglet.app.run" title="pyglet.app.run"><code class="xref py py-func docutils literal"><span class="pre">run()</span></code></a> after creating one or more 
+windows to begin processing events.  For example, a simple application 
+consisting of one window is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
+
+<span class="n">win</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+<span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="events">
+<h3>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h3>
+<p>To handle events on the main event loop, instantiate it manually.  The
+following example exits the application as soon as any window is closed (the
+default policy is to wait until all windows are closed):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">event_loop</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">EventLoop</span><span class="p">()</span>
+
+<span class="nd">@event_loop</span><span class="o">.</span><span class="n">event</span>
+<span class="k">def</span> <span class="nf">on_window_close</span><span class="p">(</span><span class="n">window</span><span class="p">):</span>
+    <span class="n">event_loop</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.1</p>
+</div>
+</div>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="app/pyglet.app.base.html#module-pyglet.app.base" title="pyglet.app.base"><code class="xref py py-obj docutils literal"><span class="pre">base</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../modules/app.html#pyglet.app.WeakSet" title="pyglet.app.WeakSet"><code class="xref py py-obj docutils literal"><span class="pre">WeakSet</span></code></a></td>
+<td>Set of objects, referenced weakly.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../modules/app.html#pyglet.app.AppException" title="pyglet.app.AppException"><code class="xref py py-obj docutils literal"><span class="pre">AppException</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../modules/app.html#pyglet.app.exit" title="pyglet.app.exit"><code class="xref py py-obj docutils literal"><span class="pre">exit</span></code></a>()</td>
+<td>Exit the application event loop.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../modules/app.html#pyglet.app.run" title="pyglet.app.run"><code class="xref py py-obj docutils literal"><span class="pre">run</span></code></a>()</td>
+<td>Begin processing events, scheduled functions and window updates.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.app.compat_platform">
+<code class="descname">compat_platform</code><em class="property"> = ‘darwin’</em><a class="headerlink" href="#pyglet.app.compat_platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=”) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.app.displays">
+<code class="descname">displays</code><em class="property"> = &lt;pyglet.app.WeakSet object&gt;</em><a class="headerlink" href="#pyglet.app.displays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of all open displays.  Instances of <a class="reference internal" href="canvas/pyglet.canvas.Display.html#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">pyglet.canvas.Display</span></code></a>
+are automatically added to this set upon construction.  The set uses weak
+references, so displays are removed from the set when they are no longer
+referenced.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <a class="reference internal" href="canvas/pyglet.canvas.get_display.html#pyglet.canvas.get_display" title="pyglet.canvas.get_display"><code class="xref py py-func docutils literal"><span class="pre">pyglet.canvas.get_display()</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../../modules/app.html#pyglet.app.WeakSet" title="pyglet.app.WeakSet"><code class="xref py py-class docutils literal"><span class="pre">WeakSet</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.app.event_loop">
+<code class="descname">event_loop</code><em class="property"> = &lt;pyglet.app.base.EventLoop object&gt;</em><a class="headerlink" href="#pyglet.app.event_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main run loop of the application.</p>
+<p>Calling <cite>run</cite> begins the application event loop, which processes
+operating system events, calls <cite>pyglet.clock.tick</cite> to call scheduled
+functions and calls <cite>pyglet.window.Window.on_draw</cite> and
+<cite>pyglet.window.Window.flip</cite> to update window contents.</p>
+<p>Applications can subclass <cite>EventLoop</cite> and override certain methods
+to integrate another framework’s run loop, or to customise processing
+in some other way.  You should not in general override <cite>run</cite>, as
+this method contains platform-specific code that ensures the application
+remains responsive to the user while keeping CPU usage to a minimum.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.app.platform_event_loop">
+<code class="descname">platform_event_loop</code><em class="property"> = &lt;pyglet.app.base.PlatformEventLoop object&gt;</em><a class="headerlink" href="#pyglet.app.platform_event_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class, implementation depends on platform.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.2</p>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.app.windows">
+<code class="descname">windows</code><em class="property"> = &lt;pyglet.app.WeakSet object&gt;</em><a class="headerlink" href="#pyglet.app.windows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of all open windows (including invisible windows).  Instances of
+<a class="reference internal" href="window/pyglet.window.Window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">pyglet.window.Window</span></code></a> are automatically added to this set upon
+construction. The set uses weak references, so windows are removed from
+the set when they are no longer referenced or are closed explicitly.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+<li><code class="docutils literal"><span class="pre">weakref</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.app</span></code></a><ul>
+<li><a class="reference internal" href="#applications">Applications</a><ul>
+<li><a class="reference internal" href="#events">Events</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.html"
+                        title="previous chapter">pyglet</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="app/pyglet.app.base.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.app.base</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app/pyglet.app.base.html" title="pyglet.app.base"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.html" title="pyglet"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

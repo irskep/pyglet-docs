@@ -1,0 +1,64 @@
+``pyglet.text.caret``
+===============================================================
+
+.. automodule:: pyglet.text.caret
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: caret/
+   :template: class.rst
+
+
+   Caret
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``clock``
+   * ``event``
+   * ``key``
+   * ``re``
+   * ``time``
+
+
+
+
+.. template module.rst
+

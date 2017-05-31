@@ -1,0 +1,53 @@
+`ObjectSpace` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.gl.base
+
+.. inheritance-diagram:: ObjectSpace
+
+.. autoclass:: ObjectSpace
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

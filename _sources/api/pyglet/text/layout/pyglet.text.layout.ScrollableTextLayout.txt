@@ -1,0 +1,150 @@
+`ScrollableTextLayout` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.layout
+
+.. inheritance-diagram:: ScrollableTextLayout
+
+.. autoclass:: ScrollableTextLayout
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ScrollableTextLayout.anchor_x
+         ~ScrollableTextLayout.anchor_y
+         ~ScrollableTextLayout.background_group
+         ~ScrollableTextLayout.batch
+         ~ScrollableTextLayout.content_valign
+         ~ScrollableTextLayout.document
+         ~ScrollableTextLayout.dpi
+         ~ScrollableTextLayout.foreground_decoration_group
+         ~ScrollableTextLayout.foreground_group
+         ~ScrollableTextLayout.height
+         ~ScrollableTextLayout.multiline
+         ~ScrollableTextLayout.top_group
+         ~ScrollableTextLayout.view_x
+         ~ScrollableTextLayout.view_y
+         ~ScrollableTextLayout.width
+         ~ScrollableTextLayout.x
+         ~ScrollableTextLayout.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ScrollableTextLayout.anchor_x
+
+.. autoattribute:: ScrollableTextLayout.anchor_y
+
+.. autoattribute:: ScrollableTextLayout.height
+
+.. autoattribute:: ScrollableTextLayout.view_x
+
+.. autoattribute:: ScrollableTextLayout.view_y
+
+.. autoattribute:: ScrollableTextLayout.width
+
+.. autoattribute:: ScrollableTextLayout.x
+
+.. autoattribute:: ScrollableTextLayout.y
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: ScrollableTextLayout.background_group
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.batch
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.content_valign
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.document
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.dpi
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.foreground_decoration_group
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.foreground_group
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.multiline
+      :noindex:
+
+   .. autoattribute:: ScrollableTextLayout.top_group
+      :noindex:
+
+
+
+

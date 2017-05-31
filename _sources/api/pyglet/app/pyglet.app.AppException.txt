@@ -1,0 +1,12 @@
+`AppException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.app.AppException
+
+Exception defined in :mod:`pyglet.app`
+
+.. currentmodule:: pyglet.app
+
+.. autoexception:: AppException

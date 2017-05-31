@@ -1,0 +1,53 @@
+``pyglet.text.formats``
+===============================================================
+
+.. automodule:: pyglet.text.formats
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: formats/
+   :template: module.rst
+
+
+   attributed
+   html
+   plaintext
+   structured
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. template module.rst
+

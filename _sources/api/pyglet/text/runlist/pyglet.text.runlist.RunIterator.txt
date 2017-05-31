@@ -1,0 +1,53 @@
+`RunIterator` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.runlist
+
+.. inheritance-diagram:: RunIterator
+
+.. autoclass:: RunIterator
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

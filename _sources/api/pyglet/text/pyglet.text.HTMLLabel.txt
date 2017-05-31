@@ -1,0 +1,173 @@
+`HTMLLabel` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text
+
+.. inheritance-diagram:: HTMLLabel
+
+.. autoclass:: HTMLLabel
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~HTMLLabel.anchor_x
+         ~HTMLLabel.anchor_y
+         ~HTMLLabel.background_group
+         ~HTMLLabel.batch
+         ~HTMLLabel.bold
+         ~HTMLLabel.color
+         ~HTMLLabel.content_valign
+         ~HTMLLabel.document
+         ~HTMLLabel.dpi
+         ~HTMLLabel.font_name
+         ~HTMLLabel.font_size
+         ~HTMLLabel.foreground_decoration_group
+         ~HTMLLabel.foreground_group
+         ~HTMLLabel.height
+         ~HTMLLabel.italic
+         ~HTMLLabel.multiline
+         ~HTMLLabel.text
+         ~HTMLLabel.top_group
+         ~HTMLLabel.width
+         ~HTMLLabel.x
+         ~HTMLLabel.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: HTMLLabel.text
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: HTMLLabel.anchor_x
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.anchor_y
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.background_group
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.batch
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.bold
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.color
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.content_valign
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.document
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.dpi
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.font_name
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.font_size
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.foreground_decoration_group
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.foreground_group
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.height
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.italic
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.multiline
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.top_group
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.width
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.x
+      :noindex:
+
+   .. autoattribute:: HTMLLabel.y
+      :noindex:
+
+
+
+

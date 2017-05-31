@@ -1,0 +1,92 @@
+`VertexBufferObject` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexbuffer
+
+.. inheritance-diagram:: VertexBufferObject
+
+.. autoclass:: VertexBufferObject
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~VertexBufferObject.ptr
+         ~VertexBufferObject.size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: VertexBufferObject.ptr
+      :noindex:
+
+   .. autoattribute:: VertexBufferObject.size
+      :noindex:
+
+
+
+

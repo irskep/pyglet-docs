@@ -1,0 +1,108 @@
+`ImageGrid` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: ImageGrid
+
+.. autoclass:: ImageGrid
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ImageGrid.anchor_x
+         ~ImageGrid.anchor_y
+         ~ImageGrid.image_data
+         ~ImageGrid.mipmapped_texture
+         ~ImageGrid.texture
+         ~ImageGrid.texture_sequence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: ImageGrid.anchor_x
+      :noindex:
+
+   .. autoattribute:: ImageGrid.anchor_y
+      :noindex:
+
+   .. autoattribute:: ImageGrid.image_data
+      :noindex:
+
+   .. autoattribute:: ImageGrid.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: ImageGrid.texture
+      :noindex:
+
+   .. autoattribute:: ImageGrid.texture_sequence
+      :noindex:
+
+
+
+

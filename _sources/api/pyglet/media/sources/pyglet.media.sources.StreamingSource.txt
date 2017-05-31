@@ -1,0 +1,109 @@
+`StreamingSource` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources
+
+.. inheritance-diagram:: StreamingSource
+
+.. autoclass:: StreamingSource
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~StreamingSource.audio_format
+         ~StreamingSource.duration
+         ~StreamingSource.info
+         ~StreamingSource.is_queued
+         ~StreamingSource.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: StreamingSource.is_queued
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: StreamingSource.audio_format
+      :noindex:
+
+   .. autoattribute:: StreamingSource.duration
+      :noindex:
+
+   .. autoattribute:: StreamingSource.info
+      :noindex:
+
+   .. autoattribute:: StreamingSource.video_format
+      :noindex:
+
+
+
+

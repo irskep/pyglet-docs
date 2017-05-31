@@ -1,0 +1,8 @@
+`create_attribute_usage` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics.vertexdomain`
+
+.. autofunction:: pyglet.graphics.vertexdomain.create_attribute_usage

@@ -1,0 +1,53 @@
+`VertexDomain` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexdomain
+
+.. inheritance-diagram:: VertexDomain
+
+.. autoclass:: VertexDomain
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+`UnformattedDocument` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.document
+
+.. inheritance-diagram:: UnformattedDocument
+
+.. autoclass:: UnformattedDocument
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~UnformattedDocument.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~UnformattedDocument.event_types
+         ~UnformattedDocument.text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: UnformattedDocument.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: UnformattedDocument.event_types
+      :noindex:
+
+   .. autoattribute:: UnformattedDocument.text
+      :noindex:
+
+
+
+

@@ -1,0 +1,76 @@
+``pyglet.media.sources.procedural``
+===============================================================
+
+.. automodule:: pyglet.media.sources.procedural
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: procedural/
+   :template: class.rst
+
+
+   ADSREnvelope
+   Digitar
+   Envelope
+   FM
+   FlatEnvelope
+   LinearDecayEnvelope
+   ProceduralSource
+   Sawtooth
+   Silence
+   Sine
+   Square
+   TremoloEnvelope
+   Triangle
+   WhiteNoise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``math``
+   * ``os``
+   * ``random``
+   * ``struct``
+
+
+
+
+.. template module.rst
+

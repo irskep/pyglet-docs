@@ -1,0 +1,86 @@
+``pyglet.text.layout``
+===============================================================
+
+.. automodule:: pyglet.text.layout
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: layout/
+   :template: class.rst
+
+
+   IncrementalTextLayout
+   ScrollableTextLayout
+   ScrollableTextLayoutGroup
+   TextLayout
+   TextLayoutForegroundDecorationGroup
+   TextLayoutForegroundGroup
+   TextLayoutGroup
+   TextLayoutTextureGroup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``event``
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``graphics``
+   * ``lib``
+   * ``lib_agl``
+   * ``re``
+   * ``runlist``
+   * ``sys``
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,104 @@
+`CompressedImageData` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: CompressedImageData
+
+.. autoclass:: CompressedImageData
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~CompressedImageData.anchor_x
+         ~CompressedImageData.anchor_y
+         ~CompressedImageData.image_data
+         ~CompressedImageData.mipmapped_texture
+         ~CompressedImageData.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: CompressedImageData.anchor_x
+      :noindex:
+
+   .. autoattribute:: CompressedImageData.anchor_y
+      :noindex:
+
+   .. autoattribute:: CompressedImageData.image_data
+      :noindex:
+
+   .. autoattribute:: CompressedImageData.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: CompressedImageData.texture
+      :noindex:
+
+
+
+

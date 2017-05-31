@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.graphics.vertexattribute &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.graphics" href="../pyglet.graphics.html" />
+    <link rel="next" title="AbstractAttribute Class" href="vertexattribute/pyglet.graphics.vertexattribute.AbstractAttribute.html" />
+    <link rel="prev" title="AllocatorMemoryException" href="allocation/pyglet.graphics.allocation.AllocatorMemoryException.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vertexattribute/pyglet.graphics.vertexattribute.AbstractAttribute.html" title="AbstractAttribute Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="allocation/pyglet.graphics.allocation.AllocatorMemoryException.html" title="AllocatorMemoryException"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.graphics.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.graphics.vertexattribute">
+<span id="pyglet-graphics-vertexattribute"></span><h1><code class="docutils literal"><span class="pre">pyglet.graphics.vertexattribute</span></code><a class="headerlink" href="#module-pyglet.graphics.vertexattribute" title="Permalink to this headline">¶</a></h1>
+<p>Access byte arrays as arrays of vertex attributes.</p>
+<p>Use <cite>create_attribute</cite> to create an attribute accessor given a simple format
+string.  Alternatively, the classes may be constructed directly.</p>
+<div class="section" id="attribute-format-strings">
+<h2>Attribute format strings<a class="headerlink" href="#attribute-format-strings" title="Permalink to this headline">¶</a></h2>
+<p>An attribute format string specifies the format of a vertex attribute.  Format
+strings are accepted by the <cite>create_attribute</cite> function as well as most
+methods in the <cite>pyglet.graphics</cite> module.</p>
+<p>Format strings have the following (BNF) syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>attribute ::= ( name | index &#39;g&#39; &#39;n&#39;? | texture &#39;t&#39; ) count type
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">name</span></code> describes the vertex attribute, and is one of the following
+constants for the predefined attributes:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">c</span></code></dt>
+<dd>Vertex color</dd>
+<dt><code class="docutils literal"><span class="pre">e</span></code></dt>
+<dd>Edge flag</dd>
+<dt><code class="docutils literal"><span class="pre">f</span></code></dt>
+<dd>Fog coordinate</dd>
+<dt><code class="docutils literal"><span class="pre">n</span></code></dt>
+<dd>Normal vector</dd>
+<dt><code class="docutils literal"><span class="pre">s</span></code></dt>
+<dd>Secondary color</dd>
+<dt><code class="docutils literal"><span class="pre">t</span></code></dt>
+<dd>Texture coordinate</dd>
+<dt><code class="docutils literal"><span class="pre">v</span></code></dt>
+<dd>Vertex coordinate</dd>
+</dl>
+<p>You can alternatively create a generic indexed vertex attribute by
+specifying its index in decimal followed by the constant <code class="docutils literal"><span class="pre">g</span></code>.  For
+example, <code class="docutils literal"><span class="pre">0g</span></code> specifies the generic vertex attribute with index 0.
+If the optional constant <code class="docutils literal"><span class="pre">n</span></code> is present after the <code class="docutils literal"><span class="pre">g</span></code>, the
+attribute is normalised to the range <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">1]</span></code> or <code class="docutils literal"><span class="pre">[-1,</span> <span class="pre">1]</span></code> within
+the range of the data type.</p>
+<p>Texture coordinates for multiple texture units can be specified with the 
+texture number before the constant ‘t’.  For example, <code class="docutils literal"><span class="pre">1t</span></code> gives the
+texture coordinate attribute for texture unit 1.</p>
+<p><code class="docutils literal"><span class="pre">count</span></code> gives the number of data components in the attribute.  For
+example, a 3D vertex position has a count of 3.  Some attributes
+constrain the possible counts that can be used; for example, a normal
+vector must have a count of 3.</p>
+<p><code class="docutils literal"><span class="pre">type</span></code> gives the data type of each component of the attribute.  The
+following types can be used:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">b</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLbyte</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">B</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLubyte</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">s</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLshort</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">S</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLushort</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">i</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLint</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">I</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLuint</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">f</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLfloat</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">d</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">GLdouble</span></code></dd>
+</dl>
+<p>Some attributes constrain the possible data types; for example,
+normal vectors must use one of the signed data types.  The use of
+some data types, while not illegal, may have severe performance
+concerns.  For example, the use of <code class="docutils literal"><span class="pre">GLdouble</span></code> is discouraged,
+and colours should be specified with <code class="docutils literal"><span class="pre">GLubyte</span></code>.</p>
+<p>Whitespace is prohibited within the format string.</p>
+<p>Some examples follow:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">v3f</span></code></dt>
+<dd>3-float vertex position</dd>
+<dt><code class="docutils literal"><span class="pre">c4b</span></code></dt>
+<dd>4-byte colour</dd>
+<dt><code class="docutils literal"><span class="pre">1eb</span></code></dt>
+<dd>Edge flag</dd>
+<dt><code class="docutils literal"><span class="pre">0g3f</span></code></dt>
+<dd>3-float generic vertex attribute 0</dd>
+<dt><code class="docutils literal"><span class="pre">1gn1i</span></code></dt>
+<dd>Integer generic vertex attribute 1, normalized to [-1, 1]</dd>
+<dt><code class="docutils literal"><span class="pre">2gn4B</span></code></dt>
+<dd>4-byte generic vertex attribute 2, normalized to [0, 1] (because
+the type is unsigned)</dd>
+<dt><code class="docutils literal"><span class="pre">3t2f</span></code></dt>
+<dd>2-float texture coordinate for texture unit 3.</dd>
+</dl>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.AbstractAttribute.html#pyglet.graphics.vertexattribute.AbstractAttribute" title="pyglet.graphics.vertexattribute.AbstractAttribute"><code class="xref py py-obj docutils literal"><span class="pre">AbstractAttribute</span></code></a></td>
+<td>Abstract accessor for an attribute in a mapped buffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.ColorAttribute.html#pyglet.graphics.vertexattribute.ColorAttribute" title="pyglet.graphics.vertexattribute.ColorAttribute"><code class="xref py py-obj docutils literal"><span class="pre">ColorAttribute</span></code></a></td>
+<td>Color vertex attribute.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.EdgeFlagAttribute.html#pyglet.graphics.vertexattribute.EdgeFlagAttribute" title="pyglet.graphics.vertexattribute.EdgeFlagAttribute"><code class="xref py py-obj docutils literal"><span class="pre">EdgeFlagAttribute</span></code></a></td>
+<td>Edge flag attribute.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.FogCoordAttribute.html#pyglet.graphics.vertexattribute.FogCoordAttribute" title="pyglet.graphics.vertexattribute.FogCoordAttribute"><code class="xref py py-obj docutils literal"><span class="pre">FogCoordAttribute</span></code></a></td>
+<td>Fog coordinate attribute.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.GenericAttribute.html#pyglet.graphics.vertexattribute.GenericAttribute" title="pyglet.graphics.vertexattribute.GenericAttribute"><code class="xref py py-obj docutils literal"><span class="pre">GenericAttribute</span></code></a></td>
+<td>Generic vertex attribute, used by shader programs.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.MultiTexCoordAttribute.html#pyglet.graphics.vertexattribute.MultiTexCoordAttribute" title="pyglet.graphics.vertexattribute.MultiTexCoordAttribute"><code class="xref py py-obj docutils literal"><span class="pre">MultiTexCoordAttribute</span></code></a></td>
+<td>Texture coordinate attribute.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.NormalAttribute.html#pyglet.graphics.vertexattribute.NormalAttribute" title="pyglet.graphics.vertexattribute.NormalAttribute"><code class="xref py py-obj docutils literal"><span class="pre">NormalAttribute</span></code></a></td>
+<td>Normal vector attribute.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.SecondaryColorAttribute.html#pyglet.graphics.vertexattribute.SecondaryColorAttribute" title="pyglet.graphics.vertexattribute.SecondaryColorAttribute"><code class="xref py py-obj docutils literal"><span class="pre">SecondaryColorAttribute</span></code></a></td>
+<td>Secondary color attribute.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.TexCoordAttribute.html#pyglet.graphics.vertexattribute.TexCoordAttribute" title="pyglet.graphics.vertexattribute.TexCoordAttribute"><code class="xref py py-obj docutils literal"><span class="pre">TexCoordAttribute</span></code></a></td>
+<td>Texture coordinate attribute.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.VertexAttribute.html#pyglet.graphics.vertexattribute.VertexAttribute" title="pyglet.graphics.vertexattribute.VertexAttribute"><code class="xref py py-obj docutils literal"><span class="pre">VertexAttribute</span></code></a></td>
+<td>Vertex coordinate attribute.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.create_attribute.html#pyglet.graphics.vertexattribute.create_attribute" title="pyglet.graphics.vertexattribute.create_attribute"><code class="xref py py-obj docutils literal"><span class="pre">create_attribute</span></code></a>(format)</td>
+<td>Create a vertex attribute description from a format string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.interleave_attributes.html#pyglet.graphics.vertexattribute.interleave_attributes" title="pyglet.graphics.vertexattribute.interleave_attributes"><code class="xref py py-obj docutils literal"><span class="pre">interleave_attributes</span></code></a>(attributes)</td>
+<td>Interleave attribute offsets.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="vertexattribute/pyglet.graphics.vertexattribute.serialize_attributes.html#pyglet.graphics.vertexattribute.serialize_attributes" title="pyglet.graphics.vertexattribute.serialize_attributes"><code class="xref py py-obj docutils literal"><span class="pre">serialize_attributes</span></code></a>(count,&nbsp;attributes)</td>
+<td>Serialize attribute offsets.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.graphics.vertexattribute.absolute_import">
+<code class="descname">absolute_import</code><em class="property"> = _Feature((2, 5, 0, ‘alpha’, 1), (3, 0, 0, ‘alpha’, 0), 16384)</em><a class="headerlink" href="#pyglet.graphics.vertexattribute.absolute_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pyglet.graphics.vertexattribute.compat_platform">
+<code class="descname">compat_platform</code><em class="property"> = ‘darwin’</em><a class="headerlink" href="#pyglet.graphics.vertexattribute.compat_platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=”) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">gl</span></code></li>
+<li><code class="docutils literal"><span class="pre">glext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">glu</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib_agl</span></code></li>
+<li><code class="docutils literal"><span class="pre">re</span></code></li>
+<li><code class="docutils literal"><span class="pre">vertexbuffer</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.graphics.vertexattribute</span></code></a><ul>
+<li><a class="reference internal" href="#attribute-format-strings">Attribute format strings</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="allocation/pyglet.graphics.allocation.AllocatorMemoryException.html"
+                        title="previous chapter"><cite>AllocatorMemoryException</cite></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vertexattribute/pyglet.graphics.vertexattribute.AbstractAttribute.html"
+                        title="next chapter"><cite>AbstractAttribute</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vertexattribute/pyglet.graphics.vertexattribute.AbstractAttribute.html" title="AbstractAttribute Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="allocation/pyglet.graphics.allocation.AllocatorMemoryException.html" title="AllocatorMemoryException"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.graphics.html" ><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

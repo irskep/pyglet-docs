@@ -1,0 +1,53 @@
+`Allocator` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.allocation
+
+.. inheritance-diagram:: Allocator
+
+.. autoclass:: Allocator
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

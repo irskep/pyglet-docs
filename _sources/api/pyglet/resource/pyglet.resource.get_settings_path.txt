@@ -1,0 +1,8 @@
+`get_settings_path` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.resource`
+
+.. autofunction:: pyglet.resource.get_settings_path

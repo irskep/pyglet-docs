@@ -1,0 +1,8 @@
+`add_directory` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.font`
+
+.. autofunction:: pyglet.font.add_directory

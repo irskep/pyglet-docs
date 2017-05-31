@@ -1,0 +1,8 @@
+`debug_print` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.debug`
+
+.. autofunction:: pyglet.debug.debug_print

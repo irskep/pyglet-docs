@@ -1,0 +1,12 @@
+`NoSuchScreenModeException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.window.NoSuchScreenModeException
+
+Exception defined in :mod:`pyglet.window`
+
+.. currentmodule:: pyglet.window
+
+.. autoexception:: NoSuchScreenModeException

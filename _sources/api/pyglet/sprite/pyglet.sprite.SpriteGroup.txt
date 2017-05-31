@@ -1,0 +1,53 @@
+`SpriteGroup` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.sprite
+
+.. inheritance-diagram:: SpriteGroup
+
+.. autoclass:: SpriteGroup
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

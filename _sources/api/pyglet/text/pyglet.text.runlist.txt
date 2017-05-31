@@ -1,0 +1,57 @@
+``pyglet.text.runlist``
+===============================================================
+
+.. automodule:: pyglet.text.runlist
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: runlist/
+   :template: class.rst
+
+
+   AbstractRunIterator
+   ConstRunIterator
+   FilteredRunIterator
+   OverriddenRunIterator
+   RunIterator
+   RunList
+   ZipRunIterator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,92 @@
+`VertexArray` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexbuffer
+
+.. inheritance-diagram:: VertexArray
+
+.. autoclass:: VertexArray
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~VertexArray.ptr
+         ~VertexArray.size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: VertexArray.ptr
+      :noindex:
+
+   .. autoattribute:: VertexArray.size
+      :noindex:
+
+
+
+

@@ -1,0 +1,8 @@
+`get_source_loader` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.media.sources.loader`
+
+.. autofunction:: pyglet.media.sources.loader.get_source_loader

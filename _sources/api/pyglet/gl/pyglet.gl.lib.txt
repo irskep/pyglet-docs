@@ -1,0 +1,97 @@
+``pyglet.gl.lib``
+===============================================================
+
+.. automodule:: pyglet.gl.lib
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: lib/
+   :template: class.rst
+
+
+   c_void
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: lib/
+   :template: exception.rst
+
+
+   GLException
+   MissingFunctionException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: lib/
+   :template: function.rst
+
+
+   decorate_function
+   errcheck
+   errcheck_glbegin
+   errcheck_glend
+   missing_function
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: link_GLX
+
+.. autodata:: link_WGL
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,71 @@
+`RIFFChunk` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.riff
+
+.. inheritance-diagram:: RIFFChunk
+
+.. autoclass:: RIFFChunk
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~RIFFChunk.header_fmt
+         ~RIFFChunk.header_length
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: RIFFChunk.header_fmt
+
+.. autoattribute:: RIFFChunk.header_length
+
+
+
+
+
+
+
+

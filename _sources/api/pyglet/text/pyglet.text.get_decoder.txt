@@ -1,0 +1,8 @@
+`get_decoder` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.text`
+
+.. autofunction:: pyglet.text.get_decoder

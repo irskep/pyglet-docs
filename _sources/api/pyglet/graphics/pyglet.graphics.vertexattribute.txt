@@ -1,0 +1,98 @@
+``pyglet.graphics.vertexattribute``
+===============================================================
+
+.. automodule:: pyglet.graphics.vertexattribute
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: vertexattribute/
+   :template: class.rst
+
+
+   AbstractAttribute
+   ColorAttribute
+   EdgeFlagAttribute
+   FogCoordAttribute
+   GenericAttribute
+   MultiTexCoordAttribute
+   NormalAttribute
+   SecondaryColorAttribute
+   TexCoordAttribute
+   VertexAttribute
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: vertexattribute/
+   :template: function.rst
+
+
+   create_attribute
+   interleave_attributes
+   serialize_attributes
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``lib``
+   * ``lib_agl``
+   * ``re``
+   * ``vertexbuffer``
+
+
+
+
+.. template module.rst
+

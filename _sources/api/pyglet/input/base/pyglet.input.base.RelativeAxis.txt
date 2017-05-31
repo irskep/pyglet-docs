@@ -1,0 +1,133 @@
+`RelativeAxis` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input.base
+
+.. inheritance-diagram:: RelativeAxis
+
+.. autoclass:: RelativeAxis
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~RelativeAxis.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~RelativeAxis.RX
+         ~RelativeAxis.RY
+         ~RelativeAxis.RZ
+         ~RelativeAxis.WHEEL
+         ~RelativeAxis.X
+         ~RelativeAxis.Y
+         ~RelativeAxis.Z
+         ~RelativeAxis.event_types
+         ~RelativeAxis.value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: RelativeAxis.RX
+
+.. autoattribute:: RelativeAxis.RY
+
+.. autoattribute:: RelativeAxis.RZ
+
+.. autoattribute:: RelativeAxis.WHEEL
+
+.. autoattribute:: RelativeAxis.X
+
+.. autoattribute:: RelativeAxis.Y
+
+.. autoattribute:: RelativeAxis.Z
+
+.. autoattribute:: RelativeAxis.value
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: RelativeAxis.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: RelativeAxis.event_types
+      :noindex:
+
+
+
+

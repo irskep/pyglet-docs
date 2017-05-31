@@ -1,0 +1,163 @@
+`Glyph` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.font.base
+
+.. inheritance-diagram:: Glyph
+
+.. autoclass:: Glyph
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Glyph.create
+         ~Glyph.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Glyph.advance
+         ~Glyph.anchor_x
+         ~Glyph.anchor_y
+         ~Glyph.image_data
+         ~Glyph.images
+         ~Glyph.level
+         ~Glyph.mipmapped_texture
+         ~Glyph.tex_coords
+         ~Glyph.tex_coords_order
+         ~Glyph.texture
+         ~Glyph.vertices
+         ~Glyph.x
+         ~Glyph.y
+         ~Glyph.z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Glyph.advance
+
+.. autoattribute:: Glyph.vertices
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: Glyph.create
+      :noindex:
+
+   .. automethod:: Glyph.create_for_size
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Glyph.anchor_x
+      :noindex:
+
+   .. autoattribute:: Glyph.anchor_y
+      :noindex:
+
+   .. autoattribute:: Glyph.image_data
+      :noindex:
+
+   .. autoattribute:: Glyph.images
+      :noindex:
+
+   .. autoattribute:: Glyph.level
+      :noindex:
+
+   .. autoattribute:: Glyph.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: Glyph.tex_coords
+      :noindex:
+
+   .. autoattribute:: Glyph.tex_coords_order
+      :noindex:
+
+   .. autoattribute:: Glyph.texture
+      :noindex:
+
+   .. autoattribute:: Glyph.x
+      :noindex:
+
+   .. autoattribute:: Glyph.y
+      :noindex:
+
+   .. autoattribute:: Glyph.z
+      :noindex:
+
+
+
+

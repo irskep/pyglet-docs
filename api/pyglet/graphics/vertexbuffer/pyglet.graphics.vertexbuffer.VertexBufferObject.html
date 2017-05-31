@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>VertexBufferObject Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.graphics.vertexbuffer" href="../pyglet.graphics.vertexbuffer.html" />
+    <link rel="next" title="VertexBufferObjectRegion Class" href="pyglet.graphics.vertexbuffer.VertexBufferObjectRegion.html" />
+    <link rel="prev" title="VertexArrayRegion Class" href="pyglet.graphics.vertexbuffer.VertexArrayRegion.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexbuffer.VertexBufferObjectRegion.html" title="VertexBufferObjectRegion Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexbuffer.VertexArrayRegion.html" title="VertexArrayRegion Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.graphics.html" ><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.graphics.vertexbuffer.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.graphics.vertexbuffer</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vertexbufferobject-class">
+<h1><cite>VertexBufferObject</cite> Class<a class="headerlink" href="#vertexbufferobject-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-1b3cf5e3147b997d52f10074529bbde87f65b233.png" alt="Inheritance diagram of VertexBufferObject" usemap="#inheritance0dce3a37d1" class="inheritance"/>
+<map id="inheritance0dce3a37d1" name="inheritance0dce3a37d1">
+<area shape="rect" id="node1" href="pyglet.graphics.vertexbuffer.AbstractBuffer.html#pyglet.graphics.vertexbuffer.AbstractBuffer" target="_top" title="Abstract buffer of byte data." alt="" coords="5,5,277,29"/>
+<area shape="rect" id="node2" href="#pyglet.graphics.vertexbuffer.VertexBufferObject" target="_top" title="Lightweight representation of an OpenGL VBO." alt="" coords="325,5,625,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.graphics.vertexbuffer.VertexBufferObject">
+<em class="property">class </em><code class="descname">VertexBufferObject</code><span class="sig-paren">(</span><em>size</em>, <em>target</em>, <em>usage</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.graphics.vertexbuffer.VertexBufferObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lightweight representation of an OpenGL VBO.</p>
+<p>The data in the buffer is not replicated in any system memory (unless it
+is done so by the video driver).  While this can improve memory usage and
+possibly performance, updates to the buffer are relatively slow.</p>
+<p>This class does not implement <cite>AbstractMappable</cite>, and so has no
+<code class="docutils literal"><span class="pre">get_region</span></code> method.  See <cite>MappableVertexBufferObject</cite> for a VBO class
+that does implement <code class="docutils literal"><span class="pre">get_region</span></code>.</p>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ptr</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">VertexBufferObject.</code><code class="descname">ptr</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">VertexBufferObject.</code><code class="descname">size</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>VertexBufferObject</cite> Class</a><ul>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.graphics.vertexbuffer.VertexArrayRegion.html"
+                        title="previous chapter"><cite>VertexArrayRegion</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.graphics.vertexbuffer.VertexBufferObjectRegion.html"
+                        title="next chapter"><cite>VertexBufferObjectRegion</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexbuffer.VertexBufferObjectRegion.html" title="VertexBufferObjectRegion Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexbuffer.VertexArrayRegion.html" title="VertexArrayRegion Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.graphics.html" ><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.graphics.vertexbuffer.html" ><code class="docutils literal"><span class="pre">pyglet.graphics.vertexbuffer</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

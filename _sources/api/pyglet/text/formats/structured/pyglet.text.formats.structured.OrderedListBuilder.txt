@@ -1,0 +1,68 @@
+`OrderedListBuilder` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.formats.structured
+
+.. inheritance-diagram:: OrderedListBuilder
+
+.. autoclass:: OrderedListBuilder
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~OrderedListBuilder.format_re
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: OrderedListBuilder.format_re
+
+
+
+
+
+
+
+

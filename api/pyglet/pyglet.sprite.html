@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.sprite &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="Sprite Class" href="sprite/pyglet.sprite.Sprite.html" />
+    <link rel="prev" title="get_settings_path Function" href="resource/pyglet.resource.get_settings_path.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sprite/pyglet.sprite.Sprite.html" title="Sprite Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="resource/pyglet.resource.get_settings_path.html" title="get_settings_path Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.sprite">
+<span id="pyglet-sprite"></span><h1><code class="docutils literal"><span class="pre">pyglet.sprite</span></code><a class="headerlink" href="#module-pyglet.sprite" title="Permalink to this headline">¶</a></h1>
+<p>Display positioned, scaled and rotated images.</p>
+<p>A sprite is an instance of an image displayed on-screen.  Multiple sprites can
+display the same image at different positions on the screen.  Sprites can also
+be scaled larger or smaller, rotated at any angle and drawn at a fractional
+opacity.</p>
+<p>The following complete example loads a <code class="docutils literal"><span class="pre">&quot;ball.png&quot;</span></code> image and creates a
+sprite for that image.  The sprite is then drawn in the window’s
+draw event handler:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
+
+<span class="n">ball_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;ball.png&#39;</span><span class="p">)</span>
+<span class="n">ball</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">(</span><span class="n">ball_image</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+
+<span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
+<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The sprite can be moved by modifying the <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> properties.  Other
+properties determine the sprite’s rotation, scale and opacity.</p>
+<p>By default sprite coordinates are restricted to integer values to avoid
+sub-pixel artifacts.  If you require to use floats, for example for smoother
+animations, you can set the <code class="docutils literal"><span class="pre">subpixel</span></code> parameter to <code class="docutils literal"><span class="pre">True</span></code> when creating
+the sprite (:since: pyglet 1.2).</p>
+<p>The sprite’s positioning, rotation and scaling all honor the original
+image’s anchor (anchor_x, anchor_y).</p>
+<div class="section" id="drawing-multiple-sprites">
+<h2>Drawing multiple sprites<a class="headerlink" href="#drawing-multiple-sprites" title="Permalink to this headline">¶</a></h2>
+<p>Sprites can be “batched” together and drawn at once more quickly than if each
+of their <code class="docutils literal"><span class="pre">draw</span></code> methods were called individually.  The following example
+creates one hundred ball sprites and adds each of them to a <cite>Batch</cite>.  The
+entire batch of sprites is then drawn in one call:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">batch</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">Batch</span><span class="p">()</span>
+
+<span class="n">ball_sprites</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span>
+    <span class="n">ball_sprites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">(</span><span class="n">ball_image</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="n">batch</span><span class="p">))</span>
+
+<span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
+<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+    <span class="n">batch</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Sprites can be freely modified in any way even after being added to a batch,
+however a sprite can belong to at most one batch.  See the documentation for
+<cite>pyglet.graphics</cite> for more details on batched rendering, and grouping of
+sprites within batches.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.1</p>
+</div>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="sprite/pyglet.sprite.Sprite.html#pyglet.sprite.Sprite" title="pyglet.sprite.Sprite"><code class="xref py py-obj docutils literal"><span class="pre">Sprite</span></code></a></td>
+<td>Instance of an on-screen image.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="sprite/pyglet.sprite.SpriteGroup.html#pyglet.sprite.SpriteGroup" title="pyglet.sprite.SpriteGroup"><code class="xref py py-obj docutils literal"><span class="pre">SpriteGroup</span></code></a></td>
+<td>Shared sprite rendering group.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.sprite.absolute_import">
+<code class="descname">absolute_import</code><em class="property"> = _Feature((2, 5, 0, ‘alpha’, 1), (3, 0, 0, ‘alpha’, 0), 16384)</em><a class="headerlink" href="#pyglet.sprite.absolute_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pyglet.sprite.compat_platform">
+<code class="descname">compat_platform</code><em class="property"> = ‘darwin’</em><a class="headerlink" href="#pyglet.sprite.compat_platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=”) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">clock</span></code></li>
+<li><code class="docutils literal"><span class="pre">event</span></code></li>
+<li><code class="docutils literal"><span class="pre">gl</span></code></li>
+<li><code class="docutils literal"><span class="pre">glext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">glu</span></code></li>
+<li><code class="docutils literal"><span class="pre">graphics</span></code></li>
+<li><code class="docutils literal"><span class="pre">image</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib_agl</span></code></li>
+<li><code class="docutils literal"><span class="pre">math</span></code></li>
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+<li><code class="docutils literal"><span class="pre">warnings</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.sprite</span></code></a><ul>
+<li><a class="reference internal" href="#drawing-multiple-sprites">Drawing multiple sprites</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="resource/pyglet.resource.get_settings_path.html"
+                        title="previous chapter"><cite>get_settings_path</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sprite/pyglet.sprite.Sprite.html"
+                        title="next chapter"><cite>Sprite</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sprite/pyglet.sprite.Sprite.html" title="Sprite Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="resource/pyglet.resource.get_settings_path.html" title="get_settings_path Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

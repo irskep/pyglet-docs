@@ -1,0 +1,8 @@
+`schedule_interval_soft` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.clock`
+
+.. autofunction:: pyglet.clock.schedule_interval_soft

@@ -1,0 +1,8 @@
+`have_context` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.gl.gl_info`
+
+.. autofunction:: pyglet.gl.gl_info.have_context

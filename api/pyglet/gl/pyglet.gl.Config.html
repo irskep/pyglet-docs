@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Config Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="config-class">
+<h1><cite>Config</cite> Class<a class="headerlink" href="#config-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-ef68bbeeb5d8d67de12564b78ef97dfbe8a84a29.png" alt="Inheritance diagram of Config" usemap="#inheritancea7f655f1b0" class="inheritance"/>
+<map id="inheritancea7f655f1b0" name="inheritancea7f655f1b0">
+<area shape="rect" id="node1" href="base/pyglet.gl.base.Config.html#pyglet.gl.base.Config" target="_top" title="Graphics configuration." alt="" coords="5,5,151,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.gl.Config">
+<em class="property">class </em><code class="descname">Config</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Graphics configuration.</p>
+<p>A Config stores the preferences for OpenGL attributes such as the
+number of auxilliary buffers, size of the colour and depth buffers,
+double buffering, stencilling, multi- and super-sampling, and so on.</p>
+<p>Different platforms support a different set of attributes, so these
+are set with a string key and a value which is integer or boolean.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>double_buffer</strong> – Specify the presence of a back-buffer for every color buffer.</li>
+<li><strong>stereo</strong> – Specify the presence of separate left and right buffer sets.</li>
+<li><strong>buffer_size</strong> – Total bits per sample per color buffer.</li>
+<li><strong>aux_buffers</strong> – The number of auxilliary color buffers.</li>
+<li><strong>sample_buffers</strong> – The number of multisample buffers.</li>
+<li><strong>samples</strong> – The number of samples per pixel, or 0 if there are no multisample
+buffers.</li>
+<li><strong>red_size</strong> – Bits per sample per buffer devoted to the red component.</li>
+<li><strong>green_size</strong> – Bits per sample per buffer devoted to the green component.</li>
+<li><strong>blue_size</strong> – Bits per sample per buffer devoted to the blue component.</li>
+<li><strong>alpha_size</strong> – Bits per sample per buffer devoted to the alpha component.</li>
+<li><strong>depth_size</strong> – Bits per sample in the depth buffer.</li>
+<li><strong>stencil_size</strong> – Bits per sample in the stencil buffer.</li>
+<li><strong>accum_red_size</strong> – Bits per pixel devoted to the red component in the accumulation
+buffer.</li>
+<li><strong>accum_green_size</strong> – Bits per pixel devoted to the green component in the accumulation
+buffer.</li>
+<li><strong>accum_blue_size</strong> – Bits per pixel devoted to the blue component in the accumulation
+buffer.</li>
+<li><strong>accum_alpha_size</strong> – Bits per pixel devoted to the alpha component in the accumulation
+buffer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.gl.Config.debug" title="pyglet.gl.Config.debug"><code class="xref py py-obj docutils literal"><span class="pre">debug</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.gl.Config.forward_compatible" title="pyglet.gl.Config.forward_compatible"><code class="xref py py-obj docutils literal"><span class="pre">forward_compatible</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.gl.Config.major_version" title="pyglet.gl.Config.major_version"><code class="xref py py-obj docutils literal"><span class="pre">major_version</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.gl.Config.minor_version" title="pyglet.gl.Config.minor_version"><code class="xref py py-obj docutils literal"><span class="pre">minor_version</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.gl.Config.debug">
+<code class="descclassname">Config.</code><code class="descname">debug</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.Config.forward_compatible">
+<code class="descclassname">Config.</code><code class="descname">forward_compatible</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.forward_compatible" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.Config.major_version">
+<code class="descclassname">Config.</code><code class="descname">major_version</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.major_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.Config.minor_version">
+<code class="descclassname">Config.</code><code class="descname">minor_version</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.minor_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Config</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>InlineElement Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.text.document" href="../pyglet.text.document.html" />
+    <link rel="next" title="UnformattedDocument Class" href="pyglet.text.document.UnformattedDocument.html" />
+    <link rel="prev" title="FormattedDocument Class" href="pyglet.text.document.FormattedDocument.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.document.UnformattedDocument.html" title="UnformattedDocument Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.document.FormattedDocument.html" title="FormattedDocument Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.document.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text.document</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="inlineelement-class">
+<h1><cite>InlineElement</cite> Class<a class="headerlink" href="#inlineelement-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-908aa99688f91d89aa1041f7f02fa16dc87ac7c4.png" alt="Inheritance diagram of InlineElement" usemap="#inheritance4f50a9d830" class="inheritance"/>
+<map id="inheritance4f50a9d830" name="inheritance4f50a9d830">
+<area shape="rect" id="node1" href="#pyglet.text.document.InlineElement" target="_top" title="Arbitrary inline element positioned within a formatted document." alt="" coords="5,5,234,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.text.document.InlineElement">
+<em class="property">class </em><code class="descname">InlineElement</code><span class="sig-paren">(</span><em>ascent</em>, <em>descent</em>, <em>advance</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.document.InlineElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arbitrary inline element positioned within a formatted document.</p>
+<p>Elements behave like a single glyph in the document.  They are
+measured by their horizontal advance, ascent above the baseline, and
+descent below the baseline.</p>
+<p>The pyglet layout classes reserve space in the layout for elements and
+call the element’s methods to ensure they are rendered at the
+appropriate position.</p>
+<p>If the size of a element (any of the <cite>advance</cite>, <cite>ascent</cite>, or <cite>descent</cite>
+instance variables) is modified it is the application’s responsibility to
+trigger a reflow of the appropriate area in the affected layouts.  This
+can be done by forcing a style change over the element’s position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="../../font/base/pyglet.font.base.Font.html#pyglet.font.base.Font.ascent" title="pyglet.font.base.Font.ascent"><strong>ascent</strong></a> – Ascent of the element above the baseline, in pixels.</li>
+<li><a class="reference internal" href="../../font/base/pyglet.font.base.Font.html#pyglet.font.base.Font.descent" title="pyglet.font.base.Font.descent"><strong>descent</strong></a> – Descent of the element below the baseline, in pixels.
+Typically negative.</li>
+<li><a class="reference internal" href="../../font/base/pyglet.font.base.Glyph.html#pyglet.font.base.Glyph.advance" title="pyglet.font.base.Glyph.advance"><strong>advance</strong></a> – Width of the element, in pixels.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.document.InlineElement.position" title="pyglet.text.document.InlineElement.position"><code class="xref py py-obj docutils literal"><span class="pre">position</span></code></a></td>
+<td>Position of the element within the document.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.text.document.InlineElement.position">
+<code class="descclassname">InlineElement.</code><code class="descname">position</code><a class="headerlink" href="#pyglet.text.document.InlineElement.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Position of the element within the
+document.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>InlineElement</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.text.document.FormattedDocument.html"
+                        title="previous chapter"><cite>FormattedDocument</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.text.document.UnformattedDocument.html"
+                        title="next chapter"><cite>UnformattedDocument</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.document.UnformattedDocument.html" title="UnformattedDocument Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.document.FormattedDocument.html" title="FormattedDocument Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.document.html" ><code class="docutils literal"><span class="pre">pyglet.text.document</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

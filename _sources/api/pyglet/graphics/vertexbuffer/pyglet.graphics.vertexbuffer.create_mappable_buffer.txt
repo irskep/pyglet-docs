@@ -1,0 +1,8 @@
+`create_mappable_buffer` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics.vertexbuffer`
+
+.. autofunction:: pyglet.graphics.vertexbuffer.create_mappable_buffer

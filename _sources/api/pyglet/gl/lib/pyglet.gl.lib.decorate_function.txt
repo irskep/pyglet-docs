@@ -1,0 +1,8 @@
+`decorate_function` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.gl.lib`
+
+.. autofunction:: pyglet.gl.lib.decorate_function

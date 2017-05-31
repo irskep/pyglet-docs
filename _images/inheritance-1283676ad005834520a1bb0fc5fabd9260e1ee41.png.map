@@ -1,0 +1,6 @@
+<map id="inheritance9a94134c3c" name="inheritance9a94134c3c">
+<area shape="rect" id="node1" href="../../exceptions/pyglet.media.exceptions.MediaException.html#pyglet.media.exceptions.MediaException" target="_top" title="pyglet.media.exceptions.MediaException" alt="" coords="5,5,268,29"/>
+<area shape="rect" id="node2" href="../../exceptions/pyglet.media.exceptions.MediaFormatException.html#pyglet.media.exceptions.MediaFormatException" target="_top" title="pyglet.media.exceptions.MediaFormatException" alt="" coords="316,5,621,29"/>
+<area shape="rect" id="node3" href="pyglet.media.sources.riff.RIFFFormatException.html#pyglet.media.sources.riff.RIFFFormatException" target="_top" title="pyglet.media.sources.riff.RIFFFormatException" alt="" coords="669,5,969,29"/>
+<area shape="rect" id="node4" href="#pyglet.media.sources.riff.WAVEFormatException" target="_top" title="pyglet.media.sources.riff.WAVEFormatException" alt="" coords="1017,5,1325,29"/>
+</map>

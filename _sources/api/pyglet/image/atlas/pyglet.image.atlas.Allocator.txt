@@ -1,0 +1,53 @@
+`Allocator` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image.atlas
+
+.. inheritance-diagram:: Allocator
+
+.. autoclass:: Allocator
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

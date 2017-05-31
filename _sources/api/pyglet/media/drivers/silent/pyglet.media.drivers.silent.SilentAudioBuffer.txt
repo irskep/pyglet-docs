@@ -1,0 +1,53 @@
+`SilentAudioBuffer` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.drivers.silent
+
+.. inheritance-diagram:: SilentAudioBuffer
+
+.. autoclass:: SilentAudioBuffer
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

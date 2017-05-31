@@ -1,0 +1,101 @@
+``pyglet.font.base``
+===============================================================
+
+.. automodule:: pyglet.font.base
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: base/
+   :template: class.rst
+
+
+   Font
+   Glyph
+   GlyphRenderer
+   GlyphTextureAtlas
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: base/
+   :template: exception.rst
+
+
+   FontException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: base/
+   :template: function.rst
+
+
+   get_grapheme_clusters
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``image``
+   * ``lib``
+   * ``lib_agl``
+   * ``unicodedata``
+
+
+
+
+.. template module.rst
+

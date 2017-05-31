@@ -1,0 +1,68 @@
+`EventDispatcher` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.event
+
+.. inheritance-diagram:: EventDispatcher
+
+.. autoclass:: EventDispatcher
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~EventDispatcher.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Methods
+-------
+
+
+
+.. automethod:: EventDispatcher.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

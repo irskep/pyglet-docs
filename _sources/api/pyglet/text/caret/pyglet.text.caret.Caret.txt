@@ -1,0 +1,86 @@
+`Caret` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.caret
+
+.. inheritance-diagram:: Caret
+
+.. autoclass:: Caret
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Caret.PERIOD
+         ~Caret.SCROLL_INCREMENT
+         ~Caret.color
+         ~Caret.line
+         ~Caret.mark
+         ~Caret.position
+         ~Caret.visible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Caret.PERIOD
+
+.. autoattribute:: Caret.SCROLL_INCREMENT
+
+.. autoattribute:: Caret.color
+
+.. autoattribute:: Caret.line
+
+.. autoattribute:: Caret.mark
+
+.. autoattribute:: Caret.position
+
+.. autoattribute:: Caret.visible
+
+
+
+
+
+
+
+

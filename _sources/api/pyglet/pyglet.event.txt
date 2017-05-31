@@ -1,0 +1,81 @@
+``pyglet.event``
+===============================================================
+
+.. automodule:: pyglet.event
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: event/
+   :template: class.rst
+
+
+   EventDispatcher
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: event/
+   :template: exception.rst
+
+
+   EventException
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: EVENT_HANDLED
+
+.. autodata:: EVENT_UNHANDLED
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``inspect``
+
+
+
+
+.. template module.rst
+

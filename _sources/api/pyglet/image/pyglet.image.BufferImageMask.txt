@@ -1,0 +1,117 @@
+`BufferImageMask` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: BufferImageMask
+
+.. autoclass:: BufferImageMask
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~BufferImageMask.anchor_x
+         ~BufferImageMask.anchor_y
+         ~BufferImageMask.format
+         ~BufferImageMask.image_data
+         ~BufferImageMask.mipmapped_texture
+         ~BufferImageMask.owner
+         ~BufferImageMask.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: BufferImageMask.format
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: BufferImageMask.anchor_x
+      :noindex:
+
+   .. autoattribute:: BufferImageMask.anchor_y
+      :noindex:
+
+   .. autoattribute:: BufferImageMask.image_data
+      :noindex:
+
+   .. autoattribute:: BufferImageMask.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: BufferImageMask.owner
+      :noindex:
+
+   .. autoattribute:: BufferImageMask.texture
+      :noindex:
+
+
+
+

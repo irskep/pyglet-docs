@@ -1,0 +1,15 @@
+pyglet.image
+===============================================================
+
+.. rubric:: Submodules
+
+.. toctree::
+   :maxdepth: 1
+
+   atlas
+
+.. rubric:: Details
+
+.. automodule:: pyglet.image
+  :members:
+  :undoc-members:

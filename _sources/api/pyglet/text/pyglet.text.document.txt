@@ -1,0 +1,74 @@
+``pyglet.text.document``
+===============================================================
+
+.. automodule:: pyglet.text.document
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: document/
+   :template: class.rst
+
+
+   AbstractDocument
+   FormattedDocument
+   InlineElement
+   UnformattedDocument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: STYLE_INDETERMINATE
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``event``
+   * ``re``
+   * ``runlist``
+   * ``sys``
+
+
+
+
+.. template module.rst
+

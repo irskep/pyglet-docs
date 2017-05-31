@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.gl &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="pyglet.gl.base" href="gl/pyglet.gl.base.html" />
+    <link rel="prev" title="load Function" href="font/pyglet.font.load.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gl/pyglet.gl.base.html" title="pyglet.gl.base"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="font/pyglet.font.load.html" title="load Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.gl">
+<span id="pyglet-gl"></span><h1><code class="docutils literal"><span class="pre">pyglet.gl</span></code><a class="headerlink" href="#module-pyglet.gl" title="Permalink to this headline">¶</a></h1>
+<p>OpenGL and GLU interface.</p>
+<p>This package imports all OpenGL, GLU and registered OpenGL extension
+functions.  Functions have identical signatures to their C counterparts.  For
+example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="c1"># [...omitted: set up a GL context and framebuffer]</span>
+<span class="n">glBegin</span><span class="p">(</span><span class="n">GL_QUADS</span><span class="p">)</span>
+<span class="n">glVertex3f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">glVertex3f</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">glVertex3f</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">glEnd</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>OpenGL is documented in full at the <a class="reference external" href="http://www.opengl.org/documentation/red_book/">OpenGL Reference Pages</a>.</p>
+<p>The <a class="reference external" href="http://fly.cc.fer.hr/~unreal/theredbook/">OpenGL Programming Guide</a> is a popular reference manual organised by
+topic.  The free online version documents only OpenGL 1.1.  <a class="reference external" href="http://www.opengl.org/documentation/red_book/">Later editions</a>
+cover more recent versions of the API and can be purchased from a book store.</p>
+<p>The following subpackages are imported into this “mega” package already (and
+so are available by importing <code class="docutils literal"><span class="pre">pyglet.gl</span></code>):</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.gl</span></code></dt>
+<dd>OpenGL</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glu</span></code></dt>
+<dd>GLU</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.gl.glext_arb</span></code></dt>
+<dd>ARB registered OpenGL extension functions</dd>
+</dl>
+<p>These subpackages are also available, but are not imported into this namespace
+by default:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glext_nv</span></code></dt>
+<dd>nVidia OpenGL extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.agl</span></code></dt>
+<dd>AGL (Mac OS X OpenGL context functions)</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glx</span></code></dt>
+<dd>GLX (Linux OpenGL context functions)</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glxext_arb</span></code></dt>
+<dd>ARB registered GLX extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glxext_nv</span></code></dt>
+<dd>nvidia GLX extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.wgl</span></code></dt>
+<dd>WGL (Windows OpenGL context functions)</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.wglext_arb</span></code></dt>
+<dd>ARB registered WGL extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.wglext_nv</span></code></dt>
+<dd>nvidia WGL extension functions</dd>
+</dl>
+<p>The information modules are provided for convenience, and are documented
+below.</p>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="gl/pyglet.gl.base.html#module-pyglet.gl.base" title="pyglet.gl.base"><code class="xref py py-obj docutils literal"><span class="pre">base</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="gl/pyglet.gl.gl.html#module-pyglet.gl.gl" title="pyglet.gl.gl"><code class="xref py py-obj docutils literal"><span class="pre">gl</span></code></a></td>
+<td>Wrapper for /usr/include/GL/gl.h</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="gl/pyglet.gl.gl_info.html#module-pyglet.gl.gl_info" title="pyglet.gl.gl_info"><code class="xref py py-obj docutils literal"><span class="pre">gl_info</span></code></a></td>
+<td>Information about version and extensions of current GL implementation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="gl/pyglet.gl.glu.html#module-pyglet.gl.glu" title="pyglet.gl.glu"><code class="xref py py-obj docutils literal"><span class="pre">glu</span></code></a></td>
+<td>Wrapper for /usr/include/GL/glu.h</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="gl/pyglet.gl.glu_info.html#module-pyglet.gl.glu_info" title="pyglet.gl.glu_info"><code class="xref py py-obj docutils literal"><span class="pre">glu_info</span></code></a></td>
+<td>Information about version and extensions of current GLU implementation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="gl/pyglet.gl.lib.html#module-pyglet.gl.lib" title="pyglet.gl.lib"><code class="xref py py-obj docutils literal"><span class="pre">lib</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="gl/pyglet.gl.ConfigException.html#pyglet.gl.ConfigException" title="pyglet.gl.ConfigException"><code class="xref py py-obj docutils literal"><span class="pre">ConfigException</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="gl/pyglet.gl.ContextException.html#pyglet.gl.ContextException" title="pyglet.gl.ContextException"><code class="xref py py-obj docutils literal"><span class="pre">ContextException</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="gl/pyglet.gl.get_current_context.html#pyglet.gl.get_current_context" title="pyglet.gl.get_current_context"><code class="xref py py-obj docutils literal"><span class="pre">get_current_context</span></code></a>()</td>
+<td>Return the active OpenGL context.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.gl.absolute_import">
+<code class="descname">absolute_import</code><em class="property"> = _Feature((2, 5, 0, ‘alpha’, 1), (3, 0, 0, ‘alpha’, 0), 16384)</em><a class="headerlink" href="#pyglet.gl.absolute_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.compat_platform">
+<code class="descname">compat_platform</code><em class="property"> = ‘darwin’</em><a class="headerlink" href="#pyglet.gl.compat_platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=”) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">glext_arb</span></code></li>
+<li><code class="docutils literal"><span class="pre">lib_agl</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a><ul>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="font/pyglet.font.load.html"
+                        title="previous chapter"><cite>load</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gl/pyglet.gl.base.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.gl.base</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gl/pyglet.gl.base.html" title="pyglet.gl.base"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="font/pyglet.font.load.html" title="load Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

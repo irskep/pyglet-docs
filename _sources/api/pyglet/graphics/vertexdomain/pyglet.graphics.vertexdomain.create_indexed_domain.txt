@@ -1,0 +1,8 @@
+`create_indexed_domain` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics.vertexdomain`
+
+.. autofunction:: pyglet.graphics.vertexdomain.create_indexed_domain

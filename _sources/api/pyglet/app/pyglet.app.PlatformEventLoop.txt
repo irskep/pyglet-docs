@@ -1,0 +1,53 @@
+`PlatformEventLoop` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.app
+
+.. inheritance-diagram:: PlatformEventLoop
+
+.. autoclass:: PlatformEventLoop
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

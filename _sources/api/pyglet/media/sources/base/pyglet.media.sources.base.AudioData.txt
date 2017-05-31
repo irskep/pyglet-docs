@@ -1,0 +1,53 @@
+`AudioData` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.base
+
+.. inheritance-diagram:: AudioData
+
+.. autoclass:: AudioData
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

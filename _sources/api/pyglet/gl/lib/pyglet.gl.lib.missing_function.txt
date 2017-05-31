@@ -1,0 +1,8 @@
+`missing_function` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.gl.lib`
+
+.. autofunction:: pyglet.gl.lib.missing_function

@@ -1,0 +1,89 @@
+`SourceInfo` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources
+
+.. inheritance-diagram:: SourceInfo
+
+.. autoclass:: SourceInfo
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~SourceInfo.album
+         ~SourceInfo.author
+         ~SourceInfo.comment
+         ~SourceInfo.copyright
+         ~SourceInfo.genre
+         ~SourceInfo.title
+         ~SourceInfo.track
+         ~SourceInfo.year
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: SourceInfo.album
+
+.. autoattribute:: SourceInfo.author
+
+.. autoattribute:: SourceInfo.comment
+
+.. autoattribute:: SourceInfo.copyright
+
+.. autoattribute:: SourceInfo.genre
+
+.. autoattribute:: SourceInfo.title
+
+.. autoattribute:: SourceInfo.track
+
+.. autoattribute:: SourceInfo.year
+
+
+
+
+
+
+
+

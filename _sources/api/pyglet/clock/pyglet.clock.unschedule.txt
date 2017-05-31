@@ -1,0 +1,8 @@
+`unschedule` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.clock`
+
+.. autofunction:: pyglet.clock.unschedule

@@ -1,0 +1,93 @@
+``pyglet.clock``
+===============================================================
+
+.. automodule:: pyglet.clock
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: clock/
+   :template: class.rst
+
+
+   Clock
+   ClockDisplay
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: clock/
+   :template: function.rst
+
+
+   get_default
+   get_fps
+   get_fps_limit
+   get_sleep_time
+   schedule
+   schedule_interval
+   schedule_interval_soft
+   schedule_once
+   set_default
+   set_fps_limit
+   test_clock
+   tick
+   unschedule
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+   * ``time``
+
+
+
+
+.. template module.rst
+

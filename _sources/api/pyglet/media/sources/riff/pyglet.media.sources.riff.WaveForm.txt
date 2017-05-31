@@ -1,0 +1,53 @@
+`WaveForm` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.riff
+
+.. inheritance-diagram:: WaveForm
+
+.. autoclass:: WaveForm
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+`ZipRunIterator` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.runlist
+
+.. inheritance-diagram:: ZipRunIterator
+
+.. autoclass:: ZipRunIterator
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

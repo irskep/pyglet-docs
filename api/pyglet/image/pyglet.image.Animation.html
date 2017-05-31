@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Animation Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.image" href="../pyglet.image.html" />
+    <link rel="next" title="AnimationFrame Class" href="pyglet.image.AnimationFrame.html" />
+    <link rel="prev" title="AbstractImageSequence Class" href="pyglet.image.AbstractImageSequence.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.AnimationFrame.html" title="AnimationFrame Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.AbstractImageSequence.html" title="AbstractImageSequence Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="animation-class">
+<h1><cite>Animation</cite> Class<a class="headerlink" href="#animation-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-b2d50e79838e606acc9a80aeb95639e0c099fa29.png" alt="Inheritance diagram of Animation" usemap="#inheritancea43e9441d5" class="inheritance"/>
+<map id="inheritancea43e9441d5" name="inheritancea43e9441d5">
+<area shape="rect" id="node1" href="#pyglet.image.Animation" target="_top" title="Sequence of images with timing information." alt="" coords="5,5,165,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.image.Animation">
+<em class="property">class </em><code class="descname">Animation</code><span class="sig-paren">(</span><em>frames</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.Animation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence of images with timing information.</p>
+<p>If no frames of the animation have a duration of <code class="docutils literal"><span class="pre">None</span></code>, the animation
+loops continuously; otherwise the animation stops at the first frame with
+duration of <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>frames</strong> – The frames that make up the animation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.image.Animation.from_image_sequence" title="pyglet.image.Animation.from_image_sequence"><code class="xref py py-obj docutils literal"><span class="pre">from_image_sequence</span></code></a>(sequence,&nbsp;period[,&nbsp;loop])</td>
+<td>Create an animation from a list of images and a constant framerate.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="classmethod">
+<dt id="pyglet.image.Animation.from_image_sequence">
+<em class="property">classmethod </em><code class="descclassname">Animation.</code><code class="descname">from_image_sequence</code><span class="sig-paren">(</span><em>sequence</em>, <em>period</em>, <em>loop=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.Animation.from_image_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an animation from a list of images and a constant framerate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sequence</strong> (<em>list of AbstractImage</em>) – Images that make up the animation, in sequence.</li>
+<li><strong>period</strong> (<em>float</em>) – Number of seconds to display each image.</li>
+<li><strong>loop</strong> (<em>bool</em>) – If True, the animation will loop continuously.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>Animation</cite></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Animation</cite> Class</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.image.AbstractImageSequence.html"
+                        title="previous chapter"><cite>AbstractImageSequence</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.image.AnimationFrame.html"
+                        title="next chapter"><cite>AnimationFrame</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.AnimationFrame.html" title="AnimationFrame Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.AbstractImageSequence.html" title="AbstractImageSequence Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" ><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

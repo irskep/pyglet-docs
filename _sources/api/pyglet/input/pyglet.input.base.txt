@@ -1,0 +1,82 @@
+``pyglet.input.base``
+===============================================================
+
+.. automodule:: pyglet.input.base
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: base/
+   :template: class.rst
+
+
+   AbsoluteAxis
+   AppleRemote
+   Button
+   Control
+   Device
+   Joystick
+   RelativeAxis
+   Tablet
+   TabletCanvas
+   TabletCursor
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: base/
+   :template: exception.rst
+
+
+   DeviceException
+   DeviceExclusiveException
+   DeviceOpenException
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``sys``
+
+
+
+
+.. template module.rst
+

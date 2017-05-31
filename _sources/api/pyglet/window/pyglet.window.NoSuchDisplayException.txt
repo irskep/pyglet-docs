@@ -1,0 +1,12 @@
+`NoSuchDisplayException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.window.NoSuchDisplayException
+
+Exception defined in :mod:`pyglet.window`
+
+.. currentmodule:: pyglet.window
+
+.. autoexception:: NoSuchDisplayException

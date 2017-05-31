@@ -1,0 +1,12 @@
+`GLException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.gl.lib.GLException
+
+Exception defined in :mod:`pyglet.gl.lib`
+
+.. currentmodule:: pyglet.gl.lib
+
+.. autoexception:: GLException

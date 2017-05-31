@@ -1,0 +1,8 @@
+`load` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.font`
+
+.. autofunction:: pyglet.font.load

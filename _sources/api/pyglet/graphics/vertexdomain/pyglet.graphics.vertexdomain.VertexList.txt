@@ -1,0 +1,89 @@
+`VertexList` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexdomain
+
+.. inheritance-diagram:: VertexList
+
+.. autoclass:: VertexList
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~VertexList.colors
+         ~VertexList.edge_flags
+         ~VertexList.fog_coords
+         ~VertexList.multi_tex_coords
+         ~VertexList.normals
+         ~VertexList.secondary_colors
+         ~VertexList.tex_coords
+         ~VertexList.vertices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: VertexList.colors
+
+.. autoattribute:: VertexList.edge_flags
+
+.. autoattribute:: VertexList.fog_coords
+
+.. autoattribute:: VertexList.multi_tex_coords
+
+.. autoattribute:: VertexList.normals
+
+.. autoattribute:: VertexList.secondary_colors
+
+.. autoattribute:: VertexList.tex_coords
+
+.. autoattribute:: VertexList.vertices
+
+
+
+
+
+
+
+

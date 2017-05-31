@@ -1,0 +1,8 @@
+`draw_indexed` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics`
+
+.. autofunction:: pyglet.graphics.draw_indexed

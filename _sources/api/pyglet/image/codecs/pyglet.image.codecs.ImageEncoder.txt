@@ -1,0 +1,53 @@
+`ImageEncoder` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image.codecs
+
+.. inheritance-diagram:: ImageEncoder
+
+.. autoclass:: ImageEncoder
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

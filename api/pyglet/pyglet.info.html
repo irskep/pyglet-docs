@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.info &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="dump Function" href="info/pyglet.info.dump.html" />
+    <link rel="prev" title="load_animation Function" href="image/pyglet.image.load_animation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info/pyglet.info.dump.html" title="dump Function"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="image/pyglet.image.load_animation.html" title="load_animation Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.info">
+<span id="pyglet-info"></span><h1><code class="docutils literal"><span class="pre">pyglet.info</span></code><a class="headerlink" href="#module-pyglet.info" title="Permalink to this headline">¶</a></h1>
+<p>Get environment information useful for debugging.</p>
+<p>Intended usage is to create a file for bug reports, e.g.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">info</span> <span class="o">&gt;</span> <span class="n">info</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="info/pyglet.info.dump.html#pyglet.info.dump" title="pyglet.info.dump"><code class="xref py py-obj docutils literal"><span class="pre">dump</span></code></a>()</td>
+<td>Dump all information to stdout.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="info/pyglet.info.dump_al.html#pyglet.info.dump_al" title="pyglet.info.dump_al"><code class="xref py py-obj docutils literal"><span class="pre">dump_al</span></code></a>()</td>
+<td>Dump OpenAL info.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="info/pyglet.info.dump_avbin.html#pyglet.info.dump_avbin" title="pyglet.info.dump_avbin"><code class="xref py py-obj docutils literal"><span class="pre">dump_avbin</span></code></a>()</td>
+<td>Dump AVbin info.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="info/pyglet.info.dump_gl.html#pyglet.info.dump_gl" title="pyglet.info.dump_gl"><code class="xref py py-obj docutils literal"><span class="pre">dump_gl</span></code></a>([context])</td>
+<td>Dump GL info.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="info/pyglet.info.dump_glu.html#pyglet.info.dump_glu" title="pyglet.info.dump_glu"><code class="xref py py-obj docutils literal"><span class="pre">dump_glu</span></code></a>()</td>
+<td>Dump GLU info.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="info/pyglet.info.dump_glx.html#pyglet.info.dump_glx" title="pyglet.info.dump_glx"><code class="xref py py-obj docutils literal"><span class="pre">dump_glx</span></code></a>()</td>
+<td>Dump GLX info.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="info/pyglet.info.dump_media.html#pyglet.info.dump_media" title="pyglet.info.dump_media"><code class="xref py py-obj docutils literal"><span class="pre">dump_media</span></code></a>()</td>
+<td>Dump pyglet.media info.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="info/pyglet.info.dump_pyglet.html#pyglet.info.dump_pyglet" title="pyglet.info.dump_pyglet"><code class="xref py py-obj docutils literal"><span class="pre">dump_pyglet</span></code></a>()</td>
+<td>Dump pyglet version and options.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="info/pyglet.info.dump_python.html#pyglet.info.dump_python" title="pyglet.info.dump_python"><code class="xref py py-obj docutils literal"><span class="pre">dump_python</span></code></a>()</td>
+<td>Dump Python version and environment to stdout.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="info/pyglet.info.dump_window.html#pyglet.info.dump_window" title="pyglet.info.dump_window"><code class="xref py py-obj docutils literal"><span class="pre">dump_window</span></code></a>()</td>
+<td>Dump display, window, screen and default config info.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="info/pyglet.info.dump_wintab.html#pyglet.info.dump_wintab" title="pyglet.info.dump_wintab"><code class="xref py py-obj docutils literal"><span class="pre">dump_wintab</span></code></a>()</td>
+<td>Dump WinTab info.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.info</span></code></a><ul>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="image/pyglet.image.load_animation.html"
+                        title="previous chapter"><cite>load_animation</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="info/pyglet.info.dump.html"
+                        title="next chapter"><cite>dump</cite> Function</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="info/pyglet.info.dump.html" title="dump Function"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="image/pyglet.image.load_animation.html" title="load_animation Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+`OrderedGroup` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics
+
+.. inheritance-diagram:: OrderedGroup
+
+.. autoclass:: OrderedGroup
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+`interleave_attributes` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics.vertexattribute`
+
+.. autofunction:: pyglet.graphics.vertexattribute.interleave_attributes

@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.event &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="EventDispatcher Class" href="event/pyglet.event.EventDispatcher.html" />
+    <link rel="prev" title="debug_print Function" href="debug/pyglet.debug.debug_print.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="event/pyglet.event.EventDispatcher.html" title="EventDispatcher Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="debug/pyglet.debug.debug_print.html" title="debug_print Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.event">
+<span id="pyglet-event"></span><h1><code class="docutils literal"><span class="pre">pyglet.event</span></code><a class="headerlink" href="#module-pyglet.event" title="Permalink to this headline">¶</a></h1>
+<p>Event dispatch framework.</p>
+<p>All objects that produce events in pyglet implement <cite>EventDispatcher</cite>,
+providing a consistent interface for registering and manipulating event
+handlers.  A commonly used event dispatcher is <cite>pyglet.window.Window</cite>.</p>
+<div class="section" id="event-types">
+<h2>Event types<a class="headerlink" href="#event-types" title="Permalink to this headline">¶</a></h2>
+<p>For each event dispatcher there is a set of events that it dispatches; these
+correspond with the type of event handlers you can attach.  Event types are
+identified by their name, for example, ”on_resize”.  If you are creating a
+new class which implements <cite>EventDispatcher</cite>, you must call
+<cite>EventDispatcher.register_event_type</cite> for each event type.</p>
+</div>
+<div class="section" id="attaching-event-handlers">
+<h2>Attaching event handlers<a class="headerlink" href="#attaching-event-handlers" title="Permalink to this headline">¶</a></h2>
+<p>An event handler is simply a function or method.  You can attach an event
+handler by setting the appropriate function on the instance:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_resize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+<span class="n">dispatcher</span><span class="o">.</span><span class="n">on_resize</span> <span class="o">=</span> <span class="n">on_resize</span>
+</pre></div>
+</div>
+<p>There is also a convenience decorator that reduces typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@dispatcher</span><span class="o">.</span><span class="n">event</span>
+<span class="k">def</span> <span class="nf">on_resize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>You may prefer to subclass and override the event handlers instead:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyDispatcher</span><span class="p">(</span><span class="n">DispatcherClass</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">on_resize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="event-handler-stack">
+<h2>Event handler stack<a class="headerlink" href="#event-handler-stack" title="Permalink to this headline">¶</a></h2>
+<p>When attaching an event handler to a dispatcher using the above methods, it
+replaces any existing handler (causing the original handler to no longer be
+called).  Each dispatcher maintains a stack of event handlers, allowing you to
+insert an event handler “above” the existing one rather than replacing it.</p>
+<p>There are two main use cases for “pushing” event handlers:</p>
+<ul class="simple">
+<li>Temporarily intercepting the events coming from the dispatcher by pushing a
+custom set of handlers onto the dispatcher, then later “popping” them all
+off at once.</li>
+<li>Creating “chains” of event handlers, where the event propagates from the
+top-most (most recently added) handler to the bottom, until a handler
+takes care of it.</li>
+</ul>
+<p>Use <cite>EventDispatcher.push_handlers</cite> to create a new level in the stack and
+attach handlers to it.  You can push several handlers at once:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dispatcher</span><span class="o">.</span><span class="n">push_handlers</span><span class="p">(</span><span class="n">on_resize</span><span class="p">,</span> <span class="n">on_key_press</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If your function handlers have different names to the events they handle, use
+keyword arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dispatcher</span><span class="o">.</span><span class="n">push_handlers</span><span class="p">(</span><span class="n">on_resize</span><span class="o">=</span><span class="n">my_resize</span><span class="p">,</span>
+                         <span class="n">on_key_press</span><span class="o">=</span><span class="n">my_key_press</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After an event handler has processed an event, it is passed on to the
+next-lowest event handler, unless the handler returns <cite>EVENT_HANDLED</cite>, which
+prevents further propagation.</p>
+<p>To remove all handlers on the top stack level, use
+<cite>EventDispatcher.pop_handlers</cite>.</p>
+<p>Note that any handlers pushed onto the stack have precedence over the
+handlers set directly on the instance (for example, using the methods
+described in the previous section), regardless of when they were set.
+For example, handler <code class="docutils literal"><span class="pre">foo</span></code> is called before handler <code class="docutils literal"><span class="pre">bar</span></code> in the following
+example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dispatcher</span><span class="o">.</span><span class="n">push_handlers</span><span class="p">(</span><span class="n">on_resize</span><span class="o">=</span><span class="n">foo</span><span class="p">)</span>
+<span class="n">dispatcher</span><span class="o">.</span><span class="n">on_resize</span> <span class="o">=</span> <span class="n">bar</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dispatching-events">
+<h2>Dispatching events<a class="headerlink" href="#dispatching-events" title="Permalink to this headline">¶</a></h2>
+<p>pyglet uses a single-threaded model for all application code.  Event
+handlers are only ever invoked as a result of calling
+EventDispatcher.dispatch_events`.</p>
+<p>It is up to the specific event dispatcher to queue relevant events until they
+can be dispatched, at which point the handlers are called in the order the
+events were originally generated.</p>
+<p>This implies that your application runs with a main loop that continuously
+updates the application state and checks for new events:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">dispatcher</span><span class="o">.</span><span class="n">dispatch_events</span><span class="p">()</span>
+    <span class="c1"># ... additional per-frame processing</span>
+</pre></div>
+</div>
+<p>Not all event dispatchers require the call to <code class="docutils literal"><span class="pre">dispatch_events</span></code>; check with
+the particular class documentation.</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" title="pyglet.event.EventDispatcher"><code class="xref py py-obj docutils literal"><span class="pre">EventDispatcher</span></code></a></td>
+<td>Generic event dispatcher interface.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="event/pyglet.event.EventException.html#pyglet.event.EventException" title="pyglet.event.EventException"><code class="xref py py-obj docutils literal"><span class="pre">EventException</span></code></a></td>
+<td>An exception raised when an event handler could not be attached.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.event.EVENT_HANDLED">
+<code class="descname">EVENT_HANDLED</code><em class="property"> = True</em><a class="headerlink" href="#pyglet.event.EVENT_HANDLED" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool(x) -&gt; bool</p>
+<p>Returns True when the argument x is true, False otherwise.
+The builtins True and False are the only two instances of the class bool.
+The class bool is a subclass of the class int, and cannot be subclassed.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.event.EVENT_UNHANDLED">
+<code class="descname">EVENT_UNHANDLED</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.event.EVENT_UNHANDLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">inspect</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.event</span></code></a><ul>
+<li><a class="reference internal" href="#event-types">Event types</a></li>
+<li><a class="reference internal" href="#attaching-event-handlers">Attaching event handlers</a></li>
+<li><a class="reference internal" href="#event-handler-stack">Event handler stack</a></li>
+<li><a class="reference internal" href="#dispatching-events">Dispatching events</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="debug/pyglet.debug.debug_print.html"
+                        title="previous chapter"><cite>debug_print</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="event/pyglet.event.EventDispatcher.html"
+                        title="next chapter"><cite>EventDispatcher</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="event/pyglet.event.EventDispatcher.html" title="EventDispatcher Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="debug/pyglet.debug.debug_print.html" title="debug_print Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

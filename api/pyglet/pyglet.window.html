@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.window &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="pyglet.window.event" href="window/pyglet.window.event.html" />
+    <link rel="prev" title="load Function" href="text/pyglet.text.load.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="window/pyglet.window.event.html" title="pyglet.window.event"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="text/pyglet.text.load.html" title="load Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.window">
+<span id="pyglet-window"></span><h1><code class="docutils literal"><span class="pre">pyglet.window</span></code><a class="headerlink" href="#module-pyglet.window" title="Permalink to this headline">¶</a></h1>
+<p>Windowing and user-interface events.</p>
+<p>This module allows applications to create and display windows with an
+OpenGL context.  Windows can be created with a variety of border styles 
+or set fullscreen.</p>
+<p>You can register event handlers for keyboard, mouse and window events.
+For games and kiosks you can also restrict the input to your windows,
+for example disabling users from switching away from the application
+with certain key combinations or capturing and hiding the mouse.</p>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>Call the Window constructor to create a new window:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.window</span> <span class="k">import</span> <span class="n">Window</span>
+<span class="n">win</span> <span class="o">=</span> <span class="n">Window</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">480</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Attach your own event handlers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@win</span><span class="o">.</span><span class="n">event</span>
+<span class="k">def</span> <span class="nf">on_key_press</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="n">modifiers</span><span class="p">):</span>
+    <span class="c1"># ... handle this event ...</span>
+</pre></div>
+</div>
+<p>Place drawing code for the window within the <cite>Window.on_draw</cite> event handler:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@win</span><span class="o">.</span><span class="n">event</span>
+<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+    <span class="c1"># ... drawing code ...</span>
+</pre></div>
+</div>
+<p>Call <cite>pyglet.app.run</cite> to enter the main event loop (by default, this
+returns when all open windows are closed):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet</span> <span class="k">import</span> <span class="n">app</span>
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-a-game-window">
+<h2>Creating a game window<a class="headerlink" href="#creating-a-game-window" title="Permalink to this headline">¶</a></h2>
+<p>Use <cite>Window.set_exclusive_mouse</cite> to hide the mouse cursor and receive relative
+mouse movement events.  Specify <code class="docutils literal"><span class="pre">fullscreen=True</span></code> as a keyword argument to
+the <cite>Window</cite> constructor to render to the entire screen rather than opening a
+window:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">win</span> <span class="o">=</span> <span class="n">Window</span><span class="p">(</span><span class="n">fullscreen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">win</span><span class="o">.</span><span class="n">set_exclusive_mouse</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-with-multiple-screens">
+<h2>Working with multiple screens<a class="headerlink" href="#working-with-multiple-screens" title="Permalink to this headline">¶</a></h2>
+<p>By default, fullscreen windows are opened on the primary display (typically
+set by the user in their operating system settings).  You can retrieve a list
+of attached screens and select one manually if you prefer.  This is useful for
+opening a fullscreen window on each screen:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">display</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">get_platform</span><span class="p">()</span><span class="o">.</span><span class="n">get_default_display</span><span class="p">()</span>
+<span class="n">screens</span> <span class="o">=</span> <span class="n">display</span><span class="o">.</span><span class="n">get_screens</span><span class="p">()</span>
+<span class="n">windows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">screen</span> <span class="ow">in</span> <span class="n">screens</span><span class="p">:</span>
+    <span class="n">windows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="n">fullscreen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">screen</span><span class="o">=</span><span class="n">screen</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Specifying a screen has no effect if the window is not fullscreen.</p>
+</div>
+<div class="section" id="specifying-the-opengl-context-properties">
+<h2>Specifying the OpenGL context properties<a class="headerlink" href="#specifying-the-opengl-context-properties" title="Permalink to this headline">¶</a></h2>
+<p>Each window has its own context which is created when the window is created.
+You can specify the properties of the context before it is created
+by creating a “template” configuration:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet</span> <span class="k">import</span> <span class="n">gl</span>
+<span class="c1"># Create template config</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">gl</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">stencil_size</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">config</span><span class="o">.</span><span class="n">aux_buffers</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="c1"># Create a window using this config</span>
+<span class="n">win</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To determine if a given configuration is supported, query the screen (see
+above, “Working with multiple screens”):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">configs</span> <span class="o">=</span> <span class="n">screen</span><span class="o">.</span><span class="n">get_matching_configs</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">configs</span><span class="p">:</span>
+    <span class="c1"># ... config is not supported</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">win</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">configs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.event.html#module-pyglet.window.event" title="pyglet.window.event"><code class="xref py py-obj docutils literal"><span class="pre">event</span></code></a></td>
+<td>Events for <cite>pyglet.window</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="window/pyglet.window.key.html#module-pyglet.window.key" title="pyglet.window.key"><code class="xref py py-obj docutils literal"><span class="pre">key</span></code></a></td>
+<td>Key constants and utilities for pyglet.window.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.mouse.html#module-pyglet.window.mouse" title="pyglet.window.mouse"><code class="xref py py-obj docutils literal"><span class="pre">mouse</span></code></a></td>
+<td>Mouse constants and utilities for pyglet.window.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.DefaultMouseCursor.html#pyglet.window.DefaultMouseCursor" title="pyglet.window.DefaultMouseCursor"><code class="xref py py-obj docutils literal"><span class="pre">DefaultMouseCursor</span></code></a></td>
+<td>The default mouse cursor used by the operating system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="window/pyglet.window.Display.html#pyglet.window.Display" title="pyglet.window.Display"><code class="xref py py-obj docutils literal"><span class="pre">Display</span></code></a></td>
+<td>A display device supporting one or more screens.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.FPSDisplay.html#pyglet.window.FPSDisplay" title="pyglet.window.FPSDisplay"><code class="xref py py-obj docutils literal"><span class="pre">FPSDisplay</span></code></a></td>
+<td>Display of a window’s framerate.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="window/pyglet.window.ImageMouseCursor.html#pyglet.window.ImageMouseCursor" title="pyglet.window.ImageMouseCursor"><code class="xref py py-obj docutils literal"><span class="pre">ImageMouseCursor</span></code></a></td>
+<td>A user-defined mouse cursor created from an image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.MouseCursor.html#pyglet.window.MouseCursor" title="pyglet.window.MouseCursor"><code class="xref py py-obj docutils literal"><span class="pre">MouseCursor</span></code></a></td>
+<td>An abstract mouse cursor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="window/pyglet.window.Platform.html#pyglet.window.Platform" title="pyglet.window.Platform"><code class="xref py py-obj docutils literal"><span class="pre">Platform</span></code></a></td>
+<td>Operating-system-level functionality.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.Window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-obj docutils literal"><span class="pre">Window</span></code></a></td>
+<td>Platform-independent application window.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.MouseCursorException.html#pyglet.window.MouseCursorException" title="pyglet.window.MouseCursorException"><code class="xref py py-obj docutils literal"><span class="pre">MouseCursorException</span></code></a></td>
+<td>The root exception for all mouse cursor-related errors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="window/pyglet.window.NoSuchConfigException.html#pyglet.window.NoSuchConfigException" title="pyglet.window.NoSuchConfigException"><code class="xref py py-obj docutils literal"><span class="pre">NoSuchConfigException</span></code></a></td>
+<td>An exception indicating the requested configuration is not available.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.NoSuchDisplayException.html#pyglet.window.NoSuchDisplayException" title="pyglet.window.NoSuchDisplayException"><code class="xref py py-obj docutils literal"><span class="pre">NoSuchDisplayException</span></code></a></td>
+<td>An exception indicating the requested display is not available.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="window/pyglet.window.NoSuchScreenModeException.html#pyglet.window.NoSuchScreenModeException" title="pyglet.window.NoSuchScreenModeException"><code class="xref py py-obj docutils literal"><span class="pre">NoSuchScreenModeException</span></code></a></td>
+<td>An exception indicating the requested screen resolution could not be met.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.WindowException.html#pyglet.window.WindowException" title="pyglet.window.WindowException"><code class="xref py py-obj docutils literal"><span class="pre">WindowException</span></code></a></td>
+<td>The root exception for all window-related errors.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="window/pyglet.window.get_platform.html#pyglet.window.get_platform" title="pyglet.window.get_platform"><code class="xref py py-obj docutils literal"><span class="pre">get_platform</span></code></a>()</td>
+<td>Get an instance of the Platform most appropriate for this system.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">gl</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet</span></code></li>
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.window</span></code></a><ul>
+<li><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li><a class="reference internal" href="#creating-a-game-window">Creating a game window</a></li>
+<li><a class="reference internal" href="#working-with-multiple-screens">Working with multiple screens</a></li>
+<li><a class="reference internal" href="#specifying-the-opengl-context-properties">Specifying the OpenGL context properties</a></li>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="text/pyglet.text.load.html"
+                        title="previous chapter"><cite>load</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="window/pyglet.window.event.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.window.event</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="window/pyglet.window.event.html" title="pyglet.window.event"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="text/pyglet.text.load.html" title="load Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

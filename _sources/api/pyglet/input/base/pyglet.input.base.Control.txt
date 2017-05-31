@@ -1,0 +1,106 @@
+`Control` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input.base
+
+.. inheritance-diagram:: Control
+
+.. autoclass:: Control
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Control.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Control.event_types
+         ~Control.value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Control.event_types
+
+.. autoattribute:: Control.value
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: Control.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

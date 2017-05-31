@@ -1,0 +1,8 @@
+`add_encoders` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.image.codecs`
+
+.. autofunction:: pyglet.image.codecs.add_encoders

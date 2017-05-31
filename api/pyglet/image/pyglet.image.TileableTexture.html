@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>TileableTexture Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.image" href="../pyglet.image.html" />
+    <link rel="next" title="UniformTextureSequence Class" href="pyglet.image.UniformTextureSequence.html" />
+    <link rel="prev" title="TextureSequence Class" href="pyglet.image.TextureSequence.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.UniformTextureSequence.html" title="UniformTextureSequence Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.TextureSequence.html" title="TextureSequence Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tileabletexture-class">
+<h1><cite>TileableTexture</cite> Class<a class="headerlink" href="#tileabletexture-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-095ec0c082adf7f896f7c5ebbedb455ad0fa009a.png" alt="Inheritance diagram of TileableTexture" usemap="#inheritance33c99061d6" class="inheritance"/>
+<map id="inheritance33c99061d6" name="inheritance33c99061d6">
+<area shape="rect" id="node1" href="pyglet.image.AbstractImage.html#pyglet.image.AbstractImage" target="_top" title="Abstract class representing an image." alt="" coords="5,5,192,29"/>
+<area shape="rect" id="node2" href="pyglet.image.Texture.html#pyglet.image.Texture" target="_top" title="An image loaded into video memory that can be efficiently drawn" alt="" coords="240,5,384,29"/>
+<area shape="rect" id="node3" href="#pyglet.image.TileableTexture" target="_top" title="A texture that can be tiled efficiently." alt="" coords="432,5,623,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.image.TileableTexture">
+<em class="property">class </em><code class="descname">TileableTexture</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>target</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.TileableTexture" title="Permalink to this definition">¶</a></dt>
+<dd><p>A texture that can be tiled efficiently.</p>
+<p>Use <cite>create_for_image</cite> classmethod to construct.</p>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">create</span></code>(width,&nbsp;height[,&nbsp;internalformat,&nbsp;…])</td>
+<td>Create an empty Texture.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.image.TileableTexture.create_for_image" title="pyglet.image.TileableTexture.create_for_image"><code class="xref py py-obj docutils literal"><span class="pre">create_for_image</span></code></a>(image)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">create_for_size</span></code>(target,&nbsp;min_width,&nbsp;min_height)</td>
+<td>Create a Texture with dimensions at least min_width, min_height.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">anchor_x</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">anchor_y</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">image_data</span></code></td>
+<td>An ImageData view of this texture.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">images</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">level</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">mipmapped_texture</span></code></td>
+<td>A Texture view of this image.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">tex_coords</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">tex_coords_order</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">texture</span></code></td>
+<td>Get a <cite>Texture</cite> view of this image.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">x</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">y</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">z</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="classmethod">
+<dt id="pyglet.image.TileableTexture.create_for_image">
+<em class="property">classmethod </em><code class="descclassname">TileableTexture.</code><code class="descname">create_for_image</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.TileableTexture.create_for_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">create</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>internalformat=6408</em>, <em>rectangle=False</em>, <em>force_rectangle=False</em>, <em>min_filter=9729</em>, <em>mag_filter=9729</em><span class="sig-paren">)</span></dt>
+<dd><p>Create an empty Texture.</p>
+<p>If <cite>rectangle</cite> is <code class="docutils literal"><span class="pre">False</span></code> or the appropriate driver extensions are
+not available, a larger texture than requested will be created, and
+a <cite>TextureRegion</cite> corresponding to the requested size will be
+returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>width</strong> (<em>int</em>) – Width of the texture.</li>
+<li><strong>height</strong> (<em>int</em>) – Height of the texture.</li>
+<li><strong>internalformat</strong> (<em>int</em>) – GL constant giving the internal format of the texture; for
+example, <code class="docutils literal"><span class="pre">GL_RGBA</span></code>.</li>
+<li><strong>rectangle</strong> (<em>bool</em>) – <code class="docutils literal"><span class="pre">True</span></code> if a rectangular texture is permitted.  See
+<cite>AbstractImage.get_texture</cite>.</li>
+<li><strong>force_rectangle</strong> (<em>bool</em>) – <code class="docutils literal"><span class="pre">True</span></code> if a rectangular texture is required.  See
+<cite>AbstractImage.get_texture</cite>.  
+<strong>Since:</strong> pyglet 1.1.4.</li>
+<li><strong>min_filter</strong> (<em>int</em>) – The minifaction filter used for this texture, commonly <code class="docutils literal"><span class="pre">GL_LINEAR</span></code> or <code class="docutils literal"><span class="pre">GL_NEAREST</span></code></li>
+<li><strong>mag_filter</strong> (<em>int</em>) – The magnification filter used for this texture, commonly <code class="docutils literal"><span class="pre">GL_LINEAR</span></code> or <code class="docutils literal"><span class="pre">GL_NEAREST</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>Texture</cite></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.1</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">create_for_size</code><span class="sig-paren">(</span><em>target</em>, <em>min_width</em>, <em>min_height</em>, <em>internalformat=None</em>, <em>min_filter=9729</em>, <em>mag_filter=9729</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a Texture with dimensions at least min_width, min_height.
+On return, the texture will be bound.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>target</strong> (<em>int</em>) – GL constant giving texture target to use, typically
+<code class="docutils literal"><span class="pre">GL_TEXTURE_2D</span></code>.</li>
+<li><strong>min_width</strong> (<em>int</em>) – Minimum width of texture (may be increased to create a power
+of 2).</li>
+<li><strong>min_height</strong> (<em>int</em>) – Minimum height of texture (may be increased to create a power
+of 2).</li>
+<li><strong>internalformat</strong> (<em>int</em>) – GL constant giving internal format of texture; for example,
+<code class="docutils literal"><span class="pre">GL_RGBA</span></code>.  If unspecified, the texture will not be
+initialised (only the texture name will be created on the
+instance).   If specified, the image will be initialised
+to this format with zero’d data.</li>
+<li><strong>min_filter</strong> (<em>int</em>) – The minifaction filter used for this texture, commonly <code class="docutils literal"><span class="pre">GL_LINEAR</span></code> or <code class="docutils literal"><span class="pre">GL_NEAREST</span></code></li>
+<li><strong>mag_filter</strong> (<em>int</em>) – The magnification filter used for this texture, commonly <code class="docutils literal"><span class="pre">GL_LINEAR</span></code> or <code class="docutils literal"><span class="pre">GL_NEAREST</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>Texture</cite></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">anchor_x</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">anchor_y</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">image_data</code></dt>
+<dd><p>An ImageData view of this texture.</p>
+<p>Changes to the returned instance will not be reflected in this
+texture.  If the texture is a 3D texture, the first image will be 
+returned.  See also <cite>get_image_data</cite>.  Read-only.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>get_image_data</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>ImageData</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">images</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">level</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">mipmapped_texture</code></dt>
+<dd><p>A Texture view of this image.</p>
+<p>The returned Texture will have mipmaps filled in for all levels.
+Requires that image dimensions be powers of 2.  Read-only.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>get_mipmapped_texture</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Texture</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">tex_coords</code><em class="property"> = (0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">tex_coords_order</code><em class="property"> = (0, 1, 2, 3)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">texture</code></dt>
+<dd><p>Get a <cite>Texture</cite> view of this image.</p>
+<p>Changes to the returned instance may or may not be reflected in this
+image.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>get_texture</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Texture</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">x</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">y</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">TileableTexture.</code><code class="descname">z</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>TileableTexture</cite> Class</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.image.TextureSequence.html"
+                        title="previous chapter"><cite>TextureSequence</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.image.UniformTextureSequence.html"
+                        title="next chapter"><cite>UniformTextureSequence</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.UniformTextureSequence.html" title="UniformTextureSequence Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.TextureSequence.html" title="TextureSequence Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" ><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

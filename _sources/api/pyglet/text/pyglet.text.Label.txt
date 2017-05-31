@@ -1,0 +1,168 @@
+`Label` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text
+
+.. inheritance-diagram:: Label
+
+.. autoclass:: Label
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Label.anchor_x
+         ~Label.anchor_y
+         ~Label.background_group
+         ~Label.batch
+         ~Label.bold
+         ~Label.color
+         ~Label.content_valign
+         ~Label.document
+         ~Label.dpi
+         ~Label.font_name
+         ~Label.font_size
+         ~Label.foreground_decoration_group
+         ~Label.foreground_group
+         ~Label.height
+         ~Label.italic
+         ~Label.multiline
+         ~Label.text
+         ~Label.top_group
+         ~Label.width
+         ~Label.x
+         ~Label.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Label.anchor_x
+      :noindex:
+
+   .. autoattribute:: Label.anchor_y
+      :noindex:
+
+   .. autoattribute:: Label.background_group
+      :noindex:
+
+   .. autoattribute:: Label.batch
+      :noindex:
+
+   .. autoattribute:: Label.bold
+      :noindex:
+
+   .. autoattribute:: Label.color
+      :noindex:
+
+   .. autoattribute:: Label.content_valign
+      :noindex:
+
+   .. autoattribute:: Label.document
+      :noindex:
+
+   .. autoattribute:: Label.dpi
+      :noindex:
+
+   .. autoattribute:: Label.font_name
+      :noindex:
+
+   .. autoattribute:: Label.font_size
+      :noindex:
+
+   .. autoattribute:: Label.foreground_decoration_group
+      :noindex:
+
+   .. autoattribute:: Label.foreground_group
+      :noindex:
+
+   .. autoattribute:: Label.height
+      :noindex:
+
+   .. autoattribute:: Label.italic
+      :noindex:
+
+   .. autoattribute:: Label.multiline
+      :noindex:
+
+   .. autoattribute:: Label.text
+      :noindex:
+
+   .. autoattribute:: Label.top_group
+      :noindex:
+
+   .. autoattribute:: Label.width
+      :noindex:
+
+   .. autoattribute:: Label.x
+      :noindex:
+
+   .. autoattribute:: Label.y
+      :noindex:
+
+
+
+

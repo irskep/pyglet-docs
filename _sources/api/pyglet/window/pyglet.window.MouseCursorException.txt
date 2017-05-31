@@ -1,0 +1,12 @@
+`MouseCursorException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.window.MouseCursorException
+
+Exception defined in :mod:`pyglet.window`
+
+.. currentmodule:: pyglet.window
+
+.. autoexception:: MouseCursorException

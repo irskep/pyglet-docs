@@ -1,0 +1,60 @@
+``pyglet.text.formats.plaintext``
+===============================================================
+
+.. automodule:: pyglet.text.formats.plaintext
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: plaintext/
+   :template: class.rst
+
+
+   PlainTextDecoder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+
+
+
+
+.. template module.rst
+

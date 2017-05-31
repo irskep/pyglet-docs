@@ -1,0 +1,8 @@
+`color_as_bytes` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.image`
+
+.. autofunction:: pyglet.image.color_as_bytes

@@ -1,0 +1,63 @@
+``pyglet.text.formats.html``
+===============================================================
+
+.. automodule:: pyglet.text.formats.html
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: html/
+   :template: class.rst
+
+
+   HTMLDecoder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``entities``
+   * ``pyglet``
+   * ``re``
+   * ``structured``
+
+
+
+
+.. template module.rst
+

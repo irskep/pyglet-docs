@@ -1,0 +1,71 @@
+`Display` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.canvas.base
+
+.. inheritance-diagram:: Display
+
+.. autoclass:: Display
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Display.name
+         ~Display.x_screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Display.name
+
+.. autoattribute:: Display.x_screen
+
+
+
+
+
+
+
+

@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Sprite Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.sprite" href="../pyglet.sprite.html" />
+    <link rel="next" title="SpriteGroup Class" href="pyglet.sprite.SpriteGroup.html" />
+    <link rel="prev" title="pyglet.sprite" href="../pyglet.sprite.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.sprite.SpriteGroup.html" title="SpriteGroup Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.sprite.html" title="pyglet.sprite"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.sprite.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.sprite</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sprite-class">
+<h1><cite>Sprite</cite> Class<a class="headerlink" href="#sprite-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-560d608f02d9591dff118072c0d9e7a39c67f4a3.png" alt="Inheritance diagram of Sprite" usemap="#inheritancee39dae3866" class="inheritance"/>
+<map id="inheritancee39dae3866" name="inheritancee39dae3866">
+<area shape="rect" id="node1" href="../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+<area shape="rect" id="node2" href="#pyglet.sprite.Sprite" target="_top" title="Instance of an on&#45;screen image." alt="" coords="248,5,380,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.sprite.Sprite">
+<em class="property">class </em><code class="descname">Sprite</code><span class="sig-paren">(</span><em>img</em>, <em>x=0</em>, <em>y=0</em>, <em>blend_src=770</em>, <em>blend_dest=771</em>, <em>batch=None</em>, <em>group=None</em>, <em>usage=’dynamic’</em>, <em>subpixel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.sprite.Sprite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance of an on-screen image.</p>
+<p>See the module documentation for usage.</p>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.batch" title="pyglet.sprite.Sprite.batch"><code class="xref py py-obj docutils literal"><span class="pre">batch</span></code></a></td>
+<td>Graphics batch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.color" title="pyglet.sprite.Sprite.color"><code class="xref py py-obj docutils literal"><span class="pre">color</span></code></a></td>
+<td>Blend color.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.event_types" title="pyglet.sprite.Sprite.event_types"><code class="xref py py-obj docutils literal"><span class="pre">event_types</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.group" title="pyglet.sprite.Sprite.group"><code class="xref py py-obj docutils literal"><span class="pre">group</span></code></a></td>
+<td>Parent graphics group.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.height" title="pyglet.sprite.Sprite.height"><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></a></td>
+<td>Scaled height of the sprite.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.image" title="pyglet.sprite.Sprite.image"><code class="xref py py-obj docutils literal"><span class="pre">image</span></code></a></td>
+<td>Image or animation to display.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.opacity" title="pyglet.sprite.Sprite.opacity"><code class="xref py py-obj docutils literal"><span class="pre">opacity</span></code></a></td>
+<td>Blend opacity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.position" title="pyglet.sprite.Sprite.position"><code class="xref py py-obj docutils literal"><span class="pre">position</span></code></a></td>
+<td>The (x, y) coordinates of the sprite, as a tuple.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.rotation" title="pyglet.sprite.Sprite.rotation"><code class="xref py py-obj docutils literal"><span class="pre">rotation</span></code></a></td>
+<td>Clockwise rotation of the sprite, in degrees.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.scale" title="pyglet.sprite.Sprite.scale"><code class="xref py py-obj docutils literal"><span class="pre">scale</span></code></a></td>
+<td>Base Scaling factor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.scale_x" title="pyglet.sprite.Sprite.scale_x"><code class="xref py py-obj docutils literal"><span class="pre">scale_x</span></code></a></td>
+<td>Horizontal scaling factor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.scale_y" title="pyglet.sprite.Sprite.scale_y"><code class="xref py py-obj docutils literal"><span class="pre">scale_y</span></code></a></td>
+<td>Vertical scaling factor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.visible" title="pyglet.sprite.Sprite.visible"><code class="xref py py-obj docutils literal"><span class="pre">visible</span></code></a></td>
+<td>True if the sprite will be drawn.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.width" title="pyglet.sprite.Sprite.width"><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></a></td>
+<td>Scaled width of the sprite.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.sprite.Sprite.x" title="pyglet.sprite.Sprite.x"><code class="xref py py-obj docutils literal"><span class="pre">x</span></code></a></td>
+<td>X coordinate of the sprite.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.sprite.Sprite.y" title="pyglet.sprite.Sprite.y"><code class="xref py py-obj docutils literal"><span class="pre">y</span></code></a></td>
+<td>Y coordinate of the sprite.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.batch">
+<code class="descclassname">Sprite.</code><code class="descname">batch</code><a class="headerlink" href="#pyglet.sprite.Sprite.batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Graphics batch.</p>
+<p>The sprite can be migrated from one batch to another, or removed from
+its batch (for individual drawing).  Note that this can be an expensive
+operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Batch</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.color">
+<code class="descclassname">Sprite.</code><code class="descname">color</code><a class="headerlink" href="#pyglet.sprite.Sprite.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blend color.</p>
+<p>This property sets the color of the sprite’s vertices. This allows the
+sprite to be drawn with a color tint.</p>
+<p>The color is specified as an RGB tuple of integers ‘(red, green, blue)’.
+Each color component must be in the range 0 (dark) to 255 (saturated).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">(int, int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.event_types">
+<code class="descclassname">Sprite.</code><code class="descname">event_types</code><em class="property"> = [‘on_animation_end’]</em><a class="headerlink" href="#pyglet.sprite.Sprite.event_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.group">
+<code class="descclassname">Sprite.</code><code class="descname">group</code><a class="headerlink" href="#pyglet.sprite.Sprite.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent graphics group.</p>
+<p>The sprite can change its rendering group, however this can be an
+expensive operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Group</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.height">
+<code class="descclassname">Sprite.</code><code class="descname">height</code><a class="headerlink" href="#pyglet.sprite.Sprite.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaled height of the sprite.</p>
+<p>Read-only.  Invariant under rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.image">
+<code class="descclassname">Sprite.</code><code class="descname">image</code><a class="headerlink" href="#pyglet.sprite.Sprite.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image or animation to display.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>AbstractImage</cite> or <cite>Animation</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.opacity">
+<code class="descclassname">Sprite.</code><code class="descname">opacity</code><a class="headerlink" href="#pyglet.sprite.Sprite.opacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blend opacity.</p>
+<p>This property sets the alpha component of the colour of the sprite’s
+vertices.  With the default blend mode (see the constructor), this
+allows the sprite to be drawn with fractional opacity, blending with the
+background.</p>
+<p>An opacity of 255 (the default) has no effect.  An opacity of 128 will
+make the sprite appear translucent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.position">
+<code class="descclassname">Sprite.</code><code class="descname">position</code><a class="headerlink" href="#pyglet.sprite.Sprite.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>The (x, y) coordinates of the sprite, as a tuple.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>int</em>) – X coordinate of the sprite.</li>
+<li><strong>y</strong> (<em>int</em>) – Y coordinate of the sprite.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.rotation">
+<code class="descclassname">Sprite.</code><code class="descname">rotation</code><a class="headerlink" href="#pyglet.sprite.Sprite.rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clockwise rotation of the sprite, in degrees.</p>
+<p>The sprite image will be rotated about its image’s (anchor_x, anchor_y)
+position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.scale">
+<code class="descclassname">Sprite.</code><code class="descname">scale</code><a class="headerlink" href="#pyglet.sprite.Sprite.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base Scaling factor.</p>
+<p>A scaling factor of 1 (the default) has no effect.  A scale of 2 will
+draw the sprite at twice the native size of its image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.scale_x">
+<code class="descclassname">Sprite.</code><code class="descname">scale_x</code><a class="headerlink" href="#pyglet.sprite.Sprite.scale_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Horizontal scaling factor.</p>
+<blockquote>
+<div>A scaling factor of 1 (the default) has no effect.  A scale of 2 will
+draw the sprite at twice the native width of its image.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.scale_y">
+<code class="descclassname">Sprite.</code><code class="descname">scale_y</code><a class="headerlink" href="#pyglet.sprite.Sprite.scale_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertical scaling factor.</p>
+<blockquote>
+<div>A scaling factor of 1 (the default) has no effect.  A scale of 2 will
+draw the sprite at twice the native height of its image.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.visible">
+<code class="descclassname">Sprite.</code><code class="descname">visible</code><a class="headerlink" href="#pyglet.sprite.Sprite.visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the sprite will be drawn.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.width">
+<code class="descclassname">Sprite.</code><code class="descname">width</code><a class="headerlink" href="#pyglet.sprite.Sprite.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaled width of the sprite.</p>
+<p>Read-only.  Invariant under rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.x">
+<code class="descclassname">Sprite.</code><code class="descname">x</code><a class="headerlink" href="#pyglet.sprite.Sprite.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>X coordinate of the sprite.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.sprite.Sprite.y">
+<code class="descclassname">Sprite.</code><code class="descname">y</code><a class="headerlink" href="#pyglet.sprite.Sprite.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Y coordinate of the sprite.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">Sprite.</code><code class="descname">register_event_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
+<dd><p>Register an event type with the dispatcher.</p>
+<p>Registering event types allows the dispatcher to validate event
+handler names as they are attached, and to search attached objects for
+suitable handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of the event to register.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Sprite</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.sprite.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.sprite</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.sprite.SpriteGroup.html"
+                        title="next chapter"><cite>SpriteGroup</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.sprite.SpriteGroup.html" title="SpriteGroup Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.sprite.html" title="pyglet.sprite"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.sprite.html" ><code class="docutils literal"><span class="pre">pyglet.sprite</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

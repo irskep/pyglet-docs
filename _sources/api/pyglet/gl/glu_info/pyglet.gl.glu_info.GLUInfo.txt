@@ -1,0 +1,74 @@
+`GLUInfo` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.gl.glu_info
+
+.. inheritance-diagram:: GLUInfo
+
+.. autoclass:: GLUInfo
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~GLUInfo.extensions
+         ~GLUInfo.have_context
+         ~GLUInfo.version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: GLUInfo.extensions
+
+.. autoattribute:: GLUInfo.have_context
+
+.. autoattribute:: GLUInfo.version
+
+
+
+
+
+
+
+

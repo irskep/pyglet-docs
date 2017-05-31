@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.input.base &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.input" href="../pyglet.input.html" />
+    <link rel="next" title="AbsoluteAxis Class" href="base/pyglet.input.base.AbsoluteAxis.html" />
+    <link rel="prev" title="pyglet.input" href="../pyglet.input.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="base/pyglet.input.base.AbsoluteAxis.html" title="AbsoluteAxis Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.input.html" title="pyglet.input"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.input.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.input</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.input.base">
+<span id="pyglet-input-base"></span><h1><code class="docutils literal"><span class="pre">pyglet.input.base</span></code><a class="headerlink" href="#module-pyglet.input.base" title="Permalink to this headline">¶</a></h1>
+<p>Interface classes for <cite>pyglet.input</cite>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.2</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.input.base.AbsoluteAxis.html#pyglet.input.base.AbsoluteAxis" title="pyglet.input.base.AbsoluteAxis"><code class="xref py py-obj docutils literal"><span class="pre">AbsoluteAxis</span></code></a></td>
+<td>An axis whose value represents a physical measurement from the device.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.input.base.AppleRemote.html#pyglet.input.base.AppleRemote" title="pyglet.input.base.AppleRemote"><code class="xref py py-obj docutils literal"><span class="pre">AppleRemote</span></code></a></td>
+<td>High-level interface for Apple remote control.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.input.base.Button.html#pyglet.input.base.Button" title="pyglet.input.base.Button"><code class="xref py py-obj docutils literal"><span class="pre">Button</span></code></a></td>
+<td>A control whose value is boolean.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.input.base.Control.html#pyglet.input.base.Control" title="pyglet.input.base.Control"><code class="xref py py-obj docutils literal"><span class="pre">Control</span></code></a></td>
+<td>Single value input provided by a device.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.input.base.Device.html#pyglet.input.base.Device" title="pyglet.input.base.Device"><code class="xref py py-obj docutils literal"><span class="pre">Device</span></code></a></td>
+<td>Input device.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.input.base.Joystick.html#pyglet.input.base.Joystick" title="pyglet.input.base.Joystick"><code class="xref py py-obj docutils literal"><span class="pre">Joystick</span></code></a></td>
+<td>High-level interface for joystick-like devices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.input.base.RelativeAxis.html#pyglet.input.base.RelativeAxis" title="pyglet.input.base.RelativeAxis"><code class="xref py py-obj docutils literal"><span class="pre">RelativeAxis</span></code></a></td>
+<td>An axis whose value represents a relative change from the previous value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.input.base.Tablet.html#pyglet.input.base.Tablet" title="pyglet.input.base.Tablet"><code class="xref py py-obj docutils literal"><span class="pre">Tablet</span></code></a></td>
+<td>High-level interface to tablet devices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.input.base.TabletCanvas.html#pyglet.input.base.TabletCanvas" title="pyglet.input.base.TabletCanvas"><code class="xref py py-obj docutils literal"><span class="pre">TabletCanvas</span></code></a></td>
+<td>Event dispatcher for tablets.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.input.base.TabletCursor.html#pyglet.input.base.TabletCursor" title="pyglet.input.base.TabletCursor"><code class="xref py py-obj docutils literal"><span class="pre">TabletCursor</span></code></a></td>
+<td>A distinct cursor used on a tablet.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.input.base.DeviceException.html#pyglet.input.base.DeviceException" title="pyglet.input.base.DeviceException"><code class="xref py py-obj docutils literal"><span class="pre">DeviceException</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.input.base.DeviceExclusiveException.html#pyglet.input.base.DeviceExclusiveException" title="pyglet.input.base.DeviceExclusiveException"><code class="xref py py-obj docutils literal"><span class="pre">DeviceExclusiveException</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.input.base.DeviceOpenException.html#pyglet.input.base.DeviceOpenException" title="pyglet.input.base.DeviceOpenException"><code class="xref py py-obj docutils literal"><span class="pre">DeviceOpenException</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.input.base</span></code></a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.input.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.input</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="base/pyglet.input.base.AbsoluteAxis.html"
+                        title="next chapter"><cite>AbsoluteAxis</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="base/pyglet.input.base.AbsoluteAxis.html" title="AbsoluteAxis Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.input.html" title="pyglet.input"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.input.html" ><code class="docutils literal"><span class="pre">pyglet.input</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

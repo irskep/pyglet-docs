@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>get_settings_path Function &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.resource" href="../pyglet.resource.html" />
+    <link rel="next" title="pyglet.sprite" href="../pyglet.sprite.html" />
+    <link rel="prev" title="get_script_home Function" href="pyglet.resource.get_script_home.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.sprite.html" title="pyglet.sprite"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.resource.get_script_home.html" title="get_script_home Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.resource.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.resource</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="get-settings-path-function">
+<h1><cite>get_settings_path</cite> Function<a class="headerlink" href="#get-settings-path-function" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <a class="reference internal" href="../pyglet.resource.html#module-pyglet.resource" title="pyglet.resource"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.resource</span></code></a></p>
+<dl class="function">
+<dt id="pyglet.resource.get_settings_path">
+<code class="descname">get_settings_path</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.resource.get_settings_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a directory to save user preferences.</p>
+<p>Different platforms have different conventions for where to save user
+preferences, saved games, and settings.  This function implements those
+conventions.  Note that the returned path may not exist: applications
+should use <code class="docutils literal"><span class="pre">os.makedirs</span></code> to construct it if desired.</p>
+<p>On Linux, a directory <cite>name</cite> in the user’s configuration directory is
+returned (usually under <code class="docutils literal"><span class="pre">~/.config</span></code>).</p>
+<p>On Windows (including under Cygwin) the <cite>name</cite> directory in the user’s
+<code class="docutils literal"><span class="pre">Application</span> <span class="pre">Settings</span></code> directory is returned.</p>
+<p>On Mac OS X the <cite>name</cite> directory under <code class="docutils literal"><span class="pre">~/Library/Application</span> <span class="pre">Support</span></code>
+is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The name of the application.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.resource.get_script_home.html"
+                        title="previous chapter"><cite>get_script_home</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../pyglet.sprite.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.sprite</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.sprite.html" title="pyglet.sprite"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.resource.get_script_home.html" title="get_script_home Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.resource.html" ><code class="docutils literal"><span class="pre">pyglet.resource</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

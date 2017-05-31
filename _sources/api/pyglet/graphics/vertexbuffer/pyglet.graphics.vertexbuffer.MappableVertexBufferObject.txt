@@ -1,0 +1,92 @@
+`MappableVertexBufferObject` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexbuffer
+
+.. inheritance-diagram:: MappableVertexBufferObject
+
+.. autoclass:: MappableVertexBufferObject
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~MappableVertexBufferObject.ptr
+         ~MappableVertexBufferObject.size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: MappableVertexBufferObject.ptr
+      :noindex:
+
+   .. autoattribute:: MappableVertexBufferObject.size
+      :noindex:
+
+
+
+

@@ -1,0 +1,5 @@
+<map id="inheritanceeda3f47047" name="inheritanceeda3f47047">
+<area shape="rect" id="node1" href="../../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+<area shape="rect" id="node2" href="pyglet.text.document.AbstractDocument.html#pyglet.text.document.AbstractDocument" target="_top" title="Abstract document interface used by all `pyglet.text` classes." alt="" coords="248,5,506,29"/>
+<area shape="rect" id="node3" href="#pyglet.text.document.UnformattedDocument" target="_top" title="A document having uniform style over all text." alt="" coords="554,5,836,29"/>
+</map>

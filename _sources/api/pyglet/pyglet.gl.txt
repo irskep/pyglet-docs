@@ -1,0 +1,113 @@
+``pyglet.gl``
+===============================================================
+
+.. automodule:: pyglet.gl
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: gl/
+   :template: module.rst
+
+
+   base
+   gl
+   gl_info
+   glu
+   glu_info
+   lib
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: gl/
+   :template: class.rst
+
+
+   CanvasConfig
+   Config
+   Context
+   ObjectSpace
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: gl/
+   :template: exception.rst
+
+
+   ConfigException
+   ContextException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: gl/
+   :template: function.rst
+
+
+   get_current_context
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``glext_arb``
+   * ``lib_agl``
+
+
+
+
+.. template module.rst
+

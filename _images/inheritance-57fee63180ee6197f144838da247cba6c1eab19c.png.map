@@ -1,0 +1,7 @@
+<map id="inheritancefdc7c97c2d" name="inheritancefdc7c97c2d">
+<area shape="rect" id="node1" title="Parser base class which provides some common support methods used" alt="" coords="16,5,192,29"/>
+<area shape="rect" id="node2" title="Find tags and other markup and call handler functions." alt="" coords="334,5,500,29"/>
+<area shape="rect" id="node4" href="#pyglet.text.formats.html.HTMLDecoder" target="_top" title="Decoder for HTML documents." alt="" coords="632,29,881,53"/>
+<area shape="rect" id="node3" href="../../pyglet.text.DocumentDecoder.html#pyglet.text.DocumentDecoder" target="_top" title="Abstract document decoder." alt="" coords="5,53,202,77"/>
+<area shape="rect" id="node5" href="../structured/pyglet.text.formats.structured.StructuredTextDecoder.html#pyglet.text.formats.structured.StructuredTextDecoder" target="_top" title="pyglet.text.formats.structured.StructuredTextDecoder" alt="" coords="250,53,584,77"/>
+</map>

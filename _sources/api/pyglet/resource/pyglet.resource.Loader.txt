@@ -1,0 +1,53 @@
+`Loader` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.resource
+
+.. inheritance-diagram:: Loader
+
+.. autoclass:: Loader
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

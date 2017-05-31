@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Screen Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="screen-class">
+<h1><cite>Screen</cite> Class<a class="headerlink" href="#screen-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-4593e5d89ffbfe5abeae554a1fc07c46ae358579.png" alt="Inheritance diagram of Screen" usemap="#inheritance293b9f5c7b" class="inheritance"/>
+<map id="inheritance293b9f5c7b" name="inheritance293b9f5c7b">
+<area shape="rect" id="node1" href="#pyglet.canvas.base.Screen" target="_top" title="A virtual monitor that supports fullscreen windows." alt="" coords="5,5,187,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.canvas.base.Screen">
+<em class="property">class </em><code class="descname">Screen</code><span class="sig-paren">(</span><em>display</em>, <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.canvas.base.Screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>A virtual monitor that supports fullscreen windows.</p>
+<p>Screens typically map onto a physical display such as a
+monitor, television or projector.  Selecting a screen for a window
+has no effect unless the window is made fullscreen, in which case
+the window will fill only that particular virtual screen.</p>
+<p>The <a class="reference internal" href="#pyglet.canvas.base.Screen.width" title="pyglet.canvas.base.Screen.width"><code class="xref py py-attr docutils literal"><span class="pre">width</span></code></a> and <a class="reference internal" href="#pyglet.canvas.base.Screen.height" title="pyglet.canvas.base.Screen.height"><code class="xref py py-attr docutils literal"><span class="pre">height</span></code></a> attributes of a screen give the 
+current resolution of the screen.  The <a class="reference internal" href="#pyglet.canvas.base.Screen.x" title="pyglet.canvas.base.Screen.x"><code class="xref py py-attr docutils literal"><span class="pre">x</span></code></a> and <a class="reference internal" href="#pyglet.canvas.base.Screen.y" title="pyglet.canvas.base.Screen.y"><code class="xref py py-attr docutils literal"><span class="pre">y</span></code></a> attributes 
+give the global location of the top-left corner of the screen.  This is 
+useful for determining if screens are arranged above or next to one 
+another.</p>
+<p>Use <code class="xref py py-func docutils literal"><span class="pre">get_screens()</span></code> or <code class="xref py py-func docutils literal"><span class="pre">get_default_screen()</span></code>
+to obtain an instance of this class.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Programming Guide - <a class="reference internal" href="../../../../programming_guide/context.html#guide-screens"><span class="std std-ref">Screens</span></a></p>
+</div>
+</dd></dl>
+
+<div class="section" id="instance-attributes">
+<h2>Instance Attributes<a class="headerlink" href="#instance-attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.canvas.base.Screen.display">
+<code class="descclassname">Screen.</code><code class="descname">display</code><a class="headerlink" href="#pyglet.canvas.base.Screen.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display this screen belongs to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.canvas.base.Screen.height">
+<code class="descclassname">Screen.</code><code class="descname">height</code><a class="headerlink" href="#pyglet.canvas.base.Screen.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Height of the screen, in pixels.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.canvas.base.Screen.width">
+<code class="descclassname">Screen.</code><code class="descname">width</code><a class="headerlink" href="#pyglet.canvas.base.Screen.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Width of the screen, in pixels.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.canvas.base.Screen.x">
+<code class="descclassname">Screen.</code><code class="descname">x</code><a class="headerlink" href="#pyglet.canvas.base.Screen.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Left edge of the screen on the virtual desktop.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.canvas.base.Screen.y">
+<code class="descclassname">Screen.</code><code class="descname">y</code><a class="headerlink" href="#pyglet.canvas.base.Screen.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Top edge of the screen on the virtual desktop.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Screen</cite> Class</a><ul>
+<li><a class="reference internal" href="#instance-attributes">Instance Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

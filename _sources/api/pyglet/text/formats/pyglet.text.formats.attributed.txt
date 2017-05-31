@@ -1,0 +1,64 @@
+``pyglet.text.formats.attributed``
+===============================================================
+
+.. automodule:: pyglet.text.formats.attributed
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: attributed/
+   :template: class.rst
+
+
+   AttributedTextDecoder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``operator``
+   * ``parser``
+   * ``pyglet``
+   * ``re``
+   * ``token``
+
+
+
+
+.. template module.rst
+

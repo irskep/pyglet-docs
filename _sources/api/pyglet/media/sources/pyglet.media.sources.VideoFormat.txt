@@ -1,0 +1,53 @@
+`VideoFormat` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources
+
+.. inheritance-diagram:: VideoFormat
+
+.. autoclass:: VideoFormat
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

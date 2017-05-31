@@ -1,0 +1,104 @@
+`Silence` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.procedural
+
+.. inheritance-diagram:: Silence
+
+.. autoclass:: Silence
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Silence.audio_format
+         ~Silence.duration
+         ~Silence.envelope
+         ~Silence.info
+         ~Silence.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Silence.audio_format
+      :noindex:
+
+   .. autoattribute:: Silence.duration
+      :noindex:
+
+   .. autoattribute:: Silence.envelope
+      :noindex:
+
+   .. autoattribute:: Silence.info
+      :noindex:
+
+   .. autoattribute:: Silence.video_format
+      :noindex:
+
+
+
+

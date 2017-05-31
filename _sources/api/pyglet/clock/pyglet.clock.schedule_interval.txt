@@ -1,0 +1,8 @@
+`schedule_interval` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.clock`
+
+.. autofunction:: pyglet.clock.schedule_interval

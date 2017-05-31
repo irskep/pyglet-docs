@@ -1,0 +1,61 @@
+``pyglet.media.events``
+===============================================================
+
+.. automodule:: pyglet.media.events
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: events/
+   :template: class.rst
+
+
+   MediaEvent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+   * ``time``
+
+
+
+
+.. template module.rst
+

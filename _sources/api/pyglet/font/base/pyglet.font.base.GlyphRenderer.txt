@@ -1,0 +1,53 @@
+`GlyphRenderer` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.font.base
+
+.. inheritance-diagram:: GlyphRenderer
+
+.. autoclass:: GlyphRenderer
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

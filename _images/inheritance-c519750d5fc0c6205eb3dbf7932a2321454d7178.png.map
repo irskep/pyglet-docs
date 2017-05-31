@@ -1,0 +1,5 @@
+<map id="inheritance911b501588" name="inheritance911b501588">
+<area shape="rect" id="node1" href="#pyglet.font.base.GlyphTextureAtlas" target="_top" title="A texture within which glyphs can be drawn." alt="" coords="432,5,660,29"/>
+<area shape="rect" id="node2" href="../../image/pyglet.image.Texture.html#pyglet.image.Texture" target="_top" title="An image loaded into video memory that can be efficiently drawn" alt="" coords="240,5,384,29"/>
+<area shape="rect" id="node3" href="../../image/pyglet.image.AbstractImage.html#pyglet.image.AbstractImage" target="_top" title="Abstract class representing an image." alt="" coords="5,5,192,29"/>
+</map>

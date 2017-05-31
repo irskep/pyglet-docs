@@ -1,0 +1,88 @@
+``pyglet.font``
+===============================================================
+
+.. automodule:: pyglet.font
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: font/
+   :template: module.rst
+
+
+   base
+   text
+   ttf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: font/
+   :template: function.rst
+
+
+   add_directory
+   add_file
+   have_font
+   load
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: gl
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``os``
+   * ``pyglet``
+   * ``sys``
+   * ``weakref``
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,100 @@
+`UniformTextureSequence` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: UniformTextureSequence
+
+.. autoclass:: UniformTextureSequence
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~UniformTextureSequence.item_height
+         ~UniformTextureSequence.item_width
+         ~UniformTextureSequence.texture_sequence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: UniformTextureSequence.item_height
+
+.. autoattribute:: UniformTextureSequence.item_width
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: UniformTextureSequence.texture_sequence
+      :noindex:
+
+
+
+

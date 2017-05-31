@@ -1,0 +1,105 @@
+``pyglet.text``
+===============================================================
+
+.. automodule:: pyglet.text
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: text/
+   :template: module.rst
+
+
+   caret
+   document
+   formats
+   layout
+   runlist
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: text/
+   :template: class.rst
+
+
+   DocumentDecoder
+   DocumentLabel
+   HTMLLabel
+   Label
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: text/
+   :template: exception.rst
+
+
+   DocumentDecodeException
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: text/
+   :template: function.rst
+
+
+   decode_attributed
+   decode_html
+   decode_text
+   get_decoder
+   load
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``os``
+   * ``pyglet``
+
+
+
+
+.. template module.rst
+

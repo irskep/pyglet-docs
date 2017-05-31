@@ -1,0 +1,80 @@
+`AbstractImage` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: AbstractImage
+
+.. autoclass:: AbstractImage
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~AbstractImage.anchor_x
+         ~AbstractImage.anchor_y
+         ~AbstractImage.image_data
+         ~AbstractImage.mipmapped_texture
+         ~AbstractImage.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: AbstractImage.anchor_x
+
+.. autoattribute:: AbstractImage.anchor_y
+
+.. autoattribute:: AbstractImage.image_data
+
+.. autoattribute:: AbstractImage.mipmapped_texture
+
+.. autoattribute:: AbstractImage.texture
+
+
+
+
+
+
+
+

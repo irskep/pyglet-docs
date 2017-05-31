@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>WindowExitHandler Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.window.event" href="../pyglet.window.event.html" />
+    <link rel="next" title="pyglet.window.key" href="../pyglet.window.key.html" />
+    <link rel="prev" title="WindowEventLogger Class" href="pyglet.window.event.WindowEventLogger.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.window.key.html" title="pyglet.window.key"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.window.event.WindowEventLogger.html" title="WindowEventLogger Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.window.html" ><code class="docutils literal"><span class="pre">pyglet.window</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.window.event.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.window.event</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="windowexithandler-class">
+<h1><cite>WindowExitHandler</cite> Class<a class="headerlink" href="#windowexithandler-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-9e690aba3ae656358462cdd5b149f692e1285438.png" alt="Inheritance diagram of WindowExitHandler" usemap="#inheritance65f9444dd7" class="inheritance"/>
+<map id="inheritance65f9444dd7" name="inheritance65f9444dd7">
+<area shape="rect" id="node1" href="#pyglet.window.event.WindowExitHandler" target="_top" title="Determine if the window should be closed." alt="" coords="5,5,266,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.window.event.WindowExitHandler">
+<em class="property">class </em><code class="descname">WindowExitHandler</code><a class="headerlink" href="#pyglet.window.event.WindowExitHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the window should be closed.</p>
+<p>This event handler watches for the ESC key or the window close event
+and sets <cite>self.has_exit</cite> to True when either is pressed.  An instance
+of this class is automatically attached to all new <cite>pyglet.window.Window</cite>
+objects.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. This class’s functionality is provided directly on <cite>Window</cite>
+in pyglet 1.1.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><a class="reference internal" href="#pyglet.window.event.WindowExitHandler.has_exit" title="pyglet.window.event.WindowExitHandler.has_exit"><strong>has_exit</strong></a> – True if the user wants to close the window.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.event.WindowExitHandler.has_exit" title="pyglet.window.event.WindowExitHandler.has_exit"><code class="xref py py-obj docutils literal"><span class="pre">has_exit</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.window.event.WindowExitHandler.has_exit">
+<code class="descclassname">WindowExitHandler.</code><code class="descname">has_exit</code><em class="property"> = False</em><a class="headerlink" href="#pyglet.window.event.WindowExitHandler.has_exit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>WindowExitHandler</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.window.event.WindowEventLogger.html"
+                        title="previous chapter"><cite>WindowEventLogger</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../pyglet.window.key.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.window.key</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.window.key.html" title="pyglet.window.key"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.window.event.WindowEventLogger.html" title="WindowEventLogger Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.window.html" ><code class="docutils literal"><span class="pre">pyglet.window</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.window.event.html" ><code class="docutils literal"><span class="pre">pyglet.window.event</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

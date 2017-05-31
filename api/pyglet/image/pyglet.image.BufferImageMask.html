@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>BufferImageMask Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.image" href="../pyglet.image.html" />
+    <link rel="next" title="BufferManager Class" href="pyglet.image.BufferManager.html" />
+    <link rel="prev" title="BufferImage Class" href="pyglet.image.BufferImage.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.BufferManager.html" title="BufferManager Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.BufferImage.html" title="BufferImage Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bufferimagemask-class">
+<h1><cite>BufferImageMask</cite> Class<a class="headerlink" href="#bufferimagemask-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-c0d552fed562a7fbadb45e6c156955bc80f916f3.png" alt="Inheritance diagram of BufferImageMask" usemap="#inheritance84db822ae3" class="inheritance"/>
+<map id="inheritance84db822ae3" name="inheritance84db822ae3">
+<area shape="rect" id="node1" href="pyglet.image.AbstractImage.html#pyglet.image.AbstractImage" target="_top" title="Abstract class representing an image." alt="" coords="5,5,192,29"/>
+<area shape="rect" id="node2" href="pyglet.image.BufferImage.html#pyglet.image.BufferImage" target="_top" title="An abstract framebuffer." alt="" coords="240,5,413,29"/>
+<area shape="rect" id="node3" href="#pyglet.image.BufferImageMask" target="_top" title="A single bit of the stencil buffer." alt="" coords="461,5,666,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.image.BufferImageMask">
+<em class="property">class </em><code class="descname">BufferImageMask</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>width</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.BufferImageMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single bit of the stencil buffer.</p>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">anchor_x</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">anchor_y</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.image.BufferImageMask.format" title="pyglet.image.BufferImageMask.format"><code class="xref py py-obj docutils literal"><span class="pre">format</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">image_data</span></code></td>
+<td>An <cite>ImageData</cite> view of this image.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">mipmapped_texture</span></code></td>
+<td>A Texture view of this image.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">owner</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">texture</span></code></td>
+<td>Get a <cite>Texture</cite> view of this image.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.image.BufferImageMask.format">
+<code class="descclassname">BufferImageMask.</code><code class="descname">format</code><em class="property"> = ‘L’</em><a class="headerlink" href="#pyglet.image.BufferImageMask.format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">BufferImageMask.</code><code class="descname">anchor_x</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">BufferImageMask.</code><code class="descname">anchor_y</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">BufferImageMask.</code><code class="descname">image_data</code></dt>
+<dd><p>An <cite>ImageData</cite> view of this image.</p>
+<p>Changes to the returned instance may or may not be reflected in this
+image.  Read-only.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>get_image_data</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>ImageData</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">BufferImageMask.</code><code class="descname">mipmapped_texture</code></dt>
+<dd><p>A Texture view of this image.</p>
+<p>The returned Texture will have mipmaps filled in for all levels.
+Requires that image dimensions be powers of 2.  Read-only.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>get_mipmapped_texture</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Texture</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">BufferImageMask.</code><code class="descname">owner</code><em class="property"> = None</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">BufferImageMask.</code><code class="descname">texture</code></dt>
+<dd><p>Get a <cite>Texture</cite> view of this image.</p>
+<p>Changes to the returned instance may or may not be reflected in this
+image.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>get_texture</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Texture</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>BufferImageMask</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.image.BufferImage.html"
+                        title="previous chapter"><cite>BufferImage</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.image.BufferManager.html"
+                        title="next chapter"><cite>BufferManager</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.BufferManager.html" title="BufferManager Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.BufferImage.html" title="BufferImage Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.image.html" ><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

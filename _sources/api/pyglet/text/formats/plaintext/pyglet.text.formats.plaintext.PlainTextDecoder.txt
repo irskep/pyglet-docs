@@ -1,0 +1,53 @@
+`PlainTextDecoder` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.formats.plaintext
+
+.. inheritance-diagram:: PlainTextDecoder
+
+.. autoclass:: PlainTextDecoder
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

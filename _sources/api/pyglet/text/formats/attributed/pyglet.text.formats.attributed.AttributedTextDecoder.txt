@@ -1,0 +1,53 @@
+`AttributedTextDecoder` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.formats.attributed
+
+.. inheritance-diagram:: AttributedTextDecoder
+
+.. autoclass:: AttributedTextDecoder
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

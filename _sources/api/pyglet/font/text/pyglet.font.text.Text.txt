@@ -1,0 +1,119 @@
+`Text` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.font.text
+
+.. inheritance-diagram:: Text
+
+.. autoclass:: Text
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Text.BASELINE
+         ~Text.BOTTOM
+         ~Text.CENTER
+         ~Text.LEFT
+         ~Text.RIGHT
+         ~Text.TOP
+         ~Text.color
+         ~Text.font
+         ~Text.halign
+         ~Text.height
+         ~Text.leading
+         ~Text.line_height
+         ~Text.text
+         ~Text.valign
+         ~Text.width
+         ~Text.x
+         ~Text.y
+         ~Text.z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Text.BASELINE
+
+.. autoattribute:: Text.BOTTOM
+
+.. autoattribute:: Text.CENTER
+
+.. autoattribute:: Text.LEFT
+
+.. autoattribute:: Text.RIGHT
+
+.. autoattribute:: Text.TOP
+
+.. autoattribute:: Text.color
+
+.. autoattribute:: Text.font
+
+.. autoattribute:: Text.halign
+
+.. autoattribute:: Text.height
+
+.. autoattribute:: Text.leading
+
+.. autoattribute:: Text.line_height
+
+.. autoattribute:: Text.text
+
+.. autoattribute:: Text.valign
+
+.. autoattribute:: Text.width
+
+.. autoattribute:: Text.x
+
+.. autoattribute:: Text.y
+
+.. autoattribute:: Text.z
+
+
+
+
+
+
+
+

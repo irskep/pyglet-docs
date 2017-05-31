@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.canvas &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.canvas">
+<span id="pyglet-canvas"></span><h1><code class="docutils literal"><span class="pre">pyglet.canvas</span></code><a class="headerlink" href="#module-pyglet.canvas" title="Permalink to this headline">¶</a></h1>
+<p>Display and screen management.</p>
+<p>Rendering is performed on a <a class="reference internal" href="canvas/pyglet.canvas.Canvas.html#pyglet.canvas.Canvas" title="pyglet.canvas.Canvas"><code class="xref py py-class docutils literal"><span class="pre">Canvas</span></code></a>, which conceptually could be an
+off-screen buffer, the content area of a <a class="reference internal" href="window/pyglet.window.Window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">pyglet.window.Window</span></code></a>, or an 
+entire screen. Currently, canvases can only be created with windows (though 
+windows can be set fullscreen).</p>
+<p>Windows and canvases must belong to a <a class="reference internal" href="canvas/pyglet.canvas.Display.html#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a>.  On Windows and Mac OS 
+X there is only one display, which can be obtained with <a class="reference internal" href="../../modules/canvas.html#pyglet.canvas.get_display" title="pyglet.canvas.get_display"><code class="xref py py-func docutils literal"><span class="pre">get_display()</span></code></a>.  
+Linux supports multiple displays, corresponding to discrete X11 display 
+connections and screens.  <a class="reference internal" href="../../modules/canvas.html#pyglet.canvas.get_display" title="pyglet.canvas.get_display"><code class="xref py py-func docutils literal"><span class="pre">get_display()</span></code></a> on  Linux returns the default 
+display and screen 0 (<code class="docutils literal"><span class="pre">localhost:0.0</span></code>); if a particular screen or display is 
+required then <a class="reference internal" href="canvas/pyglet.canvas.Display.html#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a> can be instantiated directly.</p>
+<p>Within a display one or more screens are attached.  A <a class="reference internal" href="canvas/pyglet.canvas.Screen.html#pyglet.canvas.Screen" title="pyglet.canvas.Screen"><code class="xref py py-class docutils literal"><span class="pre">Screen</span></code></a> often
+corresponds to a physical attached monitor, however a monitor or projector set
+up to clone another screen will not be listed.  Use <a class="reference internal" href="../../modules/canvas.html#pyglet.canvas.Display.get_screens" title="pyglet.canvas.Display.get_screens"><code class="xref py py-meth docutils literal"><span class="pre">Display.get_screens()</span></code></a>
+to get a list of the attached screens; these can then be queried for their 
+sizes and virtual positions on the desktop.</p>
+<p>The size of a screen is determined by its current mode, which can be changed
+by the application; see the documentation for <a class="reference internal" href="canvas/pyglet.canvas.Screen.html#pyglet.canvas.Screen" title="pyglet.canvas.Screen"><code class="xref py py-class docutils literal"><span class="pre">Screen</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.2</p>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="canvas/pyglet.canvas.base.html#module-pyglet.canvas.base" title="pyglet.canvas.base"><code class="xref py py-obj docutils literal"><span class="pre">base</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../modules/canvas.html#pyglet.canvas.get_display" title="pyglet.canvas.get_display"><code class="xref py py-obj docutils literal"><span class="pre">get_display</span></code></a>()</td>
+<td>Get the default display device.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.canvas</span></code></a><ul>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

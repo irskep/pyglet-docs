@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.text.document &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.text" href="../pyglet.text.html" />
+    <link rel="next" title="AbstractDocument Class" href="document/pyglet.text.document.AbstractDocument.html" />
+    <link rel="prev" title="Caret Class" href="caret/pyglet.text.caret.Caret.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="document/pyglet.text.document.AbstractDocument.html" title="AbstractDocument Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="caret/pyglet.text.caret.Caret.html" title="Caret Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.text.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.text.document">
+<span id="pyglet-text-document"></span><h1><code class="docutils literal"><span class="pre">pyglet.text.document</span></code><a class="headerlink" href="#module-pyglet.text.document" title="Permalink to this headline">¶</a></h1>
+<p>Formatted and unformatted document interfaces used by text layout.</p>
+<div class="section" id="abstract-representation">
+<h2>Abstract representation<a class="headerlink" href="#abstract-representation" title="Permalink to this headline">¶</a></h2>
+<p>Styled text in pyglet is represented by one of the <cite>AbstractDocument</cite> classes,
+which manage the state representation of text and style independently of how
+it is loaded or rendered.</p>
+<p>A document consists of the document text (a Unicode string) and a set of
+named style ranges.  For example, consider the following (artificial)
+example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">0</span>    <span class="mi">5</span>   <span class="mi">10</span>   <span class="mi">15</span>   <span class="mi">20</span>
+<span class="n">The</span> <span class="n">cat</span> <span class="n">sat</span> <span class="n">on</span> <span class="n">the</span> <span class="n">mat</span><span class="o">.</span>
+<span class="o">+++++++</span>        <span class="o">+++++++</span>    <span class="s2">&quot;bold&quot;</span>
+            <span class="o">++++++</span>      <span class="s2">&quot;italic&quot;</span>
+</pre></div>
+</div>
+<p>If this example were to be rendered, “The cat” and “the mat” would be in bold,
+and “on the” in italics.  Note that the second “the” is both bold and italic.</p>
+<p>The document styles recorded for this example would be <code class="docutils literal"><span class="pre">&quot;bold&quot;</span></code> over ranges
+(0-7, 15-22) and <code class="docutils literal"><span class="pre">&quot;italic&quot;</span></code> over range (12-18).  Overlapping styles are
+permitted; unlike HTML and other structured markup, the ranges need not be
+nested.</p>
+<p>The document has no knowledge of the semantics of <code class="docutils literal"><span class="pre">&quot;bold&quot;</span></code> or <code class="docutils literal"><span class="pre">&quot;italic&quot;</span></code>,
+it stores only the style names.  The pyglet layout classes give meaning to
+these style names in the way they are rendered; but you are also free to
+invent your own style names (which will be ignored by the layout classes).
+This can be useful to tag areas of interest in a document, or maintain
+references back to the source material.</p>
+<p>As well as text, the document can contain arbitrary elements represented by
+<cite>InlineElement</cite>.  An inline element behaves like a single character in the
+documented, but can be rendered by the application.</p>
+</div>
+<div class="section" id="paragraph-breaks">
+<h2>Paragraph breaks<a class="headerlink" href="#paragraph-breaks" title="Permalink to this headline">¶</a></h2>
+<p>Paragraph breaks are marked with a “newline” character (U+0010).  The Unicode
+paragraph break (U+2029) can also be used.</p>
+<p>Line breaks (U+2028) can be used to force a line break within a paragraph.</p>
+<p>See Unicode recommendation UTR #13 for more information:
+<a class="reference external" href="http://unicode.org/reports/tr13/tr13-5.html">http://unicode.org/reports/tr13/tr13-5.html</a>.</p>
+</div>
+<div class="section" id="document-classes">
+<h2>Document classes<a class="headerlink" href="#document-classes" title="Permalink to this headline">¶</a></h2>
+<p>Any class implementing <cite>AbstractDocument</cite> provides an interface to a
+document model as described above.  In theory a structured document such as
+HTML or XML could export this model, though the classes provided by pyglet
+implement only unstructured documents.</p>
+<p>The <cite>UnformattedDocument</cite> class assumes any styles set are set over the entire
+document.  So, regardless of the range specified when setting a <code class="docutils literal"><span class="pre">&quot;bold&quot;</span></code>
+style attribute, for example, the entire document will receive that style.</p>
+<p>The <cite>FormattedDocument</cite> class implements the document model directly, using
+the <cite>RunList</cite> class to represent style runs efficiently.</p>
+</div>
+<div class="section" id="style-attributes">
+<h2>Style attributes<a class="headerlink" href="#style-attributes" title="Permalink to this headline">¶</a></h2>
+<p>The following character style attribute names are recognised by pyglet:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">font_name</span></code></dt>
+<dd>Font family name, as given to <cite>pyglet.font.load</cite>.</dd>
+<dt><code class="docutils literal"><span class="pre">font_size</span></code></dt>
+<dd>Font size, in points.</dd>
+<dt><code class="docutils literal"><span class="pre">bold</span></code></dt>
+<dd>Boolean.</dd>
+<dt><code class="docutils literal"><span class="pre">italic</span></code></dt>
+<dd>Boolean.</dd>
+<dt><code class="docutils literal"><span class="pre">underline</span></code></dt>
+<dd>4-tuple of ints in range (0, 255) giving RGBA underline color, or None
+(default) for no underline.</dd>
+<dt><code class="docutils literal"><span class="pre">kerning</span></code></dt>
+<dd>Additional space to insert between glyphs, in points.  Defaults to 0.</dd>
+<dt><code class="docutils literal"><span class="pre">baseline</span></code></dt>
+<dd>Offset of glyph baseline from line baseline, in points.  Positive values
+give a superscript, negative values give a subscript.  Defaults to 0.</dd>
+<dt><code class="docutils literal"><span class="pre">color</span></code></dt>
+<dd>4-tuple of ints in range (0, 255) giving RGBA text color</dd>
+<dt><code class="docutils literal"><span class="pre">background_color</span></code></dt>
+<dd>4-tuple of ints in range (0, 255) giving RGBA text background color; or
+<code class="docutils literal"><span class="pre">None</span></code> for no background fill.</dd>
+</dl>
+<p>The following paragraph style attribute names are recognised by pyglet.  Note
+that paragraph styles are handled no differently from character styles by the
+document: it is the application’s responsibility to set the style over an
+entire paragraph, otherwise results are undefined.</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">align</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">left</span></code> (default), <code class="docutils literal"><span class="pre">center</span></code> or <code class="docutils literal"><span class="pre">right</span></code>.</dd>
+<dt><code class="docutils literal"><span class="pre">indent</span></code></dt>
+<dd>Additional horizontal space to insert before the first</dd>
+<dt><code class="docutils literal"><span class="pre">leading</span></code></dt>
+<dd>Additional space to insert between consecutive lines within a paragraph,
+in points.  Defaults to 0.</dd>
+<dt><code class="docutils literal"><span class="pre">line_spacing</span></code></dt>
+<dd>Distance between consecutive baselines in a paragraph, in points.
+Defaults to <code class="docutils literal"><span class="pre">None</span></code>, which automatically calculates the tightest line
+spacing for each line based on the font ascent and descent.</dd>
+<dt><code class="docutils literal"><span class="pre">margin_left</span></code></dt>
+<dd>Left paragraph margin, in pixels.</dd>
+<dt><code class="docutils literal"><span class="pre">margin_right</span></code></dt>
+<dd>Right paragraph margin, in pixels.</dd>
+<dt><code class="docutils literal"><span class="pre">margin_top</span></code></dt>
+<dd>Margin above paragraph, in pixels.</dd>
+<dt><code class="docutils literal"><span class="pre">margin_bottom</span></code></dt>
+<dd>Margin below paragraph, in pixels.  Adjacent margins do not collapse.</dd>
+<dt><code class="docutils literal"><span class="pre">tab_stops</span></code></dt>
+<dd>List of horizontal tab stops, in pixels, measured from the left edge of
+the text layout.  Defaults to the empty list.  When the tab stops
+are exhausted, they implicitly continue at 50 pixel intervals.</dd>
+<dt><code class="docutils literal"><span class="pre">wrap</span></code></dt>
+<dd>Boolean.  If True (the default), text wraps within the width of the layout.</dd>
+</dl>
+<p>Other attributes can be used to store additional style information within the
+document; it will be ignored by the built-in text classes.</p>
+<p>All style attributes (including those not present in a document) default to
+<code class="docutils literal"><span class="pre">None</span></code> (including the so-called “boolean” styles listed above).  The meaning
+of a <code class="docutils literal"><span class="pre">None</span></code> style is style- and application-dependent.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.1</p>
+</div>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="document/pyglet.text.document.AbstractDocument.html#pyglet.text.document.AbstractDocument" title="pyglet.text.document.AbstractDocument"><code class="xref py py-obj docutils literal"><span class="pre">AbstractDocument</span></code></a></td>
+<td>Abstract document interface used by all <cite>pyglet.text</cite> classes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="document/pyglet.text.document.FormattedDocument.html#pyglet.text.document.FormattedDocument" title="pyglet.text.document.FormattedDocument"><code class="xref py py-obj docutils literal"><span class="pre">FormattedDocument</span></code></a></td>
+<td>Simple implementation of a document that maintains text formatting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="document/pyglet.text.document.InlineElement.html#pyglet.text.document.InlineElement" title="pyglet.text.document.InlineElement"><code class="xref py py-obj docutils literal"><span class="pre">InlineElement</span></code></a></td>
+<td>Arbitrary inline element positioned within a formatted document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="document/pyglet.text.document.UnformattedDocument.html#pyglet.text.document.UnformattedDocument" title="pyglet.text.document.UnformattedDocument"><code class="xref py py-obj docutils literal"><span class="pre">UnformattedDocument</span></code></a></td>
+<td>A document having uniform style over all text.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.text.document.STYLE_INDETERMINATE">
+<code class="descname">STYLE_INDETERMINATE</code><em class="property"> = ‘indeterminate’</em><a class="headerlink" href="#pyglet.text.document.STYLE_INDETERMINATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The style attribute takes on multiple values in the document.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">event</span></code></li>
+<li><code class="docutils literal"><span class="pre">re</span></code></li>
+<li><code class="docutils literal"><span class="pre">runlist</span></code></li>
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.text.document</span></code></a><ul>
+<li><a class="reference internal" href="#abstract-representation">Abstract representation</a></li>
+<li><a class="reference internal" href="#paragraph-breaks">Paragraph breaks</a></li>
+<li><a class="reference internal" href="#document-classes">Document classes</a></li>
+<li><a class="reference internal" href="#style-attributes">Style attributes</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="caret/pyglet.text.caret.Caret.html"
+                        title="previous chapter"><cite>Caret</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="document/pyglet.text.document.AbstractDocument.html"
+                        title="next chapter"><cite>AbstractDocument</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="document/pyglet.text.document.AbstractDocument.html" title="AbstractDocument Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="caret/pyglet.text.caret.Caret.html" title="Caret Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+`FontException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.font.base.FontException
+
+Exception defined in :mod:`pyglet.font.base`
+
+.. currentmodule:: pyglet.font.base
+
+.. autoexception:: FontException

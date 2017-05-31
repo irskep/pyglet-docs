@@ -1,0 +1,100 @@
+`CanvasConfig` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.gl
+
+.. inheritance-diagram:: CanvasConfig
+
+.. autoclass:: CanvasConfig
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~CanvasConfig.debug
+         ~CanvasConfig.forward_compatible
+         ~CanvasConfig.major_version
+         ~CanvasConfig.minor_version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: CanvasConfig.debug
+      :noindex:
+
+   .. autoattribute:: CanvasConfig.forward_compatible
+      :noindex:
+
+   .. autoattribute:: CanvasConfig.major_version
+      :noindex:
+
+   .. autoattribute:: CanvasConfig.minor_version
+      :noindex:
+
+
+
+

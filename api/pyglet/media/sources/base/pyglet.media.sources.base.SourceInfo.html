@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SourceInfo Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../../index.html" />
+    <link rel="up" title="pyglet.media.sources.base" href="../pyglet.media.sources.base.html" />
+    <link rel="next" title="StaticMemorySource Class" href="pyglet.media.sources.base.StaticMemorySource.html" />
+    <link rel="prev" title="SourceGroup Class" href="pyglet.media.sources.base.SourceGroup.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.sources.base.StaticMemorySource.html" title="StaticMemorySource Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.sources.base.SourceGroup.html" title="SourceGroup Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../../pyglet.media.sources.html" ><code class="docutils literal"><span class="pre">pyglet.media.sources</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.sources.base.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.media.sources.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sourceinfo-class">
+<h1><cite>SourceInfo</cite> Class<a class="headerlink" href="#sourceinfo-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../../_images/inheritance-bde753ba0ce4588a889448502256ec8d83701b22.png" alt="Inheritance diagram of SourceInfo" usemap="#inheritance276e3a6607" class="inheritance"/>
+<map id="inheritance276e3a6607" name="inheritance276e3a6607">
+<area shape="rect" id="node1" href="#pyglet.media.sources.base.SourceInfo" target="_top" title="Source metadata information." alt="" coords="5,5,253,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.media.sources.base.SourceInfo">
+<em class="property">class </em><code class="descname">SourceInfo</code><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source metadata information.</p>
+<p>Fields are the empty string or zero if the information is not available.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.title" title="pyglet.media.sources.base.SourceInfo.title"><strong>title</strong></a> – Title</li>
+<li><a class="reference internal" href="../pyglet.media.sources.SourceInfo.html#pyglet.media.sources.SourceInfo.author" title="pyglet.media.sources.SourceInfo.author"><strong>author</strong></a> – Author</li>
+<li><a class="reference internal" href="../pyglet.media.sources.SourceInfo.html#pyglet.media.sources.SourceInfo.copyright" title="pyglet.media.sources.SourceInfo.copyright"><strong>copyright</strong></a> – Copyright statement</li>
+<li><a class="reference internal" href="../pyglet.media.sources.SourceInfo.html#pyglet.media.sources.SourceInfo.comment" title="pyglet.media.sources.SourceInfo.comment"><strong>comment</strong></a> – Comment</li>
+<li><a class="reference internal" href="../pyglet.media.sources.SourceInfo.html#pyglet.media.sources.SourceInfo.album" title="pyglet.media.sources.SourceInfo.album"><strong>album</strong></a> – Album name</li>
+<li><a class="reference internal" href="../pyglet.media.sources.SourceInfo.html#pyglet.media.sources.SourceInfo.year" title="pyglet.media.sources.SourceInfo.year"><strong>year</strong></a> – Year</li>
+<li><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.track" title="pyglet.media.sources.base.SourceInfo.track"><strong>track</strong></a> – Track number</li>
+<li><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.genre" title="pyglet.media.sources.base.SourceInfo.genre"><strong>genre</strong></a> – Genre</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.2</p>
+</div>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.album" title="pyglet.media.sources.base.SourceInfo.album"><code class="xref py py-obj docutils literal"><span class="pre">album</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.author" title="pyglet.media.sources.base.SourceInfo.author"><code class="xref py py-obj docutils literal"><span class="pre">author</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.comment" title="pyglet.media.sources.base.SourceInfo.comment"><code class="xref py py-obj docutils literal"><span class="pre">comment</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.copyright" title="pyglet.media.sources.base.SourceInfo.copyright"><code class="xref py py-obj docutils literal"><span class="pre">copyright</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.genre" title="pyglet.media.sources.base.SourceInfo.genre"><code class="xref py py-obj docutils literal"><span class="pre">genre</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.title" title="pyglet.media.sources.base.SourceInfo.title"><code class="xref py py-obj docutils literal"><span class="pre">title</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.track" title="pyglet.media.sources.base.SourceInfo.track"><code class="xref py py-obj docutils literal"><span class="pre">track</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.sources.base.SourceInfo.year" title="pyglet.media.sources.base.SourceInfo.year"><code class="xref py py-obj docutils literal"><span class="pre">year</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.album">
+<code class="descclassname">SourceInfo.</code><code class="descname">album</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.album" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.author">
+<code class="descclassname">SourceInfo.</code><code class="descname">author</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.author" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.comment">
+<code class="descclassname">SourceInfo.</code><code class="descname">comment</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.comment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.copyright">
+<code class="descclassname">SourceInfo.</code><code class="descname">copyright</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.copyright" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.genre">
+<code class="descclassname">SourceInfo.</code><code class="descname">genre</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.genre" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.title">
+<code class="descclassname">SourceInfo.</code><code class="descname">title</code><em class="property"> = ”</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.track">
+<code class="descclassname">SourceInfo.</code><code class="descname">track</code><em class="property"> = 0</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.track" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.sources.base.SourceInfo.year">
+<code class="descclassname">SourceInfo.</code><code class="descname">year</code><em class="property"> = 0</em><a class="headerlink" href="#pyglet.media.sources.base.SourceInfo.year" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>SourceInfo</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.media.sources.base.SourceGroup.html"
+                        title="previous chapter"><cite>SourceGroup</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.media.sources.base.StaticMemorySource.html"
+                        title="next chapter"><cite>StaticMemorySource</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.sources.base.StaticMemorySource.html" title="StaticMemorySource Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.sources.base.SourceGroup.html" title="SourceGroup Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../../pyglet.media.sources.html" ><code class="docutils literal"><span class="pre">pyglet.media.sources</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.sources.base.html" ><code class="docutils literal"><span class="pre">pyglet.media.sources.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

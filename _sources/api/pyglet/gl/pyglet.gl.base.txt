@@ -1,0 +1,64 @@
+``pyglet.gl.base``
+===============================================================
+
+.. automodule:: pyglet.gl.base
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: base/
+   :template: class.rst
+
+
+   CanvasConfig
+   Config
+   Context
+   ObjectSpace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: compat_platform
+
+.. autodata:: gl
+
+
+
+
+
+
+
+
+
+
+.. template module.rst
+

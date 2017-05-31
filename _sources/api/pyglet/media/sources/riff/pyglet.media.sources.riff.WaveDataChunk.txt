@@ -1,0 +1,92 @@
+`WaveDataChunk` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.riff
+
+.. inheritance-diagram:: WaveDataChunk
+
+.. autoclass:: WaveDataChunk
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~WaveDataChunk.header_fmt
+         ~WaveDataChunk.header_length
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: WaveDataChunk.header_fmt
+      :noindex:
+
+   .. autoattribute:: WaveDataChunk.header_length
+      :noindex:
+
+
+
+

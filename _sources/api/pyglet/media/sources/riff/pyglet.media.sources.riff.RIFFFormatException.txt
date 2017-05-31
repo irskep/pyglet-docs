@@ -1,0 +1,12 @@
+`RIFFFormatException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.media.sources.riff.RIFFFormatException
+
+Exception defined in :mod:`pyglet.media.sources.riff`
+
+.. currentmodule:: pyglet.media.sources.riff
+
+.. autoexception:: RIFFFormatException

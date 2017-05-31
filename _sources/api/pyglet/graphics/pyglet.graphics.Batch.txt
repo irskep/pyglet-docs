@@ -1,0 +1,53 @@
+`Batch` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics
+
+.. inheritance-diagram:: Batch
+
+.. autoclass:: Batch
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

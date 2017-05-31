@@ -1,0 +1,12 @@
+`ImageDecodeException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.image.codecs.ImageDecodeException
+
+Exception defined in :mod:`pyglet.image.codecs`
+
+.. currentmodule:: pyglet.image.codecs
+
+.. autoexception:: ImageDecodeException

@@ -1,0 +1,110 @@
+`TextLayout` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.layout
+
+.. inheritance-diagram:: TextLayout
+
+.. autoclass:: TextLayout
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~TextLayout.anchor_x
+         ~TextLayout.anchor_y
+         ~TextLayout.background_group
+         ~TextLayout.batch
+         ~TextLayout.content_valign
+         ~TextLayout.document
+         ~TextLayout.dpi
+         ~TextLayout.foreground_decoration_group
+         ~TextLayout.foreground_group
+         ~TextLayout.height
+         ~TextLayout.multiline
+         ~TextLayout.top_group
+         ~TextLayout.width
+         ~TextLayout.x
+         ~TextLayout.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: TextLayout.anchor_x
+
+.. autoattribute:: TextLayout.anchor_y
+
+.. autoattribute:: TextLayout.background_group
+
+.. autoattribute:: TextLayout.batch
+
+.. autoattribute:: TextLayout.content_valign
+
+.. autoattribute:: TextLayout.document
+
+.. autoattribute:: TextLayout.dpi
+
+.. autoattribute:: TextLayout.foreground_decoration_group
+
+.. autoattribute:: TextLayout.foreground_group
+
+.. autoattribute:: TextLayout.height
+
+.. autoattribute:: TextLayout.multiline
+
+.. autoattribute:: TextLayout.top_group
+
+.. autoattribute:: TextLayout.width
+
+.. autoattribute:: TextLayout.x
+
+.. autoattribute:: TextLayout.y
+
+
+
+
+
+
+
+

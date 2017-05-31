@@ -1,0 +1,84 @@
+`Screen` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.canvas.base
+
+.. inheritance-diagram:: Screen
+
+.. autoclass:: Screen
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Instance Attributes
+-------------------
+
+
+
+.. attribute:: Screen.display
+
+   Display this screen belongs to.
+   
+
+.. attribute:: Screen.height
+
+   Height of the screen, in pixels.
+   
+
+.. attribute:: Screen.width
+
+   Width of the screen, in pixels.
+   
+
+.. attribute:: Screen.x
+
+   Left edge of the screen on the virtual desktop.
+   
+
+.. attribute:: Screen.y
+
+   Top edge of the screen on the virtual desktop.
+   
+
+
+
+

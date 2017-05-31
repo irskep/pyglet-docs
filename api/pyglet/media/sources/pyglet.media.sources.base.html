@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.media.sources.base &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.media.sources" href="../pyglet.media.sources.html" />
+    <link rel="next" title="AudioData Class" href="base/pyglet.media.sources.base.AudioData.html" />
+    <link rel="prev" title="pyglet.media.sources" href="../pyglet.media.sources.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="base/pyglet.media.sources.base.AudioData.html" title="AudioData Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.sources.html" title="pyglet.media.sources"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.sources.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.media.sources</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.media.sources.base">
+<span id="pyglet-media-sources-base"></span><h1><code class="docutils literal"><span class="pre">pyglet.media.sources.base</span></code><a class="headerlink" href="#module-pyglet.media.sources.base" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.media.sources.base.AudioData.html#pyglet.media.sources.base.AudioData" title="pyglet.media.sources.base.AudioData"><code class="xref py py-obj docutils literal"><span class="pre">AudioData</span></code></a></td>
+<td>A single packet of audio data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.media.sources.base.AudioFormat.html#pyglet.media.sources.base.AudioFormat" title="pyglet.media.sources.base.AudioFormat"><code class="xref py py-obj docutils literal"><span class="pre">AudioFormat</span></code></a></td>
+<td>Audio details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.media.sources.base.Source.html#pyglet.media.sources.base.Source" title="pyglet.media.sources.base.Source"><code class="xref py py-obj docutils literal"><span class="pre">Source</span></code></a></td>
+<td>An audio and/or video source.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.media.sources.base.SourceGroup.html#pyglet.media.sources.base.SourceGroup" title="pyglet.media.sources.base.SourceGroup"><code class="xref py py-obj docutils literal"><span class="pre">SourceGroup</span></code></a></td>
+<td>Read data from a queue of sources, with support for looping.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.media.sources.base.SourceInfo.html#pyglet.media.sources.base.SourceInfo" title="pyglet.media.sources.base.SourceInfo"><code class="xref py py-obj docutils literal"><span class="pre">SourceInfo</span></code></a></td>
+<td>Source metadata information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.media.sources.base.StaticMemorySource.html#pyglet.media.sources.base.StaticMemorySource" title="pyglet.media.sources.base.StaticMemorySource"><code class="xref py py-obj docutils literal"><span class="pre">StaticMemorySource</span></code></a></td>
+<td>Helper class for default implementation of <cite>StaticSource</cite>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.media.sources.base.StaticSource.html#pyglet.media.sources.base.StaticSource" title="pyglet.media.sources.base.StaticSource"><code class="xref py py-obj docutils literal"><span class="pre">StaticSource</span></code></a></td>
+<td>A source that has been completely decoded in memory.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="base/pyglet.media.sources.base.StreamingSource.html#pyglet.media.sources.base.StreamingSource" title="pyglet.media.sources.base.StreamingSource"><code class="xref py py-obj docutils literal"><span class="pre">StreamingSource</span></code></a></td>
+<td>A source that is decoded as it is being played, and can only be queued once.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="base/pyglet.media.sources.base.VideoFormat.html#pyglet.media.sources.base.VideoFormat" title="pyglet.media.sources.base.VideoFormat"><code class="xref py py-obj docutils literal"><span class="pre">VideoFormat</span></code></a></td>
+<td>Video details.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pyglet</span></code></li>
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.media.sources.base</span></code></a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.media.sources.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.media.sources</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="base/pyglet.media.sources.base.AudioData.html"
+                        title="next chapter"><cite>AudioData</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="base/pyglet.media.sources.base.AudioData.html" title="AudioData Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.sources.html" title="pyglet.media.sources"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.sources.html" ><code class="docutils literal"><span class="pre">pyglet.media.sources</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

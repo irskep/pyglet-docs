@@ -1,0 +1,151 @@
+`TextureRegion` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: TextureRegion
+
+.. autoclass:: TextureRegion
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~TextureRegion.create
+         ~TextureRegion.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~TextureRegion.anchor_x
+         ~TextureRegion.anchor_y
+         ~TextureRegion.image_data
+         ~TextureRegion.images
+         ~TextureRegion.level
+         ~TextureRegion.mipmapped_texture
+         ~TextureRegion.tex_coords
+         ~TextureRegion.tex_coords_order
+         ~TextureRegion.texture
+         ~TextureRegion.x
+         ~TextureRegion.y
+         ~TextureRegion.z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: TextureRegion.create
+      :noindex:
+
+   .. automethod:: TextureRegion.create_for_size
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: TextureRegion.anchor_x
+      :noindex:
+
+   .. autoattribute:: TextureRegion.anchor_y
+      :noindex:
+
+   .. autoattribute:: TextureRegion.image_data
+      :noindex:
+
+   .. autoattribute:: TextureRegion.images
+      :noindex:
+
+   .. autoattribute:: TextureRegion.level
+      :noindex:
+
+   .. autoattribute:: TextureRegion.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: TextureRegion.tex_coords
+      :noindex:
+
+   .. autoattribute:: TextureRegion.tex_coords_order
+      :noindex:
+
+   .. autoattribute:: TextureRegion.texture
+      :noindex:
+
+   .. autoattribute:: TextureRegion.x
+      :noindex:
+
+   .. autoattribute:: TextureRegion.y
+      :noindex:
+
+   .. autoattribute:: TextureRegion.z
+      :noindex:
+
+
+
+

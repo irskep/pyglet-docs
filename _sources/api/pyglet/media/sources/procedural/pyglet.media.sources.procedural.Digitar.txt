@@ -1,0 +1,104 @@
+`Digitar` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.procedural
+
+.. inheritance-diagram:: Digitar
+
+.. autoclass:: Digitar
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Digitar.audio_format
+         ~Digitar.duration
+         ~Digitar.envelope
+         ~Digitar.info
+         ~Digitar.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Digitar.audio_format
+      :noindex:
+
+   .. autoattribute:: Digitar.duration
+      :noindex:
+
+   .. autoattribute:: Digitar.envelope
+      :noindex:
+
+   .. autoattribute:: Digitar.info
+      :noindex:
+
+   .. autoattribute:: Digitar.video_format
+      :noindex:
+
+
+
+

@@ -1,0 +1,107 @@
+`FormattedDocument` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.document
+
+.. inheritance-diagram:: FormattedDocument
+
+.. autoclass:: FormattedDocument
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~FormattedDocument.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~FormattedDocument.event_types
+         ~FormattedDocument.text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: FormattedDocument.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: FormattedDocument.event_types
+      :noindex:
+
+   .. autoattribute:: FormattedDocument.text
+      :noindex:
+
+
+
+

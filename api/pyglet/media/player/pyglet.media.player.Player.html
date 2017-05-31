@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Player Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.media.player" href="../pyglet.media.player.html" />
+    <link rel="next" title="PlayerGroup Class" href="pyglet.media.player.PlayerGroup.html" />
+    <link rel="prev" title="pyglet.media.player" href="../pyglet.media.player.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.player.PlayerGroup.html" title="PlayerGroup Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.player.html" title="pyglet.media.player"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.player.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.media.player</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="player-class">
+<h1><cite>Player</cite> Class<a class="headerlink" href="#player-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-6e2f48521757ca4ae9bd8f3742e4f9319866eec8.png" alt="Inheritance diagram of Player" usemap="#inheritancef9bb3a1cbf" class="inheritance"/>
+<map id="inheritancef9bb3a1cbf" name="inheritancef9bb3a1cbf">
+<area shape="rect" id="node1" href="../../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+<area shape="rect" id="node2" href="#pyglet.media.player.Player" target="_top" title="High&#45;level sound and video player." alt="" coords="248,5,426,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.media.player.Player">
+<em class="property">class </em><code class="descname">Player</code><a class="headerlink" href="#pyglet.media.player.Player" title="Permalink to this definition">¶</a></dt>
+<dd><p>High-level sound and video player.</p>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.player.Player.cone_inner_angle" title="pyglet.media.player.Player.cone_inner_angle"><code class="xref py py-obj docutils literal"><span class="pre">cone_inner_angle</span></code></a></td>
+<td>The interior angle of the inner cone.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.player.Player.cone_orientation" title="pyglet.media.player.Player.cone_orientation"><code class="xref py py-obj docutils literal"><span class="pre">cone_orientation</span></code></a></td>
+<td>The direction of the sound in 3D space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.player.Player.cone_outer_angle" title="pyglet.media.player.Player.cone_outer_angle"><code class="xref py py-obj docutils literal"><span class="pre">cone_outer_angle</span></code></a></td>
+<td>The interior angle of the outer cone.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.player.Player.cone_outer_gain" title="pyglet.media.player.Player.cone_outer_gain"><code class="xref py py-obj docutils literal"><span class="pre">cone_outer_gain</span></code></a></td>
+<td>The gain applied outside the cone.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.player.Player.event_types" title="pyglet.media.player.Player.event_types"><code class="xref py py-obj docutils literal"><span class="pre">event_types</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.player.Player.max_distance" title="pyglet.media.player.Player.max_distance"><code class="xref py py-obj docutils literal"><span class="pre">max_distance</span></code></a></td>
+<td>The distance at which no further attenuation is applied.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.player.Player.min_distance" title="pyglet.media.player.Player.min_distance"><code class="xref py py-obj docutils literal"><span class="pre">min_distance</span></code></a></td>
+<td>The distance beyond which the sound volume drops by half, and within which no attenuation is applied.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.player.Player.pitch" title="pyglet.media.player.Player.pitch"><code class="xref py py-obj docutils literal"><span class="pre">pitch</span></code></a></td>
+<td>The pitch shift to apply to the sound.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.player.Player.playing" title="pyglet.media.player.Player.playing"><code class="xref py py-obj docutils literal"><span class="pre">playing</span></code></a></td>
+<td>Read-only.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.player.Player.position" title="pyglet.media.player.Player.position"><code class="xref py py-obj docutils literal"><span class="pre">position</span></code></a></td>
+<td>The position of the sound in 3D space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.player.Player.source" title="pyglet.media.player.Player.source"><code class="xref py py-obj docutils literal"><span class="pre">source</span></code></a></td>
+<td>Read-only.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.media.player.Player.time" title="pyglet.media.player.Player.time"><code class="xref py py-obj docutils literal"><span class="pre">time</span></code></a></td>
+<td>Read-only.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.media.player.Player.volume" title="pyglet.media.player.Player.volume"><code class="xref py py-obj docutils literal"><span class="pre">volume</span></code></a></td>
+<td>The volume level of sound playback.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.cone_inner_angle">
+<code class="descclassname">Player.</code><code class="descname">cone_inner_angle</code><a class="headerlink" href="#pyglet.media.player.Player.cone_inner_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The interior angle of the inner cone.</p>
+<p>The angle is given in degrees, and defaults to 360. When the listener
+is positioned within the volume defined by the inner cone, the sound is
+played at normal gain (see <a class="reference internal" href="#pyglet.media.player.Player.volume" title="pyglet.media.player.Player.volume"><code class="xref py py-attr docutils literal"><span class="pre">volume</span></code></a>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.cone_orientation">
+<code class="descclassname">Player.</code><code class="descname">cone_orientation</code><a class="headerlink" href="#pyglet.media.player.Player.cone_orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The direction of the sound in 3D space.</p>
+<p>The direction is specified as a tuple of floats (x, y, z), and has no
+unit. The default direction is (0, 0, -1). Directional effects are only
+noticeable if the other cone properties are changed from their default
+values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.cone_outer_angle">
+<code class="descclassname">Player.</code><code class="descname">cone_outer_angle</code><a class="headerlink" href="#pyglet.media.player.Player.cone_outer_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The interior angle of the outer cone.</p>
+<p>The angle is given in degrees, and defaults to 360. When the listener
+is positioned within the volume defined by the outer cone, but outside
+the volume defined by the inner cone, the gain applied is a smooth
+interpolation between <a class="reference internal" href="#pyglet.media.player.Player.volume" title="pyglet.media.player.Player.volume"><code class="xref py py-attr docutils literal"><span class="pre">volume</span></code></a> and <a class="reference internal" href="#pyglet.media.player.Player.cone_outer_gain" title="pyglet.media.player.Player.cone_outer_gain"><code class="xref py py-attr docutils literal"><span class="pre">cone_outer_gain</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.cone_outer_gain">
+<code class="descclassname">Player.</code><code class="descname">cone_outer_gain</code><a class="headerlink" href="#pyglet.media.player.Player.cone_outer_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The gain applied outside the cone.</p>
+<p>When the listener is positioned outside the volume defined by the outer
+cone, this gain is applied instead of <a class="reference internal" href="#pyglet.media.player.Player.volume" title="pyglet.media.player.Player.volume"><code class="xref py py-attr docutils literal"><span class="pre">volume</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.event_types">
+<code class="descclassname">Player.</code><code class="descname">event_types</code><em class="property"> = [‘on_eos’, ‘on_player_eos’, ‘on_source_group_eos’]</em><a class="headerlink" href="#pyglet.media.player.Player.event_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.max_distance">
+<code class="descclassname">Player.</code><code class="descname">max_distance</code><a class="headerlink" href="#pyglet.media.player.Player.max_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance at which no further attenuation is applied.</p>
+<p>When the distance from the listener to the player is greater than this
+value, attenuation is calculated as if the distance were value. By
+default the maximum distance is infinity.</p>
+<p>The unit defaults to meters, but can be modified with the listener
+properties.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.min_distance">
+<code class="descclassname">Player.</code><code class="descname">min_distance</code><a class="headerlink" href="#pyglet.media.player.Player.min_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance beyond which the sound volume drops by half, and within
+which no attenuation is applied.</p>
+<p>The minimum distance controls how quickly a sound is attenuated as it
+moves away from the listener. The gain is clamped at the nominal value
+within the min distance. By default the value is 1.0.</p>
+<p>The unit defaults to meters, but can be modified with the listener properties.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.pitch">
+<code class="descclassname">Player.</code><code class="descname">pitch</code><a class="headerlink" href="#pyglet.media.player.Player.pitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pitch shift to apply to the sound.</p>
+<p>The nominal pitch is 1.0. A pitch of 2.0 will sound one octave higher,
+and play twice as fast. A pitch of 0.5 will sound one octave lower, and
+play twice as slow. A pitch of 0.0 is not permitted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.playing">
+<code class="descclassname">Player.</code><code class="descname">playing</code><a class="headerlink" href="#pyglet.media.player.Player.playing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only. Determine if the player state is playing.</p>
+<p>The <em>playing</em> property is irrespective of whether or not there is
+actually a source to play. If <em>playing</em> is <code class="docutils literal"><span class="pre">True</span></code> and a source is
+queued, it will begin playing immediately. If <em>playing</em> is <code class="docutils literal"><span class="pre">False</span></code>,
+it is implied that the player is paused. There is no other possible
+state.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.position">
+<code class="descclassname">Player.</code><code class="descname">position</code><a class="headerlink" href="#pyglet.media.player.Player.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>The position of the sound in 3D space.</p>
+<p>The position is given as a tuple of floats (x, y, z). The unit
+defaults to meters, but can be modified with the listener properties.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.source">
+<code class="descclassname">Player.</code><code class="descname">source</code><a class="headerlink" href="#pyglet.media.player.Player.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only. The current <code class="xref py py-class docutils literal"><span class="pre">Source</span></code>, or <code class="docutils literal"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.time">
+<code class="descclassname">Player.</code><code class="descname">time</code><a class="headerlink" href="#pyglet.media.player.Player.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only. Current playback time of the current source.</p>
+<p>The playback time is a float expressed in seconds, with 0.0 being the
+beginning of the sound. The playback time returned represents the time
+encoded in the source, and may not reflect actual time passed due to 
+pitch shifting or pausing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.player.Player.volume">
+<code class="descclassname">Player.</code><code class="descname">volume</code><a class="headerlink" href="#pyglet.media.player.Player.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>The volume level of sound playback.</p>
+<p>The nominal level is 1.0, and 0.0 is silence.</p>
+<p>The volume level is affected by the distance from the listener (if
+positioned).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">Player.</code><code class="descname">register_event_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
+<dd><p>Register an event type with the dispatcher.</p>
+<p>Registering event types allows the dispatcher to validate event
+handler names as they are attached, and to search attached objects for
+suitable handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of the event to register.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Player</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.media.player.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.media.player</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.media.player.PlayerGroup.html"
+                        title="next chapter"><cite>PlayerGroup</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.player.PlayerGroup.html" title="PlayerGroup Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.player.html" title="pyglet.media.player"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.player.html" ><code class="docutils literal"><span class="pre">pyglet.media.player</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

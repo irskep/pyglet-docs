@@ -1,0 +1,62 @@
+``pyglet.window.mouse``
+===============================================================
+
+.. automodule:: pyglet.window.mouse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: mouse/
+   :template: function.rst
+
+
+   buttons_string
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: LEFT
+
+.. autodata:: MIDDLE
+
+.. autodata:: RIGHT
+
+
+
+
+
+
+
+
+
+
+.. template module.rst
+

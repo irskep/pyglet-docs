@@ -1,0 +1,63 @@
+``pyglet.font.ttf``
+===============================================================
+
+.. automodule:: pyglet.font.ttf
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: ttf/
+   :template: class.rst
+
+
+   TruetypeInfo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``codecs``
+   * ``mmap``
+   * ``os``
+   * ``struct``
+
+
+
+
+.. template module.rst
+

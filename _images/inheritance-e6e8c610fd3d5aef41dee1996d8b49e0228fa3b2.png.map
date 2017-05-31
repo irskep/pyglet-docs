@@ -1,0 +1,8 @@
+<map id="inheritance1b2af46d20" name="inheritance1b2af46d20">
+<area shape="rect" id="node1" href="pyglet.image.AbstractImage.html#pyglet.image.AbstractImage" target="_top" title="Abstract class representing an image." alt="" coords="309,5,495,29"/>
+<area shape="rect" id="node3" href="pyglet.image.Texture.html#pyglet.image.Texture" target="_top" title="An image loaded into video memory that can be efficiently drawn" alt="" coords="606,5,750,29"/>
+<area shape="rect" id="node2" href="pyglet.image.AbstractImageSequence.html#pyglet.image.AbstractImageSequence" target="_top" title="Abstract sequence of images." alt="" coords="5,53,252,77"/>
+<area shape="rect" id="node6" href="pyglet.image.TextureSequence.html#pyglet.image.TextureSequence" target="_top" title="Interface for a sequence of textures." alt="" coords="300,53,504,77"/>
+<area shape="rect" id="node4" href="#pyglet.image.Texture3D" target="_top" title="A texture with more than one image slice." alt="" coords="851,29,1013,53"/>
+<area shape="rect" id="node5" href="pyglet.image.UniformTextureSequence.html#pyglet.image.UniformTextureSequence" target="_top" title="Interface for a sequence of textures, each with the same dimensions." alt="" coords="552,53,803,77"/>
+</map>

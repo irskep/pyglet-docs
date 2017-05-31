@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Allocator Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.image.atlas" href="../pyglet.image.atlas.html" />
+    <link rel="next" title="TextureAtlas Class" href="pyglet.image.atlas.TextureAtlas.html" />
+    <link rel="prev" title="pyglet.image.atlas" href="../pyglet.image.atlas.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.atlas.TextureAtlas.html" title="TextureAtlas Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.image.atlas.html" title="pyglet.image.atlas"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.image.html" ><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.image.atlas.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.image.atlas</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="allocator-class">
+<h1><cite>Allocator</cite> Class<a class="headerlink" href="#allocator-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-105ce80409473cea3ef9012acf865773785b71b7.png" alt="Inheritance diagram of Allocator" usemap="#inheritance2cf296eceb" class="inheritance"/>
+<map id="inheritance2cf296eceb" name="inheritance2cf296eceb">
+<area shape="rect" id="node1" href="#pyglet.image.atlas.Allocator" target="_top" title="Rectangular area allocation algorithm." alt="" coords="5,5,190,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.image.atlas.Allocator">
+<em class="property">class </em><code class="descname">Allocator</code><span class="sig-paren">(</span><em>width</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.atlas.Allocator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rectangular area allocation algorithm.</p>
+<p>Initialise with a given <code class="docutils literal"><span class="pre">width</span></code> and <code class="docutils literal"><span class="pre">height</span></code>, then repeatedly
+call <cite>alloc</cite> to retrieve free regions of the area and protect that
+area from future allocations.</p>
+<p><cite>Allocator</cite> uses a fairly simple strips-based algorithm.  It performs best
+when rectangles are allocated in decreasing height order.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.image.atlas.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.image.atlas</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.image.atlas.TextureAtlas.html"
+                        title="next chapter"><cite>TextureAtlas</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.image.atlas.TextureAtlas.html" title="TextureAtlas Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.image.atlas.html" title="pyglet.image.atlas"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.image.html" ><code class="docutils literal"><span class="pre">pyglet.image</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.image.atlas.html" ><code class="docutils literal"><span class="pre">pyglet.image.atlas</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

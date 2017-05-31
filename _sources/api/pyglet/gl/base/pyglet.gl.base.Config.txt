@@ -1,0 +1,77 @@
+`Config` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.gl.base
+
+.. inheritance-diagram:: Config
+
+.. autoclass:: Config
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Config.debug
+         ~Config.forward_compatible
+         ~Config.major_version
+         ~Config.minor_version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Config.debug
+
+.. autoattribute:: Config.forward_compatible
+
+.. autoattribute:: Config.major_version
+
+.. autoattribute:: Config.minor_version
+
+
+
+
+
+
+
+

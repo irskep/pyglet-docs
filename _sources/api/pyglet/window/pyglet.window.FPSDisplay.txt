@@ -1,0 +1,68 @@
+`FPSDisplay` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.window
+
+.. inheritance-diagram:: FPSDisplay
+
+.. autoclass:: FPSDisplay
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~FPSDisplay.update_period
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: FPSDisplay.update_period
+
+
+
+
+
+
+
+

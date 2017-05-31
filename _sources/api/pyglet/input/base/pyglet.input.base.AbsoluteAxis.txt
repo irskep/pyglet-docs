@@ -1,0 +1,140 @@
+`AbsoluteAxis` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input.base
+
+.. inheritance-diagram:: AbsoluteAxis
+
+.. autoclass:: AbsoluteAxis
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~AbsoluteAxis.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~AbsoluteAxis.HAT
+         ~AbsoluteAxis.HAT_X
+         ~AbsoluteAxis.HAT_Y
+         ~AbsoluteAxis.RX
+         ~AbsoluteAxis.RY
+         ~AbsoluteAxis.RZ
+         ~AbsoluteAxis.X
+         ~AbsoluteAxis.Y
+         ~AbsoluteAxis.Z
+         ~AbsoluteAxis.event_types
+         ~AbsoluteAxis.value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: AbsoluteAxis.HAT
+
+.. autoattribute:: AbsoluteAxis.HAT_X
+
+.. autoattribute:: AbsoluteAxis.HAT_Y
+
+.. autoattribute:: AbsoluteAxis.RX
+
+.. autoattribute:: AbsoluteAxis.RY
+
+.. autoattribute:: AbsoluteAxis.RZ
+
+.. autoattribute:: AbsoluteAxis.X
+
+.. autoattribute:: AbsoluteAxis.Y
+
+.. autoattribute:: AbsoluteAxis.Z
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: AbsoluteAxis.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: AbsoluteAxis.event_types
+      :noindex:
+
+   .. autoattribute:: AbsoluteAxis.value
+      :noindex:
+
+
+
+

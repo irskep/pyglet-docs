@@ -1,0 +1,53 @@
+`WindowEventLogger` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.window.event
+
+.. inheritance-diagram:: WindowEventLogger
+
+.. autoclass:: WindowEventLogger
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

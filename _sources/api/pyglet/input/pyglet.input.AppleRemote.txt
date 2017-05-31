@@ -1,0 +1,103 @@
+`AppleRemote` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input
+
+.. inheritance-diagram:: AppleRemote
+
+.. autoclass:: AppleRemote
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~AppleRemote.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~AppleRemote.event_types
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: AppleRemote.event_types
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: AppleRemote.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

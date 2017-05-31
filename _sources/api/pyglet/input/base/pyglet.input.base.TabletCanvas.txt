@@ -1,0 +1,103 @@
+`TabletCanvas` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input.base
+
+.. inheritance-diagram:: TabletCanvas
+
+.. autoclass:: TabletCanvas
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~TabletCanvas.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~TabletCanvas.event_types
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: TabletCanvas.event_types
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: TabletCanvas.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+`get_grapheme_clusters` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.font.base`
+
+.. autofunction:: pyglet.font.base.get_grapheme_clusters

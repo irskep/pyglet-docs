@@ -1,0 +1,116 @@
+`ImageData` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: ImageData
+
+.. autoclass:: ImageData
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ImageData.anchor_x
+         ~ImageData.anchor_y
+         ~ImageData.data
+         ~ImageData.format
+         ~ImageData.image_data
+         ~ImageData.mipmapped_texture
+         ~ImageData.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ImageData.data
+
+.. autoattribute:: ImageData.format
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: ImageData.anchor_x
+      :noindex:
+
+   .. autoattribute:: ImageData.anchor_y
+      :noindex:
+
+   .. autoattribute:: ImageData.image_data
+      :noindex:
+
+   .. autoattribute:: ImageData.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: ImageData.texture
+      :noindex:
+
+
+
+

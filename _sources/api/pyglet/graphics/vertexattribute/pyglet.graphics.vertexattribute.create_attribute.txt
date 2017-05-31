@@ -1,0 +1,8 @@
+`create_attribute` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics.vertexattribute`
+
+.. autofunction:: pyglet.graphics.vertexattribute.create_attribute

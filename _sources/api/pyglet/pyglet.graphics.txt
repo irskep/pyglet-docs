@@ -1,0 +1,109 @@
+``pyglet.graphics``
+===============================================================
+
+.. automodule:: pyglet.graphics
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: graphics/
+   :template: module.rst
+
+
+   allocation
+   vertexattribute
+   vertexbuffer
+   vertexdomain
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: graphics/
+   :template: class.rst
+
+
+   Batch
+   Group
+   NullGroup
+   OrderedGroup
+   TextureGroup
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: graphics/
+   :template: function.rst
+
+
+   draw
+   draw_indexed
+   vertex_list
+   vertex_list_indexed
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: absolute_import
+
+.. autodata:: compat_platform
+
+.. autodata:: null_group
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``gl``
+   * ``glext_arb``
+   * ``glu``
+   * ``lib``
+   * ``lib_agl``
+   * ``pyglet``
+
+
+
+
+.. template module.rst
+

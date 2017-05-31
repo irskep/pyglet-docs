@@ -1,0 +1,68 @@
+`AbstractImageSequence` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: AbstractImageSequence
+
+.. autoclass:: AbstractImageSequence
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~AbstractImageSequence.texture_sequence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: AbstractImageSequence.texture_sequence
+
+
+
+
+
+
+
+

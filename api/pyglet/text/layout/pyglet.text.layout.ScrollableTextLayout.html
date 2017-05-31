@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ScrollableTextLayout Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.text.layout" href="../pyglet.text.layout.html" />
+    <link rel="next" title="ScrollableTextLayoutGroup Class" href="pyglet.text.layout.ScrollableTextLayoutGroup.html" />
+    <link rel="prev" title="IncrementalTextLayout Class" href="pyglet.text.layout.IncrementalTextLayout.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.ScrollableTextLayoutGroup.html" title="ScrollableTextLayoutGroup Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.IncrementalTextLayout.html" title="IncrementalTextLayout Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.layout.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text.layout</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="scrollabletextlayout-class">
+<h1><cite>ScrollableTextLayout</cite> Class<a class="headerlink" href="#scrollabletextlayout-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-5bc27a542c91a2ec821ff69850fda1703af0d0ca.png" alt="Inheritance diagram of ScrollableTextLayout" usemap="#inheritancef50639caa2" class="inheritance"/>
+<map id="inheritancef50639caa2" name="inheritancef50639caa2">
+<area shape="rect" id="node1" href="#pyglet.text.layout.ScrollableTextLayout" target="_top" title="Display text in a scrollable viewport." alt="" coords="243,5,491,29"/>
+<area shape="rect" id="node2" href="pyglet.text.layout.TextLayout.html#pyglet.text.layout.TextLayout" target="_top" title="Lay out and display documents." alt="" coords="5,5,195,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.text.layout.ScrollableTextLayout">
+<em class="property">class </em><code class="descname">ScrollableTextLayout</code><span class="sig-paren">(</span><em>document</em>, <em>width</em>, <em>height</em>, <em>multiline=False</em>, <em>dpi=None</em>, <em>batch=None</em>, <em>group=None</em>, <em>wrap_lines=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display text in a scrollable viewport.</p>
+<p>This class does not display a scrollbar or handle scroll events; it merely
+clips the text that would be drawn in <cite>TextLayout</cite> to the bounds of the
+layout given by <cite>x</cite>, <cite>y</cite>, <cite>width</cite> and <cite>height</cite>; and offsets the text by a
+scroll offset.</p>
+<p>Use <cite>view_x</cite> and <cite>view_y</cite> to scroll the text within the viewport.</p>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.anchor_x" title="pyglet.text.layout.ScrollableTextLayout.anchor_x"><code class="xref py py-obj docutils literal"><span class="pre">anchor_x</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.anchor_y" title="pyglet.text.layout.ScrollableTextLayout.anchor_y"><code class="xref py py-obj docutils literal"><span class="pre">anchor_y</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">batch</span></code></td>
+<td>The Batch that this Layout is assigned to.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">content_valign</span></code></td>
+<td>Vertical alignment of content within larger layout box.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document</span></code></td>
+<td>Document to display.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">dpi</span></code></td>
+<td>Get DPI used by this layout.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">foreground_decoration_group</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">foreground_group</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.height" title="pyglet.text.layout.ScrollableTextLayout.height"><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">multiline</span></code></td>
+<td>Set if multiline layout is enabled.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">top_group</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.view_x" title="pyglet.text.layout.ScrollableTextLayout.view_x"><code class="xref py py-obj docutils literal"><span class="pre">view_x</span></code></a></td>
+<td>Horizontal scroll offset.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.view_y" title="pyglet.text.layout.ScrollableTextLayout.view_y"><code class="xref py py-obj docutils literal"><span class="pre">view_y</span></code></a></td>
+<td>Vertical scroll offset.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.width" title="pyglet.text.layout.ScrollableTextLayout.width"><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.x" title="pyglet.text.layout.ScrollableTextLayout.x"><code class="xref py py-obj docutils literal"><span class="pre">x</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout.y" title="pyglet.text.layout.ScrollableTextLayout.y"><code class="xref py py-obj docutils literal"><span class="pre">y</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.anchor_x">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">anchor_x</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.anchor_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.anchor_y">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">anchor_y</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.anchor_y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.height">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">height</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.view_x">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">view_x</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.view_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Horizontal scroll offset.</p>
+<p>The initial value is 0, and the left edge of the text will touch the left
+side of the layout bounds.  A positive value causes the text to “scroll”
+to the right.  Values are automatically clipped into the range
+<code class="docutils literal"><span class="pre">[0,</span> <span class="pre">content_width</span> <span class="pre">-</span> <span class="pre">width]</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.view_y">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">view_y</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.view_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertical scroll offset.</p>
+<p>The initial value is 0, and the top of the text will touch the top of the
+layout bounds (unless the content height is less than the layout height,
+in which case <cite>content_valign</cite> is used).</p>
+<p>A negative value causes the text to “scroll” upwards.  Values outside of
+the range <code class="docutils literal"><span class="pre">[height</span> <span class="pre">-</span> <span class="pre">content_height,</span> <span class="pre">0]</span></code> are automatically clipped in
+range.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.width">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">width</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.x">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">x</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.ScrollableTextLayout.y">
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">y</code><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout.y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">background_group</code><em class="property"> = OrderedGroup(0)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">batch</code></dt>
+<dd><p>The Batch that this Layout is assigned to.</p>
+<p>If no Batch is assigned, an internal Batch is 
+created and used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Batch</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">content_valign</code></dt>
+<dd><p>Vertical alignment of content within
+larger layout box.</p>
+<p>This property determines how content is positioned within the layout
+box when <code class="docutils literal"><span class="pre">content_height</span></code> is less than <code class="docutils literal"><span class="pre">height</span></code>.  It is one
+of the enumerants:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">top</span></code> (default)</dt>
+<dd>Content is aligned to the top of the layout box.</dd>
+<dt><code class="docutils literal"><span class="pre">center</span></code></dt>
+<dd>Content is centered vertically within the layout box.</dd>
+<dt><code class="docutils literal"><span class="pre">bottom</span></code></dt>
+<dd>Content is aligned to the bottom of the layout box.</dd>
+</dl>
+<p>This property has no effect when <code class="docutils literal"><span class="pre">content_height</span></code> is greater
+than <code class="docutils literal"><span class="pre">height</span></code> (in which case the content is aligned to the top) or when
+<code class="docutils literal"><span class="pre">height</span></code> is <code class="docutils literal"><span class="pre">None</span></code> (in which case there is no vertical layout box
+dimension).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">document</code></dt>
+<dd><p>Document to display.</p>
+<p>For <cite>IncrementalTextLayout</cite> it is far more efficient to modify a document
+in-place than to replace the document instance on the layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>AbstractDocument</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">dpi</code></dt>
+<dd><p>Get DPI used by this layout.</p>
+<p>Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">foreground_decoration_group</code><em class="property"> = TextLayoutForegroundDecorationGroup(2)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">foreground_group</code><em class="property"> = TextLayoutForegroundGroup(1)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">multiline</code></dt>
+<dd><p>Set if multiline layout is enabled.</p>
+<p>If multiline is False, newline and paragraph characters are ignored and
+text is not word-wrapped.
+If True, the text is word-wrapped only if the <cite>wrap_lines</cite> is True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">ScrollableTextLayout.</code><code class="descname">top_group</code><em class="property"> = &lt;pyglet.text.layout.TextLayoutGroup object&gt;</em></dt>
+<dd></dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>ScrollableTextLayout</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.text.layout.IncrementalTextLayout.html"
+                        title="previous chapter"><cite>IncrementalTextLayout</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.text.layout.ScrollableTextLayoutGroup.html"
+                        title="next chapter"><cite>ScrollableTextLayoutGroup</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.ScrollableTextLayoutGroup.html" title="ScrollableTextLayoutGroup Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.IncrementalTextLayout.html" title="IncrementalTextLayout Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.layout.html" ><code class="docutils literal"><span class="pre">pyglet.text.layout</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

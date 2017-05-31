@@ -1,0 +1,53 @@
+`PlayerGroup` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.player
+
+.. inheritance-diagram:: PlayerGroup
+
+.. autoclass:: PlayerGroup
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

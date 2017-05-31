@@ -1,0 +1,53 @@
+`ConstRunIterator` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.runlist
+
+.. inheritance-diagram:: ConstRunIterator
+
+.. autoclass:: ConstRunIterator
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+``pyglet.media.sources.loader``
+===============================================================
+
+.. automodule:: pyglet.media.sources.loader
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: loader/
+   :template: class.rst
+
+
+   AVbinSourceLoader
+   AbstractSourceLoader
+   RIFFSourceLoader
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------
+   
+.. autosummary::
+   :toctree: loader/
+   :template: function.rst
+
+
+   get_source_loader
+   have_avbin
+   load
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+
+
+
+
+.. template module.rst
+

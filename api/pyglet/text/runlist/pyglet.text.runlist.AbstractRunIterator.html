@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AbstractRunIterator Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.text.runlist" href="../pyglet.text.runlist.html" />
+    <link rel="next" title="ConstRunIterator Class" href="pyglet.text.runlist.ConstRunIterator.html" />
+    <link rel="prev" title="pyglet.text.runlist" href="../pyglet.text.runlist.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.runlist.ConstRunIterator.html" title="ConstRunIterator Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.text.runlist.html" title="pyglet.text.runlist"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.runlist.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text.runlist</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="abstractruniterator-class">
+<h1><cite>AbstractRunIterator</cite> Class<a class="headerlink" href="#abstractruniterator-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-250118b114899bf3c8f1758d68ced82694179880.png" alt="Inheritance diagram of AbstractRunIterator" usemap="#inheritance7b47e7c6bf" class="inheritance"/>
+<map id="inheritance7b47e7c6bf" name="inheritance7b47e7c6bf">
+<area shape="rect" id="node1" href="#pyglet.text.runlist.AbstractRunIterator" target="_top" title="Range iteration over `RunList`." alt="" coords="5,5,246,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.text.runlist.AbstractRunIterator">
+<em class="property">class </em><code class="descname">AbstractRunIterator</code><a class="headerlink" href="#pyglet.text.runlist.AbstractRunIterator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Range iteration over <cite>RunList</cite>.</p>
+<p><cite>AbstractRunIterator</cite> objects allow any monotonically non-decreasing
+access of the iteration, including repeated iteration over the same index.
+Use the <code class="docutils literal"><span class="pre">[index]</span></code> operator to get the value at a particular index within
+the document.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">run_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">run_list</span><span class="p">)</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">run_iter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">run_iter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>       <span class="c1"># non-decreasing access is OK</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">run_iter</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">run_iter</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">run_iter</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span>      <span class="c1"># this is illegal, the index decreased.</span>
+</pre></div>
+</div>
+<p>Using <cite>AbstractRunIterator</cite> to access increasing indices of the value runs
+is more efficient than calling <cite>RunList.__getitem__</cite> repeatedly.</p>
+<p>You can also iterate over monotonically non-decreasing ranges over the
+iteration.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">run_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">run_list</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">run_iter</span><span class="o">.</span><span class="n">ranges</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="k">pass</span>
+<span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">run_iter</span><span class="o">.</span><span class="n">ranges</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
+    <span class="k">pass</span>
+<span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">run_iter</span><span class="o">.</span><span class="n">ranges</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Both start and end indices of the slice are required and must be positive.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.text.runlist.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.text.runlist</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.text.runlist.ConstRunIterator.html"
+                        title="next chapter"><cite>ConstRunIterator</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.runlist.ConstRunIterator.html" title="ConstRunIterator Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.text.runlist.html" title="pyglet.text.runlist"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.runlist.html" ><code class="docutils literal"><span class="pre">pyglet.text.runlist</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

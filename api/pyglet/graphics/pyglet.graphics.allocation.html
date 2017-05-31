@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.graphics.allocation &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.graphics" href="../pyglet.graphics.html" />
+    <link rel="next" title="Allocator Class" href="allocation/pyglet.graphics.allocation.Allocator.html" />
+    <link rel="prev" title="pyglet.graphics" href="../pyglet.graphics.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="allocation/pyglet.graphics.allocation.Allocator.html" title="Allocator Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.graphics.html" title="pyglet.graphics"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.graphics.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.graphics.allocation">
+<span id="pyglet-graphics-allocation"></span><h1><code class="docutils literal"><span class="pre">pyglet.graphics.allocation</span></code><a class="headerlink" href="#module-pyglet.graphics.allocation" title="Permalink to this headline">¶</a></h1>
+<p>Memory allocation algorithm for vertex arrays and buffers.</p>
+<p>The region allocator is used to allocate vertex indices within a vertex
+domain’s  multiple buffers.  (“Buffer” refers to any abstract buffer presented
+by <cite>pyglet.graphics.vertexbuffer</cite>.</p>
+<p>The allocator will at times request more space from the buffers. The current
+policy is to double the buffer size when there is not enough room to fulfil an
+allocation.  The buffer is never resized smaller.</p>
+<p>The allocator maintains references to free space only; it is the caller’s
+responsibility to maintain the allocated regions.</p>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="allocation/pyglet.graphics.allocation.Allocator.html#pyglet.graphics.allocation.Allocator" title="pyglet.graphics.allocation.Allocator"><code class="xref py py-obj docutils literal"><span class="pre">Allocator</span></code></a></td>
+<td>Buffer space allocation implementation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="allocation/pyglet.graphics.allocation.AllocatorMemoryException.html#pyglet.graphics.allocation.AllocatorMemoryException" title="pyglet.graphics.allocation.AllocatorMemoryException"><code class="xref py py-obj docutils literal"><span class="pre">AllocatorMemoryException</span></code></a>(requested_capacity)</td>
+<td>The buffer is not large enough to fulfil an allocation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.graphics.allocation</span></code></a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.graphics.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="allocation/pyglet.graphics.allocation.Allocator.html"
+                        title="next chapter"><cite>Allocator</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="allocation/pyglet.graphics.allocation.Allocator.html" title="Allocator Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.graphics.html" title="pyglet.graphics"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.graphics.html" ><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+``pyglet.media.sources``
+===============================================================
+
+.. automodule:: pyglet.media.sources
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: sources/
+   :template: module.rst
+
+
+   base
+   loader
+   procedural
+   riff
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: sources/
+   :template: class.rst
+
+
+   AudioData
+   AudioFormat
+   Source
+   SourceGroup
+   SourceInfo
+   StaticSource
+   StreamingSource
+   VideoFormat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. template module.rst
+

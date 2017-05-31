@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RelativeAxis Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.input.base" href="../pyglet.input.base.html" />
+    <link rel="next" title="Tablet Class" href="pyglet.input.base.Tablet.html" />
+    <link rel="prev" title="Joystick Class" href="pyglet.input.base.Joystick.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.input.base.Tablet.html" title="Tablet Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.input.base.Joystick.html" title="Joystick Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.input.html" ><code class="docutils literal"><span class="pre">pyglet.input</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.input.base.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.input.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="relativeaxis-class">
+<h1><cite>RelativeAxis</cite> Class<a class="headerlink" href="#relativeaxis-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-0c212aba64db05b85625a76cdefe42171d1f4ed4.png" alt="Inheritance diagram of RelativeAxis" usemap="#inheritance1730433e26" class="inheritance"/>
+<map id="inheritance1730433e26" name="inheritance1730433e26">
+<area shape="rect" id="node1" href="../../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+<area shape="rect" id="node2" href="pyglet.input.base.Control.html#pyglet.input.base.Control" target="_top" title="Single value input provided by a device." alt="" coords="248,5,417,29"/>
+<area shape="rect" id="node3" href="#pyglet.input.base.RelativeAxis" target="_top" title="An axis whose value represents a relative change from the previous" alt="" coords="465,5,664,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.input.base.RelativeAxis">
+<em class="property">class </em><code class="descname">RelativeAxis</code><span class="sig-paren">(</span><em>name</em>, <em>raw_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.base.RelativeAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>An axis whose value represents a relative change from the previous
+value.</p>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.RX" title="pyglet.input.base.RelativeAxis.RX"><code class="xref py py-obj docutils literal"><span class="pre">RX</span></code></a></td>
+<td>Name of the rotational-X axis control</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.RY" title="pyglet.input.base.RelativeAxis.RY"><code class="xref py py-obj docutils literal"><span class="pre">RY</span></code></a></td>
+<td>Name of the rotational-Y axis control</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.RZ" title="pyglet.input.base.RelativeAxis.RZ"><code class="xref py py-obj docutils literal"><span class="pre">RZ</span></code></a></td>
+<td>Name of the rotational-Z axis control</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.WHEEL" title="pyglet.input.base.RelativeAxis.WHEEL"><code class="xref py py-obj docutils literal"><span class="pre">WHEEL</span></code></a></td>
+<td>Name of the scroll wheel control</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.X" title="pyglet.input.base.RelativeAxis.X"><code class="xref py py-obj docutils literal"><span class="pre">X</span></code></a></td>
+<td>Name of the horizontal axis control</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.Y" title="pyglet.input.base.RelativeAxis.Y"><code class="xref py py-obj docutils literal"><span class="pre">Y</span></code></a></td>
+<td>Name of the vertical axis control</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.Z" title="pyglet.input.base.RelativeAxis.Z"><code class="xref py py-obj docutils literal"><span class="pre">Z</span></code></a></td>
+<td>Name of the Z axis control.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">event_types</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.base.RelativeAxis.value" title="pyglet.input.base.RelativeAxis.value"><code class="xref py py-obj docutils literal"><span class="pre">value</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.RX">
+<code class="descclassname">RelativeAxis.</code><code class="descname">RX</code><em class="property"> = ‘rx’</em><a class="headerlink" href="#pyglet.input.base.RelativeAxis.RX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the rotational-X axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.RY">
+<code class="descclassname">RelativeAxis.</code><code class="descname">RY</code><em class="property"> = ‘ry’</em><a class="headerlink" href="#pyglet.input.base.RelativeAxis.RY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the rotational-Y axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.RZ">
+<code class="descclassname">RelativeAxis.</code><code class="descname">RZ</code><em class="property"> = ‘rz’</em><a class="headerlink" href="#pyglet.input.base.RelativeAxis.RZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the rotational-Z axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.WHEEL">
+<code class="descclassname">RelativeAxis.</code><code class="descname">WHEEL</code><em class="property"> = ‘wheel’</em><a class="headerlink" href="#pyglet.input.base.RelativeAxis.WHEEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the scroll wheel control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.X">
+<code class="descclassname">RelativeAxis.</code><code class="descname">X</code><em class="property"> = ‘x’</em><a class="headerlink" href="#pyglet.input.base.RelativeAxis.X" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the horizontal axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.Y">
+<code class="descclassname">RelativeAxis.</code><code class="descname">Y</code><em class="property"> = ‘y’</em><a class="headerlink" href="#pyglet.input.base.RelativeAxis.Y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the vertical axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.Z">
+<code class="descclassname">RelativeAxis.</code><code class="descname">Z</code><em class="property"> = ‘z’</em><a class="headerlink" href="#pyglet.input.base.RelativeAxis.Z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Z axis control.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.base.RelativeAxis.value">
+<code class="descclassname">RelativeAxis.</code><code class="descname">value</code><a class="headerlink" href="#pyglet.input.base.RelativeAxis.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">RelativeAxis.</code><code class="descname">register_event_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
+<dd><p>Register an event type with the dispatcher.</p>
+<p>Registering event types allows the dispatcher to validate event
+handler names as they are attached, and to search attached objects for
+suitable handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of the event to register.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">RelativeAxis.</code><code class="descname">event_types</code><em class="property"> = [‘on_change’, ‘on_press’, ‘on_release’]</em></dt>
+<dd></dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>RelativeAxis</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.input.base.Joystick.html"
+                        title="previous chapter"><cite>Joystick</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.input.base.Tablet.html"
+                        title="next chapter"><cite>Tablet</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.input.base.Tablet.html" title="Tablet Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.input.base.Joystick.html" title="Joystick Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.input.html" ><code class="docutils literal"><span class="pre">pyglet.input</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.input.base.html" ><code class="docutils literal"><span class="pre">pyglet.input.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

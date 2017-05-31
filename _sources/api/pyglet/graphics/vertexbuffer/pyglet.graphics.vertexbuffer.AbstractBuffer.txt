@@ -1,0 +1,71 @@
+`AbstractBuffer` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.graphics.vertexbuffer
+
+.. inheritance-diagram:: AbstractBuffer
+
+.. autoclass:: AbstractBuffer
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~AbstractBuffer.ptr
+         ~AbstractBuffer.size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: AbstractBuffer.ptr
+
+.. autoattribute:: AbstractBuffer.size
+
+
+
+
+
+
+
+

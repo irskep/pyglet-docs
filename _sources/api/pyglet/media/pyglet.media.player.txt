@@ -1,0 +1,61 @@
+``pyglet.media.player``
+===============================================================
+
+.. automodule:: pyglet.media.player
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: player/
+   :template: class.rst
+
+
+   Player
+   PlayerGroup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+
+
+
+
+.. template module.rst
+

@@ -1,0 +1,148 @@
+`Sprite` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.sprite
+
+.. inheritance-diagram:: Sprite
+
+.. autoclass:: Sprite
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Sprite.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Sprite.batch
+         ~Sprite.color
+         ~Sprite.event_types
+         ~Sprite.group
+         ~Sprite.height
+         ~Sprite.image
+         ~Sprite.opacity
+         ~Sprite.position
+         ~Sprite.rotation
+         ~Sprite.scale
+         ~Sprite.scale_x
+         ~Sprite.scale_y
+         ~Sprite.visible
+         ~Sprite.width
+         ~Sprite.x
+         ~Sprite.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Sprite.batch
+
+.. autoattribute:: Sprite.color
+
+.. autoattribute:: Sprite.event_types
+
+.. autoattribute:: Sprite.group
+
+.. autoattribute:: Sprite.height
+
+.. autoattribute:: Sprite.image
+
+.. autoattribute:: Sprite.opacity
+
+.. autoattribute:: Sprite.position
+
+.. autoattribute:: Sprite.rotation
+
+.. autoattribute:: Sprite.scale
+
+.. autoattribute:: Sprite.scale_x
+
+.. autoattribute:: Sprite.scale_y
+
+.. autoattribute:: Sprite.visible
+
+.. autoattribute:: Sprite.width
+
+.. autoattribute:: Sprite.x
+
+.. autoattribute:: Sprite.y
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: Sprite.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

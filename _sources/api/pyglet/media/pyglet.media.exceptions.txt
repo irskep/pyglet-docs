@@ -1,0 +1,52 @@
+``pyglet.media.exceptions``
+===============================================================
+
+.. automodule:: pyglet.media.exceptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: exceptions/
+   :template: exception.rst
+
+
+   CannotSeekException
+   MediaException
+   MediaFormatException
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. template module.rst
+

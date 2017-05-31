@@ -1,0 +1,12 @@
+`MediaFormatException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.media.exceptions.MediaFormatException
+
+Exception defined in :mod:`pyglet.media.exceptions`
+
+.. currentmodule:: pyglet.media.exceptions
+
+.. autoexception:: MediaFormatException

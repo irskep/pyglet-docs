@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Font Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.font.base" href="../pyglet.font.base.html" />
+    <link rel="next" title="Glyph Class" href="pyglet.font.base.Glyph.html" />
+    <link rel="prev" title="pyglet.font.base" href="../pyglet.font.base.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.font.base.Glyph.html" title="Glyph Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.base.html" title="pyglet.font.base"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.font.html" ><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.font.base.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.font.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="font-class">
+<h1><cite>Font</cite> Class<a class="headerlink" href="#font-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-e53a0046181d10e0c87acfce2d0ab2a803ba92a3.png" alt="Inheritance diagram of Font" usemap="#inheritance5fe2782ca4" class="inheritance"/>
+<map id="inheritance5fe2782ca4" name="inheritance5fe2782ca4">
+<area shape="rect" id="node1" href="#pyglet.font.base.Font" target="_top" title="Abstract font class able to produce glyphs." alt="" coords="5,5,151,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.font.base.Font">
+<em class="property">class </em><code class="descname">Font</code><a class="headerlink" href="#pyglet.font.base.Font" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract font class able to produce glyphs.</p>
+<p>To construct a font, use <cite>pyglet.font.load</cite>, which will instantiate the
+platform-specific font class.</p>
+<p>Internally, this class is used by the platform classes to manage the set
+of textures into which glyphs are written.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pyglet.font.base.Font.ascent" title="pyglet.font.base.Font.ascent"><strong>ascent</strong></a> – Maximum ascent above the baseline, in pixels.</li>
+<li><a class="reference internal" href="#pyglet.font.base.Font.descent" title="pyglet.font.base.Font.descent"><strong>descent</strong></a> – Maximum descent below the baseline, in pixels. Usually negative.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.base.Font.add_font_data" title="pyglet.font.base.Font.add_font_data"><code class="xref py py-obj docutils literal"><span class="pre">add_font_data</span></code></a>(data)</td>
+<td>Add font data to the font loader.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.base.Font.have_font" title="pyglet.font.base.Font.have_font"><code class="xref py py-obj docutils literal"><span class="pre">have_font</span></code></a>(name)</td>
+<td>Determine if a font with the given name is installed.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.base.Font.ascent" title="pyglet.font.base.Font.ascent"><code class="xref py py-obj docutils literal"><span class="pre">ascent</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.base.Font.descent" title="pyglet.font.base.Font.descent"><code class="xref py py-obj docutils literal"><span class="pre">descent</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.base.Font.texture_height" title="pyglet.font.base.Font.texture_height"><code class="xref py py-obj docutils literal"><span class="pre">texture_height</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.font.base.Font.texture_internalformat" title="pyglet.font.base.Font.texture_internalformat"><code class="xref py py-obj docutils literal"><span class="pre">texture_internalformat</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.font.base.Font.texture_width" title="pyglet.font.base.Font.texture_width"><code class="xref py py-obj docutils literal"><span class="pre">texture_width</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="classmethod">
+<dt id="pyglet.font.base.Font.add_font_data">
+<em class="property">classmethod </em><code class="descclassname">Font.</code><code class="descname">add_font_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.font.base.Font.add_font_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add font data to the font loader.</p>
+<p>This is a class method and affects all fonts loaded.  Data must be
+some byte string of data, for example, the contents of a TrueType font
+file.  Subclasses can override this method to add the font data into
+the font registry.</p>
+<p>There is no way to instantiate a font given the data directly, you
+must use <cite>pyglet.font.load</cite> specifying the font name.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pyglet.font.base.Font.have_font">
+<em class="property">classmethod </em><code class="descclassname">Font.</code><code class="descname">have_font</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.font.base.Font.have_font" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a font with the given name is installed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of a font to search for</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.font.base.Font.ascent">
+<code class="descclassname">Font.</code><code class="descname">ascent</code><em class="property"> = 0</em><a class="headerlink" href="#pyglet.font.base.Font.ascent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.base.Font.descent">
+<code class="descclassname">Font.</code><code class="descname">descent</code><em class="property"> = 0</em><a class="headerlink" href="#pyglet.font.base.Font.descent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.base.Font.texture_height">
+<code class="descclassname">Font.</code><code class="descname">texture_height</code><em class="property"> = 256</em><a class="headerlink" href="#pyglet.font.base.Font.texture_height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.base.Font.texture_internalformat">
+<code class="descclassname">Font.</code><code class="descname">texture_internalformat</code><em class="property"> = 6406</em><a class="headerlink" href="#pyglet.font.base.Font.texture_internalformat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.font.base.Font.texture_width">
+<code class="descclassname">Font.</code><code class="descname">texture_width</code><em class="property"> = 256</em><a class="headerlink" href="#pyglet.font.base.Font.texture_width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Font</cite> Class</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.font.base.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.font.base</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.font.base.Glyph.html"
+                        title="next chapter"><cite>Glyph</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.font.base.Glyph.html" title="Glyph Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.font.base.html" title="pyglet.font.base"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.font.html" ><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.font.base.html" ><code class="docutils literal"><span class="pre">pyglet.font.base</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

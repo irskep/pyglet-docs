@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ScreenMode Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="screenmode-class">
+<h1><cite>ScreenMode</cite> Class<a class="headerlink" href="#screenmode-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-dd1eaae11321243f8e13bdb9af214b7c26d16f3d.png" alt="Inheritance diagram of ScreenMode" usemap="#inheritance9c958b1986" class="inheritance"/>
+<map id="inheritance9c958b1986" name="inheritance9c958b1986">
+<area shape="rect" id="node1" href="base/pyglet.canvas.base.ScreenMode.html#pyglet.canvas.base.ScreenMode" target="_top" title="Screen resolution and display settings." alt="" coords="5,5,220,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.canvas.ScreenMode">
+<em class="property">class </em><code class="descname">ScreenMode</code><span class="sig-paren">(</span><em>screen</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.canvas.ScreenMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Screen resolution and display settings.</p>
+<p>Applications should not construct <cite>ScreenMode</cite> instances themselves; see
+<a class="reference internal" href="../../../modules/canvas.html#pyglet.canvas.Screen.get_modes" title="pyglet.canvas.Screen.get_modes"><code class="xref py py-meth docutils literal"><span class="pre">Screen.get_modes()</span></code></a>.</p>
+<p>The <a class="reference internal" href="#pyglet.canvas.ScreenMode.depth" title="pyglet.canvas.ScreenMode.depth"><code class="xref py py-attr docutils literal"><span class="pre">depth</span></code></a> and <a class="reference internal" href="#pyglet.canvas.ScreenMode.rate" title="pyglet.canvas.ScreenMode.rate"><code class="xref py py-attr docutils literal"><span class="pre">rate</span></code></a> variables may be <code class="docutils literal"><span class="pre">None</span></code> if the 
+operating system does not provide relevant data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.2</p>
+</div>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.canvas.ScreenMode.depth" title="pyglet.canvas.ScreenMode.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
+<td>Pixel color depth, in bits per pixel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.canvas.ScreenMode.height" title="pyglet.canvas.ScreenMode.height"><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></a></td>
+<td>Height of screen, in pixels.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.canvas.ScreenMode.rate" title="pyglet.canvas.ScreenMode.rate"><code class="xref py py-obj docutils literal"><span class="pre">rate</span></code></a></td>
+<td>Screen refresh rate in Hz.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.canvas.ScreenMode.width" title="pyglet.canvas.ScreenMode.width"><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></a></td>
+<td>Width of screen, in pixels.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.canvas.ScreenMode.depth">
+<code class="descclassname">ScreenMode.</code><code class="descname">depth</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.canvas.ScreenMode.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pixel color depth, in bits per pixel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.canvas.ScreenMode.height">
+<code class="descclassname">ScreenMode.</code><code class="descname">height</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.canvas.ScreenMode.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Height of screen, in pixels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.canvas.ScreenMode.rate">
+<code class="descclassname">ScreenMode.</code><code class="descname">rate</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.canvas.ScreenMode.rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Screen refresh rate in Hz.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.canvas.ScreenMode.width">
+<code class="descclassname">ScreenMode.</code><code class="descname">width</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.canvas.ScreenMode.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Width of screen, in pixels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>ScreenMode</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

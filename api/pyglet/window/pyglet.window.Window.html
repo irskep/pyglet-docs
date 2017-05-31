@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Window Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.window" href="../pyglet.window.html" />
+    <link rel="next" title="MouseCursorException" href="pyglet.window.MouseCursorException.html" />
+    <link rel="prev" title="Platform Class" href="pyglet.window.Platform.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.window.MouseCursorException.html" title="MouseCursorException"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.window.Platform.html" title="Platform Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.window.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.window</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="window-class">
+<h1><cite>Window</cite> Class<a class="headerlink" href="#window-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-cbc6ebd3b93c9d7dcc825ddf10a84e39abbab055.png" alt="Inheritance diagram of Window" usemap="#inheritancea5ceb9f2c0" class="inheritance"/>
+<map id="inheritancea5ceb9f2c0" name="inheritancea5ceb9f2c0">
+<area shape="rect" id="node1" href="../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+<area shape="rect" id="node2" href="#pyglet.window.Window" target="_top" title="Platform&#45;independent application window." alt="" coords="248,5,404,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.window.Window">
+<em class="property">class </em><code class="descname">Window</code><span class="sig-paren">(</span><em>width=None</em>, <em>height=None</em>, <em>caption=None</em>, <em>resizable=False</em>, <em>style=None</em>, <em>fullscreen=False</em>, <em>visible=True</em>, <em>vsync=True</em>, <em>display=None</em>, <em>screen=None</em>, <em>config=None</em>, <em>context=None</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.window.Window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Platform-independent application window.</p>
+<p>A window is a “heavyweight” object occupying operating system resources.
+The “client” or “content” area of a window is filled entirely with
+an OpenGL viewport.  Applications have no access to operating system
+widgets or controls; all rendering must be done via OpenGL.</p>
+<p>Windows may appear as floating regions or can be set to fill an entire
+screen (fullscreen).  When floating, windows may appear borderless or
+decorated with a platform-specific frame (including, for example, the
+title bar, minimize and close buttons, resize handles, and so on).</p>
+<p>While it is possible to set the location of a window, it is recommended
+that applications allow the platform to place it according to local
+conventions.  This will ensure it is not obscured by other windows,
+and appears on an appropriate screen for the user.</p>
+<p>To render into a window, you must first call <cite>switch_to</cite>, to make
+it the current OpenGL context.  If you use only one window in the
+application, there is no need to do this.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><a class="reference internal" href="event/pyglet.window.event.WindowExitHandler.html#pyglet.window.event.WindowExitHandler.has_exit" title="pyglet.window.event.WindowExitHandler.has_exit"><strong>has_exit</strong></a> – <p>True if the user has attempted to close the window.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Windows are closed immediately by the default
+<cite>on_close</cite> handler when <cite>pyglet.app.event_loop</cite> is being
+used.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_CROSSHAIR" title="pyglet.window.Window.CURSOR_CROSSHAIR"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_CROSSHAIR</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_DEFAULT" title="pyglet.window.Window.CURSOR_DEFAULT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_DEFAULT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_HAND" title="pyglet.window.Window.CURSOR_HAND"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_HAND</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_HELP" title="pyglet.window.Window.CURSOR_HELP"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_HELP</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_NO" title="pyglet.window.Window.CURSOR_NO"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_NO</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE" title="pyglet.window.Window.CURSOR_SIZE"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_DOWN" title="pyglet.window.Window.CURSOR_SIZE_DOWN"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_DOWN</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_DOWN_LEFT" title="pyglet.window.Window.CURSOR_SIZE_DOWN_LEFT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_DOWN_LEFT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_DOWN_RIGHT" title="pyglet.window.Window.CURSOR_SIZE_DOWN_RIGHT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_DOWN_RIGHT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_LEFT" title="pyglet.window.Window.CURSOR_SIZE_LEFT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_LEFT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_LEFT_RIGHT" title="pyglet.window.Window.CURSOR_SIZE_LEFT_RIGHT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_LEFT_RIGHT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_RIGHT" title="pyglet.window.Window.CURSOR_SIZE_RIGHT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_RIGHT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_UP" title="pyglet.window.Window.CURSOR_SIZE_UP"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_UP</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_UP_DOWN" title="pyglet.window.Window.CURSOR_SIZE_UP_DOWN"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_UP_DOWN</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_UP_LEFT" title="pyglet.window.Window.CURSOR_SIZE_UP_LEFT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_UP_LEFT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_SIZE_UP_RIGHT" title="pyglet.window.Window.CURSOR_SIZE_UP_RIGHT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_SIZE_UP_RIGHT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_TEXT" title="pyglet.window.Window.CURSOR_TEXT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_TEXT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_WAIT" title="pyglet.window.Window.CURSOR_WAIT"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_WAIT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.CURSOR_WAIT_ARROW" title="pyglet.window.Window.CURSOR_WAIT_ARROW"><code class="xref py py-obj docutils literal"><span class="pre">CURSOR_WAIT_ARROW</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.WINDOW_STYLE_BORDERLESS" title="pyglet.window.Window.WINDOW_STYLE_BORDERLESS"><code class="xref py py-obj docutils literal"><span class="pre">WINDOW_STYLE_BORDERLESS</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.WINDOW_STYLE_DEFAULT" title="pyglet.window.Window.WINDOW_STYLE_DEFAULT"><code class="xref py py-obj docutils literal"><span class="pre">WINDOW_STYLE_DEFAULT</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.WINDOW_STYLE_DIALOG" title="pyglet.window.Window.WINDOW_STYLE_DIALOG"><code class="xref py py-obj docutils literal"><span class="pre">WINDOW_STYLE_DIALOG</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.WINDOW_STYLE_TOOL" title="pyglet.window.Window.WINDOW_STYLE_TOOL"><code class="xref py py-obj docutils literal"><span class="pre">WINDOW_STYLE_TOOL</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.caption" title="pyglet.window.Window.caption"><code class="xref py py-obj docutils literal"><span class="pre">caption</span></code></a></td>
+<td>The window caption (title).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.config" title="pyglet.window.Window.config"><code class="xref py py-obj docutils literal"><span class="pre">config</span></code></a></td>
+<td>A GL config describing the context of this window.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.context" title="pyglet.window.Window.context"><code class="xref py py-obj docutils literal"><span class="pre">context</span></code></a></td>
+<td>The OpenGL context attached to this window.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.display" title="pyglet.window.Window.display"><code class="xref py py-obj docutils literal"><span class="pre">display</span></code></a></td>
+<td>The display this window belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.event_types" title="pyglet.window.Window.event_types"><code class="xref py py-obj docutils literal"><span class="pre">event_types</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.fullscreen" title="pyglet.window.Window.fullscreen"><code class="xref py py-obj docutils literal"><span class="pre">fullscreen</span></code></a></td>
+<td>True if the window is currently fullscreen.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.has_exit" title="pyglet.window.Window.has_exit"><code class="xref py py-obj docutils literal"><span class="pre">has_exit</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.height" title="pyglet.window.Window.height"><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></a></td>
+<td>The height of the window, in pixels.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.invalid" title="pyglet.window.Window.invalid"><code class="xref py py-obj docutils literal"><span class="pre">invalid</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.resizeable" title="pyglet.window.Window.resizeable"><code class="xref py py-obj docutils literal"><span class="pre">resizeable</span></code></a></td>
+<td>True if the window is resizable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.screen" title="pyglet.window.Window.screen"><code class="xref py py-obj docutils literal"><span class="pre">screen</span></code></a></td>
+<td>The screen this window is fullscreen in.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.style" title="pyglet.window.Window.style"><code class="xref py py-obj docutils literal"><span class="pre">style</span></code></a></td>
+<td>The window style; one of the <code class="docutils literal"><span class="pre">WINDOW_STYLE_*</span></code> constants.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.visible" title="pyglet.window.Window.visible"><code class="xref py py-obj docutils literal"><span class="pre">visible</span></code></a></td>
+<td>True if the window is currently visible.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.window.Window.vsync" title="pyglet.window.Window.vsync"><code class="xref py py-obj docutils literal"><span class="pre">vsync</span></code></a></td>
+<td>True if buffer flips are synchronised to the screen’s vertical retrace.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.window.Window.width" title="pyglet.window.Window.width"><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></a></td>
+<td>The width of the window, in pixels.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_CROSSHAIR">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_CROSSHAIR</code><em class="property"> = ‘crosshair’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_CROSSHAIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_DEFAULT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_DEFAULT</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_HAND">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_HAND</code><em class="property"> = ‘hand’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_HAND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_HELP">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_HELP</code><em class="property"> = ‘help’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_HELP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_NO">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_NO</code><em class="property"> = ‘no’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE</code><em class="property"> = ‘size’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_DOWN">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_DOWN</code><em class="property"> = ‘size_down’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_DOWN_LEFT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_DOWN_LEFT</code><em class="property"> = ‘size_down_left’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_DOWN_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_DOWN_RIGHT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_DOWN_RIGHT</code><em class="property"> = ‘size_down_right’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_DOWN_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_LEFT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_LEFT</code><em class="property"> = ‘size_left’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_LEFT_RIGHT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_LEFT_RIGHT</code><em class="property"> = ‘size_left_right’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_LEFT_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_RIGHT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_RIGHT</code><em class="property"> = ‘size_right’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_UP">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_UP</code><em class="property"> = ‘size_up’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_UP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_UP_DOWN">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_UP_DOWN</code><em class="property"> = ‘size_up_down’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_UP_DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_UP_LEFT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_UP_LEFT</code><em class="property"> = ‘size_up_left’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_UP_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_SIZE_UP_RIGHT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_SIZE_UP_RIGHT</code><em class="property"> = ‘size_up_right’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_SIZE_UP_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_TEXT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_TEXT</code><em class="property"> = ‘text’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_TEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_WAIT">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_WAIT</code><em class="property"> = ‘wait’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_WAIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.CURSOR_WAIT_ARROW">
+<code class="descclassname">Window.</code><code class="descname">CURSOR_WAIT_ARROW</code><em class="property"> = ‘wait_arrow’</em><a class="headerlink" href="#pyglet.window.Window.CURSOR_WAIT_ARROW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.WINDOW_STYLE_BORDERLESS">
+<code class="descclassname">Window.</code><code class="descname">WINDOW_STYLE_BORDERLESS</code><em class="property"> = ‘borderless’</em><a class="headerlink" href="#pyglet.window.Window.WINDOW_STYLE_BORDERLESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.WINDOW_STYLE_DEFAULT">
+<code class="descclassname">Window.</code><code class="descname">WINDOW_STYLE_DEFAULT</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.window.Window.WINDOW_STYLE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.WINDOW_STYLE_DIALOG">
+<code class="descclassname">Window.</code><code class="descname">WINDOW_STYLE_DIALOG</code><em class="property"> = ‘dialog’</em><a class="headerlink" href="#pyglet.window.Window.WINDOW_STYLE_DIALOG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.WINDOW_STYLE_TOOL">
+<code class="descclassname">Window.</code><code class="descname">WINDOW_STYLE_TOOL</code><em class="property"> = ‘tool’</em><a class="headerlink" href="#pyglet.window.Window.WINDOW_STYLE_TOOL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.caption">
+<code class="descclassname">Window.</code><code class="descname">caption</code><a class="headerlink" href="#pyglet.window.Window.caption" title="Permalink to this definition">¶</a></dt>
+<dd><p>The window caption (title).  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.config">
+<code class="descclassname">Window.</code><code class="descname">config</code><a class="headerlink" href="#pyglet.window.Window.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A GL config describing the context of this window.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>pyglet.gl.Config</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.context">
+<code class="descclassname">Window.</code><code class="descname">context</code><a class="headerlink" href="#pyglet.window.Window.context" title="Permalink to this definition">¶</a></dt>
+<dd><p>The OpenGL context attached to this window.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>pyglet.gl.Context</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.display">
+<code class="descclassname">Window.</code><code class="descname">display</code><a class="headerlink" href="#pyglet.window.Window.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display this window belongs to.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Display</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.event_types">
+<code class="descclassname">Window.</code><code class="descname">event_types</code><em class="property"> = [‘on_key_press’, ‘on_key_release’, ‘on_text’, ‘on_text_motion’, ‘on_text_motion_select’, ‘on_mouse_motion’, ‘on_mouse_drag’, ‘on_mouse_press’, ‘on_mouse_release’, ‘on_mouse_scroll’, ‘on_mouse_enter’, ‘on_mouse_leave’, ‘on_close’, ‘on_expose’, ‘on_resize’, ‘on_move’, ‘on_activate’, ‘on_deactivate’, ‘on_show’, ‘on_hide’, ‘on_context_lost’, ‘on_context_state_lost’, ‘on_draw’]</em><a class="headerlink" href="#pyglet.window.Window.event_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.fullscreen">
+<code class="descclassname">Window.</code><code class="descname">fullscreen</code><a class="headerlink" href="#pyglet.window.Window.fullscreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the window is currently fullscreen.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.has_exit">
+<code class="descclassname">Window.</code><code class="descname">has_exit</code><em class="property"> = False</em><a class="headerlink" href="#pyglet.window.Window.has_exit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.height">
+<code class="descclassname">Window.</code><code class="descname">height</code><a class="headerlink" href="#pyglet.window.Window.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the window, in pixels.  Read-write.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.invalid">
+<code class="descclassname">Window.</code><code class="descname">invalid</code><em class="property"> = True</em><a class="headerlink" href="#pyglet.window.Window.invalid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.resizeable">
+<code class="descclassname">Window.</code><code class="descname">resizeable</code><a class="headerlink" href="#pyglet.window.Window.resizeable" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the window is resizable.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.screen">
+<code class="descclassname">Window.</code><code class="descname">screen</code><a class="headerlink" href="#pyglet.window.Window.screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>The screen this window is fullscreen in.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Screen</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.style">
+<code class="descclassname">Window.</code><code class="descname">style</code><a class="headerlink" href="#pyglet.window.Window.style" title="Permalink to this definition">¶</a></dt>
+<dd><p>The window style; one of the <code class="docutils literal"><span class="pre">WINDOW_STYLE_*</span></code> constants.
+Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.visible">
+<code class="descclassname">Window.</code><code class="descname">visible</code><a class="headerlink" href="#pyglet.window.Window.visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the window is currently visible.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.vsync">
+<code class="descclassname">Window.</code><code class="descname">vsync</code><a class="headerlink" href="#pyglet.window.Window.vsync" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if buffer flips are synchronised to the screen’s vertical
+retrace.  Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.window.Window.width">
+<code class="descclassname">Window.</code><code class="descname">width</code><a class="headerlink" href="#pyglet.window.Window.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the window, in pixels.  Read-write.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">Window.</code><code class="descname">register_event_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
+<dd><p>Register an event type with the dispatcher.</p>
+<p>Registering event types allows the dispatcher to validate event
+handler names as they are attached, and to search attached objects for
+suitable handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of the event to register.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Window</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.window.Platform.html"
+                        title="previous chapter"><cite>Platform</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.window.MouseCursorException.html"
+                        title="next chapter"><cite>MouseCursorException</cite></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.window.MouseCursorException.html" title="MouseCursorException"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.window.Platform.html" title="Platform Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.window.html" ><code class="docutils literal"><span class="pre">pyglet.window</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

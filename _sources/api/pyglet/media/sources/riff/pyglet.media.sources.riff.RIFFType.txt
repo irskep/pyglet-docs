@@ -1,0 +1,92 @@
+`RIFFType` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.riff
+
+.. inheritance-diagram:: RIFFType
+
+.. autoclass:: RIFFType
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~RIFFType.header_fmt
+         ~RIFFType.header_length
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: RIFFType.header_fmt
+      :noindex:
+
+   .. autoattribute:: RIFFType.header_length
+      :noindex:
+
+
+
+

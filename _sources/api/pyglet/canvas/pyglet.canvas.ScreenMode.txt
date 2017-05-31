@@ -1,0 +1,77 @@
+`ScreenMode` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.canvas
+
+.. inheritance-diagram:: ScreenMode
+
+.. autoclass:: ScreenMode
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ScreenMode.depth
+         ~ScreenMode.height
+         ~ScreenMode.rate
+         ~ScreenMode.width
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ScreenMode.depth
+
+.. autoattribute:: ScreenMode.height
+
+.. autoattribute:: ScreenMode.rate
+
+.. autoattribute:: ScreenMode.width
+
+
+
+
+
+
+
+

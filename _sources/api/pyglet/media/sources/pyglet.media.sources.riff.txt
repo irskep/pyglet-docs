@@ -1,0 +1,93 @@
+``pyglet.media.sources.riff``
+===============================================================
+
+.. automodule:: pyglet.media.sources.riff
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: riff/
+   :template: class.rst
+
+
+   RIFFChunk
+   RIFFFile
+   RIFFForm
+   RIFFType
+   WaveDataChunk
+   WaveForm
+   WaveFormatChunk
+   WaveSource
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: riff/
+   :template: exception.rst
+
+
+   RIFFFormatException
+   WAVEFormatException
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: IBM_FORMAT_ADPCM
+
+.. autodata:: IBM_FORMAT_ALAW
+
+.. autodata:: IBM_FORMAT_MULAW
+
+.. autodata:: WAVE_FORMAT_PCM
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``struct``
+
+
+
+
+.. template module.rst
+

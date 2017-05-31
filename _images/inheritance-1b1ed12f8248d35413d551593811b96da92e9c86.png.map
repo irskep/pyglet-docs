@@ -1,0 +1,4 @@
+<map id="inheritancea78cc4da63" name="inheritancea78cc4da63">
+<area shape="rect" id="node1" href="#pyglet.media.sources.procedural.ADSREnvelope" target="_top" title="A four part Attack, Decay, Suspend, Release envelope." alt="" coords="327,5,637,29"/>
+<area shape="rect" id="node2" href="pyglet.media.sources.procedural.Envelope.html#pyglet.media.sources.procedural.Envelope" target="_top" title="Base class for ProceduralSource amplitude envelopes." alt="" coords="5,5,279,29"/>
+</map>

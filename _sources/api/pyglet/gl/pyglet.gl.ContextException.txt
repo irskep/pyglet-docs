@@ -1,0 +1,12 @@
+`ContextException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.gl.ContextException
+
+Exception defined in :mod:`pyglet.gl`
+
+.. currentmodule:: pyglet.gl
+
+.. autoexception:: ContextException

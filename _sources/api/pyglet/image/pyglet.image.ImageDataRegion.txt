@@ -1,0 +1,117 @@
+`ImageDataRegion` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: ImageDataRegion
+
+.. autoclass:: ImageDataRegion
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ImageDataRegion.anchor_x
+         ~ImageDataRegion.anchor_y
+         ~ImageDataRegion.data
+         ~ImageDataRegion.format
+         ~ImageDataRegion.image_data
+         ~ImageDataRegion.mipmapped_texture
+         ~ImageDataRegion.texture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ImageDataRegion.data
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: ImageDataRegion.anchor_x
+      :noindex:
+
+   .. autoattribute:: ImageDataRegion.anchor_y
+      :noindex:
+
+   .. autoattribute:: ImageDataRegion.format
+      :noindex:
+
+   .. autoattribute:: ImageDataRegion.image_data
+      :noindex:
+
+   .. autoattribute:: ImageDataRegion.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: ImageDataRegion.texture
+      :noindex:
+
+
+
+

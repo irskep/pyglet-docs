@@ -1,0 +1,148 @@
+`Texture` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: Texture
+
+.. autoclass:: Texture
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Texture.create
+         ~Texture.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Texture.anchor_x
+         ~Texture.anchor_y
+         ~Texture.image_data
+         ~Texture.images
+         ~Texture.level
+         ~Texture.mipmapped_texture
+         ~Texture.tex_coords
+         ~Texture.tex_coords_order
+         ~Texture.texture
+         ~Texture.x
+         ~Texture.y
+         ~Texture.z
+
+
+
+
+
+
+
+
+Methods
+-------
+
+
+
+.. automethod:: Texture.create
+
+.. automethod:: Texture.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Texture.image_data
+
+.. autoattribute:: Texture.images
+
+.. autoattribute:: Texture.level
+
+.. autoattribute:: Texture.tex_coords
+
+.. autoattribute:: Texture.tex_coords_order
+
+.. autoattribute:: Texture.x
+
+.. autoattribute:: Texture.y
+
+.. autoattribute:: Texture.z
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Texture.anchor_x
+      :noindex:
+
+   .. autoattribute:: Texture.anchor_y
+      :noindex:
+
+   .. autoattribute:: Texture.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: Texture.texture
+      :noindex:
+
+
+
+

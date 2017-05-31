@@ -1,0 +1,8 @@
+`get_apple_remote` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.input`
+
+.. autofunction:: pyglet.input.get_apple_remote

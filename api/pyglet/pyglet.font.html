@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.font &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../index.html" />
+    <link rel="up" title="pyglet" href="../pyglet.html" />
+    <link rel="next" title="pyglet.font.base" href="font/pyglet.font.base.html" />
+    <link rel="prev" title="EventException" href="event/pyglet.event.EventException.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="font/pyglet.font.base.html" title="pyglet.font.base"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="event/pyglet.event.EventException.html" title="EventException"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" accesskey="U">pyglet</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.font">
+<span id="pyglet-font"></span><h1><code class="docutils literal"><span class="pre">pyglet.font</span></code><a class="headerlink" href="#module-pyglet.font" title="Permalink to this headline">¶</a></h1>
+<p>Load fonts and render text.</p>
+<p>This is a fairly-low level interface to text rendering. Obtain a font using <a class="reference internal" href="font/pyglet.font.load.html#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-meth docutils literal"><span class="pre">load()</span></code></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet</span> <span class="k">import</span> <span class="n">font</span>
+<span class="n">arial</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;Arial&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">italic</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Manually loading fonts is only required in the following situations:</p>
+<ul class="simple">
+<li>When manually rendering fonts;</li>
+<li>When using the deprecated font rendering in <a class="reference internal" href="font/pyglet.font.text.html#module-pyglet.font.text" title="pyglet.font.text"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.font.text</span></code></a>.</li>
+</ul>
+<p>You are encouraged to use <a class="reference internal" href="pyglet.text.html#module-pyglet.text" title="pyglet.text"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.text</span></code></a> for actual test rendering. Classes in this module will
+handle font loading for you, so manual loading is not required.</p>
+<p>pyglet will automatically load any system-installed fonts.  You can add additional fonts
+(for example, from your program resources) using <a class="reference internal" href="font/pyglet.font.add_file.html#pyglet.font.add_file" title="pyglet.font.add_file"><code class="xref py py-meth docutils literal"><span class="pre">add_file()</span></code></a> or
+<a class="reference internal" href="font/pyglet.font.add_directory.html#pyglet.font.add_directory" title="pyglet.font.add_directory"><code class="xref py py-meth docutils literal"><span class="pre">add_directory()</span></code></a>. These fonts are then available in the same way as system-installed fonts:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet</span> <span class="k">import</span> <span class="n">font</span>
+<span class="n">font</span><span class="o">.</span><span class="n">add_file</span><span class="p">(</span><span class="s1">&#39;action_man.ttf&#39;</span><span class="p">)</span>
+<span class="n">action_man</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;Action Man&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See the <a class="reference internal" href="font/pyglet.font.base.html#module-pyglet.font.base" title="pyglet.font.base"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.font.base</span></code></a> module for documentation on the base classes used
+by this package.</p>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="font/pyglet.font.base.html#module-pyglet.font.base" title="pyglet.font.base"><code class="xref py py-obj docutils literal"><span class="pre">base</span></code></a></td>
+<td>Abstract classes used by pyglet.font implementations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="font/pyglet.font.text.html#module-pyglet.font.text" title="pyglet.font.text"><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></a></td>
+<td>Deprecated text rendering</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="font/pyglet.font.ttf.html#module-pyglet.font.ttf" title="pyglet.font.ttf"><code class="xref py py-obj docutils literal"><span class="pre">ttf</span></code></a></td>
+<td>Implementation of the Truetype file format.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="font/pyglet.font.add_directory.html#pyglet.font.add_directory" title="pyglet.font.add_directory"><code class="xref py py-obj docutils literal"><span class="pre">add_directory</span></code></a>(dir)</td>
+<td>Add a directory of fonts to pyglet’s search path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="font/pyglet.font.add_file.html#pyglet.font.add_file" title="pyglet.font.add_file"><code class="xref py py-obj docutils literal"><span class="pre">add_file</span></code></a>(font)</td>
+<td>Add a font to pyglet’s search path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="font/pyglet.font.have_font.html#pyglet.font.have_font" title="pyglet.font.have_font"><code class="xref py py-obj docutils literal"><span class="pre">have_font</span></code></a>(name)</td>
+<td>Check if specified system font name is available.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="font/pyglet.font.load.html#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-obj docutils literal"><span class="pre">load</span></code></a>([name,&nbsp;size,&nbsp;bold,&nbsp;italic,&nbsp;dpi])</td>
+<td>Load a font for rendering.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.font.absolute_import">
+<code class="descname">absolute_import</code><em class="property"> = _Feature((2, 5, 0, ‘alpha’, 1), (3, 0, 0, ‘alpha’, 0), 16384)</em><a class="headerlink" href="#pyglet.font.absolute_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pyglet.font.gl">
+<code class="descname">gl</code><em class="property"> = &lt;module ‘pyglet.gl’ from ‘/Users/steve/dev/3p/pyglet/pyglet/gl/__init__.py’&gt;</em><a class="headerlink" href="#pyglet.font.gl" title="Permalink to this definition">¶</a></dt>
+<dd><p>OpenGL and GLU interface.</p>
+<p>This package imports all OpenGL, GLU and registered OpenGL extension
+functions.  Functions have identical signatures to their C counterparts.  For
+example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="c1"># [...omitted: set up a GL context and framebuffer]</span>
+<span class="n">glBegin</span><span class="p">(</span><span class="n">GL_QUADS</span><span class="p">)</span>
+<span class="n">glVertex3f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">glVertex3f</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">glVertex3f</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">glEnd</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>OpenGL is documented in full at the <a class="reference external" href="http://www.opengl.org/documentation/red_book/">OpenGL Reference Pages</a>.</p>
+<p>The <a class="reference external" href="http://fly.cc.fer.hr/~unreal/theredbook/">OpenGL Programming Guide</a> is a popular reference manual organised by
+topic.  The free online version documents only OpenGL 1.1.  <a class="reference external" href="http://www.opengl.org/documentation/red_book/">Later editions</a>
+cover more recent versions of the API and can be purchased from a book store.</p>
+<p>The following subpackages are imported into this “mega” package already (and
+so are available by importing <code class="docutils literal"><span class="pre">pyglet.gl</span></code>):</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.gl</span></code></dt>
+<dd>OpenGL</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glu</span></code></dt>
+<dd>GLU</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.gl.glext_arb</span></code></dt>
+<dd>ARB registered OpenGL extension functions</dd>
+</dl>
+<p>These subpackages are also available, but are not imported into this namespace
+by default:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glext_nv</span></code></dt>
+<dd>nVidia OpenGL extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.agl</span></code></dt>
+<dd>AGL (Mac OS X OpenGL context functions)</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glx</span></code></dt>
+<dd>GLX (Linux OpenGL context functions)</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glxext_arb</span></code></dt>
+<dd>ARB registered GLX extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.glxext_nv</span></code></dt>
+<dd>nvidia GLX extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.wgl</span></code></dt>
+<dd>WGL (Windows OpenGL context functions)</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.wglext_arb</span></code></dt>
+<dd>ARB registered WGL extension functions</dd>
+<dt><code class="docutils literal"><span class="pre">pyglet.gl.wglext_nv</span></code></dt>
+<dd>nvidia WGL extension functions</dd>
+</dl>
+<p>The information modules are provided for convenience, and are documented
+below.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">os</span></code></li>
+<li><code class="docutils literal"><span class="pre">pyglet</span></code></li>
+<li><code class="docutils literal"><span class="pre">sys</span></code></li>
+<li><code class="docutils literal"><span class="pre">weakref</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.font</span></code></a><ul>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="event/pyglet.event.EventException.html"
+                        title="previous chapter"><cite>EventException</cite></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="font/pyglet.font.base.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.font.base</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="font/pyglet.font.base.html" title="pyglet.font.base"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="event/pyglet.event.EventException.html" title="EventException"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../pyglet.html" >pyglet</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

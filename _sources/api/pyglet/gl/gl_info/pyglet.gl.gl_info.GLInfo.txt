@@ -1,0 +1,80 @@
+`GLInfo` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.gl.gl_info
+
+.. inheritance-diagram:: GLInfo
+
+.. autoclass:: GLInfo
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~GLInfo.extensions
+         ~GLInfo.have_context
+         ~GLInfo.renderer
+         ~GLInfo.vendor
+         ~GLInfo.version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: GLInfo.extensions
+
+.. autoattribute:: GLInfo.have_context
+
+.. autoattribute:: GLInfo.renderer
+
+.. autoattribute:: GLInfo.vendor
+
+.. autoattribute:: GLInfo.version
+
+
+
+
+
+
+
+

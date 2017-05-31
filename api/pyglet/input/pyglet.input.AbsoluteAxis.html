@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AbsoluteAxis Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="absoluteaxis-class">
+<h1><cite>AbsoluteAxis</cite> Class<a class="headerlink" href="#absoluteaxis-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-bb44a8dd26814c7bfb2cda4cb36781dc29df4780.png" alt="Inheritance diagram of AbsoluteAxis" usemap="#inheritance5933542d4a" class="inheritance"/>
+<map id="inheritance5933542d4a" name="inheritance5933542d4a">
+<area shape="rect" id="node1" href="../event/pyglet.event.EventDispatcher.html#pyglet.event.EventDispatcher" target="_top" title="Generic event dispatcher interface." alt="" coords="5,5,200,29"/>
+<area shape="rect" id="node3" href="base/pyglet.input.base.Control.html#pyglet.input.base.Control" target="_top" title="Single value input provided by a device." alt="" coords="248,5,417,29"/>
+<area shape="rect" id="node2" href="base/pyglet.input.base.AbsoluteAxis.html#pyglet.input.base.AbsoluteAxis" target="_top" title="An axis whose value represents a physical measurement from the device." alt="" coords="465,5,668,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.input.AbsoluteAxis">
+<em class="property">class </em><code class="descname">AbsoluteAxis</code><span class="sig-paren">(</span><em>name</em>, <em>min</em>, <em>max</em>, <em>raw_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.AbsoluteAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>An axis whose value represents a physical measurement from the device.</p>
+<p>The value is advertised to range over <code class="docutils literal"><span class="pre">min</span></code> and <code class="docutils literal"><span class="pre">max</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>min</strong> – Minimum advertised value.</li>
+<li><strong>max</strong> – Maximum advertised value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.HAT" title="pyglet.input.AbsoluteAxis.HAT"><code class="xref py py-obj docutils literal"><span class="pre">HAT</span></code></a></td>
+<td>Name of the hat (POV) control, when a single control enumerates all of the hat’s positions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.HAT_X" title="pyglet.input.AbsoluteAxis.HAT_X"><code class="xref py py-obj docutils literal"><span class="pre">HAT_X</span></code></a></td>
+<td>Name of the hat’s (POV’s) horizontal control, when the hat position is described by two orthogonal controls.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.HAT_Y" title="pyglet.input.AbsoluteAxis.HAT_Y"><code class="xref py py-obj docutils literal"><span class="pre">HAT_Y</span></code></a></td>
+<td>Name of the hat’s (POV’s) vertical control, when the hat position is described by two orthogonal controls.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.RX" title="pyglet.input.AbsoluteAxis.RX"><code class="xref py py-obj docutils literal"><span class="pre">RX</span></code></a></td>
+<td>Name of the rotational-X axis control</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.RY" title="pyglet.input.AbsoluteAxis.RY"><code class="xref py py-obj docutils literal"><span class="pre">RY</span></code></a></td>
+<td>Name of the rotational-Y axis control</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.RZ" title="pyglet.input.AbsoluteAxis.RZ"><code class="xref py py-obj docutils literal"><span class="pre">RZ</span></code></a></td>
+<td>Name of the rotational-Z axis control</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.X" title="pyglet.input.AbsoluteAxis.X"><code class="xref py py-obj docutils literal"><span class="pre">X</span></code></a></td>
+<td>Name of the horizontal axis control</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.Y" title="pyglet.input.AbsoluteAxis.Y"><code class="xref py py-obj docutils literal"><span class="pre">Y</span></code></a></td>
+<td>Name of the vertical axis control</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.input.AbsoluteAxis.Z" title="pyglet.input.AbsoluteAxis.Z"><code class="xref py py-obj docutils literal"><span class="pre">Z</span></code></a></td>
+<td>Name of the Z axis control.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">event_types</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">value</span></code></td>
+<td>Current value of the control.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.HAT">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">HAT</code><em class="property"> = ‘hat’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.HAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the hat (POV) control, when a single control enumerates all of
+the hat’s positions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.HAT_X">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">HAT_X</code><em class="property"> = ‘hat_x’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.HAT_X" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the hat’s (POV’s) horizontal control, when the hat position is
+described by two orthogonal controls.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.HAT_Y">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">HAT_Y</code><em class="property"> = ‘hat_y’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.HAT_Y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the hat’s (POV’s) vertical control, when the hat position is
+described by two orthogonal controls.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.RX">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">RX</code><em class="property"> = ‘rx’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.RX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the rotational-X axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.RY">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">RY</code><em class="property"> = ‘ry’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.RY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the rotational-Y axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.RZ">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">RZ</code><em class="property"> = ‘rz’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.RZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the rotational-Z axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.X">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">X</code><em class="property"> = ‘x’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.X" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the horizontal axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.Y">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">Y</code><em class="property"> = ‘y’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.Y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the vertical axis control</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.input.AbsoluteAxis.Z">
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">Z</code><em class="property"> = ‘z’</em><a class="headerlink" href="#pyglet.input.AbsoluteAxis.Z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Z axis control.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Methods</p>
+<dl class="method">
+<dt>
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">register_event_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
+<dd><p>Register an event type with the dispatcher.</p>
+<p>Registering event types allows the dispatcher to validate event
+handler names as they are attached, and to search attached objects for
+suitable handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Name of the event to register.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">event_types</code><em class="property"> = [‘on_change’, ‘on_press’, ‘on_release’]</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">AbsoluteAxis.</code><code class="descname">value</code></dt>
+<dd><p>Current value of the control.</p>
+<p>The range of the value is device-dependent; for absolute controls
+the range is given by <code class="docutils literal"><span class="pre">min</span></code> and <code class="docutils literal"><span class="pre">max</span></code> (however the value may exceed
+this range); for relative controls the range is undefined.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>AbsoluteAxis</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>TextLayout Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.text.layout" href="../pyglet.text.layout.html" />
+    <link rel="next" title="TextLayoutForegroundDecorationGroup Class" href="pyglet.text.layout.TextLayoutForegroundDecorationGroup.html" />
+    <link rel="prev" title="ScrollableTextLayoutGroup Class" href="pyglet.text.layout.ScrollableTextLayoutGroup.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.TextLayoutForegroundDecorationGroup.html" title="TextLayoutForegroundDecorationGroup Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.ScrollableTextLayoutGroup.html" title="ScrollableTextLayoutGroup Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.layout.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text.layout</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="textlayout-class">
+<h1><cite>TextLayout</cite> Class<a class="headerlink" href="#textlayout-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-b7916f87d034ca21c35ee78b7c26412cf2b163bf.png" alt="Inheritance diagram of TextLayout" usemap="#inheritance342eab445e" class="inheritance"/>
+<map id="inheritance342eab445e" name="inheritance342eab445e">
+<area shape="rect" id="node1" href="#pyglet.text.layout.TextLayout" target="_top" title="Lay out and display documents." alt="" coords="5,5,195,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.text.layout.TextLayout">
+<em class="property">class </em><code class="descname">TextLayout</code><span class="sig-paren">(</span><em>document</em>, <em>width=None</em>, <em>height=None</em>, <em>multiline=False</em>, <em>dpi=None</em>, <em>batch=None</em>, <em>group=None</em>, <em>wrap_lines=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.layout.TextLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lay out and display documents.</p>
+<p>This class is intended for displaying documents that do not change
+regularly – any change will cost some time to lay out the complete
+document again and regenerate all vertex lists.</p>
+<p>The benefit of this class is that texture state is shared between
+all layouts of this class.  The time to draw one <cite>TextLayout</cite> may be
+roughly the same as the time to draw one <cite>IncrementalTextLayout</cite>; but
+drawing ten <cite>TextLayout</cite> objects in one batch is much faster than drawing
+ten incremental or scrollable text layouts.</p>
+<p><cite>Label</cite> and <cite>HTMLLabel</cite> provide a convenient interface to this class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>content_width</strong> – Calculated width of the text in the layout.  This may overflow
+the desired width if word-wrapping failed.</li>
+<li><strong>content_height</strong> – Calculated height of the text in the layout.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.top_group" title="pyglet.text.layout.TextLayout.top_group"><strong>top_group</strong></a> – Top-level rendering group.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.background_group" title="pyglet.text.layout.TextLayout.background_group"><strong>background_group</strong></a> – Rendering group for background color.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_group" title="pyglet.text.layout.TextLayout.foreground_group"><strong>foreground_group</strong></a> – Rendering group for glyphs.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_decoration_group" title="pyglet.text.layout.TextLayout.foreground_decoration_group"><strong>foreground_decoration_group</strong></a> – Rendering group for glyph underlines.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.anchor_x" title="pyglet.text.layout.TextLayout.anchor_x"><code class="xref py py-obj docutils literal"><span class="pre">anchor_x</span></code></a></td>
+<td>Horizontal anchor alignment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.anchor_y" title="pyglet.text.layout.TextLayout.anchor_y"><code class="xref py py-obj docutils literal"><span class="pre">anchor_y</span></code></a></td>
+<td>Vertical anchor alignment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.batch" title="pyglet.text.layout.TextLayout.batch"><code class="xref py py-obj docutils literal"><span class="pre">batch</span></code></a></td>
+<td>The Batch that this Layout is assigned to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.content_valign" title="pyglet.text.layout.TextLayout.content_valign"><code class="xref py py-obj docutils literal"><span class="pre">content_valign</span></code></a></td>
+<td>Vertical alignment of content within larger layout box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.document" title="pyglet.text.layout.TextLayout.document"><code class="xref py py-obj docutils literal"><span class="pre">document</span></code></a></td>
+<td>Document to display.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.dpi" title="pyglet.text.layout.TextLayout.dpi"><code class="xref py py-obj docutils literal"><span class="pre">dpi</span></code></a></td>
+<td>Get DPI used by this layout.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_decoration_group" title="pyglet.text.layout.TextLayout.foreground_decoration_group"><code class="xref py py-obj docutils literal"><span class="pre">foreground_decoration_group</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_group" title="pyglet.text.layout.TextLayout.foreground_group"><code class="xref py py-obj docutils literal"><span class="pre">foreground_group</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.height" title="pyglet.text.layout.TextLayout.height"><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></a></td>
+<td>Height of the layout.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.multiline" title="pyglet.text.layout.TextLayout.multiline"><code class="xref py py-obj docutils literal"><span class="pre">multiline</span></code></a></td>
+<td>Set if multiline layout is enabled.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.top_group" title="pyglet.text.layout.TextLayout.top_group"><code class="xref py py-obj docutils literal"><span class="pre">top_group</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.width" title="pyglet.text.layout.TextLayout.width"><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></a></td>
+<td>Width of the layout.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.x" title="pyglet.text.layout.TextLayout.x"><code class="xref py py-obj docutils literal"><span class="pre">x</span></code></a></td>
+<td>X coordinate of the layout.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.text.layout.TextLayout.y" title="pyglet.text.layout.TextLayout.y"><code class="xref py py-obj docutils literal"><span class="pre">y</span></code></a></td>
+<td>Y coordinate of the layout.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.anchor_x">
+<code class="descclassname">TextLayout.</code><code class="descname">anchor_x</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.anchor_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Horizontal anchor alignment.</p>
+<p>This property determines the meaning of the <cite>x</cite> coordinate.  It is one of
+the enumerants:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">&quot;left&quot;</span></code> (default)</dt>
+<dd>The X coordinate gives the position of the left edge of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;center&quot;</span></code></dt>
+<dd>The X coordinate gives the position of the center of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;right&quot;</span></code></dt>
+<dd>The X coordinate gives the position of the right edge of the layout.</dd>
+</dl>
+<p>For the purposes of calculating the position resulting from this
+alignment, the width of the layout is taken to be <cite>width</cite> if <cite>multiline</cite>
+is True and <cite>wrap_lines</cite> is True, otherwise <cite>content_width</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.anchor_y">
+<code class="descclassname">TextLayout.</code><code class="descname">anchor_y</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.anchor_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertical anchor alignment.</p>
+<p>This property determines the meaning of the <cite>y</cite> coordinate.  It is one of
+the enumerants:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">&quot;top&quot;</span></code></dt>
+<dd>The Y coordinate gives the position of the top edge of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;center&quot;</span></code></dt>
+<dd>The Y coordinate gives the position of the center of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;baseline&quot;</span></code></dt>
+<dd>The Y coordinate gives the position of the baseline of the first
+line of text in the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;bottom&quot;</span></code> (default)</dt>
+<dd>The Y coordinate gives the position of the bottom edge of the layout.</dd>
+</dl>
+<p>For the purposes of calculating the position resulting from this
+alignment, the height of the layout is taken to be the smaller of
+<cite>height</cite> and <cite>content_height</cite>.</p>
+<p>See also <cite>content_valign</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.background_group">
+<code class="descclassname">TextLayout.</code><code class="descname">background_group</code><em class="property"> = OrderedGroup(0)</em><a class="headerlink" href="#pyglet.text.layout.TextLayout.background_group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.batch">
+<code class="descclassname">TextLayout.</code><code class="descname">batch</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Batch that this Layout is assigned to.</p>
+<p>If no Batch is assigned, an internal Batch is 
+created and used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Batch</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.content_valign">
+<code class="descclassname">TextLayout.</code><code class="descname">content_valign</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.content_valign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertical alignment of content within
+larger layout box.</p>
+<p>This property determines how content is positioned within the layout
+box when <code class="docutils literal"><span class="pre">content_height</span></code> is less than <code class="docutils literal"><span class="pre">height</span></code>.  It is one
+of the enumerants:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">top</span></code> (default)</dt>
+<dd>Content is aligned to the top of the layout box.</dd>
+<dt><code class="docutils literal"><span class="pre">center</span></code></dt>
+<dd>Content is centered vertically within the layout box.</dd>
+<dt><code class="docutils literal"><span class="pre">bottom</span></code></dt>
+<dd>Content is aligned to the bottom of the layout box.</dd>
+</dl>
+<p>This property has no effect when <code class="docutils literal"><span class="pre">content_height</span></code> is greater
+than <code class="docutils literal"><span class="pre">height</span></code> (in which case the content is aligned to the top) or when
+<code class="docutils literal"><span class="pre">height</span></code> is <code class="docutils literal"><span class="pre">None</span></code> (in which case there is no vertical layout box
+dimension).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.document">
+<code class="descclassname">TextLayout.</code><code class="descname">document</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.document" title="Permalink to this definition">¶</a></dt>
+<dd><p>Document to display.</p>
+<p>For <cite>IncrementalTextLayout</cite> it is far more efficient to modify a document
+in-place than to replace the document instance on the layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>AbstractDocument</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.dpi">
+<code class="descclassname">TextLayout.</code><code class="descname">dpi</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.dpi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get DPI used by this layout.</p>
+<p>Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.foreground_decoration_group">
+<code class="descclassname">TextLayout.</code><code class="descname">foreground_decoration_group</code><em class="property"> = TextLayoutForegroundDecorationGroup(2)</em><a class="headerlink" href="#pyglet.text.layout.TextLayout.foreground_decoration_group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.foreground_group">
+<code class="descclassname">TextLayout.</code><code class="descname">foreground_group</code><em class="property"> = TextLayoutForegroundGroup(1)</em><a class="headerlink" href="#pyglet.text.layout.TextLayout.foreground_group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.height">
+<code class="descclassname">TextLayout.</code><code class="descname">height</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Height of the layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.multiline">
+<code class="descclassname">TextLayout.</code><code class="descname">multiline</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.multiline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set if multiline layout is enabled.</p>
+<p>If multiline is False, newline and paragraph characters are ignored and
+text is not word-wrapped.
+If True, the text is word-wrapped only if the <cite>wrap_lines</cite> is True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.top_group">
+<code class="descclassname">TextLayout.</code><code class="descname">top_group</code><em class="property"> = &lt;pyglet.text.layout.TextLayoutGroup object&gt;</em><a class="headerlink" href="#pyglet.text.layout.TextLayout.top_group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.width">
+<code class="descclassname">TextLayout.</code><code class="descname">width</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Width of the layout.</p>
+<p>This property has no effect if <cite>multiline</cite> is False or <cite>wrap_lines</cite> is False.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.x">
+<code class="descclassname">TextLayout.</code><code class="descname">x</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>X coordinate of the layout.</p>
+<p>See also <cite>anchor_x</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.text.layout.TextLayout.y">
+<code class="descclassname">TextLayout.</code><code class="descname">y</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Y coordinate of the layout.</p>
+<p>See also <cite>anchor_y</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>TextLayout</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.text.layout.ScrollableTextLayoutGroup.html"
+                        title="previous chapter"><cite>ScrollableTextLayoutGroup</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.text.layout.TextLayoutForegroundDecorationGroup.html"
+                        title="next chapter"><cite>TextLayoutForegroundDecorationGroup</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.TextLayoutForegroundDecorationGroup.html" title="TextLayoutForegroundDecorationGroup Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.layout.ScrollableTextLayoutGroup.html" title="ScrollableTextLayoutGroup Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.text.layout.html" ><code class="docutils literal"><span class="pre">pyglet.text.layout</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

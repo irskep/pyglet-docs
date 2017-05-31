@@ -1,0 +1,6 @@
+<map id="inheritanceff3e3fff6b" name="inheritanceff3e3fff6b">
+<area shape="rect" id="node1" href="pyglet.graphics.vertexbuffer.AbstractBuffer.html#pyglet.graphics.vertexbuffer.AbstractBuffer" target="_top" title="Abstract buffer of byte data." alt="" coords="5,5,277,29"/>
+<area shape="rect" id="node4" href="pyglet.graphics.vertexbuffer.VertexBufferObject.html#pyglet.graphics.vertexbuffer.VertexBufferObject" target="_top" title="Lightweight representation of an OpenGL VBO." alt="" coords="325,5,625,29"/>
+<area shape="rect" id="node2" href="pyglet.graphics.vertexbuffer.AbstractMappable.html#pyglet.graphics.vertexbuffer.AbstractMappable" target="_top" title="pyglet.graphics.vertexbuffer.AbstractMappable" alt="" coords="328,53,623,77"/>
+<area shape="rect" id="node3" href="#pyglet.graphics.vertexbuffer.MappableVertexBufferObject" target="_top" title="A VBO with system&#45;memory backed store." alt="" coords="673,29,1031,53"/>
+</map>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>VertexList Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.graphics.vertexdomain" href="../pyglet.graphics.vertexdomain.html" />
+    <link rel="next" title="create_attribute_usage Function" href="pyglet.graphics.vertexdomain.create_attribute_usage.html" />
+    <link rel="prev" title="VertexDomain Class" href="pyglet.graphics.vertexdomain.VertexDomain.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexdomain.create_attribute_usage.html" title="create_attribute_usage Function"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexdomain.VertexDomain.html" title="VertexDomain Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.graphics.html" ><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.graphics.vertexdomain.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.graphics.vertexdomain</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vertexlist-class">
+<h1><cite>VertexList</cite> Class<a class="headerlink" href="#vertexlist-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-15ecc72c674aeee8c9ef0cb6d211ab4a6f31cf0c.png" alt="Inheritance diagram of VertexList" usemap="#inheritance2c29f203c5" class="inheritance"/>
+<map id="inheritance2c29f203c5" name="inheritance2c29f203c5">
+<area shape="rect" id="node1" href="#pyglet.graphics.vertexdomain.VertexList" target="_top" title="A list of vertices within a `VertexDomain`. &#160;Use" alt="" coords="5,5,262,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.graphics.vertexdomain.VertexList">
+<em class="property">class </em><code class="descname">VertexList</code><span class="sig-paren">(</span><em>domain</em>, <em>start</em>, <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of vertices within a <cite>VertexDomain</cite>.  Use
+<cite>VertexDomain.create</cite> to construct this list.</p>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.colors" title="pyglet.graphics.vertexdomain.VertexList.colors"><code class="xref py py-obj docutils literal"><span class="pre">colors</span></code></a></td>
+<td>Array of color data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.edge_flags" title="pyglet.graphics.vertexdomain.VertexList.edge_flags"><code class="xref py py-obj docutils literal"><span class="pre">edge_flags</span></code></a></td>
+<td>Array of edge flag data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.fog_coords" title="pyglet.graphics.vertexdomain.VertexList.fog_coords"><code class="xref py py-obj docutils literal"><span class="pre">fog_coords</span></code></a></td>
+<td>Array of fog coordinate data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.multi_tex_coords" title="pyglet.graphics.vertexdomain.VertexList.multi_tex_coords"><code class="xref py py-obj docutils literal"><span class="pre">multi_tex_coords</span></code></a></td>
+<td>Multi-array texture coordinate data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.normals" title="pyglet.graphics.vertexdomain.VertexList.normals"><code class="xref py py-obj docutils literal"><span class="pre">normals</span></code></a></td>
+<td>Array of normal vector data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.secondary_colors" title="pyglet.graphics.vertexdomain.VertexList.secondary_colors"><code class="xref py py-obj docutils literal"><span class="pre">secondary_colors</span></code></a></td>
+<td>Array of secondary color data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.tex_coords" title="pyglet.graphics.vertexdomain.VertexList.tex_coords"><code class="xref py py-obj docutils literal"><span class="pre">tex_coords</span></code></a></td>
+<td>Array of texture coordinate data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList.vertices" title="pyglet.graphics.vertexdomain.VertexList.vertices"><code class="xref py py-obj docutils literal"><span class="pre">vertices</span></code></a></td>
+<td>Array of vertex coordinate data.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.colors">
+<code class="descclassname">VertexList.</code><code class="descname">colors</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of color data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.edge_flags">
+<code class="descclassname">VertexList.</code><code class="descname">edge_flags</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.edge_flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of edge flag data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.fog_coords">
+<code class="descclassname">VertexList.</code><code class="descname">fog_coords</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.fog_coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of fog coordinate data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.multi_tex_coords">
+<code class="descclassname">VertexList.</code><code class="descname">multi_tex_coords</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.multi_tex_coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-array texture coordinate data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.normals">
+<code class="descclassname">VertexList.</code><code class="descname">normals</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of normal vector data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.secondary_colors">
+<code class="descclassname">VertexList.</code><code class="descname">secondary_colors</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.secondary_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of secondary color data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.tex_coords">
+<code class="descclassname">VertexList.</code><code class="descname">tex_coords</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.tex_coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of texture coordinate data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.graphics.vertexdomain.VertexList.vertices">
+<code class="descclassname">VertexList.</code><code class="descname">vertices</code><a class="headerlink" href="#pyglet.graphics.vertexdomain.VertexList.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of vertex coordinate data.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>VertexList</cite> Class</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.graphics.vertexdomain.VertexDomain.html"
+                        title="previous chapter"><cite>VertexDomain</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.graphics.vertexdomain.create_attribute_usage.html"
+                        title="next chapter"><cite>create_attribute_usage</cite> Function</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexdomain.create_attribute_usage.html" title="create_attribute_usage Function"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.graphics.vertexdomain.VertexDomain.html" title="VertexDomain Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.graphics.html" ><code class="docutils literal"><span class="pre">pyglet.graphics</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.graphics.vertexdomain.html" ><code class="docutils literal"><span class="pre">pyglet.graphics.vertexdomain</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

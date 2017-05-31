@@ -1,0 +1,12 @@
+`ConfigException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.gl.ConfigException
+
+Exception defined in :mod:`pyglet.gl`
+
+.. currentmodule:: pyglet.gl
+
+.. autoexception:: ConfigException

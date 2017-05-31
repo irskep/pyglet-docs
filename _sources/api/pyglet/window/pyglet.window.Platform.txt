@@ -1,0 +1,53 @@
+`Platform` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.window
+
+.. inheritance-diagram:: Platform
+
+.. autoclass:: Platform
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

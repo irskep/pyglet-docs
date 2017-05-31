@@ -1,0 +1,62 @@
+``pyglet.graphics.allocation``
+===============================================================
+
+.. automodule:: pyglet.graphics.allocation
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: allocation/
+   :template: class.rst
+
+
+   Allocator
+
+
+
+
+
+
+
+Exceptions
+----------
+
+.. autosummary::
+   :toctree: allocation/
+   :template: exception.rst
+
+
+   AllocatorMemoryException
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. template module.rst
+

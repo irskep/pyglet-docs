@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MediaThread Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../../index.html" />
+    <link rel="up" title="pyglet.media.threads" href="../pyglet.media.threads.html" />
+    <link rel="next" title="PlayerWorker Class" href="pyglet.media.threads.PlayerWorker.html" />
+    <link rel="prev" title="pyglet.media.threads" href="../pyglet.media.threads.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.threads.PlayerWorker.html" title="PlayerWorker Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.threads.html" title="pyglet.media.threads"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.threads.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.media.threads</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="mediathread-class">
+<h1><cite>MediaThread</cite> Class<a class="headerlink" href="#mediathread-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../../_images/inheritance-05d728838a27b8e33679597b49a5d18eb7ad85af.png" alt="Inheritance diagram of MediaThread" usemap="#inheritance76e9b61df5" class="inheritance"/>
+<map id="inheritance76e9b61df5" name="inheritance76e9b61df5">
+<area shape="rect" id="node1" href="#pyglet.media.threads.MediaThread" target="_top" title="A thread that cleanly exits on interpreter shutdown, and provides" alt="" coords="5,5,233,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.media.threads.MediaThread">
+<em class="property">class </em><code class="descname">MediaThread</code><span class="sig-paren">(</span><em>target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.media.threads.MediaThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>A thread that cleanly exits on interpreter shutdown, and provides
+a sleep method that can be interrupted and a termination method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>condition</strong> – Lock condition on all instance variables.</li>
+<li><strong>stopped</strong> – True if <cite>stop</cite> has been called.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pyglet.media.threads.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.media.threads</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.media.threads.PlayerWorker.html"
+                        title="next chapter"><cite>PlayerWorker</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.media.threads.PlayerWorker.html" title="PlayerWorker Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.media.threads.html" title="pyglet.media.threads"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../../pyglet.media.html" ><code class="docutils literal"><span class="pre">pyglet.media</span></code></a> &raquo;</li>
+          <li><a href="../pyglet.media.threads.html" ><code class="docutils literal"><span class="pre">pyglet.media.threads</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

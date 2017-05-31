@@ -1,0 +1,12 @@
+`MissingFunctionException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.gl.lib.MissingFunctionException
+
+Exception defined in :mod:`pyglet.gl.lib`
+
+.. currentmodule:: pyglet.gl.lib
+
+.. autoexception:: MissingFunctionException

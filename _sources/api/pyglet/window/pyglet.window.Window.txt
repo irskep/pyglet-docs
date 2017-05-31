@@ -1,0 +1,214 @@
+`Window` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.window
+
+.. inheritance-diagram:: Window
+
+.. autoclass:: Window
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Window.register_event_type
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Window.CURSOR_CROSSHAIR
+         ~Window.CURSOR_DEFAULT
+         ~Window.CURSOR_HAND
+         ~Window.CURSOR_HELP
+         ~Window.CURSOR_NO
+         ~Window.CURSOR_SIZE
+         ~Window.CURSOR_SIZE_DOWN
+         ~Window.CURSOR_SIZE_DOWN_LEFT
+         ~Window.CURSOR_SIZE_DOWN_RIGHT
+         ~Window.CURSOR_SIZE_LEFT
+         ~Window.CURSOR_SIZE_LEFT_RIGHT
+         ~Window.CURSOR_SIZE_RIGHT
+         ~Window.CURSOR_SIZE_UP
+         ~Window.CURSOR_SIZE_UP_DOWN
+         ~Window.CURSOR_SIZE_UP_LEFT
+         ~Window.CURSOR_SIZE_UP_RIGHT
+         ~Window.CURSOR_TEXT
+         ~Window.CURSOR_WAIT
+         ~Window.CURSOR_WAIT_ARROW
+         ~Window.WINDOW_STYLE_BORDERLESS
+         ~Window.WINDOW_STYLE_DEFAULT
+         ~Window.WINDOW_STYLE_DIALOG
+         ~Window.WINDOW_STYLE_TOOL
+         ~Window.caption
+         ~Window.config
+         ~Window.context
+         ~Window.display
+         ~Window.event_types
+         ~Window.fullscreen
+         ~Window.has_exit
+         ~Window.height
+         ~Window.invalid
+         ~Window.resizeable
+         ~Window.screen
+         ~Window.style
+         ~Window.visible
+         ~Window.vsync
+         ~Window.width
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Window.CURSOR_CROSSHAIR
+
+.. autoattribute:: Window.CURSOR_DEFAULT
+
+.. autoattribute:: Window.CURSOR_HAND
+
+.. autoattribute:: Window.CURSOR_HELP
+
+.. autoattribute:: Window.CURSOR_NO
+
+.. autoattribute:: Window.CURSOR_SIZE
+
+.. autoattribute:: Window.CURSOR_SIZE_DOWN
+
+.. autoattribute:: Window.CURSOR_SIZE_DOWN_LEFT
+
+.. autoattribute:: Window.CURSOR_SIZE_DOWN_RIGHT
+
+.. autoattribute:: Window.CURSOR_SIZE_LEFT
+
+.. autoattribute:: Window.CURSOR_SIZE_LEFT_RIGHT
+
+.. autoattribute:: Window.CURSOR_SIZE_RIGHT
+
+.. autoattribute:: Window.CURSOR_SIZE_UP
+
+.. autoattribute:: Window.CURSOR_SIZE_UP_DOWN
+
+.. autoattribute:: Window.CURSOR_SIZE_UP_LEFT
+
+.. autoattribute:: Window.CURSOR_SIZE_UP_RIGHT
+
+.. autoattribute:: Window.CURSOR_TEXT
+
+.. autoattribute:: Window.CURSOR_WAIT
+
+.. autoattribute:: Window.CURSOR_WAIT_ARROW
+
+.. autoattribute:: Window.WINDOW_STYLE_BORDERLESS
+
+.. autoattribute:: Window.WINDOW_STYLE_DEFAULT
+
+.. autoattribute:: Window.WINDOW_STYLE_DIALOG
+
+.. autoattribute:: Window.WINDOW_STYLE_TOOL
+
+.. autoattribute:: Window.caption
+
+.. autoattribute:: Window.config
+
+.. autoattribute:: Window.context
+
+.. autoattribute:: Window.display
+
+.. autoattribute:: Window.event_types
+
+.. autoattribute:: Window.fullscreen
+
+.. autoattribute:: Window.has_exit
+
+.. autoattribute:: Window.height
+
+.. autoattribute:: Window.invalid
+
+.. autoattribute:: Window.resizeable
+
+.. autoattribute:: Window.screen
+
+.. autoattribute:: Window.style
+
+.. autoattribute:: Window.visible
+
+.. autoattribute:: Window.vsync
+
+.. autoattribute:: Window.width
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: Window.register_event_type
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+

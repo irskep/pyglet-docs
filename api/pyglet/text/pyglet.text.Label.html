@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Label Class &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.text" href="../pyglet.text.html" />
+    <link rel="next" title="DocumentDecodeException" href="pyglet.text.DocumentDecodeException.html" />
+    <link rel="prev" title="HTMLLabel Class" href="pyglet.text.HTMLLabel.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.DocumentDecodeException.html" title="DocumentDecodeException"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.HTMLLabel.html" title="HTMLLabel Class"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.text.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="label-class">
+<h1><cite>Label</cite> Class<a class="headerlink" href="#label-class" title="Permalink to this headline">¶</a></h1>
+<img src="../../../_images/inheritance-943016cc336d07dd49e336ff78b7000d19e7c379.png" alt="Inheritance diagram of Label" usemap="#inheritanceaf5098bd88" class="inheritance"/>
+<map id="inheritanceaf5098bd88" name="inheritanceaf5098bd88">
+<area shape="rect" id="node1" href="pyglet.text.DocumentLabel.html#pyglet.text.DocumentLabel" target="_top" title="Base label class." alt="" coords="243,5,422,29"/>
+<area shape="rect" id="node3" href="#pyglet.text.Label" target="_top" title="Plain text label." alt="" coords="470,5,589,29"/>
+<area shape="rect" id="node2" href="layout/pyglet.text.layout.TextLayout.html#pyglet.text.layout.TextLayout" target="_top" title="Lay out and display documents." alt="" coords="5,5,195,29"/>
+</map>
+<dl class="class">
+<dt id="pyglet.text.Label">
+<em class="property">class </em><code class="descname">Label</code><span class="sig-paren">(</span><em>text=”</em>, <em>font_name=None</em>, <em>font_size=None</em>, <em>bold=False</em>, <em>italic=False</em>, <em>color=(255</em>, <em>255</em>, <em>255</em>, <em>255)</em>, <em>x=0</em>, <em>y=0</em>, <em>width=None</em>, <em>height=None</em>, <em>anchor_x=’left’</em>, <em>anchor_y=’baseline’</em>, <em>align=’left’</em>, <em>multiline=False</em>, <em>dpi=None</em>, <em>batch=None</em>, <em>group=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.Label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plain text label.</p>
+<p><strong>Attributes:</strong></p>
+<blockquote>
+<div><table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">anchor_x</span></code></td>
+<td>Horizontal anchor alignment.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">anchor_y</span></code></td>
+<td>Vertical anchor alignment.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">batch</span></code></td>
+<td>The Batch that this Layout is assigned to.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">bold</span></code></td>
+<td>Bold font style.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">color</span></code></td>
+<td>Text color.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">content_valign</span></code></td>
+<td>Vertical alignment of content within larger layout box.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document</span></code></td>
+<td>Document to display.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">dpi</span></code></td>
+<td>Get DPI used by this layout.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">font_name</span></code></td>
+<td>Font family name.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">font_size</span></code></td>
+<td>Font size, in points.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></td>
+<td>Height of the layout.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">italic</span></code></td>
+<td>Italic font style.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">multiline</span></code></td>
+<td>Set if multiline layout is enabled.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td>The text of the label.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></td>
+<td>Width of the layout.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">x</span></code></td>
+<td>X coordinate of the layout.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">y</span></code></td>
+<td>Y coordinate of the layout.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<div class="section" id="inherited-members">
+<h2>Inherited members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p class="rubric">Attributes</p>
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">anchor_x</code></dt>
+<dd><p>Horizontal anchor alignment.</p>
+<p>This property determines the meaning of the <cite>x</cite> coordinate.  It is one of
+the enumerants:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">&quot;left&quot;</span></code> (default)</dt>
+<dd>The X coordinate gives the position of the left edge of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;center&quot;</span></code></dt>
+<dd>The X coordinate gives the position of the center of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;right&quot;</span></code></dt>
+<dd>The X coordinate gives the position of the right edge of the layout.</dd>
+</dl>
+<p>For the purposes of calculating the position resulting from this
+alignment, the width of the layout is taken to be <cite>width</cite> if <cite>multiline</cite>
+is True and <cite>wrap_lines</cite> is True, otherwise <cite>content_width</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">anchor_y</code></dt>
+<dd><p>Vertical anchor alignment.</p>
+<p>This property determines the meaning of the <cite>y</cite> coordinate.  It is one of
+the enumerants:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">&quot;top&quot;</span></code></dt>
+<dd>The Y coordinate gives the position of the top edge of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;center&quot;</span></code></dt>
+<dd>The Y coordinate gives the position of the center of the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;baseline&quot;</span></code></dt>
+<dd>The Y coordinate gives the position of the baseline of the first
+line of text in the layout.</dd>
+<dt><code class="docutils literal"><span class="pre">&quot;bottom&quot;</span></code> (default)</dt>
+<dd>The Y coordinate gives the position of the bottom edge of the layout.</dd>
+</dl>
+<p>For the purposes of calculating the position resulting from this
+alignment, the height of the layout is taken to be the smaller of
+<cite>height</cite> and <cite>content_height</cite>.</p>
+<p>See also <cite>content_valign</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">background_group</code><em class="property"> = OrderedGroup(0)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">batch</code></dt>
+<dd><p>The Batch that this Layout is assigned to.</p>
+<p>If no Batch is assigned, an internal Batch is 
+created and used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Batch</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">bold</code></dt>
+<dd><p>Bold font style.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">color</code></dt>
+<dd><p>Text color.</p>
+<p>Color is a 4-tuple of RGBA components, each in range [0, 255].</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">(int, int, int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">content_valign</code></dt>
+<dd><p>Vertical alignment of content within
+larger layout box.</p>
+<p>This property determines how content is positioned within the layout
+box when <code class="docutils literal"><span class="pre">content_height</span></code> is less than <code class="docutils literal"><span class="pre">height</span></code>.  It is one
+of the enumerants:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">top</span></code> (default)</dt>
+<dd>Content is aligned to the top of the layout box.</dd>
+<dt><code class="docutils literal"><span class="pre">center</span></code></dt>
+<dd>Content is centered vertically within the layout box.</dd>
+<dt><code class="docutils literal"><span class="pre">bottom</span></code></dt>
+<dd>Content is aligned to the bottom of the layout box.</dd>
+</dl>
+<p>This property has no effect when <code class="docutils literal"><span class="pre">content_height</span></code> is greater
+than <code class="docutils literal"><span class="pre">height</span></code> (in which case the content is aligned to the top) or when
+<code class="docutils literal"><span class="pre">height</span></code> is <code class="docutils literal"><span class="pre">None</span></code> (in which case there is no vertical layout box
+dimension).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">document</code></dt>
+<dd><p>Document to display.</p>
+<p>For <cite>IncrementalTextLayout</cite> it is far more efficient to modify a document
+in-place than to replace the document instance on the layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>AbstractDocument</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">dpi</code></dt>
+<dd><p>Get DPI used by this layout.</p>
+<p>Read-only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">font_name</code></dt>
+<dd><p>Font family name.</p>
+<p>The font name, as passed to <cite>pyglet.font.load</cite>.  A list of names can
+optionally be given: the first matching font will be used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str or list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">font_size</code></dt>
+<dd><p>Font size, in points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">foreground_decoration_group</code><em class="property"> = TextLayoutForegroundDecorationGroup(2)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">foreground_group</code><em class="property"> = TextLayoutForegroundGroup(1)</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">height</code></dt>
+<dd><p>Height of the layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">italic</code></dt>
+<dd><p>Italic font style.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">multiline</code></dt>
+<dd><p>Set if multiline layout is enabled.</p>
+<p>If multiline is False, newline and paragraph characters are ignored and
+text is not word-wrapped.
+If True, the text is word-wrapped only if the <cite>wrap_lines</cite> is True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">text</code></dt>
+<dd><p>The text of the label.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">top_group</code><em class="property"> = &lt;pyglet.text.layout.TextLayoutGroup object&gt;</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">width</code></dt>
+<dd><p>Width of the layout.</p>
+<p>This property has no effect if <cite>multiline</cite> is False or <cite>wrap_lines</cite> is False.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">x</code></dt>
+<dd><p>X coordinate of the layout.</p>
+<p>See also <cite>anchor_x</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descclassname">Label.</code><code class="descname">y</code></dt>
+<dd><p>Y coordinate of the layout.</p>
+<p>See also <cite>anchor_y</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><cite>Label</cite> Class</a><ul>
+<li><a class="reference internal" href="#inherited-members">Inherited members</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.text.HTMLLabel.html"
+                        title="previous chapter"><cite>HTMLLabel</cite> Class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.text.DocumentDecodeException.html"
+                        title="next chapter"><cite>DocumentDecodeException</cite></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.DocumentDecodeException.html" title="DocumentDecodeException"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.text.HTMLLabel.html" title="HTMLLabel Class"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.text.html" ><code class="docutils literal"><span class="pre">pyglet.text</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+`Square` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.procedural
+
+.. inheritance-diagram:: Square
+
+.. autoclass:: Square
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Square.audio_format
+         ~Square.duration
+         ~Square.envelope
+         ~Square.info
+         ~Square.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Square.audio_format
+      :noindex:
+
+   .. autoattribute:: Square.duration
+      :noindex:
+
+   .. autoattribute:: Square.envelope
+      :noindex:
+
+   .. autoattribute:: Square.info
+      :noindex:
+
+   .. autoattribute:: Square.video_format
+      :noindex:
+
+
+
+

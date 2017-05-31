@@ -1,0 +1,104 @@
+`Sawtooth` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.media.sources.procedural
+
+.. inheritance-diagram:: Sawtooth
+
+.. autoclass:: Sawtooth
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Sawtooth.audio_format
+         ~Sawtooth.duration
+         ~Sawtooth.envelope
+         ~Sawtooth.info
+         ~Sawtooth.video_format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Sawtooth.audio_format
+      :noindex:
+
+   .. autoattribute:: Sawtooth.duration
+      :noindex:
+
+   .. autoattribute:: Sawtooth.envelope
+      :noindex:
+
+   .. autoattribute:: Sawtooth.info
+      :noindex:
+
+   .. autoattribute:: Sawtooth.video_format
+      :noindex:
+
+
+
+

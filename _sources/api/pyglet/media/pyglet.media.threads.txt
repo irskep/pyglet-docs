@@ -1,0 +1,66 @@
+``pyglet.media.threads``
+===============================================================
+
+.. automodule:: pyglet.media.threads
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: threads/
+   :template: class.rst
+
+
+   MediaThread
+   PlayerWorker
+   WorkerThread
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``atexit``
+   * ``pyglet``
+   * ``standard_library``
+   * ``threading``
+   * ``time``
+
+
+
+
+.. template module.rst
+

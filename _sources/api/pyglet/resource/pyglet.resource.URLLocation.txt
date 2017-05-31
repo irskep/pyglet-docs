@@ -1,0 +1,53 @@
+`URLLocation` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.resource
+
+.. inheritance-diagram:: URLLocation
+
+.. autoclass:: URLLocation
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

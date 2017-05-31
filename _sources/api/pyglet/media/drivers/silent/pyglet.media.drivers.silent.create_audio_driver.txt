@@ -1,0 +1,8 @@
+`create_audio_driver` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.media.drivers.silent`
+
+.. autofunction:: pyglet.media.drivers.silent.create_audio_driver

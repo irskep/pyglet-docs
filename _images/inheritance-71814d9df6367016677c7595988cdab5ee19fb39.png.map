@@ -1,0 +1,5 @@
+<map id="inheritance5c9e8a2ae6" name="inheritance5c9e8a2ae6">
+<area shape="rect" id="node1" href="../base/pyglet.media.sources.base.Source.html#pyglet.media.sources.base.Source" target="_top" title="An audio and/or video source." alt="" coords="5,5,231,29"/>
+<area shape="rect" id="node2" href="pyglet.media.sources.procedural.ProceduralSource.html#pyglet.media.sources.procedural.ProceduralSource" target="_top" title="Base class for procedurally defined and generated waveforms." alt="" coords="279,5,604,29"/>
+<area shape="rect" id="node3" href="#pyglet.media.sources.procedural.Triangle" target="_top" title="A procedurally generated triangle waveform." alt="" coords="652,5,917,29"/>
+</map>

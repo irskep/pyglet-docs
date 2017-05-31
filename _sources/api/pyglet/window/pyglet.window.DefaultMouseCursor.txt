@@ -1,0 +1,68 @@
+`DefaultMouseCursor` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.window
+
+.. inheritance-diagram:: DefaultMouseCursor
+
+.. autoclass:: DefaultMouseCursor
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~DefaultMouseCursor.drawable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: DefaultMouseCursor.drawable
+
+
+
+
+
+
+
+

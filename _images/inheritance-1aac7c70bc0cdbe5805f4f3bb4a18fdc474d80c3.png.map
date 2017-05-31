@@ -1,0 +1,4 @@
+<map id="inheritance3d3a8d7a8c" name="inheritance3d3a8d7a8c">
+<area shape="rect" id="node1" href="pyglet.text.runlist.AbstractRunIterator.html#pyglet.text.runlist.AbstractRunIterator" target="_top" title="Range iteration over `RunList`." alt="" coords="5,5,246,29"/>
+<area shape="rect" id="node2" href="#pyglet.text.runlist.OverriddenRunIterator" target="_top" title="Iterator over a `RunIterator`, with a value temporarily replacing" alt="" coords="294,5,552,29"/>
+</map>

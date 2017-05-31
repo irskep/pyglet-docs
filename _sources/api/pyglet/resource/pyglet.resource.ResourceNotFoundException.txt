@@ -1,0 +1,12 @@
+`ResourceNotFoundException`
+=========================================================
+
+.. template exception.rst
+
+.. inheritance-diagram:: pyglet.resource.ResourceNotFoundException
+
+Exception defined in :mod:`pyglet.resource`
+
+.. currentmodule:: pyglet.resource
+
+.. autoexception:: ResourceNotFoundException

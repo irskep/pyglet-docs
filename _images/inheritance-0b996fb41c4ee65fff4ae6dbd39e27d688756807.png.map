@@ -1,0 +1,5 @@
+<map id="inheritancece055fcfe8" name="inheritancece055fcfe8">
+<area shape="rect" id="node1" href="pyglet.image.AbstractImageSequence.html#pyglet.image.AbstractImageSequence" target="_top" title="Abstract sequence of images." alt="" coords="5,5,252,29"/>
+<area shape="rect" id="node2" href="pyglet.image.TextureSequence.html#pyglet.image.TextureSequence" target="_top" title="Interface for a sequence of textures." alt="" coords="300,5,504,29"/>
+<area shape="rect" id="node3" href="#pyglet.image.UniformTextureSequence" target="_top" title="Interface for a sequence of textures, each with the same dimensions." alt="" coords="552,5,803,29"/>
+</map>

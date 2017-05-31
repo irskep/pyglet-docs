@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>schedule_once Function &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.clock" href="../pyglet.clock.html" />
+    <link rel="next" title="set_default Function" href="pyglet.clock.set_default.html" />
+    <link rel="prev" title="schedule_interval_soft Function" href="pyglet.clock.schedule_interval_soft.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.clock.set_default.html" title="set_default Function"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.clock.schedule_interval_soft.html" title="schedule_interval_soft Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.clock.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.clock</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="schedule-once-function">
+<h1><cite>schedule_once</cite> Function<a class="headerlink" href="#schedule-once-function" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <a class="reference internal" href="../pyglet.clock.html#module-pyglet.clock" title="pyglet.clock"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.clock</span></code></a></p>
+<dl class="function">
+<dt id="pyglet.clock.schedule_once">
+<code class="descname">schedule_once</code><span class="sig-paren">(</span><em>func</em>, <em>delay</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.clock.schedule_once" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schedule ‘func’ to be called once after ‘delay’ seconds (can be
+a float) on the default clock.  The arguments passed to ‘func’ are
+‘dt’ (time since last function call), followed by any <code class="docutils literal"><span class="pre">*args</span></code> and
+<code class="docutils literal"><span class="pre">**kwargs</span></code> given here.</p>
+<p>If no default clock is set, the func is queued and will be scheduled
+on the default clock as soon as it is created.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>func</strong> (<em>function</em>) – The function to call when the timer lapses.</li>
+<li><strong>delay</strong> (<em>float</em>) – The number of seconds to wait before the timer lapses.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.clock.schedule_interval_soft.html"
+                        title="previous chapter"><cite>schedule_interval_soft</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pyglet.clock.set_default.html"
+                        title="next chapter"><cite>set_default</cite> Function</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyglet.clock.set_default.html" title="set_default Function"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.clock.schedule_interval_soft.html" title="schedule_interval_soft Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.clock.html" ><code class="docutils literal"><span class="pre">pyglet.clock</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

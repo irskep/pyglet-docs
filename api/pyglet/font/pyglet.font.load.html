@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>load Function &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.font" href="../pyglet.font.html" />
+    <link rel="next" title="pyglet.gl" href="../pyglet.gl.html" />
+    <link rel="prev" title="have_font Function" href="pyglet.font.have_font.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.gl.html" title="pyglet.gl"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.font.have_font.html" title="have_font Function"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.font.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="load-function">
+<h1><cite>load</cite> Function<a class="headerlink" href="#load-function" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <a class="reference internal" href="../pyglet.font.html#module-pyglet.font" title="pyglet.font"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.font</span></code></a></p>
+<dl class="function">
+<dt id="pyglet.font.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>name=None</em>, <em>size=None</em>, <em>bold=False</em>, <em>italic=False</em>, <em>dpi=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.font.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a font for rendering.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>str</em><em>, or </em><em>list of str</em>) – Font family, for example, “Times New Roman”.  If a list of names
+is provided, the first one matching a known font is used.  If no
+font can be matched to the name(s), a default font is used.  In
+pyglet 1.1, the name may be omitted.</li>
+<li><strong>size</strong> (<em>float</em>) – Size of the font, in points.  The returned font may be an exact
+match or the closest available.  In pyglet 1.1, the size may be
+omitted, and defaults to 12pt.</li>
+<li><strong>bold</strong> (<em>bool</em>) – If True, a bold variant is returned, if one exists for the given
+family and size.</li>
+<li><strong>italic</strong> (<em>bool</em>) – If True, an italic variant is returned, if one exists for the given
+family and size.</li>
+<li><strong>dpi</strong> (<em>float</em>) – The assumed resolution of the display device, for the purposes of
+determining the pixel size of the font.  Defaults to 96.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>Font</cite></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.font.have_font.html"
+                        title="previous chapter"><cite>have_font</cite> Function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../pyglet.gl.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pyglet.gl.html" title="pyglet.gl"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.font.have_font.html" title="have_font Function"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.font.html" ><code class="docutils literal"><span class="pre">pyglet.font</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

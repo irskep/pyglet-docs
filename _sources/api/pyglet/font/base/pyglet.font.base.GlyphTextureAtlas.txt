@@ -1,0 +1,158 @@
+`GlyphTextureAtlas` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.font.base
+
+.. inheritance-diagram:: GlyphTextureAtlas
+
+.. autoclass:: GlyphTextureAtlas
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~GlyphTextureAtlas.create
+         ~GlyphTextureAtlas.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~GlyphTextureAtlas.anchor_x
+         ~GlyphTextureAtlas.anchor_y
+         ~GlyphTextureAtlas.image_data
+         ~GlyphTextureAtlas.images
+         ~GlyphTextureAtlas.level
+         ~GlyphTextureAtlas.line_height
+         ~GlyphTextureAtlas.mipmapped_texture
+         ~GlyphTextureAtlas.tex_coords
+         ~GlyphTextureAtlas.tex_coords_order
+         ~GlyphTextureAtlas.texture
+         ~GlyphTextureAtlas.x
+         ~GlyphTextureAtlas.y
+         ~GlyphTextureAtlas.z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: GlyphTextureAtlas.line_height
+
+.. autoattribute:: GlyphTextureAtlas.x
+
+.. autoattribute:: GlyphTextureAtlas.y
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: GlyphTextureAtlas.create
+      :noindex:
+
+   .. automethod:: GlyphTextureAtlas.create_for_size
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: GlyphTextureAtlas.anchor_x
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.anchor_y
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.image_data
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.images
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.level
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.tex_coords
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.tex_coords_order
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.texture
+      :noindex:
+
+   .. autoattribute:: GlyphTextureAtlas.z
+      :noindex:
+
+
+
+

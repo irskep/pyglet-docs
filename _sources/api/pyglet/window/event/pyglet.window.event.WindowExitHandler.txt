@@ -1,0 +1,68 @@
+`WindowExitHandler` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.window.event
+
+.. inheritance-diagram:: WindowExitHandler
+
+.. autoclass:: WindowExitHandler
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~WindowExitHandler.has_exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: WindowExitHandler.has_exit
+
+
+
+
+
+
+
+

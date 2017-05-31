@@ -1,0 +1,182 @@
+`Texture3D` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.image
+
+.. inheritance-diagram:: Texture3D
+
+.. autoclass:: Texture3D
+  
+
+
+
+
+
+
+
+
+
+   **Methods:**
+
+      .. autosummary::
+
+         ~Texture3D.create
+         ~Texture3D.create_for_image_grid
+         ~Texture3D.create_for_images
+         ~Texture3D.create_for_size
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Texture3D.anchor_x
+         ~Texture3D.anchor_y
+         ~Texture3D.image_data
+         ~Texture3D.images
+         ~Texture3D.item_height
+         ~Texture3D.item_width
+         ~Texture3D.items
+         ~Texture3D.level
+         ~Texture3D.mipmapped_texture
+         ~Texture3D.tex_coords
+         ~Texture3D.tex_coords_order
+         ~Texture3D.texture
+         ~Texture3D.texture_sequence
+         ~Texture3D.x
+         ~Texture3D.y
+         ~Texture3D.z
+
+
+
+
+
+
+
+
+Methods
+-------
+
+
+
+.. automethod:: Texture3D.create_for_image_grid
+
+.. automethod:: Texture3D.create_for_images
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Texture3D.item_height
+
+.. autoattribute:: Texture3D.item_width
+
+.. autoattribute:: Texture3D.items
+
+
+
+
+
+
+
+
+
+Inherited members
+-----------------
+
+
+
+
+
+   .. rubric:: Methods
+
+
+
+   .. automethod:: Texture3D.create
+      :noindex:
+
+   .. automethod:: Texture3D.create_for_size
+      :noindex:
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Attributes
+
+
+
+   .. autoattribute:: Texture3D.anchor_x
+      :noindex:
+
+   .. autoattribute:: Texture3D.anchor_y
+      :noindex:
+
+   .. autoattribute:: Texture3D.image_data
+      :noindex:
+
+   .. autoattribute:: Texture3D.images
+      :noindex:
+
+   .. autoattribute:: Texture3D.level
+      :noindex:
+
+   .. autoattribute:: Texture3D.mipmapped_texture
+      :noindex:
+
+   .. autoattribute:: Texture3D.tex_coords
+      :noindex:
+
+   .. autoattribute:: Texture3D.tex_coords_order
+      :noindex:
+
+   .. autoattribute:: Texture3D.texture
+      :noindex:
+
+   .. autoattribute:: Texture3D.texture_sequence
+      :noindex:
+
+   .. autoattribute:: Texture3D.x
+      :noindex:
+
+   .. autoattribute:: Texture3D.y
+      :noindex:
+
+   .. autoattribute:: Texture3D.z
+      :noindex:
+
+
+
+

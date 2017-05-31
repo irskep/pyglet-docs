@@ -1,0 +1,71 @@
+`Clock` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.clock
+
+.. inheritance-diagram:: Clock
+
+.. autoclass:: Clock
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~Clock.MIN_SLEEP
+         ~Clock.SLEEP_UNDERSHOOT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: Clock.MIN_SLEEP
+
+.. autoattribute:: Clock.SLEEP_UNDERSHOOT
+
+
+
+
+
+
+
+

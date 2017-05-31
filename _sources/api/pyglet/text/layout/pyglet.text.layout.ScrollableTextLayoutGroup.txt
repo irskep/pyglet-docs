@@ -1,0 +1,89 @@
+`ScrollableTextLayoutGroup` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.text.layout
+
+.. inheritance-diagram:: ScrollableTextLayoutGroup
+
+.. autoclass:: ScrollableTextLayoutGroup
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~ScrollableTextLayoutGroup.height
+         ~ScrollableTextLayoutGroup.left
+         ~ScrollableTextLayoutGroup.top
+         ~ScrollableTextLayoutGroup.translate_x
+         ~ScrollableTextLayoutGroup.translate_y
+         ~ScrollableTextLayoutGroup.view_x
+         ~ScrollableTextLayoutGroup.view_y
+         ~ScrollableTextLayoutGroup.width
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: ScrollableTextLayoutGroup.height
+
+.. autoattribute:: ScrollableTextLayoutGroup.left
+
+.. autoattribute:: ScrollableTextLayoutGroup.top
+
+.. autoattribute:: ScrollableTextLayoutGroup.translate_x
+
+.. autoattribute:: ScrollableTextLayoutGroup.translate_y
+
+.. autoattribute:: ScrollableTextLayoutGroup.view_x
+
+.. autoattribute:: ScrollableTextLayoutGroup.view_y
+
+.. autoattribute:: ScrollableTextLayoutGroup.width
+
+
+
+
+
+
+
+

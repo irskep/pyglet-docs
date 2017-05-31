@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyglet.gl.gl_info &mdash; pyglet v1.2.2</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyglet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="pyglet v1.2.2" href="../../../index.html" />
+    <link rel="up" title="pyglet.gl" href="../pyglet.gl.html" />
+    <link rel="next" title="GLInfo Class" href="gl_info/pyglet.gl.gl_info.GLInfo.html" />
+    <link rel="prev" title="pyglet.gl.gl" href="pyglet.gl.gl.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gl_info/pyglet.gl.gl_info.GLInfo.html" title="GLInfo Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.gl.html" title="pyglet.gl.gl"
+             accesskey="P">previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.gl.html" accesskey="U"><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pyglet.gl.gl_info">
+<span id="pyglet-gl-gl-info"></span><h1><code class="docutils literal"><span class="pre">pyglet.gl.gl_info</span></code><a class="headerlink" href="#module-pyglet.gl.gl_info" title="Permalink to this headline">¶</a></h1>
+<p>Information about version and extensions of current GL implementation.</p>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="k">import</span> <span class="n">gl_info</span>
+
+<span class="k">if</span> <span class="n">gl_info</span><span class="o">.</span><span class="n">have_extension</span><span class="p">(</span><span class="s1">&#39;GL_NV_register_combiners&#39;</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>If you are using more than one context, you can set up a separate GLInfo
+object for each context.  Call <cite>set_active_context</cite> after switching to the
+context:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.gl.gl_info</span> <span class="k">import</span> <span class="n">GLInfo</span>
+
+<span class="n">info</span> <span class="o">=</span> <span class="n">GLInfo</span><span class="p">()</span>
+<span class="n">info</span><span class="o">.</span><span class="n">set_active_context</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">info</span><span class="o">.</span><span class="n">have_version</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="gl_info/pyglet.gl.gl_info.GLInfo.html#pyglet.gl.gl_info.GLInfo" title="pyglet.gl.gl_info.GLInfo"><code class="xref py py-obj docutils literal"><span class="pre">GLInfo</span></code></a></td>
+<td>Information interface for a single GL context.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="gl_info/pyglet.gl.gl_info.have_context.html#pyglet.gl.gl_info.have_context" title="pyglet.gl.gl_info.have_context"><code class="xref py py-obj docutils literal"><span class="pre">have_context</span></code></a>()</td>
+<td>Determine if a default OpenGL context has been set yet.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pyglet.gl.gl_info.get_extensions">
+<code class="descname">get_extensions</code><em class="property"> = &lt;bound method GLInfo.get_extensions of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.get_extensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of available OpenGL extensions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of the available extensions.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.gl_info.get_renderer">
+<code class="descname">get_renderer</code><em class="property"> = &lt;bound method GLInfo.get_renderer of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.get_renderer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the renderer string of the OpenGL context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.gl_info.get_vendor">
+<code class="descname">get_vendor</code><em class="property"> = &lt;bound method GLInfo.get_vendor of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.get_vendor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the vendor string of the OpenGL context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.gl_info.get_version">
+<code class="descname">get_version</code><em class="property"> = &lt;bound method GLInfo.get_version of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current OpenGL version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the OpenGL version</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.gl_info.have_extension">
+<code class="descname">have_extension</code><em class="property"> = &lt;bound method GLInfo.have_extension of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.have_extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if an OpenGL extension is available.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>extension</strong> (<em>str</em>) – The name of the extension to test for, including its
+<code class="docutils literal"><span class="pre">GL_</span></code> prefix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the extension is provided by the driver.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.gl_info.have_version">
+<code class="descname">have_version</code><em class="property"> = &lt;bound method GLInfo.have_version of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.have_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a version of OpenGL is supported.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>major</strong> (<em>int</em>) – The major revision number (typically 1 or 2).</li>
+<li><strong>minor</strong> (<em>int</em>) – The minor revision number.</li>
+<li><strong>release</strong> (<em>int</em>) – The release number.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if the requested or a later version is supported.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.gl_info.remove_active_context">
+<code class="descname">remove_active_context</code><em class="property"> = &lt;bound method GLInfo.remove_active_context of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.remove_active_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pyglet.gl.gl_info.set_active_context">
+<code class="descname">set_active_context</code><em class="property"> = &lt;bound method GLInfo.set_active_context of &lt;pyglet.gl.gl_info.GLInfo object&gt;&gt;</em><a class="headerlink" href="#pyglet.gl.gl_info.set_active_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store information for the currently active context.</p>
+<p>This method is called automatically for the default context.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Defined</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">macholib</span></code></li>
+<li><code class="docutils literal"><span class="pre">util</span></code></li>
+<li><code class="docutils literal"><span class="pre">warnings</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">pyglet.gl.gl_info</span></code></a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyglet.gl.gl.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">pyglet.gl.gl</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gl_info/pyglet.gl.gl_info.GLInfo.html"
+                        title="next chapter"><cite>GLInfo</cite> Class</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gl_info/pyglet.gl.gl_info.GLInfo.html" title="GLInfo Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyglet.gl.gl.html" title="pyglet.gl.gl"
+             >previous</a> |</li>
+		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
+		<li><a href="../../../index.html">Documentation Index</a> &raquo;</li>
+          <li><a href="../../pyglet.html" >pyglet</a> &raquo;</li>
+          <li><a href="../pyglet.gl.html" ><code class="docutils literal"><span class="pre">pyglet.gl</span></code></a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2006-2015, Alex Holkner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

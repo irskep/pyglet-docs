@@ -1,0 +1,8 @@
+`decode_text` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.text`
+
+.. autofunction:: pyglet.text.decode_text

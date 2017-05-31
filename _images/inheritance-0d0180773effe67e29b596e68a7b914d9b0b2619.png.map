@@ -1,0 +1,4 @@
+<map id="inheritancee882fad36f" name="inheritancee882fad36f">
+<area shape="rect" id="node1" href="pyglet.media.sources.base.Source.html#pyglet.media.sources.base.Source" target="_top" title="An audio and/or video source." alt="" coords="5,5,231,29"/>
+<area shape="rect" id="node2" href="#pyglet.media.sources.base.StreamingSource" target="_top" title="A source that is decoded as it is being played, and can only be" alt="" coords="279,5,566,29"/>
+</map>

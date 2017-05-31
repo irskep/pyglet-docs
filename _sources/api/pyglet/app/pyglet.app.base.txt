@@ -1,0 +1,79 @@
+``pyglet.app.base``
+===============================================================
+
+.. automodule:: pyglet.app.base
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: base/
+   :template: class.rst
+
+
+   EventLoop
+   PlatformEventLoop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables
+---------
+
+
+
+.. autodata:: app
+
+.. autodata:: clock
+
+.. autodata:: compat_platform
+
+.. autodata:: event
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``platform``
+   * ``queue``
+   * ``standard_library``
+   * ``sys``
+   * ``threading``
+
+
+
+
+.. template module.rst
+

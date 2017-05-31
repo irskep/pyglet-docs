@@ -1,0 +1,53 @@
+`Tablet` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.input
+
+.. inheritance-diagram:: Tablet
+
+.. autoclass:: Tablet
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

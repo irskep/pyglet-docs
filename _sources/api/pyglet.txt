@@ -1,0 +1,52 @@
+pyglet
+===========================================================
+
+.. automodule:: pyglet
+
+
+
+
+
+Modules
+-------
+
+.. autosummary::
+   :toctree: pyglet/
+   :template: module.rst
+
+
+   app
+   canvas
+   clock
+   debug
+   event
+   font
+   gl
+   graphics
+   image
+   info
+   input
+   media
+   resource
+   sprite
+   text
+   window
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. template package.rst

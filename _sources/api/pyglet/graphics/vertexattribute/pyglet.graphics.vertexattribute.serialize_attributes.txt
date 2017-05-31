@@ -1,0 +1,8 @@
+`serialize_attributes` Function
+==============================================================
+
+.. template function.rst
+
+Defined in :mod:`pyglet.graphics.vertexattribute`
+
+.. autofunction:: pyglet.graphics.vertexattribute.serialize_attributes

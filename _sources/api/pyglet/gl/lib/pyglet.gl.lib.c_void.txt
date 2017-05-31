@@ -1,0 +1,68 @@
+`c_void` Class
+==============================================================
+
+.. template class.rst
+
+.. currentmodule:: pyglet.gl.lib
+
+.. inheritance-diagram:: c_void
+
+.. autoclass:: c_void
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   **Attributes:**
+
+      .. autosummary::
+
+         ~c_void.dummy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Attributes
+----------
+
+
+
+.. autoattribute:: c_void.dummy
+
+
+
+
+
+
+
+

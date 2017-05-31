@@ -1,0 +1,65 @@
+``pyglet.text.formats.structured``
+===============================================================
+
+.. automodule:: pyglet.text.formats.structured
+
+
+
+
+
+
+
+
+
+
+Classes
+-------
+
+.. autosummary::
+   :nosignatures:
+   :toctree: structured/
+   :template: class.rst
+
+
+   ImageElement
+   ListBuilder
+   OrderedListBuilder
+   StructuredTextDecoder
+   UnorderedListBuilder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes
+-----
+
+.. topic:: Defined
+
+
+   * ``pyglet``
+   * ``re``
+
+
+
+
+.. template module.rst
+
