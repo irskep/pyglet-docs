@@ -112,7 +112,7 @@ be used with Mac OS X.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="canvas.html#pyglet.canvas.Display" title="pyglet.canvas.Display"><em>Display</em></a>) – Currently ignored.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – Currently ignored.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>AppleRemote</cite></td>
 </tr>
@@ -130,7 +130,7 @@ be used with Mac OS X.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="canvas.html#pyglet.canvas.Display" title="pyglet.canvas.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
 OS X and Windows.  On Linux, defaults to the default display
 device.</td>
 </tr>
@@ -148,7 +148,7 @@ device.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="canvas.html#pyglet.canvas.Display" title="pyglet.canvas.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
 OS X and Windows.  On Linux, defaults to the default display
 device.</td>
 </tr>
@@ -171,7 +171,7 @@ is undefined if more than one is attached.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="canvas.html#pyglet.canvas.Display" title="pyglet.canvas.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
 OS X and Windows.  On Linux, defaults to the default display
 device.</td>
 </tr>
@@ -190,7 +190,7 @@ device.</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="canvas.html#pyglet.canvas.Screen.display" title="pyglet.canvas.Screen.display"><strong>display</strong></a> – Display this device is connected to.</li>
+<li><a class="reference internal" href="canvas.html#pyglet.canvas.Canvas.display" title="pyglet.canvas.Canvas.display"><strong>display</strong></a> – Display this device is connected to.</li>
 <li><a class="reference internal" href="canvas.html#pyglet.canvas.Display.name" title="pyglet.canvas.Display.name"><strong>name</strong></a> – Name of the device, as described by the device firmware.</li>
 <li><strong>manufacturer</strong> – Name of the device manufacturer, or <code class="docutils literal"><span class="pre">None</span></code> if the information is
 not available.</li>
@@ -489,9 +489,9 @@ whenever the value of the hat switch changes.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
 <li><strong>device</strong> – The underlying device used by this joystick interface.</li>
-<li><a class="reference internal" href="text/layout.html#pyglet.text.layout.TextLayout.x" title="pyglet.text.layout.TextLayout.x"><strong>x</strong></a> – Current X (horizontal) value ranging from -1.0 (left) to 1.0
+<li><a class="reference internal" href="sprite.html#pyglet.sprite.Sprite.x" title="pyglet.sprite.Sprite.x"><strong>x</strong></a> – Current X (horizontal) value ranging from -1.0 (left) to 1.0
 (right).</li>
-<li><a class="reference internal" href="canvas.html#pyglet.canvas.Screen.y" title="pyglet.canvas.Screen.y"><strong>y</strong></a> – Current y (vertical) value ranging from -1.0 (top) to 1.0
+<li><a class="reference internal" href="image/index.html#pyglet.image.Texture.y" title="pyglet.image.Texture.y"><strong>y</strong></a> – Current y (vertical) value ranging from -1.0 (top) to 1.0
 (bottom).</li>
 <li><a class="reference internal" href="font.html#pyglet.font.Text.z" title="pyglet.font.Text.z"><strong>z</strong></a> – Current Z value ranging from -1.0 to 1.0.  On joysticks the Z
 value is usually the throttle control.  On game controllers the Z
