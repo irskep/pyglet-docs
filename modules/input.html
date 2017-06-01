@@ -99,92 +99,15 @@ returns a <code class="xref py py-class docutils literal"><span class="pre">Tabl
 handlers.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<p class="last">Since 1.2</p>
 </div>
-<dl class="function">
-<dt id="pyglet.input.get_apple_remote">
-<code class="descname">get_apple_remote</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_apple_remote" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the Apple remote control device.</p>
-<p>The Apple remote is the small white 6-button remote control that
-accompanies most recent Apple desktops and laptops.  The remote can only
-be used with Mac OS X.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – Currently ignored.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>AppleRemote</cite></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The remote device, or <cite>None</cite> if the computer does not support it.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="pyglet.input.get_devices">
-<code class="descname">get_devices</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_devices" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a list of all attached input devices.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
-OS X and Windows.  On Linux, defaults to the default display
-device.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <cite>Device</cite></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="pyglet.input.get_joysticks">
-<code class="descname">get_joysticks</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_joysticks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a list of attached joysticks.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
-OS X and Windows.  On Linux, defaults to the default display
-device.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <cite>Joystick</cite></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="pyglet.input.get_tablets">
-<code class="descname">get_tablets</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_tablets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a list of tablets.</p>
-<p>This function may return a valid tablet device even if one is not
-attached (for example, it is not possible on Mac OS X to determine if
-a tablet device is connected).  Despite returning a list of tablets,
-pyglet does not currently support multiple tablets, and the behaviour
-is undefined if more than one is attached.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
-OS X and Windows.  On Linux, defaults to the default display
-device.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <cite>Tablet</cite></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="pyglet.input.Device">
 <em class="property">class </em><code class="descname">Device</code><span class="sig-paren">(</span><em>display</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.Device" title="Permalink to this definition">¶</a></dt>
-<dd><p>Input device.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Input device.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -248,7 +171,8 @@ opened it).</li>
 <dl class="class">
 <dt id="pyglet.input.Control">
 <em class="property">class </em><code class="descname">Control</code><span class="sig-paren">(</span><em>name</em>, <em>raw_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.Control" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single value input provided by a device.</p>
+<dd><p>Bases: <a class="reference internal" href="event.html#pyglet.event.EventDispatcher" title="pyglet.event.EventDispatcher"><code class="xref py py-class docutils literal"><span class="pre">pyglet.event.EventDispatcher</span></code></a></p>
+<p>Single value input provided by a device.</p>
 <p>A control’s value can be queried when the device is open.  Event handlers
 can be attached to the control to be called when the value changes.</p>
 <p>The <cite>min</cite> and <cite>max</cite> properties are provided as advertised by the
@@ -310,7 +234,8 @@ this range); for relative controls the range is undefined.</p>
 <dl class="class">
 <dt id="pyglet.input.RelativeAxis">
 <em class="property">class </em><code class="descname">RelativeAxis</code><span class="sig-paren">(</span><em>name</em>, <em>raw_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.RelativeAxis" title="Permalink to this definition">¶</a></dt>
-<dd><p>An axis whose value represents a relative change from the previous
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyglet.input.base.Control</span></code></p>
+<p>An axis whose value represents a relative change from the previous
 value.</p>
 <dl class="attribute">
 <dt id="pyglet.input.RelativeAxis.RX">
@@ -364,7 +289,8 @@ value.</p>
 <dl class="class">
 <dt id="pyglet.input.AbsoluteAxis">
 <em class="property">class </em><code class="descname">AbsoluteAxis</code><span class="sig-paren">(</span><em>name</em>, <em>min</em>, <em>max</em>, <em>raw_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.AbsoluteAxis" title="Permalink to this definition">¶</a></dt>
-<dd><p>An axis whose value represents a physical measurement from the device.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyglet.input.base.Control</span></code></p>
+<p>An axis whose value represents a physical measurement from the device.</p>
 <p>The value is advertised to range over <code class="docutils literal"><span class="pre">min</span></code> and <code class="docutils literal"><span class="pre">max</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -440,7 +366,8 @@ described by two orthogonal controls.</p>
 <dl class="class">
 <dt id="pyglet.input.Button">
 <em class="property">class </em><code class="descname">Button</code><span class="sig-paren">(</span><em>name</em>, <em>raw_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.Button" title="Permalink to this definition">¶</a></dt>
-<dd><p>A control whose value is boolean.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyglet.input.base.Control</span></code></p>
+<p>A control whose value is boolean.</p>
 <dl class="method">
 <dt id="pyglet.input.Button.on_press">
 <code class="descname">on_press</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.Button.on_press" title="Permalink to this definition">¶</a></dt>
@@ -463,7 +390,8 @@ described by two orthogonal controls.</p>
 <dl class="class">
 <dt id="pyglet.input.Joystick">
 <em class="property">class </em><code class="descname">Joystick</code><span class="sig-paren">(</span><em>device</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.Joystick" title="Permalink to this definition">¶</a></dt>
-<dd><p>High-level interface for joystick-like devices.  This includes analogue
+<dd><p>Bases: <a class="reference internal" href="event.html#pyglet.event.EventDispatcher" title="pyglet.event.EventDispatcher"><code class="xref py py-class docutils literal"><span class="pre">pyglet.event.EventDispatcher</span></code></a></p>
+<p>High-level interface for joystick-like devices.  This includes analogue
 and digital joysticks, gamepads, game controllers, and possibly even
 steering wheels and other input devices.  There is unfortunately no way to
 distinguish between these different device types.</p>
@@ -489,9 +417,9 @@ whenever the value of the hat switch changes.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
 <li><strong>device</strong> – The underlying device used by this joystick interface.</li>
-<li><a class="reference internal" href="sprite.html#pyglet.sprite.Sprite.x" title="pyglet.sprite.Sprite.x"><strong>x</strong></a> – Current X (horizontal) value ranging from -1.0 (left) to 1.0
+<li><a class="reference internal" href="text/layout.html#pyglet.text.layout.TextLayout.x" title="pyglet.text.layout.TextLayout.x"><strong>x</strong></a> – Current X (horizontal) value ranging from -1.0 (left) to 1.0
 (right).</li>
-<li><a class="reference internal" href="image/index.html#pyglet.image.Texture.y" title="pyglet.image.Texture.y"><strong>y</strong></a> – Current y (vertical) value ranging from -1.0 (top) to 1.0
+<li><a class="reference internal" href="font.html#pyglet.font.Text.y" title="pyglet.font.Text.y"><strong>y</strong></a> – Current y (vertical) value ranging from -1.0 (top) to 1.0
 (bottom).</li>
 <li><a class="reference internal" href="font.html#pyglet.font.Text.z" title="pyglet.font.Text.z"><strong>z</strong></a> – Current Z value ranging from -1.0 to 1.0.  On joysticks the Z
 value is usually the throttle control.  On game controllers the Z
@@ -621,7 +549,8 @@ and so on.</li>
 <dl class="class">
 <dt id="pyglet.input.AppleRemote">
 <em class="property">class </em><code class="descname">AppleRemote</code><span class="sig-paren">(</span><em>device</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.AppleRemote" title="Permalink to this definition">¶</a></dt>
-<dd><p>High-level interface for Apple remote control.</p>
+<dd><p>Bases: <a class="reference internal" href="event.html#pyglet.event.EventDispatcher" title="pyglet.event.EventDispatcher"><code class="xref py py-class docutils literal"><span class="pre">pyglet.event.EventDispatcher</span></code></a></p>
+<p>High-level interface for Apple remote control.</p>
 <p>This interface provides access to the 6 button controls on the remote.
 Pressing and holding certain buttons on the remote is interpreted as
 a separate control.</p>
@@ -707,7 +636,8 @@ whether or not the user has released the button.</p>
 <dl class="class">
 <dt id="pyglet.input.Tablet">
 <em class="property">class </em><code class="descname">Tablet</code><a class="headerlink" href="#pyglet.input.Tablet" title="Permalink to this definition">¶</a></dt>
-<dd><p>High-level interface to tablet devices.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>High-level interface to tablet devices.</p>
 <p>Unlike other devices, tablets must be opened for a specific window,
 and cannot be opened exclusively.  The <cite>open</cite> method returns a
 <cite>TabletCanvas</cite> object, which supports the events provided by the tablet.</p>
@@ -732,6 +662,92 @@ undefined.</p>
 
 </dd></dl>
 
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyglet.input.get_apple_remote">
+<code class="descname">get_apple_remote</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_apple_remote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Apple remote control device.</p>
+<p>The Apple remote is the small white 6-button remote control that
+accompanies most recent Apple desktops and laptops.  The remote can only
+be used with Mac OS X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – Currently ignored.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>AppleRemote</cite></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The remote device, or <cite>None</cite> if the computer does not support it.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyglet.input.get_devices">
+<code class="descname">get_devices</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of all attached input devices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
+OS X and Windows.  On Linux, defaults to the default display
+device.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <cite>Device</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyglet.input.get_joysticks">
+<code class="descname">get_joysticks</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_joysticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of attached joysticks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
+OS X and Windows.  On Linux, defaults to the default display
+device.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <cite>Joystick</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyglet.input.get_tablets">
+<code class="descname">get_tablets</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.input.get_tablets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of tablets.</p>
+<p>This function may return a valid tablet device even if one is not
+attached (for example, it is not possible on Mac OS X to determine if
+a tablet device is connected).  Despite returning a list of tablets,
+pyglet does not currently support multiple tablets, and the behaviour
+is undefined if more than one is attached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>display</strong> (<a class="reference internal" href="window.html#pyglet.window.Display" title="pyglet.window.Display"><em>Display</em></a>) – The display device to query for input devices.  Ignored on Mac
+OS X and Windows.  On Linux, defaults to the default display
+device.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <cite>Tablet</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="pyglet.input.DeviceException">
 <em class="property">class </em><code class="descname">DeviceException</code><a class="headerlink" href="#pyglet.input.DeviceException" title="Permalink to this definition">¶</a></dt>
@@ -748,6 +764,7 @@ undefined.</p>
 <dd></dd></dl>
 
 </div>
+</div>
 
 
           </div>
@@ -758,6 +775,16 @@ undefined.</p>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/logo.png" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">pyglet.input</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="info.html"
                         title="previous chapter">pyglet.info</a></p>
