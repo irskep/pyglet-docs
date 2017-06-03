@@ -80,14 +80,18 @@ draw event handler:</p>
 <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The sprite can be moved by modifying the <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> properties.  Other
-properties determine the sprite’s rotation, scale and opacity.</p>
+<p>The sprite can be moved by modifying the <a class="reference internal" href="#pyglet.sprite.Sprite.x" title="pyglet.sprite.Sprite.x"><code class="xref py py-attr docutils literal"><span class="pre">x</span></code></a> and 
+<a class="reference internal" href="#pyglet.sprite.Sprite.y" title="pyglet.sprite.Sprite.y"><code class="xref py py-attr docutils literal"><span class="pre">y</span></code></a> properties.  Other
+properties determine the sprite’s <a class="reference internal" href="#pyglet.sprite.Sprite.rotation" title="pyglet.sprite.Sprite.rotation"><code class="xref py py-attr docutils literal"><span class="pre">rotation</span></code></a>,
+<a class="reference internal" href="#pyglet.sprite.Sprite.scale" title="pyglet.sprite.Sprite.scale"><code class="xref py py-attr docutils literal"><span class="pre">scale</span></code></a> and
+<a class="reference internal" href="#pyglet.sprite.Sprite.opacity" title="pyglet.sprite.Sprite.opacity"><code class="xref py py-attr docutils literal"><span class="pre">opacity</span></code></a>.</p>
 <p>By default sprite coordinates are restricted to integer values to avoid
 sub-pixel artifacts.  If you require to use floats, for example for smoother
 animations, you can set the <code class="docutils literal"><span class="pre">subpixel</span></code> parameter to <code class="docutils literal"><span class="pre">True</span></code> when creating
-the sprite (.. versionadded:: pyglet 1.2).</p>
+the sprite (:since: pyglet 1.2).</p>
 <p>The sprite’s positioning, rotation and scaling all honor the original
-image’s anchor (anchor_x, anchor_y).</p>
+image’s anchor (<a class="reference internal" href="image/index.html#pyglet.image.AbstractImage.anchor_x" title="pyglet.image.AbstractImage.anchor_x"><code class="xref py py-attr docutils literal"><span class="pre">anchor_x</span></code></a>,
+<a class="reference internal" href="image/index.html#pyglet.image.AbstractImage.anchor_y" title="pyglet.image.AbstractImage.anchor_y"><code class="xref py py-attr docutils literal"><span class="pre">anchor_y</span></code></a>).</p>
 <div class="section" id="drawing-multiple-sprites">
 <h2>Drawing multiple sprites<a class="headerlink" href="#drawing-multiple-sprites" title="Permalink to this headline">¶</a></h2>
 <p>Sprites can be “batched” together and drawn at once more quickly than if each
@@ -114,11 +118,13 @@ sprites within batches.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Since pyglet 1.1</p>
 </div>
+</div>
 <dl class="class">
 <dt id="pyglet.sprite.Sprite">
 <em class="property">class </em><code class="descname">Sprite</code><span class="sig-paren">(</span><em>img</em>, <em>x=0</em>, <em>y=0</em>, <em>blend_src=770</em>, <em>blend_dest=771</em>, <em>batch=None</em>, <em>group=None</em>, <em>usage=’dynamic’</em>, <em>subpixel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.sprite.Sprite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance of an on-screen image.</p>
 <p>See the module documentation for usage.</p>
+<p class="rubric">Methods</p>
 <dl class="method">
 <dt id="pyglet.sprite.Sprite.delete">
 <code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.sprite.Sprite.delete" title="Permalink to this definition">¶</a></dt>
@@ -134,15 +140,6 @@ sprite is garbage.</p>
 <dd><p>Draw the sprite at its current position.</p>
 <p>See the module documentation for hints on drawing multiple sprites
 efficiently.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyglet.sprite.Sprite.on_animation_end">
-<code class="descname">on_animation_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.sprite.Sprite.on_animation_end" title="Permalink to this definition">¶</a></dt>
-<dd><p>The sprite animation reached the final frame.</p>
-<p>The event is triggered only if the sprite has an animation, not an
-image.  For looping animations, the event is triggered each time
-the animation loops.</p>
 </dd></dl>
 
 <dl class="method">
@@ -193,6 +190,17 @@ the update method, rather than modifying them one by one.</p>
 </table>
 </dd></dl>
 
+<p class="rubric">Events</p>
+<dl class="method">
+<dt id="pyglet.sprite.Sprite.on_animation_end">
+<code class="descname">on_animation_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.sprite.Sprite.on_animation_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sprite animation reached the final frame.</p>
+<p>The event is triggered only if the sprite has an animation, not an
+image.  For looping animations, the event is triggered each time
+the animation loops.</p>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
 <dl class="attribute">
 <dt id="pyglet.sprite.Sprite.batch">
 <code class="descname">batch</code><a class="headerlink" href="#pyglet.sprite.Sprite.batch" title="Permalink to this definition">¶</a></dt>
@@ -204,7 +212,7 @@ operation.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Batch</cite></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">pyglet.graphics.Batch</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -229,11 +237,6 @@ Each color component must be in the range 0 (dark) to 255 (saturated).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pyglet.sprite.Sprite.event_types">
-<code class="descname">event_types</code><em class="property"> = [‘on_animation_end’]</em><a class="headerlink" href="#pyglet.sprite.Sprite.event_types" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="pyglet.sprite.Sprite.group">
 <code class="descname">group</code><a class="headerlink" href="#pyglet.sprite.Sprite.group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parent graphics group.</p>
@@ -243,7 +246,7 @@ expensive operation.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Group</cite></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><code class="xref py py-class docutils literal"><span class="pre">pyglet.graphics.Group</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -272,7 +275,8 @@ expensive operation.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>AbstractImage</cite> or <cite>Animation</cite></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="image/index.html#pyglet.image.AbstractImage" title="pyglet.image.AbstractImage"><code class="xref py py-class docutils literal"><span class="pre">AbstractImage</span></code></a> or
+<a class="reference internal" href="image/index.html#pyglet.image.Animation" title="pyglet.image.Animation"><code class="xref py py-class docutils literal"><span class="pre">Animation</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +463,6 @@ same parent group, texture and blend parameters.</p>
 
 </dd></dl>
 
-</div>
 </div>
 
 

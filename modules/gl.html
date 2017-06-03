@@ -171,9 +171,156 @@ modify this global.</p>
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pyglet.gl.Config">
+<em class="property">class </em><code class="descname">Config</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Graphics configuration.</p>
+<p>A Config stores the preferences for OpenGL attributes such as the
+number of auxilliary buffers, size of the colour and depth buffers,
+double buffering, stencilling, multi- and super-sampling, and so on.</p>
+<p>Different platforms support a different set of attributes, so these
+are set with a string key and a value which is integer or boolean.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>double_buffer</strong> – Specify the presence of a back-buffer for every color buffer.</li>
+<li><strong>stereo</strong> – Specify the presence of separate left and right buffer sets.</li>
+<li><strong>buffer_size</strong> – Total bits per sample per color buffer.</li>
+<li><strong>aux_buffers</strong> – The number of auxilliary color buffers.</li>
+<li><strong>sample_buffers</strong> – The number of multisample buffers.</li>
+<li><strong>samples</strong> – The number of samples per pixel, or 0 if there are no multisample
+buffers.</li>
+<li><strong>red_size</strong> – Bits per sample per buffer devoted to the red component.</li>
+<li><strong>green_size</strong> – Bits per sample per buffer devoted to the green component.</li>
+<li><strong>blue_size</strong> – Bits per sample per buffer devoted to the blue component.</li>
+<li><strong>alpha_size</strong> – Bits per sample per buffer devoted to the alpha component.</li>
+<li><strong>depth_size</strong> – Bits per sample in the depth buffer.</li>
+<li><strong>stencil_size</strong> – Bits per sample in the stencil buffer.</li>
+<li><strong>accum_red_size</strong> – Bits per pixel devoted to the red component in the accumulation
+buffer.</li>
+<li><strong>accum_green_size</strong> – Bits per pixel devoted to the green component in the accumulation
+buffer.</li>
+<li><strong>accum_blue_size</strong> – Bits per pixel devoted to the blue component in the accumulation
+buffer.</li>
+<li><strong>accum_alpha_size</strong> – Bits per pixel devoted to the alpha component in the accumulation
+buffer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pyglet.gl.Config.create_context">
+<code class="descname">create_context</code><span class="sig-paren">(</span><em>share</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config.create_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a GL context that satisifies this configuration.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <cite>CanvasConfig.create_context</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>share</strong> (<a class="reference internal" href="#pyglet.gl.Context" title="pyglet.gl.Context"><em>Context</em></a>) – If not None, a context with which to share objects with.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>Context</cite></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The new context.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyglet.gl.Config.get_gl_attributes">
+<code class="descname">get_gl_attributes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config.get_gl_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of attributes set on this config.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of tuple (<a class="reference internal" href="canvas.html#pyglet.canvas.Display.name" title="pyglet.canvas.Display.name">name</a>, <a class="reference internal" href="input.html#pyglet.input.Button.value" title="pyglet.input.Button.value">value</a>)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">All attributes, with unset attributes having a value of
+<code class="docutils literal"><span class="pre">None</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyglet.gl.Config.is_complete">
+<code class="descname">is_complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config.is_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if this config is complete and able to create a context.</p>
+<p>Configs created directly are not complete, they can only serve
+as templates for retrieving a supported config from the system.
+For example, <cite>pyglet.window.Screen.get_matching_configs</cite> returns
+complete configs.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deprecated. Use <code class="docutils literal"><span class="pre">isinstance(config,</span> <span class="pre">CanvasConfig)</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the config is complete and can create a context.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyglet.gl.Config.match">
+<code class="descname">match</code><span class="sig-paren">(</span><em>canvas</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config.match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of matching complete configs for the given canvas.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since pyglet 1.2</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>canvas</strong> (<a class="reference internal" href="canvas.html#pyglet.canvas.Canvas" title="pyglet.canvas.Canvas"><em>Canvas</em></a>) – Display to host contexts created from the config.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <cite>CanvasConfig</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.Config.debug">
+<code class="descname">debug</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.Config.forward_compatible">
+<code class="descname">forward_compatible</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.forward_compatible" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.Config.major_version">
+<code class="descname">major_version</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.major_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.gl.Config.minor_version">
+<code class="descname">minor_version</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.gl.Config.minor_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pyglet.gl.CanvasConfig">
 <em class="property">class </em><code class="descname">CanvasConfig</code><span class="sig-paren">(</span><em>canvas</em>, <em>base_config</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.CanvasConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>OpenGL configuration for a particular canvas.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyglet.gl.base.Config</span></code></p>
+<p>OpenGL configuration for a particular canvas.</p>
 <p>Use <cite>Config.match</cite> to obtain an instance of this class.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
