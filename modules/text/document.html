@@ -63,7 +63,7 @@
 <p>Formatted and unformatted document interfaces used by text layout.</p>
 <div class="section" id="abstract-representation">
 <h2>Abstract representation<a class="headerlink" href="#abstract-representation" title="Permalink to this headline">¶</a></h2>
-<p>Styled text in pyglet is represented by one of the <cite>AbstractDocument</cite> classes,
+<p>Styled text in pyglet is represented by one of the <a class="reference internal" href="#pyglet.text.document.AbstractDocument" title="pyglet.text.document.AbstractDocument"><code class="xref py py-class docutils literal"><span class="pre">AbstractDocument</span></code></a> classes,
 which manage the state representation of text and style independently of how
 it is loaded or rendered.</p>
 <p>A document consists of the document text (a Unicode string) and a set of
@@ -88,7 +88,7 @@ invent your own style names (which will be ignored by the layout classes).
 This can be useful to tag areas of interest in a document, or maintain
 references back to the source material.</p>
 <p>As well as text, the document can contain arbitrary elements represented by
-<cite>InlineElement</cite>.  An inline element behaves like a single character in the
+<a class="reference internal" href="#pyglet.text.document.InlineElement" title="pyglet.text.document.InlineElement"><code class="xref py py-class docutils literal"><span class="pre">InlineElement</span></code></a>.  An inline element behaves like a single character in the
 documented, but can be rendered by the application.</p>
 </div>
 <div class="section" id="paragraph-breaks">
@@ -101,14 +101,14 @@ paragraph break (U+2029) can also be used.</p>
 </div>
 <div class="section" id="document-classes">
 <h2>Document classes<a class="headerlink" href="#document-classes" title="Permalink to this headline">¶</a></h2>
-<p>Any class implementing <cite>AbstractDocument</cite> provides an interface to a
+<p>Any class implementing <a class="reference internal" href="#pyglet.text.document.AbstractDocument" title="pyglet.text.document.AbstractDocument"><code class="xref py py-class docutils literal"><span class="pre">AbstractDocument</span></code></a> provides an interface to a
 document model as described above.  In theory a structured document such as
 HTML or XML could export this model, though the classes provided by pyglet
 implement only unstructured documents.</p>
-<p>The <cite>UnformattedDocument</cite> class assumes any styles set are set over the entire
+<p>The <a class="reference internal" href="#pyglet.text.document.UnformattedDocument" title="pyglet.text.document.UnformattedDocument"><code class="xref py py-class docutils literal"><span class="pre">UnformattedDocument</span></code></a> class assumes any styles set are set over the entire
 document.  So, regardless of the range specified when setting a <code class="docutils literal"><span class="pre">&quot;bold&quot;</span></code>
 style attribute, for example, the entire document will receive that style.</p>
-<p>The <cite>FormattedDocument</cite> class implements the document model directly, using
+<p>The <a class="reference internal" href="#pyglet.text.document.FormattedDocument" title="pyglet.text.document.FormattedDocument"><code class="xref py py-class docutils literal"><span class="pre">FormattedDocument</span></code></a> class implements the document model directly, using
 the <cite>RunList</cite> class to represent style runs efficiently.</p>
 </div>
 <div class="section" id="style-attributes">
@@ -116,7 +116,7 @@ the <cite>RunList</cite> class to represent style runs efficiently.</p>
 <p>The following character style attribute names are recognised by pyglet:</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">font_name</span></code></dt>
-<dd>Font family name, as given to <cite>pyglet.font.load</cite>.</dd>
+<dd>Font family name, as given to <a class="reference internal" href="../font.html#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.font.load()</span></code></a>.</dd>
 <dt><code class="docutils literal"><span class="pre">font_size</span></code></dt>
 <dd>Font size, in points.</dd>
 <dt><code class="docutils literal"><span class="pre">bold</span></code></dt>
@@ -173,18 +173,17 @@ document; it will be ignored by the built-in text classes.</p>
 <p>All style attributes (including those not present in a document) default to
 <code class="docutils literal"><span class="pre">None</span></code> (including the so-called “boolean” styles listed above).  The meaning
 of a <code class="docutils literal"><span class="pre">None</span></code> style is style- and application-dependent.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <dl class="class">
 <dt id="pyglet.text.document.AbstractDocument">
 <em class="property">class </em><code class="descname">AbstractDocument</code><span class="sig-paren">(</span><em>text=”</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.document.AbstractDocument" title="Permalink to this definition">¶</a></dt>
-<dd><p>Abstract document interface used by all <cite>pyglet.text</cite> classes.</p>
+<dd><p>Abstract document interface used by all <a class="reference internal" href="index.html#module-pyglet.text" title="pyglet.text"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.text</span></code></a> classes.</p>
 <p>This class can be overridden to interface pyglet with a third-party
 document format.  It may be easier to implement the document format in
-terms of one of the supplied concrete classes <cite>FormattedDocument</cite> or
-<cite>UnformattedDocument</cite>.</p>
+terms of one of the supplied concrete classes <a class="reference internal" href="#pyglet.text.document.FormattedDocument" title="pyglet.text.document.FormattedDocument"><code class="xref py py-class docutils literal"><span class="pre">FormattedDocument</span></code></a> or
+<a class="reference internal" href="#pyglet.text.document.UnformattedDocument" title="pyglet.text.document.UnformattedDocument"><code class="xref py py-class docutils literal"><span class="pre">UnformattedDocument</span></code></a>.</p>
 <dl class="method">
 <dt id="pyglet.text.document.AbstractDocument.delete_text">
 <code class="descname">delete_text</code><span class="sig-paren">(</span><em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.document.AbstractDocument.delete_text" title="Permalink to this definition">¶</a></dt>
@@ -213,7 +212,7 @@ terms of one of the supplied concrete classes <cite>FormattedDocument</cite> or
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> (<em>int</em>) – Position in the document of the element.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>InlineElement</cite></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyglet.text.document.InlineElement" title="pyglet.text.document.InlineElement"><code class="xref py py-class docutils literal"><span class="pre">InlineElement</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +232,7 @@ terms of one of the supplied concrete classes <cite>FormattedDocument</cite> or
 <tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>position</strong> (<em>int</em>) – Character position of document to query.</li>
 <li><strong>dpi</strong> (<em>float</em>) – Optional resolution to construct fonts at.  See
-<cite>pyglet.font.load</cite>.</li>
+<a class="reference internal" href="../font.html#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.font.load()</span></code></a>.</li>
 </ul>
 </td>
 </tr>
@@ -260,7 +259,7 @@ attributes.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dpi</strong> (<em>float</em>) – Optional resolution to construct fonts at.  See
-<cite>pyglet.font.load</cite>.</td>
+<a class="reference internal" href="../font.html#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.font.load()</span></code></a>.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>AbstractRunIterator</cite></td>
 </tr>
@@ -365,7 +364,7 @@ attributes.</p>
 <dt id="pyglet.text.document.AbstractDocument.insert_element">
 <code class="descname">insert_element</code><span class="sig-paren">(</span><em>position</em>, <em>element</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.document.AbstractDocument.insert_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Insert a element into the document.</p>
-<p>See the <cite>InlineElement</cite> class documentation for details of
+<p>See the <a class="reference internal" href="#pyglet.text.document.InlineElement" title="pyglet.text.document.InlineElement"><code class="xref py py-class docutils literal"><span class="pre">InlineElement</span></code></a> class documentation for details of
 usage.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -508,8 +507,8 @@ character range to the enclosing paragraph(s).</p>
 <dt id="pyglet.text.document.AbstractDocument.text">
 <code class="descname">text</code><a class="headerlink" href="#pyglet.text.document.AbstractDocument.text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Document text.</p>
-<p>For efficient incremental updates, use the <cite>insert_text</cite> and
-<cite>delete_text</cite> methods instead of replacing this property.</p>
+<p>For efficient incremental updates, use the <a class="reference internal" href="#pyglet.text.document.AbstractDocument.insert_text" title="pyglet.text.document.AbstractDocument.insert_text"><code class="xref py py-func docutils literal"><span class="pre">insert_text()</span></code></a> and
+<a class="reference internal" href="#pyglet.text.document.AbstractDocument.delete_text" title="pyglet.text.document.AbstractDocument.delete_text"><code class="xref py py-func docutils literal"><span class="pre">delete_text()</span></code></a> methods instead of replacing this property.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -527,7 +526,7 @@ character range to the enclosing paragraph(s).</p>
 <em class="property">class </em><code class="descname">FormattedDocument</code><span class="sig-paren">(</span><em>text=”</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.document.FormattedDocument" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simple implementation of a document that maintains text formatting.</p>
 <p>Changes to text style are applied according to the description in
-<cite>AbstractDocument</cite>.  All styles default to <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<a class="reference internal" href="#pyglet.text.document.AbstractDocument" title="pyglet.text.document.AbstractDocument"><code class="xref py py-class docutils literal"><span class="pre">AbstractDocument</span></code></a>.  All styles default to <code class="docutils literal"><span class="pre">None</span></code>.</p>
 <dl class="method">
 <dt id="pyglet.text.document.FormattedDocument.get_element_runs">
 <code class="descname">get_element_runs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.document.FormattedDocument.get_element_runs" title="Permalink to this definition">¶</a></dt>
@@ -574,10 +573,10 @@ can be done by forcing a style change over the element’s position.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>ascent</strong> – Ascent of the element above the baseline, in pixels.</li>
-<li><strong>descent</strong> – Descent of the element below the baseline, in pixels.
+<li><strong>ascent</strong> (<em>int</em>) – Ascent of the element above the baseline, in pixels.</li>
+<li><strong>descent</strong> (<em>int</em>) – Descent of the element below the baseline, in pixels.
 Typically negative.</li>
-<li><strong>advance</strong> – Width of the element, in pixels.</li>
+<li><strong>advance</strong> (<em>int</em>) – Width of the element, in pixels.</li>
 </ul>
 </td>
 </tr>

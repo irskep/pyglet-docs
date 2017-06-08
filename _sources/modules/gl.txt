@@ -16,7 +16,6 @@ pyglet.gl
 .. autoclass:: Config
   :members:
   :undoc-members:
-  :show-inheritance:
 
 .. autoclass:: CanvasConfig
   :members:

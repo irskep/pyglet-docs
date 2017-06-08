@@ -27,7 +27,6 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="up" title="pyglet Programming Guide" href="index.html" />
     <link rel="next" title="Keeping track of time" href="time.html" />
     <link rel="prev" title="Working with the mouse" href="mouse.html" /> 
   </head>
@@ -48,8 +47,7 @@
           <a href="mouse.html" title="Working with the mouse"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -60,20 +58,14 @@
             
   <div class="section" id="working-with-other-input-devices">
 <h1>Working with other input devices<a class="headerlink" href="#working-with-other-input-devices" title="Permalink to this headline">¶</a></h1>
-<p>Pyglet’s <cite>input</cite> module allows you to accept input from any USB human
+<p>Pyglet’s <a class="reference internal" href="../modules/input.html#module-pyglet.input" title="pyglet.input"><code class="xref py py-mod docutils literal"><span class="pre">input</span></code></a> module allows you to accept input from any USB human
 interface device (HID).  High level interfaces are provided for
 working with joysticks and with the Apple Remote.</p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#using-joysticks" id="id1">Using joysticks</a></li>
-<li><a class="reference internal" href="#using-the-apple-remote" id="id2">Using the Apple Remote</a></li>
-</ul>
-</div>
 <div class="section" id="using-joysticks">
-<h2><a class="toc-backref" href="#id1">Using joysticks</a><a class="headerlink" href="#using-joysticks" title="Permalink to this headline">¶</a></h2>
+<h2>Using joysticks<a class="headerlink" href="#using-joysticks" title="Permalink to this headline">¶</a></h2>
 <p>Before using a joystick, you must find it and open it.  To get a list
 of all joystick devices currently connected to your computer, call
-<cite>pyglet.input.get_joysticks</cite>:</p>
+<a class="reference internal" href="../modules/input.html#pyglet.input.get_joysticks" title="pyglet.input.get_joysticks"><code class="xref py py-func docutils literal"><span class="pre">pyglet.input.get_joysticks()</span></code></a>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">joysticks</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">get_joysticks</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -104,19 +96,19 @@ is no way to know which button index corresponds to which physical
 button on the device without simply testing the particular joystick.
 So it is a good idea to let users change button assignments.</p>
 <p>Each open joystick dispatches events when the joystick changes state.
-For buttons, there is the <cite>on_joybutton_press</cite> event which is sent
+For buttons, there is the <a class="reference internal" href="../modules/input.html#pyglet.input.Joystick.on_joybutton_press" title="pyglet.input.Joystick.on_joybutton_press"><code class="xref py py-meth docutils literal"><span class="pre">on_joybutton_press()</span></code></a> event which is sent
 whenever any of the joystick’s buttons are pressed:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_joybutton_press</span><span class="p">(</span><span class="n">joystick</span><span class="p">,</span> <span class="n">button</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>and the <cite>on_joybutton_release</cite> event which is sent whenever any of the
+<p>and the <a class="reference internal" href="../modules/input.html#pyglet.input.Joystick.on_joybutton_release" title="pyglet.input.Joystick.on_joybutton_release"><code class="xref py py-meth docutils literal"><span class="pre">on_joybutton_release()</span></code></a> event which is sent whenever any of the
 joystick’s buttons are released:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_joybutton_release</span><span class="p">(</span><span class="n">joystick</span><span class="p">,</span> <span class="n">button</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>The <cite>joystick</cite> parameter is the <cite>Joystick</cite> instance whose buttons
+<p>The <a class="reference internal" href="../modules/input.html#pyglet.input.Joystick" title="pyglet.input.Joystick"><code class="xref py py-class docutils literal"><span class="pre">Joystick</span></code></a> parameter is the <a class="reference internal" href="../modules/input.html#pyglet.input.Joystick" title="pyglet.input.Joystick"><code class="xref py py-class docutils literal"><span class="pre">Joystick</span></code></a> instance whose buttons
 changed state (useful if you have multiple joysticks connected).
 The <cite>button</cite> parameter signifies which button changed and is simply an
 integer value, the index of the corresponding button in the <cite>buttons</cite>
@@ -124,12 +116,12 @@ list.</p>
 <p>For most games, it is probably best to examine the current position of
 the joystick directly by using the <cite>x</cite> and <cite>y</cite> attributes.  However if
 you want to receive notifications whenever these values change you
-should handle the <cite>on_joyaxis_motion event</cite>:</p>
+should handle the <a class="reference internal" href="../modules/input.html#pyglet.input.Joystick.on_joyaxis_motion" title="pyglet.input.Joystick.on_joyaxis_motion"><code class="xref py py-meth docutils literal"><span class="pre">on_joyaxis_motion()</span></code></a> event:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_joyaxis_motion</span><span class="p">(</span><span class="n">joystick</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>The <cite>joystick</cite> parameter again tells you which joystick device
+<p>The <a class="reference internal" href="../modules/input.html#pyglet.input.Joystick" title="pyglet.input.Joystick"><code class="xref py py-class docutils literal"><span class="pre">Joystick</span></code></a> parameter again tells you which joystick device
 changed.  The <cite>axis</cite> parameter is string such as “x”, “y”, or “rx”
 telling you which axis changed value.  And <cite>value</cite> gives the current
 normalized value of the axis, ranging between -1 and 1.</p>
@@ -139,7 +131,7 @@ are either -1, 0, or 1.  Note that <cite>hat_y</cite> will output 1 in the up
 position and -1 in the down position, which is the opposite of the
 y-axis control.</p>
 <p>To be notified when the hat switch changes value, handle the
-<cite>on_joyhat_motion</cite> event:</p>
+<a class="reference internal" href="../modules/input.html#pyglet.input.Joystick.on_joyhat_motion" title="pyglet.input.Joystick.on_joyhat_motion"><code class="xref py py-meth docutils literal"><span class="pre">on_joyhat_motion()</span></code></a> event:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_joyhat_motion</span><span class="p">(</span><span class="n">joystick</span><span class="p">,</span> <span class="n">hat_x</span><span class="p">,</span> <span class="n">hat_y</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
@@ -153,14 +145,14 @@ within a controller class and then call:</p>
 </div>
 </div>
 <div class="section" id="using-the-apple-remote">
-<h2><a class="toc-backref" href="#id2">Using the Apple Remote</a><a class="headerlink" href="#using-the-apple-remote" title="Permalink to this headline">¶</a></h2>
+<h2>Using the Apple Remote<a class="headerlink" href="#using-the-apple-remote" title="Permalink to this headline">¶</a></h2>
 <p>The Apple Remote is a small infrared remote originally distributed
 with the iMac.  The remote has six buttons, which are accessed with
-the names <cite>left, `right</cite>, <cite>up</cite>, <cite>down</cite>, <cite>menu</cite>, and <cite>select</cite>.
+the names <cite>left</cite>, <cite>right</cite>, <cite>up</cite>, <cite>down</cite>, <cite>menu</cite>, and <cite>select</cite>.
 Additionally when certain buttons are held down, they act as virtual
-buttons.  These are named <cite>left_hold</cite>, ‘right_hold`, <cite>menu_hold</cite>, and
+buttons.  These are named <cite>left_hold</cite>, <cite>right_hold</cite>, <cite>menu_hold</cite>, and
 <cite>select_hold</cite>.</p>
-<p>To use the remote, first call <cite>get_apple_remote</cite>:</p>
+<p>To use the remote, first call <a class="reference internal" href="../modules/input.html#pyglet.input.get_apple_remote" title="pyglet.input.get_apple_remote"><code class="xref py py-func docutils literal"><span class="pre">get_apple_remote()</span></code></a>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">remote</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">get_apple_remote</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -247,8 +239,7 @@ some controller class and then call:</p>
           <a href="mouse.html" title="Working with the mouse"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" >pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

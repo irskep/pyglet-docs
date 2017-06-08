@@ -27,7 +27,6 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="up" title="pyglet Programming Guide" href="index.html" />
     <link rel="next" title="Windowing" href="windowing.html" />
     <link rel="prev" title="The OpenGL interface" href="gl.html" /> 
   </head>
@@ -48,8 +47,7 @@
           <a href="gl.html" title="The OpenGL interface"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -59,35 +57,16 @@
           <div class="body">
             
   <div class="section" id="graphics">
-<h1>Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline">¶</a></h1>
+<span id="programming-guide-graphics"></span><h1>Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline">¶</a></h1>
 <p>At the lowest level, pyglet uses OpenGL to draw in windows.  The OpenGL
-interface is exposed via the <cite>pyglet.gl</cite> module (see <cite>The OpenGL interface</cite>).</p>
+interface is exposed via the <a class="reference internal" href="../modules/gl.html#module-pyglet.gl" title="pyglet.gl"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.gl</span></code></a> module (see <a class="reference internal" href="gl.html#guide-gl"><span class="std std-ref">The OpenGL interface</span></a>).</p>
 <p>However, using the OpenGL interface directly for drawing graphics is difficult
-and inefficient.  The <cite>pyglet.graphics</cite> module provides a simpler means for
+and inefficient.  The <a class="reference internal" href="../modules/graphics/index.html#module-pyglet.graphics" title="pyglet.graphics"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.graphics</span></code></a> module provides a simpler means for
 drawing graphics that uses vertex arrays and vertex buffer objects internally
 to deliver better performance.</p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#drawing-primitives" id="id2">Drawing primitives</a></li>
-<li><a class="reference internal" href="#vertex-attributes" id="id3">Vertex attributes</a></li>
-<li><a class="reference internal" href="#vertex-lists" id="id4">Vertex lists</a><ul>
-<li><a class="reference internal" href="#updating-vertex-data" id="id5">Updating vertex data</a></li>
-<li><a class="reference internal" href="#data-usage" id="id6">Data usage</a></li>
-<li><a class="reference internal" href="#indexed-vertex-lists" id="id7">Indexed vertex lists</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#batched-rendering" id="id8">Batched rendering</a><ul>
-<li><a class="reference internal" href="#setting-the-opengl-state" id="id9">Setting the OpenGL state</a></li>
-<li><a class="reference internal" href="#hierarchical-state" id="id10">Hierarchical state</a></li>
-<li><a class="reference internal" href="#sorting-vertex-lists" id="id11">Sorting vertex lists</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#batches-and-groups-in-other-modules" id="id12">Batches and groups in other modules</a></li>
-</ul>
-</div>
 <div class="section" id="drawing-primitives">
-<h2><a class="toc-backref" href="#id2">Drawing primitives</a><a class="headerlink" href="#drawing-primitives" title="Permalink to this headline">¶</a></h2>
-<p>The <cite>pyglet.graphics</cite> module draws the OpenGL primitive objects by a mode
+<h2>Drawing primitives<a class="headerlink" href="#drawing-primitives" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="../modules/graphics/index.html#module-pyglet.graphics" title="pyglet.graphics"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.graphics</span></code></a> module draws the OpenGL primitive objects by a mode
 denoted by the constants</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">pyglet.gl.GL_POINTS</span></code></li>
@@ -105,7 +84,7 @@ denoted by the constants</p>
 <p>Each primitive is made up of one or more vertices.  Each vertex is specified
 with either 2, 3 or 4 components (for 2D, 3D, or non-homogeneous coordinates).
 The data type of each component can be either int or float.</p>
-<p>Use <cite>pyglet.graphics.draw</cite> to draw a primitive.  The following example draws
+<p>Use <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.draw" title="pyglet.graphics.draw"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.draw()</span></code></a> to draw a primitive.  The following example draws
 two points at coordinates (10, 15) and (30, 35):</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_POINTS</span><span class="p">,</span>
     <span class="p">(</span><span class="s1">&#39;v2i&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">))</span>
@@ -133,7 +112,7 @@ floating point data and 3 components per vertex:</p>
 </pre></div>
 </div>
 <p>Vertices can also be drawn out of order and more than once by using the
-<cite>pyglet.graphics.draw_indexed</cite> function.  This requires a list of integers
+<a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.draw_indexed" title="pyglet.graphics.draw_indexed"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.draw_indexed()</span></code></a> function.  This requires a list of integers
 giving the indices into the vertex data.  The following example draws the same
 two points as above, but indexes the vertices (sequentially):</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">draw_indexed</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_POINTS</span><span class="p">,</span>
@@ -168,7 +147,7 @@ vertex list.  For example, given the vertex list:</p>
 </div>
 </div>
 <div class="section" id="vertex-attributes">
-<h2><a class="toc-backref" href="#id3">Vertex attributes</a><a class="headerlink" href="#vertex-attributes" title="Permalink to this headline">¶</a></h2>
+<h2>Vertex attributes<a class="headerlink" href="#vertex-attributes" title="Permalink to this headline">¶</a></h2>
 <p>Besides the required vertex position, vertices can have several other numeric
 attributes.  Each is specified in the format string with a letter, the number
 of components and the data type.</p>
@@ -311,18 +290,18 @@ mismatch the size of the initial data with the number of vertices specified in
 the first argument.</p>
 </div>
 <div class="section" id="vertex-lists">
-<h2><a class="toc-backref" href="#id4">Vertex lists</a><a class="headerlink" href="#vertex-lists" title="Permalink to this headline">¶</a></h2>
-<p>There is a significant overhead in using <cite>pyglet.graphics.draw</cite> and
-<cite>pyglet.graphics.draw_indexed</cite> due to pyglet interpreting and formatting
+<h2>Vertex lists<a class="headerlink" href="#vertex-lists" title="Permalink to this headline">¶</a></h2>
+<p>There is a significant overhead in using <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.draw" title="pyglet.graphics.draw"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.draw()</span></code></a> and
+<a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.draw_indexed" title="pyglet.graphics.draw_indexed"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.draw_indexed()</span></code></a> due to pyglet interpreting and formatting
 the vertex data for the video device.  Usually the data drawn in each frame
 (of an animation) is identical or very similar to the previous frame, so
 this overhead is unnecessarily repeated.</p>
-<p>A <cite>VertexList</cite> is a list of vertices and their attributes, stored in
+<p>A <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><code class="xref py py-class docutils literal"><span class="pre">VertexList</span></code></a> is a list of vertices and their attributes, stored in
 an efficient manner that’s suitable for direct upload to the video card.
 On newer video cards (supporting OpenGL 1.5 or later) the data is actually
 stored in video memory.</p>
-<p>Create a <cite>VertexList</cite> for a set of attributes and initial data with
-<cite>pyglet.graphics.vertex_list</cite>.  The following example creates a vertex
+<p>Create a <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><code class="xref py py-class docutils literal"><span class="pre">VertexList</span></code></a> for a set of attributes and initial data with
+<a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.vertex_list" title="pyglet.graphics.vertex_list"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.vertex_list()</span></code></a>.  The following example creates a vertex
 list with the two coloured points used in the previous page:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vertex_list</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">vertex_list</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span>
     <span class="p">(</span><span class="s1">&#39;v2i&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">)),</span>
@@ -330,21 +309,21 @@ list with the two coloured points used in the previous page:</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>To draw the vertex list, call its <cite>VertexList.draw</cite> method:</p>
+<p>To draw the vertex list, call its <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexList.draw" title="pyglet.graphics.vertexdomain.VertexList.draw"><code class="xref py py-meth docutils literal"><span class="pre">draw()</span></code></a> method:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vertex_list</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_POINTS</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note that the primitive mode is given to the draw method, not the vertex list
-constructor.  Otherwise the <cite>vertex_list</cite> method takes the same arguments
-as <cite>pyglet.graphics.draw</cite>, including any number of vertex attributes.</p>
+constructor.  Otherwise the <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.vertex_list" title="pyglet.graphics.vertex_list"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.vertex_list()</span></code></a> function takes the same arguments
+as <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.draw" title="pyglet.graphics.draw"><code class="xref py py-class docutils literal"><span class="pre">pyglet.graphics.draw</span></code></a>, including any number of vertex attributes.</p>
 <p>Because vertex lists can reside in video memory, it is necessary to call the
 <cite>delete</cite> method to release video resources if the vertex list isn’t going to
 be used any more (there’s no need to do this if you’re just exiting the
 process).</p>
 <div class="section" id="updating-vertex-data">
-<h3><a class="toc-backref" href="#id5">Updating vertex data</a><a class="headerlink" href="#updating-vertex-data" title="Permalink to this headline">¶</a></h3>
+<h3>Updating vertex data<a class="headerlink" href="#updating-vertex-data" title="Permalink to this headline">¶</a></h3>
 <p>The data in a vertex list can be modified.  Each vertex attribute (including
-the vertex position) appears as an attribute on the <cite>VertexList</cite> object.  The
+the vertex position) appears as an attribute on the <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><code class="xref py py-class docutils literal"><span class="pre">VertexList</span></code></a> object.  The
 attribute names are given in the following table.</p>
 <blockquote>
 <div><table border="1" class="docutils">
@@ -414,7 +393,7 @@ positional, color, texture coordinate and normal attributes:</p>
 </div>
 </div>
 <div class="section" id="data-usage">
-<h3><a class="toc-backref" href="#id6">Data usage</a><a class="headerlink" href="#data-usage" title="Permalink to this headline">¶</a></h3>
+<h3>Data usage<a class="headerlink" href="#data-usage" title="Permalink to this headline">¶</a></h3>
 <p>By default, pyglet assumes vertex data will be updated less often than it is
 drawn, but more often than just during initialisation.  You can override
 this assumption for each attribute by affixing a usage specification
@@ -456,11 +435,13 @@ list (a <code class="docutils literal"><span class="pre">static</span></code> at
 performance benefits on some hardware.</p>
 </div>
 <div class="section" id="indexed-vertex-lists">
-<h3><a class="toc-backref" href="#id7">Indexed vertex lists</a><a class="headerlink" href="#indexed-vertex-lists" title="Permalink to this headline">¶</a></h3>
-<p><cite>IndexedVertexList</cite> performs the same role as <cite>VertexList</cite>, but for indexed
-vertices.  Use <cite>pyglet.graphics.vertex_list_indexed</cite> to construct an indexed
-vertex list, and update the <cite>IndexedVertexList.indices</cite> sequence to change the
-indices.</p>
+<h3>Indexed vertex lists<a class="headerlink" href="#indexed-vertex-lists" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.IndexedVertexList" title="pyglet.graphics.vertexdomain.IndexedVertexList"><code class="xref py py-class docutils literal"><span class="pre">IndexedVertexList</span></code></a> performs the same
+role as <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><code class="xref py py-class docutils literal"><span class="pre">VertexList</span></code></a>, but for indexed
+vertices.  Use <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.vertex_list_indexed" title="pyglet.graphics.vertex_list_indexed"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.vertex_list_indexed()</span></code></a> to construct an indexed
+vertex list, and update the
+<a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.IndexedVertexList.indices" title="pyglet.graphics.vertexdomain.IndexedVertexList.indices"><code class="xref py py-class docutils literal"><span class="pre">indices</span></code></a> sequence to
+change the indices.</p>
 <table class="docutils footnote" frame="void" id="multitex" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
@@ -471,26 +452,26 @@ through this attribute.</td></tr>
 </div>
 </div>
 <div class="section" id="batched-rendering">
-<h2><a class="toc-backref" href="#id8">Batched rendering</a><a class="headerlink" href="#batched-rendering" title="Permalink to this headline">¶</a></h2>
+<span id="guide-batched-rendering"></span><h2>Batched rendering<a class="headerlink" href="#batched-rendering" title="Permalink to this headline">¶</a></h2>
 <p>For optimal OpenGL performance, you should render as many vertex lists as
-possible in a single <code class="docutils literal"><span class="pre">draw</span></code> call.  Internally, pyglet uses <cite>VertexDomain</cite>
-and <cite>IndexedVertexDomain</cite> to keep vertex lists that share the same attribute
+possible in a single <code class="docutils literal"><span class="pre">draw</span></code> call.  Internally, pyglet uses <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexDomain" title="pyglet.graphics.vertexdomain.VertexDomain"><code class="xref py py-class docutils literal"><span class="pre">VertexDomain</span></code></a>
+and <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.IndexedVertexDomain" title="pyglet.graphics.vertexdomain.IndexedVertexDomain"><code class="xref py py-class docutils literal"><span class="pre">IndexedVertexDomain</span></code></a> to keep vertex lists that share the same attribute
 formats in adjacent areas of memory.  The entire domain of vertex lists can
-then be drawn at once, without calling <cite>VertexList.draw</cite> on each individual
+then be drawn at once, without calling <a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexList.draw" title="pyglet.graphics.vertexdomain.VertexList.draw"><code class="xref py py-meth docutils literal"><span class="pre">draw()</span></code></a> on each individual
 list.</p>
 <p>It is quite difficult and tedious to write an application that manages vertex
 domains itself, though.  In addition to maintaining a vertex domain for each
 set of attribute formats, domains must also be separated by primitive mode and
 required OpenGL state.</p>
-<p>The <cite>Batch</cite> class implements this functionality, grouping related vertex lists
+<p>The <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> class implements this functionality, grouping related vertex lists
 together and sorting by OpenGL state automatically.  A batch is created with
 no arguments:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">batch</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">Batch</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Vertex lists can now be created with the <cite>Batch.add</cite> and <cite>Batch.add_indexed</cite>
-methods instead of <cite>pyglet.graphics.vertex_list</cite> and
-<cite>pyglet.graphics.vertex_list_indexed</cite> functions.  Unlike the module functions,
+<p>Vertex lists can now be created with the <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch.add" title="pyglet.graphics.Batch.add"><code class="xref py py-meth docutils literal"><span class="pre">add()</span></code></a> and <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch.add_indexed" title="pyglet.graphics.Batch.add_indexed"><code class="xref py py-meth docutils literal"><span class="pre">add_indexed()</span></code></a>
+methods instead of <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.vertex_list" title="pyglet.graphics.vertex_list"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.vertex_list()</span></code></a> and
+<a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.vertex_list_indexed" title="pyglet.graphics.vertex_list_indexed"><code class="xref py py-func docutils literal"><span class="pre">pyglet.graphics.vertex_list_indexed()</span></code></a> functions.  Unlike the module functions,
 these methods accept a <code class="docutils literal"><span class="pre">mode</span></code> parameter (the primitive mode) and a <code class="docutils literal"><span class="pre">group</span></code>
 parameter (described below).</p>
 <p>The two coloured points from previous pages can be added to a batch as a
@@ -502,16 +483,16 @@ single vertex list with:</p>
 </pre></div>
 </div>
 <p>The resulting <cite>vertex_list</cite> can be modified as described in the previous
-section.  However, instead of calling <cite>VertexList.draw</cite> to draw it, call
-<cite>Batch.draw</cite> to draw all vertex lists contained in the batch at once:</p>
+section.  However, instead of calling <code class="docutils literal"><span class="pre">VertexList.draw</span></code> to draw it, call
+<code class="docutils literal"><span class="pre">Batch.draw()</span></code> to draw all vertex lists contained in the batch at once:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>For batches containing many vertex lists this gives a significant performance
 improvement over drawing individual vertex lists.</p>
-<p>To remove a vertex list from a batch, call <cite>VertexList.delete</cite>.</p>
+<p>To remove a vertex list from a batch, call <code class="docutils literal"><span class="pre">VertexList.delete()</span></code>.</p>
 <div class="section" id="setting-the-opengl-state">
-<h3><a class="toc-backref" href="#id9">Setting the OpenGL state</a><a class="headerlink" href="#setting-the-opengl-state" title="Permalink to this headline">¶</a></h3>
+<h3>Setting the OpenGL state<a class="headerlink" href="#setting-the-opengl-state" title="Permalink to this headline">¶</a></h3>
 <p>In order to achieve many effects in OpenGL one or more global state parameters
 must be set.  For example, to enable and bind a texture requires:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="k">import</span> <span class="o">*</span>
@@ -524,8 +505,8 @@ must be set.  For example, to enable and bind a texture requires:</p>
 </pre></div>
 </div>
 <p>afterwards to avoid interfering with later drawing commands.</p>
-<p>With a <cite>Group</cite> these state changes can be encapsulated and associated with the
-vertex lists they affect.  Subclass <cite>Group</cite> and override the <cite>Group.set_state</cite>
+<p>With a <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><code class="xref py py-class docutils literal"><span class="pre">Group</span></code></a> these state changes can be encapsulated and associated with the
+vertex lists they affect.  Subclass <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><code class="xref py py-class docutils literal"><span class="pre">Group</span></code></a> and override the <cite>Group.set_state</cite>
 and <cite>Group.unset_state</cite> methods to perform the required state changes:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomGroup</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">Group</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">set_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -544,11 +525,11 @@ and <cite>Group.unset_state</cite> methods to perform the required state changes
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>The <cite>Batch</cite> ensures that the appropriate <code class="docutils literal"><span class="pre">set_state</span></code> and <code class="docutils literal"><span class="pre">unset_state</span></code>
+<p>The <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> ensures that the appropriate <code class="docutils literal"><span class="pre">set_state</span></code> and <code class="docutils literal"><span class="pre">unset_state</span></code>
 methods are called before and after the vertex lists that use them.</p>
 </div>
 <div class="section" id="hierarchical-state">
-<h3><a class="toc-backref" href="#id10">Hierarchical state</a><a class="headerlink" href="#hierarchical-state" title="Permalink to this headline">¶</a></h3>
+<h3>Hierarchical state<a class="headerlink" href="#hierarchical-state" title="Permalink to this headline">¶</a></h3>
 <p>Groups have a <cite>parent</cite> attribute that allows them to be implicitly organised
 in a tree structure.  If groups <strong>B</strong> and <strong>C</strong> have parent <strong>A</strong>, then the
 order of <code class="docutils literal"><span class="pre">set_state</span></code> and <code class="docutils literal"><span class="pre">unset_state</span></code> calls for vertex lists in a batch
@@ -603,17 +584,18 @@ example demonstrates this:</p>
 <span class="n">batch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GL_QUADS</span><span class="p">,</span> <span class="n">TextureBindGroup</span><span class="p">(</span><span class="n">texture1</span><span class="p">),</span> <span class="s1">&#39;v2f&#39;</span><span class="p">,</span> <span class="s1">&#39;t2f&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note the use of an <code class="docutils literal"><span class="pre">__eq__</span></code> method on the group to allow <cite>Batch</cite> to merge
+<p>Note the use of an <code class="docutils literal"><span class="pre">__eq__</span></code> method on the group to allow <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> to merge
 the two <code class="docutils literal"><span class="pre">TextureBindGroup</span></code> identical instances.</p>
 </div>
 <div class="section" id="sorting-vertex-lists">
-<h3><a class="toc-backref" href="#id11">Sorting vertex lists</a><a class="headerlink" href="#sorting-vertex-lists" title="Permalink to this headline">¶</a></h3>
-<p><cite>VertexDomain</cite> does not attempt to keep vertex lists in any particular order.
+<h3>Sorting vertex lists<a class="headerlink" href="#sorting-vertex-lists" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../modules/graphics/vertexdomain.html#pyglet.graphics.vertexdomain.VertexDomain" title="pyglet.graphics.vertexdomain.VertexDomain"><code class="xref py py-class docutils literal"><span class="pre">VertexDomain</span></code></a> does not attempt to keep vertex lists in any particular order.
 So, any vertex lists sharing the same primitive mode, attribute formats and
-group will be drawn in an arbitrary order.  However, <cite>Batch</cite> will sort <cite>Group</cite>
+group will be drawn in an arbitrary order.  However,
+<a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> will sort <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><code class="xref py py-class docutils literal"><span class="pre">Group</span></code></a>
 objects sharing the same parent by their <code class="docutils literal"><span class="pre">__cmp__</span></code> method.  This allows
 groups to be ordered.</p>
-<p>The <cite>OrderedGroup</cite> class is a convenience group that does not set any OpenGL
+<p>The <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.OrderedGroup" title="pyglet.graphics.OrderedGroup"><code class="xref py py-class docutils literal"><span class="pre">OrderedGroup</span></code></a> class is a convenience group that does not set any OpenGL
 state, but is parameterised by an integer giving its draw order.  In the
 following example a number of vertex lists are grouped into a “background”
 group that is drawn before the vertex lists in the “foreground” group:</p>
@@ -627,18 +609,19 @@ group that is drawn before the vertex lists in the “foreground” group:</p>
 </pre></div>
 </div>
 <p>By combining hierarchical groups with ordered groups it is possible to
-describe an entire scene within a single <cite>Batch</cite>, which then renders it as
+describe an entire scene within a single <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a>, which then renders it as
 efficiently as possible.</p>
 </div>
 </div>
 <div class="section" id="batches-and-groups-in-other-modules">
-<h2><a class="toc-backref" href="#id12">Batches and groups in other modules</a><a class="headerlink" href="#batches-and-groups-in-other-modules" title="Permalink to this headline">¶</a></h2>
-<p>The <cite>Sprite</cite>, <cite>Label</cite> and <cite>TextLayout</cite> classes all accept <code class="docutils literal"><span class="pre">batch</span></code> and
+<h2>Batches and groups in other modules<a class="headerlink" href="#batches-and-groups-in-other-modules" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="../modules/sprite.html#pyglet.sprite.Sprite" title="pyglet.sprite.Sprite"><code class="xref py py-class docutils literal"><span class="pre">Sprite</span></code></a>, <a class="reference internal" href="../modules/text/index.html#pyglet.text.Label" title="pyglet.text.Label"><code class="xref py py-class docutils literal"><span class="pre">Label</span></code></a> and
+<a class="reference internal" href="../modules/text/layout.html#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-class docutils literal"><span class="pre">TextLayout</span></code></a> classes all accept <code class="docutils literal"><span class="pre">batch</span></code> and
 <code class="docutils literal"><span class="pre">group</span></code> parameters in their constructors.  This allows you to add any of
 these higher-level pyglet drawables into arbitrary places in your rendering
 code.</p>
 <p>For example, multiple sprites can be grouped into a single batch and then
-drawn at once, instead of calling <cite>Sprite.draw</cite> on each one individually:</p>
+drawn at once, instead of calling <code class="docutils literal"><span class="pre">Sprite.draw()</span></code> on each one individually:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">batch</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">Batch</span><span class="p">()</span>
 <span class="n">sprites</span> <span class="o">=</span> <span class="p">[</span><span class="n">pyglet</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="n">batch</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
 
@@ -722,8 +705,7 @@ classes, consider adding <code class="docutils literal"><span class="pre">batch<
           <a href="gl.html" title="The OpenGL interface"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" >pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

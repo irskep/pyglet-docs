@@ -28,7 +28,7 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
     <link rel="next" title="pyglet.sprite" href="sprite.html" />
-    <link rel="prev" title="pyglet.media" href="media.html" /> 
+    <link rel="prev" title="pyglet.media.procedural" href="media_procedural.html" /> 
   </head>
   <body>
     <div class="related">
@@ -44,7 +44,7 @@
           <a href="sprite.html" title="pyglet.sprite"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="media.html" title="pyglet.media"
+          <a href="media_procedural.html" title="pyglet.media.procedural"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
 		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
@@ -98,9 +98,8 @@ This avoids a common programmer error when porting applications between
 platforms.</p>
 <p>The default path is <code class="docutils literal"><span class="pre">['.']</span></code>.  If you modify the path, you must call
 <a class="reference internal" href="#pyglet.resource.reindex" title="pyglet.resource.reindex"><code class="xref py py-func docutils literal"><span class="pre">reindex()</span></code></a>.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <dl class="exception">
 <dt id="pyglet.resource.ResourceNotFoundException">
@@ -130,9 +129,9 @@ directories, ZIP archives and Python packages.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="#pyglet.resource.path" title="pyglet.resource.path"><strong>path</strong></a> – List of search locations.  After modifying the path you must
+<li><a class="reference internal" href="#pyglet.resource.path" title="pyglet.resource.path"><strong>path</strong></a> (<em>list of str</em>) – List of search locations.  After modifying the path you must
 call the <cite>reindex</cite> method.</li>
-<li><strong>script_home</strong> – Base resource location, defaulting to the location of the
+<li><strong>script_home</strong> (<em>str</em>) – Base resource location, defaulting to the location of the
 application script.</li>
 </ul>
 </td>
@@ -180,7 +179,7 @@ number of degrees (a multiple of 90).</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>Animation</cite></p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="image/index.html#pyglet.image.Animation" title="pyglet.image.Animation"><code class="xref py py-class docutils literal"><span class="pre">Animation</span></code></a></p>
 </td>
 </tr>
 </tbody>
@@ -285,7 +284,7 @@ with the meaning as for the builtin <code class="docutils literal"><span class="
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of <cite>TextureBin</cite></td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of <a class="reference internal" href="image/atlas.html#pyglet.image.atlas.TextureBin" title="pyglet.image.atlas.TextureBin"><code class="xref py py-class docutils literal"><span class="pre">TextureBin</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -312,7 +311,7 @@ with the meaning as for the builtin <code class="docutils literal"><span class="
 <code class="descname">image</code><span class="sig-paren">(</span><em>name</em>, <em>flip_x=False</em>, <em>flip_y=False</em>, <em>rotate=0</em>, <em>atlas=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.resource.Loader.image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load an image with optional transformation.</p>
 <p>This is similar to <cite>texture</cite>, except the resulting image will be
-packed into a <cite>TextureBin</cite> if it is an appropriate size for packing.
+packed into a <a class="reference internal" href="image/atlas.html#pyglet.image.atlas.TextureBin" title="pyglet.image.atlas.TextureBin"><code class="xref py py-class docutils literal"><span class="pre">TextureBin</span></code></a> if it is an appropriate size for packing.
 This is more efficient than loading images into separate textures.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -335,7 +334,7 @@ this argument to False.</li>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A complete texture if the image is large or not in an atlas,
-otherwise a <cite>TextureRegion</cite> of a texture atlas.</p>
+otherwise a <a class="reference internal" href="image/index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a> of a texture atlas.</p>
 </td>
 </tr>
 </tbody>
@@ -416,7 +415,7 @@ layout changes.</p>
 <code class="descname">texture</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.resource.Loader.texture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a texture.</p>
 <p>The named image will be loaded as a single OpenGL texture.  If the
-dimensions of the image are not powers of 2 a <cite>TextureRegion</cite> will
+dimensions of the image are not powers of 2 a <a class="reference internal" href="image/index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a> will
 be returned.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -503,7 +502,7 @@ be determined the working directory is returned.</p>
 <p>When the script is being run by a Python profiler, this function
 may return the directory where the profiler is running instead of
 the directory of the real script. To workaround this behaviour the
-full path to the real script can be specified in <cite>pyglet.resource.path</cite>.</p>
+full path to the real script can be specified in <a class="reference internal" href="#pyglet.resource.path" title="pyglet.resource.path"><code class="xref py py-attr docutils literal"><span class="pre">pyglet.resource.path</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -635,7 +634,7 @@ family name.  For example:</p>
 <code class="descname">image</code><span class="sig-paren">(</span><em>name</em>, <em>flip_x=False</em>, <em>flip_y=False</em>, <em>rotate=0</em>, <em>atlas=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.resource.image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load an image with optional transformation.</p>
 <p>This is similar to <cite>texture</cite>, except the resulting image will be
-packed into a <cite>TextureBin</cite> if it is an appropriate size for packing.
+packed into a <a class="reference internal" href="image/atlas.html#pyglet.image.atlas.TextureBin" title="pyglet.image.atlas.TextureBin"><code class="xref py py-class docutils literal"><span class="pre">TextureBin</span></code></a> if it is an appropriate size for packing.
 This is more efficient than loading images into separate textures.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -658,7 +657,7 @@ this argument to False.</li>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A complete texture if the image is large or not in an atlas,
-otherwise a <cite>TextureRegion</cite> of a texture atlas.</p>
+otherwise a <a class="reference internal" href="image/index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a> of a texture atlas.</p>
 </td>
 </tr>
 </tbody>
@@ -684,7 +683,7 @@ number of degrees (a multiple of 90).</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>Animation</cite></p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="image/index.html#pyglet.image.Animation" title="pyglet.image.Animation"><code class="xref py py-class docutils literal"><span class="pre">Animation</span></code></a></p>
 </td>
 </tr>
 </tbody>
@@ -736,7 +735,7 @@ number of degrees (a multiple of 90).</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of <cite>TextureBin</cite></td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of <a class="reference internal" href="image/atlas.html#pyglet.image.atlas.TextureBin" title="pyglet.image.atlas.TextureBin"><code class="xref py py-class docutils literal"><span class="pre">TextureBin</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -772,7 +771,7 @@ it should be entirely decoded into memory immediately.</li>
 <code class="descname">texture</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.resource.texture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a texture.</p>
 <p>The named image will be loaded as a single OpenGL texture.  If the
-dimensions of the image are not powers of 2 a <cite>TextureRegion</cite> will
+dimensions of the image are not powers of 2 a <a class="reference internal" href="image/index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a> will
 be returned.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -869,8 +868,8 @@ be returned.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="media.html"
-                        title="previous chapter">pyglet.media</a></p>
+  <p class="topless"><a href="media_procedural.html"
+                        title="previous chapter">pyglet.media.procedural</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="sprite.html"
                         title="next chapter">pyglet.sprite</a></p>
@@ -901,7 +900,7 @@ be returned.</p>
           <a href="sprite.html" title="pyglet.sprite"
              >next</a> |</li>
         <li class="right" >
-          <a href="media.html" title="pyglet.media"
+          <a href="media_procedural.html" title="pyglet.media.procedural"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
 		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 

@@ -74,13 +74,13 @@ very good performance for rendering OpenGL primitives; far better than the
 typical immediate-mode usage and, on modern graphics cards, better than using
 display lists in many cases.  The module is used internally by other areas of
 pyglet.</p>
-<p>See the <a class="reference internal" href="../../programming_guide/index.html#programming-guide"><span class="std std-ref">pyglet Programming Guide</span></a> for details on how to use this graphics API.</p>
+<p>See the <a class="reference internal" href="../../programming_guide/graphics.html#programming-guide-graphics"><span class="std std-ref">Graphics</span></a> for details on how to use this graphics API.</p>
 <div class="section" id="batches-and-groups">
 <h2>Batches and groups<a class="headerlink" href="#batches-and-groups" title="Permalink to this headline">¶</a></h2>
 <p>Without even needing to understand the details on how to draw primitives with
-the graphics API, developers can make use of <cite>Batch</cite> and <cite>Group</cite>
+the graphics API, developers can make use of <a class="reference internal" href="#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> and <a class="reference internal" href="#pyglet.graphics.Group" title="pyglet.graphics.Group"><code class="xref py py-class docutils literal"><span class="pre">Group</span></code></a>
 objects to improve performance of sprite and text rendering.</p>
-<p>The <cite>Sprite</cite>, <cite>Label</cite> and <cite>TextLayout</cite> classes all accept a <code class="docutils literal"><span class="pre">batch</span></code> and
+<p>The <a class="reference internal" href="../sprite.html#pyglet.sprite.Sprite" title="pyglet.sprite.Sprite"><code class="xref py py-class docutils literal"><span class="pre">Sprite</span></code></a>, <a class="reference internal" href="../text/index.html#pyglet.text.Label" title="pyglet.text.Label"><code class="xref py py-func docutils literal"><span class="pre">Label()</span></code></a> and <a class="reference internal" href="../text/layout.html#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a> classes all accept a <code class="docutils literal"><span class="pre">batch</span></code> and
 <code class="docutils literal"><span class="pre">group</span></code> parameter in their constructors.  A batch manages a set of objects
 that will be drawn all at once, and a group describes the manner in which an
 object is drawn.</p>
@@ -176,15 +176,14 @@ vertex list.  For example, given the vertex list:</p>
 present.  This also permits use of <code class="docutils literal"><span class="pre">GL_POLYGON</span></code>, <code class="docutils literal"><span class="pre">GL_LINE_LOOP</span></code> and
 <code class="docutils literal"><span class="pre">GL_TRIANGLE_FAN</span></code>.   Unfortunately the extension is not provided by older
 video drivers, and requires indexed vertex lists.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <dl class="class">
 <dt id="pyglet.graphics.Batch">
 <em class="property">class </em><code class="descname">Batch</code><a class="headerlink" href="#pyglet.graphics.Batch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a collection of vertex lists for batched rendering.</p>
-<p>Vertex lists are added to a <cite>Batch</cite> using the <cite>add</cite> and <cite>add_indexed</cite>
+<p>Vertex lists are added to a <a class="reference internal" href="#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> using the <cite>add</cite> and <cite>add_indexed</cite>
 methods.  An optional group can be specified along with the vertex list,
 which gives the OpenGL state required for its rendering.  Vertex lists
 with shared mode and group are allocated into adjacent areas of memory and
@@ -209,7 +208,7 @@ the module summary for details.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>VertexList</cite></p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="vertexdomain.html#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><code class="xref py py-class docutils literal"><span class="pre">VertexList</span></code></a></p>
 </td>
 </tr>
 </tbody>
@@ -274,9 +273,8 @@ undefined if this condition is not met.</p>
 <dd><p>Force the batch to update the draw list.</p>
 <p>This method can be used to force the batch to re-compute the draw list
 when the ordering of groups has changed.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 
@@ -425,7 +423,7 @@ details.</li>
 <dl class="function">
 <dt id="pyglet.graphics.vertex_list">
 <code class="descname">vertex_list</code><span class="sig-paren">(</span><em>count</em>, <em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.graphics.vertex_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a <cite>VertexList</cite> not associated with a batch, group or mode.</p>
+<dd><p>Create a <a class="reference internal" href="vertexdomain.html#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><code class="xref py py-class docutils literal"><span class="pre">VertexList</span></code></a> not associated with a batch, group or mode.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -437,7 +435,7 @@ module summary for details.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>VertexList</cite></p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="vertexdomain.html#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><code class="xref py py-class docutils literal"><span class="pre">VertexList</span></code></a></p>
 </td>
 </tr>
 </tbody>
@@ -475,7 +473,7 @@ module summary for details.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Group</cite></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#pyglet.graphics.Group" title="pyglet.graphics.Group"><code class="xref py py-class docutils literal"><span class="pre">Group</span></code></a></td>
 </tr>
 </tbody>
 </table>

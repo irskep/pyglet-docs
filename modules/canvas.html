@@ -63,12 +63,12 @@
 off-screen buffer, the content area of a <a class="reference internal" href="window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">pyglet.window.Window</span></code></a>, or an 
 entire screen. Currently, canvases can only be created with windows (though 
 windows can be set fullscreen).</p>
-<p>Windows and canvases must belong to a <a class="reference internal" href="#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a>.  On Windows and Mac OS 
+<p>Windows and canvases must belong to a :class`~pyglet.canvas.Display`  On Windows and Mac OS 
 X there is only one display, which can be obtained with <a class="reference internal" href="#pyglet.canvas.get_display" title="pyglet.canvas.get_display"><code class="xref py py-func docutils literal"><span class="pre">get_display()</span></code></a>.  
 Linux supports multiple displays, corresponding to discrete X11 display 
 connections and screens.  <a class="reference internal" href="#pyglet.canvas.get_display" title="pyglet.canvas.get_display"><code class="xref py py-func docutils literal"><span class="pre">get_display()</span></code></a> on  Linux returns the default 
 display and screen 0 (<code class="docutils literal"><span class="pre">localhost:0.0</span></code>); if a particular screen or display is 
-required then <a class="reference internal" href="#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a> can be instantiated directly.</p>
+required then :class`~pyglet.canvas.Display`can be instantiated directly.</p>
 <p>Within a display one or more screens are attached.  A <a class="reference internal" href="#pyglet.canvas.Screen" title="pyglet.canvas.Screen"><code class="xref py py-class docutils literal"><span class="pre">Screen</span></code></a> often
 corresponds to a physical attached monitor, however a monitor or projector set
 up to clone another screen will not be listed.  Use <a class="reference internal" href="#pyglet.canvas.Display.get_screens" title="pyglet.canvas.Display.get_screens"><code class="xref py py-meth docutils literal"><span class="pre">Display.get_screens()</span></code></a>
@@ -76,26 +76,24 @@ to get a list of the attached screens; these can then be queried for their
 sizes and virtual positions on the desktop.</p>
 <p>The size of a screen is determined by its current mode, which can be changed
 by the application; see the documentation for <a class="reference internal" href="#pyglet.canvas.Screen" title="pyglet.canvas.Screen"><code class="xref py py-class docutils literal"><span class="pre">Screen</span></code></a>.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <dl class="function">
 <dt id="pyglet.canvas.get_display">
 <code class="descname">get_display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.canvas.get_display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the default display device.</p>
-<p>If there is already a <a class="reference internal" href="#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a> connection, that display will be 
-returned. Otherwise, a default <a class="reference internal" href="#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a> is created and returned.  
+<p>If there is already a :class`~pyglet.canvas.Display`connection, that display will be 
+returned. Otherwise, a default :class`~pyglet.canvas.Display`is created and returned.  
 If multiple display connections are active, an arbitrary one is returned.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a></td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">:class`~pyglet.canvas.Display`</td>
 </tr>
 </tbody>
 </table>
@@ -105,13 +103,8 @@ If multiple display connections are active, an arbitrary one is returned.</p>
 <dt id="pyglet.canvas.Display">
 <em class="property">class </em><code class="descname">Display</code><span class="sig-paren">(</span><em>name=None</em>, <em>x_screen=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.canvas.Display" title="Permalink to this definition">¶</a></dt>
 <dd><p>A display device supporting one or more screens.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">Programming Guide - <a class="reference internal" href="../programming_guide/context.html#guide-displays"><span class="std std-ref">Displays</span></a></p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <dl class="method">
 <dt id="pyglet.canvas.Display.get_default_screen">
@@ -132,7 +125,7 @@ preferences.</p>
 <dt id="pyglet.canvas.Display.get_screens">
 <code class="descname">get_screens</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.canvas.Display.get_screens" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the available screens.</p>
-<p>A typical multi-monitor workstation comprises one <a class="reference internal" href="#pyglet.canvas.Display" title="pyglet.canvas.Display"><code class="xref py py-class docutils literal"><span class="pre">Display</span></code></a> 
+<p>A typical multi-monitor workstation comprises one :class`~pyglet.canvas.Display`
 with multiple <a class="reference internal" href="#pyglet.canvas.Screen" title="pyglet.canvas.Screen"><code class="xref py py-class docutils literal"><span class="pre">Screen</span></code></a> s.  This method returns a list of 
 screens which can be enumerated to select one for full-screen display.</p>
 <p>For the purposes of creating an OpenGL config, the default screen
@@ -206,10 +199,6 @@ useful for determining if screens are arranged above or next to one
 another.</p>
 <p>Use <a class="reference internal" href="#pyglet.canvas.Display.get_screens" title="pyglet.canvas.Display.get_screens"><code class="xref py py-func docutils literal"><span class="pre">get_screens()</span></code></a> or <a class="reference internal" href="#pyglet.canvas.Display.get_default_screen" title="pyglet.canvas.Display.get_default_screen"><code class="xref py py-func docutils literal"><span class="pre">get_default_screen()</span></code></a>
 to obtain an instance of this class.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">Programming Guide - <a class="reference internal" href="../programming_guide/context.html#guide-screens"><span class="std std-ref">Screens</span></a></p>
-</div>
 <dl class="method">
 <dt id="pyglet.canvas.Screen.get_best_config">
 <code class="descname">get_best_config</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.canvas.Screen.get_best_config" title="Permalink to this definition">¶</a></dt>
@@ -219,15 +208,15 @@ no configuration matches the template,
 <a class="reference internal" href="window.html#pyglet.window.NoSuchConfigException" title="pyglet.window.NoSuchConfigException"><code class="xref py py-class docutils literal"><span class="pre">NoSuchConfigException</span></code></a> will be raised.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Deprecated. Use <code class="xref py py-meth docutils literal"><span class="pre">pyglet.gl.Config.match()</span></code>.</p>
+<p class="last">Deprecated. Use <a class="reference internal" href="gl.html#pyglet.gl.Config.match" title="pyglet.gl.Config.match"><code class="xref py py-meth docutils literal"><span class="pre">pyglet.gl.Config.match()</span></code></a>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>template</strong> (<em>pyglet.gl.Config</em>) – A configuration with desired attributes filled in.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>template</strong> (<a class="reference internal" href="gl.html#pyglet.gl.Config" title="pyglet.gl.Config"><em>pyglet.gl.Config</em></a>) – A configuration with desired attributes filled in.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">Config</span></code></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="gl.html#pyglet.gl.Config" title="pyglet.gl.Config"><code class="xref py py-class docutils literal"><span class="pre">Config</span></code></a></td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A configuration supported by the platform that best
 fulfils the needs described by the template.</td>
@@ -257,9 +246,8 @@ is returned; or <code class="docutils literal"><span class="pre">None</span></co
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 
@@ -272,15 +260,15 @@ to or greater in each returned config.  If no configs satisfy
 the template, an empty list is returned.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Deprecated. Use <code class="xref py py-meth docutils literal"><span class="pre">pyglet.gl.Config.match()</span></code>.</p>
+<p class="last">Deprecated. Use <a class="reference internal" href="gl.html#pyglet.gl.Config.match" title="pyglet.gl.Config.match"><code class="xref py py-meth docutils literal"><span class="pre">pyglet.gl.Config.match()</span></code></a>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>template</strong> (<em>pyglet.gl.Config</em>) – A configuration with desired attributes filled in.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>template</strong> (<a class="reference internal" href="gl.html#pyglet.gl.Config" title="pyglet.gl.Config"><em>pyglet.gl.Config</em></a>) – A configuration with desired attributes filled in.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <code class="xref py py-class docutils literal"><span class="pre">Config</span></code></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="gl.html#pyglet.gl.Config" title="pyglet.gl.Config"><code class="xref py py-class docutils literal"><span class="pre">Config</span></code></a></td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of matching configs.</td>
 </tr>
@@ -300,9 +288,8 @@ the template, an empty list is returned.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 
@@ -318,9 +305,8 @@ the template, an empty list is returned.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 
@@ -384,9 +370,8 @@ the template, an empty list is returned.</p>
 <dd><p>Abstract drawing area.</p>
 <p>Canvases are used internally by pyglet to represent drawing areas –
 either within a window or full-screen.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <dl class="attribute">
 <dt id="pyglet.canvas.Canvas.display">

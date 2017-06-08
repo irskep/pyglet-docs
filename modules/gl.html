@@ -154,9 +154,8 @@ modify this global.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 </dd></dl>
 
@@ -173,8 +172,7 @@ modify this global.</p>
 <dl class="class">
 <dt id="pyglet.gl.Config">
 <em class="property">class </em><code class="descname">Config</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Graphics configuration.</p>
+<dd><p>Graphics configuration.</p>
 <p>A Config stores the preferences for OpenGL attributes such as the
 number of auxilliary buffers, size of the colour and depth buffers,
 double buffering, stencilling, multi- and super-sampling, and so on.</p>
@@ -185,26 +183,26 @@ are set with a string key and a value which is integer or boolean.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>double_buffer</strong> – Specify the presence of a back-buffer for every color buffer.</li>
-<li><strong>stereo</strong> – Specify the presence of separate left and right buffer sets.</li>
-<li><strong>buffer_size</strong> – Total bits per sample per color buffer.</li>
-<li><strong>aux_buffers</strong> – The number of auxilliary color buffers.</li>
-<li><strong>sample_buffers</strong> – The number of multisample buffers.</li>
-<li><strong>samples</strong> – The number of samples per pixel, or 0 if there are no multisample
+<li><strong>double_buffer</strong> (<em>bool</em>) – Specify the presence of a back-buffer for every color buffer.</li>
+<li><strong>stereo</strong> (<em>bool</em>) – Specify the presence of separate left and right buffer sets.</li>
+<li><strong>buffer_size</strong> (<em>int</em>) – Total bits per sample per color buffer.</li>
+<li><strong>aux_buffers</strong> (<em>int</em>) – The number of auxilliary color buffers.</li>
+<li><strong>sample_buffers</strong> (<em>int</em>) – The number of multisample buffers.</li>
+<li><strong>samples</strong> (<em>int</em>) – The number of samples per pixel, or 0 if there are no multisample
 buffers.</li>
-<li><strong>red_size</strong> – Bits per sample per buffer devoted to the red component.</li>
-<li><strong>green_size</strong> – Bits per sample per buffer devoted to the green component.</li>
-<li><strong>blue_size</strong> – Bits per sample per buffer devoted to the blue component.</li>
-<li><strong>alpha_size</strong> – Bits per sample per buffer devoted to the alpha component.</li>
-<li><strong>depth_size</strong> – Bits per sample in the depth buffer.</li>
-<li><strong>stencil_size</strong> – Bits per sample in the stencil buffer.</li>
-<li><strong>accum_red_size</strong> – Bits per pixel devoted to the red component in the accumulation
+<li><strong>red_size</strong> (<em>int</em>) – Bits per sample per buffer devoted to the red component.</li>
+<li><strong>green_size</strong> (<em>int</em>) – Bits per sample per buffer devoted to the green component.</li>
+<li><strong>blue_size</strong> (<em>int</em>) – Bits per sample per buffer devoted to the blue component.</li>
+<li><strong>alpha_size</strong> (<em>int</em>) – Bits per sample per buffer devoted to the alpha component.</li>
+<li><strong>depth_size</strong> (<em>int</em>) – Bits per sample in the depth buffer.</li>
+<li><strong>stencil_size</strong> (<em>int</em>) – Bits per sample in the stencil buffer.</li>
+<li><strong>accum_red_size</strong> (<em>int</em>) – Bits per pixel devoted to the red component in the accumulation
 buffer.</li>
-<li><strong>accum_green_size</strong> – Bits per pixel devoted to the green component in the accumulation
+<li><strong>accum_green_size</strong> (<em>int</em>) – Bits per pixel devoted to the green component in the accumulation
 buffer.</li>
-<li><strong>accum_blue_size</strong> – Bits per pixel devoted to the blue component in the accumulation
+<li><strong>accum_blue_size</strong> (<em>int</em>) – Bits per pixel devoted to the blue component in the accumulation
 buffer.</li>
-<li><strong>accum_alpha_size</strong> – Bits per pixel devoted to the alpha component in the accumulation
+<li><strong>accum_alpha_size</strong> (<em>int</em>) – Bits per pixel devoted to the alpha component in the accumulation
 buffer.</li>
 </ul>
 </td>
@@ -241,7 +239,7 @@ buffer.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of tuple (<a class="reference internal" href="canvas.html#pyglet.canvas.Display.name" title="pyglet.canvas.Display.name">name</a>, <a class="reference internal" href="input.html#pyglet.input.Button.value" title="pyglet.input.Button.value">value</a>)</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of tuple <code class="docutils literal"><span class="pre">(name,</span> <span class="pre">value)</span></code></td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">All attributes, with unset attributes having a value of
 <code class="docutils literal"><span class="pre">None</span></code>.</td>
@@ -278,9 +276,8 @@ complete configs.</p>
 <dt id="pyglet.gl.Config.match">
 <code class="descname">match</code><span class="sig-paren">(</span><em>canvas</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Config.match" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of matching complete configs for the given canvas.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -322,15 +319,14 @@ complete configs.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyglet.gl.base.Config</span></code></p>
 <p>OpenGL configuration for a particular canvas.</p>
 <p>Use <cite>Config.match</cite> to obtain an instance of this class.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><a class="reference internal" href="canvas.html#module-pyglet.canvas" title="pyglet.canvas"><strong>canvas</strong></a> – The canvas this config is valid on.</td>
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><a class="reference internal" href="canvas.html#module-pyglet.canvas" title="pyglet.canvas"><strong>canvas</strong></a> (<a class="reference internal" href="canvas.html#pyglet.canvas.Canvas" title="pyglet.canvas.Canvas"><em>Canvas</em></a>) – The canvas this config is valid on.</td>
 </tr>
 </tbody>
 </table>
@@ -373,7 +369,7 @@ complete configs.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>object_space</strong> – An object which is shared between all contexts that share
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>object_space</strong> (<a class="reference internal" href="#pyglet.gl.ObjectSpace" title="pyglet.gl.ObjectSpace"><em>ObjectSpace</em></a>) – An object which is shared between all contexts that share
 GL objects.</td>
 </tr>
 </tbody>
@@ -387,7 +383,7 @@ GL objects.</td>
 <dt id="pyglet.gl.Context.delete_buffer">
 <code class="descname">delete_buffer</code><span class="sig-paren">(</span><em>buffer_id</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Context.delete_buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Safely delete a buffer object belonging to this context.</p>
-<p>This method behaves similarly to <cite>delete_texture</cite>, though for
+<p>This method behaves similarly to <code class="xref py py-func docutils literal"><span class="pre">delete_texture()</span></code>, though for
 <code class="docutils literal"><span class="pre">glDeleteBuffers</span></code> instead of <code class="docutils literal"><span class="pre">glDeleteTextures</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -397,9 +393,8 @@ GL objects.</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 </dd></dl>
 
@@ -440,9 +435,8 @@ by an application.</p>
 <dt id="pyglet.gl.Context.get_info">
 <code class="descname">get_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.gl.Context.get_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the OpenGL information for this context.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

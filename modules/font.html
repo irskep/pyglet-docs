@@ -90,21 +90,9 @@ care of caching the vertices so the text can be rendered every frame with
 little performance penalty.</p>
 <p>Text can be word-wrapped by specifying a <cite>width</cite> to wrap into.  If the
 width is not specified, it gives the width of the text as laid out.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="sprite.html#pyglet.sprite.Sprite.x" title="pyglet.sprite.Sprite.x"><strong>x</strong></a> – X coordinate of the text</li>
-<li><a class="reference internal" href="image/index.html#pyglet.image.Texture.y" title="pyglet.image.Texture.y"><strong>y</strong></a> – Y coordinate of the text</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Deprecated. Use <cite>pyglet.text.Label</cite>.</p>
+<p class="last">Deprecated. Use <a class="reference internal" href="text/index.html#pyglet.text.Label" title="pyglet.text.Label"><code class="xref py py-class docutils literal"><span class="pre">pyglet.text.Label</span></code></a>.</p>
 </div>
 <dl class="method">
 <dt id="pyglet.font.Text.draw">
@@ -266,12 +254,14 @@ determined.</p>
 <dl class="attribute">
 <dt id="pyglet.font.Text.x">
 <code class="descname">x</code><a class="headerlink" href="#pyglet.font.Text.x" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>X coordinate of the text</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pyglet.font.Text.y">
 <code class="descname">y</code><a class="headerlink" href="#pyglet.font.Text.y" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Y coordinate of the text</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pyglet.font.Text.z">
@@ -289,13 +279,13 @@ call this method to tell pyglet that it exists.  You can supply
 either a filename or any file-like object.</p>
 <p>The font format is platform-dependent, but is typically a TrueType font
 file containing a single font face. Note that to use a font added with this method,
-you should pass the face name (not the file name) to <a class="reference internal" href="#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-meth docutils literal"><span class="pre">pyglet.font.load()</span></code></a> or any
+you should pass the face name (not the file name) to :meth:<a class="reference internal" href="#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.font.load()</span></code></a> or any
 other place where you normally specify a font.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>font</strong> (<em>str</em><em> or </em><a class="reference internal" href="resource.html#pyglet.resource.Loader.file" title="pyglet.resource.Loader.file"><em>file</em></a>) – Filename or file-like object to load fonts from.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>font</strong> (<em>str</em><em> or </em><em>file-like object</em>) – Filename or file-like object to load fonts from.</td>
 </tr>
 </tbody>
 </table>

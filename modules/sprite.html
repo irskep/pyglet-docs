@@ -96,7 +96,7 @@ image’s anchor (<a class="reference internal" href="image/index.html#pyglet.im
 <h2>Drawing multiple sprites<a class="headerlink" href="#drawing-multiple-sprites" title="Permalink to this headline">¶</a></h2>
 <p>Sprites can be “batched” together and drawn at once more quickly than if each
 of their <code class="docutils literal"><span class="pre">draw</span></code> methods were called individually.  The following example
-creates one hundred ball sprites and adds each of them to a <cite>Batch</cite>.  The
+creates one hundred ball sprites and adds each of them to a <a class="reference internal" href="graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a>.  The
 entire batch of sprites is then drawn in one call:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">batch</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">Batch</span><span class="p">()</span>
 
@@ -112,11 +112,10 @@ entire batch of sprites is then drawn in one call:</p>
 </div>
 <p>Sprites can be freely modified in any way even after being added to a batch,
 however a sprite can belong to at most one batch.  See the documentation for
-<cite>pyglet.graphics</cite> for more details on batched rendering, and grouping of
+<a class="reference internal" href="graphics/index.html#module-pyglet.graphics" title="pyglet.graphics"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.graphics</span></code></a> for more details on batched rendering, and grouping of
 sprites within batches.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 </div>
 <dl class="class">

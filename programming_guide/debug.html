@@ -27,8 +27,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="up" title="pyglet Programming Guide" href="index.html" />
-    <link rel="next" title="Advanced topics" href="advanced.html" />
+    <link rel="next" title="Environment settings" href="advanced.html" />
     <link rel="prev" title="pyglet options" href="options.html" /> 
   </head>
   <body>
@@ -42,14 +41,13 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="advanced.html" title="Advanced topics"
+          <a href="advanced.html" title="Environment settings"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="options.html" title="pyglet options"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -64,7 +62,7 @@
 application startup.  These were primarily developed to aid in debugging
 pyglet itself, however some of them may also prove useful for understanding
 and debugging pyglet applications.</p>
-<p>Each debug option is a key in the <cite>pyglet.options</cite> dictionary.  Options can be
+<p>Each debug option is a key in the <a class="reference internal" href="options.html#pyglet.options" title="pyglet.options"><code class="xref py py-attr docutils literal"><span class="pre">pyglet.options</span></code></a> dictionary.  Options can be
 set directly on the dictionary before any other modules are imported:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
 <span class="n">pyglet</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s1">&#39;debug_gl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
@@ -146,19 +144,19 @@ are set or unset with <code class="docutils literal"><span class="pre">1</span><
 </table>
 </div></blockquote>
 <p>The <code class="docutils literal"><span class="pre">debug_media</span></code> and <code class="docutils literal"><span class="pre">debug_font</span></code> options are used to debug the
-<code class="docutils literal"><span class="pre">pyglet.media</span></code> and <code class="docutils literal"><span class="pre">pyglet.font</span></code> modules, respectively.  Their behaviour
+<a class="reference internal" href="../modules/media.html#module-pyglet.media" title="pyglet.media"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.media</span></code></a> and <a class="reference internal" href="../modules/font.html#module-pyglet.font" title="pyglet.font"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.font</span></code></a> modules, respectively.  Their behaviour
 is platform-dependent and useful only for pyglet developers.</p>
 <p>The remaining debug options are detailed below.</p>
 <div class="section" id="debugging-opengl">
 <h2>Debugging OpenGL<a class="headerlink" href="#debugging-opengl" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">graphics_vbo</span></code> option enables the use of vertex buffer objects in
-<cite>pyglet.graphics</cite> (instead, only vertex arrays).  This is useful when
+<a class="reference internal" href="../modules/graphics/index.html#module-pyglet.graphics" title="pyglet.graphics"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.graphics</span></code></a> (instead, only vertex arrays).  This is useful when
 debugging the <code class="docutils literal"><span class="pre">graphics</span></code> module as well as isolating code for determining if
 a video driver is faulty.</p>
-<p>The <code class="docutils literal"><span class="pre">debug_graphics_batch</span></code> option causes all <cite>Batch</cite> objects to dump their
+<p>The <code class="docutils literal"><span class="pre">debug_graphics_batch</span></code> option causes all <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> objects to dump their
 rendering tree to standard output before drawing, after any change (so two
 drawings of the same tree will only dump once).  This is useful to debug
-applications making use of <cite>Group</cite> and <cite>Batch</cite> rendering.</p>
+applications making use of <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><code class="xref py py-class docutils literal"><span class="pre">Group</span></code></a> and <a class="reference internal" href="../modules/graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a> rendering.</p>
 <div class="section" id="error-checking">
 <h3>Error checking<a class="headerlink" href="#error-checking" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">debug_gl</span></code> option intercepts most OpenGL calls and calls <code class="docutils literal"><span class="pre">glGetError</span></code>
@@ -249,7 +247,7 @@ returned an error code, but the interception function does not check this.</p>
                         title="previous chapter">pyglet options</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="advanced.html"
-                        title="next chapter">Advanced topics</a></p>
+                        title="next chapter">Environment settings</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -274,14 +272,13 @@ returned an error code, but the interception function does not check this.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="advanced.html" title="Advanced topics"
+          <a href="advanced.html" title="Environment settings"
              >next</a> |</li>
         <li class="right" >
           <a href="options.html" title="pyglet options"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" >pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

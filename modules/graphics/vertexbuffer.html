@@ -77,11 +77,11 @@ efficient path for updating partial data within the buffer.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractBuffer.size" title="pyglet.graphics.vertexbuffer.AbstractBuffer.size"><strong>size</strong></a> – Size of buffer, in bytes</li>
-<li><a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractBuffer.ptr" title="pyglet.graphics.vertexbuffer.AbstractBuffer.ptr"><strong>ptr</strong></a> – Memory offset of the buffer, as used by the <code class="docutils literal"><span class="pre">glVertexPointer</span></code>
+<li><a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractBuffer.size" title="pyglet.graphics.vertexbuffer.AbstractBuffer.size"><strong>size</strong></a> (<em>int</em>) – Size of buffer, in bytes</li>
+<li><a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractBuffer.ptr" title="pyglet.graphics.vertexbuffer.AbstractBuffer.ptr"><strong>ptr</strong></a> (<em>int</em>) – Memory offset of the buffer, as used by the <code class="docutils literal"><span class="pre">glVertexPointer</span></code>
 family of functions</li>
-<li><strong>target</strong> – OpenGL buffer target, for example <code class="docutils literal"><span class="pre">GL_ARRAY_BUFFER</span></code></li>
-<li><strong>usage</strong> – OpenGL buffer usage, for example <code class="docutils literal"><span class="pre">GL_DYNAMIC_DRAW</span></code></li>
+<li><strong>target</strong> (<em>int</em>) – OpenGL buffer target, for example <code class="docutils literal"><span class="pre">GL_ARRAY_BUFFER</span></code></li>
+<li><strong>usage</strong> (<em>int</em>) – OpenGL buffer usage, for example <code class="docutils literal"><span class="pre">GL_DYNAMIC_DRAW</span></code></li>
 </ul>
 </td>
 </tr>
@@ -200,7 +200,7 @@ reflect the actual contents of the buffer.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>array</strong> – Array of data, of the type and count requested by
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>array</strong> (<em>ctypes array</em>) – Array of data, of the type and count requested by
 <a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractMappable.get_region" title="pyglet.graphics.vertexbuffer.AbstractMappable.get_region"><code class="xref py py-meth docutils literal"><span class="pre">get_region()</span></code></a>.</td>
 </tr>
 </tbody>
@@ -389,7 +389,7 @@ is done so by the video driver).  While this can improve memory usage and
 possibly performance, updates to the buffer are relatively slow.</p>
 <p>This class does not implement <a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractMappable" title="pyglet.graphics.vertexbuffer.AbstractMappable"><code class="xref py py-class docutils literal"><span class="pre">AbstractMappable</span></code></a>, and so has no
 <a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractMappable.get_region" title="pyglet.graphics.vertexbuffer.AbstractMappable.get_region"><code class="xref py py-meth docutils literal"><span class="pre">get_region()</span></code></a> method.  See 
-:py;class:<cite>MappableVertexBufferObject</cite> for a VBO class
+<a class="reference internal" href="#pyglet.graphics.vertexbuffer.MappableVertexBufferObject" title="pyglet.graphics.vertexbuffer.MappableVertexBufferObject"><code class="xref py py-class docutils literal"><span class="pre">MappableVertexBufferObject</span></code></a> for a VBO class
 that does implement <a class="reference internal" href="#pyglet.graphics.vertexbuffer.AbstractMappable.get_region" title="pyglet.graphics.vertexbuffer.AbstractMappable.get_region"><code class="xref py py-meth docutils literal"><span class="pre">get_region()</span></code></a>.</p>
 <dl class="method">
 <dt id="pyglet.graphics.vertexbuffer.VertexBufferObject.bind">

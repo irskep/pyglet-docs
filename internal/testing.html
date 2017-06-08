@@ -78,9 +78,9 @@ interaction, but they can take longer to run due to access to system resources.<
 <p>Interactive tests require the user to verify whether the test is successful and in some cases
 require the user to perform actions in order for the test to continue. These tests can take a
 long time to run.</p>
-<dl class="docutils">
-<dt>There are currently 3 types of interactive test cases:</dt>
-<dd><ul class="first last simple">
+<p>There are currently 3 types of interactive test cases:</p>
+<blockquote>
+<div><ul class="simple">
 <li>tests that can only run in fully interactive mode as they require the user to perform an
 action in order for the test to continue. These tests are decorated with
 <code class="xref py py-func docutils literal"><span class="pre">requires_user_action()</span></code>.</li>
@@ -90,8 +90,7 @@ pass or fail. These tests are docorated with
 <li>tests that can run without user interaction and that can compare results to screenshots from
 a previous run to determine whether they pass or fail. This is the default type.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="running-tests">
@@ -112,9 +111,9 @@ supported Python versions.</p>
 <span class="n">py</span><span class="o">.</span><span class="n">test</span> <span class="n">tests</span><span class="o">/</span><span class="n">interactive</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>For the interactive test suites, there are some extra command line switches for py.test:</dt>
-<dd><ul class="first last simple">
+<p>For the interactive test suites, there are some extra command line switches for py.test:</p>
+<blockquote>
+<div><ul class="simple">
 <li><code class="docutils literal"><span class="pre">--non-interactive</span></code>: Only run the interactive tests that can only verify themselves using
 screenshots. The screenshots are created when you run the tests in interactive mode, so you
 will need to run the tests interactively once, before you can use this option;</li>
@@ -122,8 +121,7 @@ will need to run the tests interactively once, before you can use this option;</
 Not all tests can run without intervention, so these tests will still be skipped. Mostly
 useful to quickly check changes in code. Not all tests perform complete validation.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </div>
 <div class="section" id="writing-tests">
 <h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">¶</a></h2>

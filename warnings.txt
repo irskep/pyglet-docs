@@ -1,5 +1,1 @@
-[31mWARNING: while setting up extension ext.sphinx_mod: directive 'autofunction' is already registered, it will be overridden[39;49;00m
-[31mWARNING: The config value `autosummary_generate' has type `bool', defaults to `list'.[39;49;00m
-[31m/Users/steve/dev/3p/pyglet/pyglet/gl/base.py:docstring of pyglet.gl.Config.get_gl_attributes:: WARNING: more than one target found for cross-reference 'value': pyglet.input.Button.value, pyglet.input.RelativeAxis.value, pyglet.input.Control.value[39;49;00m
-[31m/Users/steve/dev/3p/pyglet/pyglet/window/__init__.py:docstring of pyglet.window.Window:: WARNING: more than one target found for cross-reference 'has_exit': pyglet.app.EventLoop.has_exit, pyglet.window.Window.has_exit[39;49;00m
-[31mWARNING: favicon file 'favicon.ico' does not exist[39;49;00m
+WARNING: favicon file 'favicon.ico' does not exist

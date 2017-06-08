@@ -27,7 +27,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="next" title="pyglet.resource" href="resource.html" />
+    <link rel="next" title="pyglet.media.procedural" href="media_procedural.html" />
     <link rel="prev" title="pyglet.input" href="input.html" /> 
   </head>
   <body>
@@ -41,7 +41,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="resource.html" title="pyglet.resource"
+          <a href="media_procedural.html" title="pyglet.media.procedural"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="input.html" title="pyglet.input"
@@ -56,9 +56,16 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="module-pyglet.media">
-<span id="pyglet-media"></span><h1>pyglet.media<a class="headerlink" href="#module-pyglet.media" title="Permalink to this headline">¶</a></h1>
-<p>Audio and video playback.</p>
+  <div class="section" id="pyglet-media">
+<h1>pyglet.media<a class="headerlink" href="#pyglet-media" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">Submodules</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="media_procedural.html">pyglet.media.procedural</a></li>
+</ul>
+</div>
+<p class="rubric">Details</p>
+<span class="target" id="module-pyglet.media"></span><p>Audio and video playback.</p>
 <p>pyglet can play WAV files, and if AVbin is installed, many other audio and
 video formats.</p>
 <p>Playback is handled by the <code class="xref py py-class docutils literal"><span class="pre">Player</span></code> class, which reads raw data from
@@ -75,7 +82,7 @@ associated with a single player by “queuing” it:</p>
 </pre></div>
 </div>
 <p>Use the <code class="xref py py-class docutils literal"><span class="pre">Player</span></code> to control playback.</p>
-<p>If the source contains video, the <a class="reference internal" href="#pyglet.media.Source.video_format" title="pyglet.media.Source.video_format"><code class="xref py py-meth docutils literal"><span class="pre">Source.video_format()</span></code></a> attribute will
+<p>If the source contains video, the <code class="xref py py-meth docutils literal"><span class="pre">Source.video_format()</span></code> attribute will
 be non-None, and the <code class="xref py py-attr docutils literal"><span class="pre">Player.texture</span></code> attribute will contain the
 current video image synchronised to the audio.</p>
 <p>Decoding sounds can be processor-intensive and may introduce latency,
@@ -333,7 +340,7 @@ positioned).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>players</strong> – Players in this group.</td>
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>players</strong> (<em>list of Player</em>) – Players in this group.</td>
 </tr>
 </tbody>
 </table>
@@ -363,10 +370,10 @@ format of data provided by the source.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>channels</strong> – The number of channels: 1 for mono or 2 for stereo (pyglet does
+<li><strong>channels</strong> (<em>int</em>) – The number of channels: 1 for mono or 2 for stereo (pyglet does
 not yet support surround-sound sources).</li>
-<li><strong>sample_size</strong> – Bits per sample; only 8 or 16 are supported.</li>
-<li><strong>sample_rate</strong> – Samples per second (in Hertz).</li>
+<li><strong>sample_size</strong> (<em>int</em>) – Bits per sample; only 8 or 16 are supported.</li>
+<li><strong>sample_rate</strong> (<em>int</em>) – Samples per second (in Hertz).</li>
 </ul>
 </td>
 </tr>
@@ -389,13 +396,13 @@ application to perform this scaling.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="text/layout.html#pyglet.text.layout.TextLayout.width" title="pyglet.text.layout.TextLayout.width"><strong>width</strong></a> – Width of video image, in pixels.</li>
-<li><a class="reference internal" href="sprite.html#pyglet.sprite.Sprite.height" title="pyglet.sprite.Sprite.height"><strong>height</strong></a> – Height of video image, in pixels.</li>
-<li><strong>sample_aspect</strong> – Aspect ratio (width over height) of a single video pixel.</li>
-<li><strong>frame_rate</strong> – Frame rate (frames per second) of the video.
+<li><a class="reference internal" href="font.html#pyglet.font.Text.width" title="pyglet.font.Text.width"><strong>width</strong></a> (<em>int</em>) – Width of video image, in pixels.</li>
+<li><a class="reference internal" href="sprite.html#pyglet.sprite.Sprite.height" title="pyglet.sprite.Sprite.height"><strong>height</strong></a> (<em>int</em>) – Height of video image, in pixels.</li>
+<li><strong>sample_aspect</strong> (<em>float</em>) – Aspect ratio (width over height) of a single video pixel.</li>
+<li><strong>frame_rate</strong> (<em>float</em>) – Frame rate (frames per second) of the video.
 AVbin 8 or later is required, otherwise the frame rate will be
 <code class="docutils literal"><span class="pre">None</span></code>.
-<strong>Since:</strong> pyglet 1.2.</li>
+.. versionadded:: 1.2.</li>
 </ul>
 </td>
 </tr>
@@ -413,11 +420,11 @@ AVbin 8 or later is required, otherwise the frame rate will be
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="image/index.html#pyglet.image.ImageData.data" title="pyglet.image.ImageData.data"><strong>data</strong></a> – Sample data.</li>
-<li><strong>length</strong> – Size of sample data, in bytes.</li>
-<li><strong>timestamp</strong> – Time of the first sample, in seconds.</li>
-<li><a class="reference internal" href="#pyglet.media.Source.duration" title="pyglet.media.Source.duration"><strong>duration</strong></a> – Total data duration, in seconds.</li>
-<li><strong>events</strong> – List of events contained within this packet.  Events are
+<li><a class="reference internal" href="image/index.html#pyglet.image.ImageDataRegion.data" title="pyglet.image.ImageDataRegion.data"><strong>data</strong></a> (<em>str</em><em> or </em><em>ctypes array</em><em> or </em><em>pointer</em>) – Sample data.</li>
+<li><strong>length</strong> (<em>int</em>) – Size of sample data, in bytes.</li>
+<li><strong>timestamp</strong> (<em>float</em>) – Time of the first sample, in seconds.</li>
+<li><a class="reference internal" href="#pyglet.media.Source.duration" title="pyglet.media.Source.duration"><strong>duration</strong></a> (<em>float</em>) – Total data duration, in seconds.</li>
+<li><strong>events</strong> (<em>list of MediaEvent</em>) – List of events contained within this packet.  Events are
 timestamped relative to this audio packet.</li>
 </ul>
 </td>
@@ -436,22 +443,21 @@ timestamped relative to this audio packet.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>title</strong> – Title</li>
-<li><strong>author</strong> – Author</li>
-<li><strong>copyright</strong> – Copyright statement</li>
-<li><strong>comment</strong> – Comment</li>
-<li><strong>album</strong> – Album name</li>
-<li><strong>year</strong> – Year</li>
-<li><strong>track</strong> – Track number</li>
-<li><strong>genre</strong> – Genre</li>
+<li><strong>title</strong> (<em>str</em>) – Title</li>
+<li><strong>author</strong> (<em>str</em>) – Author</li>
+<li><strong>copyright</strong> (<em>str</em>) – Copyright statement</li>
+<li><strong>comment</strong> (<em>str</em>) – Comment</li>
+<li><strong>album</strong> (<em>str</em>) – Album name</li>
+<li><strong>year</strong> (<em>int</em>) – Year</li>
+<li><strong>track</strong> (<em>int</em>) – Track number</li>
+<li><strong>genre</strong> (<em>str</em>) – Genre</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 
@@ -464,13 +470,13 @@ timestamped relative to this audio packet.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference internal" href="#pyglet.media.Source.audio_format" title="pyglet.media.Source.audio_format"><strong>audio_format</strong></a> – Format of the audio in this source, or None if the source is
+<li><strong>audio_format</strong> (<a class="reference internal" href="#pyglet.media.AudioFormat" title="pyglet.media.AudioFormat"><em>AudioFormat</em></a>) – Format of the audio in this source, or None if the source is
 silent.</li>
-<li><a class="reference internal" href="#pyglet.media.Source.video_format" title="pyglet.media.Source.video_format"><strong>video_format</strong></a> – Format of the video in this source, or None if there is no
+<li><strong>video_format</strong> (<a class="reference internal" href="#pyglet.media.VideoFormat" title="pyglet.media.VideoFormat"><em>VideoFormat</em></a>) – Format of the video in this source, or None if there is no
 video.</li>
-<li><a class="reference internal" href="info.html#module-pyglet.info" title="pyglet.info"><strong>info</strong></a> – Source metadata such as title, artist, etc; or None if the
+<li><a class="reference internal" href="info.html#module-pyglet.info" title="pyglet.info"><strong>info</strong></a> (<a class="reference internal" href="#pyglet.media.SourceInfo" title="pyglet.media.SourceInfo"><em>SourceInfo</em></a>) – Source metadata such as title, artist, etc; or None if the
 information is not available.
-<strong>Since:</strong> pyglet 1.2</li>
+.. versionadded:: 1.2</li>
 </ul>
 </td>
 </tr>
@@ -479,16 +485,15 @@ information is not available.
 <dl class="method">
 <dt id="pyglet.media.Source.get_animation">
 <code class="descname">get_animation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.media.Source.get_animation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Import all video frames into memory as an <cite>Animation</cite>.</p>
+<dd><p>Import all video frames into memory as an <a class="reference internal" href="image/index.html#pyglet.image.Animation" title="pyglet.image.Animation"><code class="xref py py-class docutils literal"><span class="pre">Animation</span></code></a>.</p>
 <p>An empty animation will be returned if the source has no video.
 Otherwise, the animation will contain all unplayed video frames (the
 entire source, if it has not been queued on a player).  After creating
 the animation, the source will be at EOS.</p>
 <p>This method is unsuitable for videos running longer than a
 few seconds.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -526,9 +531,8 @@ data.</td>
 <p>Video frames may share memory: the previous frame may be invalidated
 or corrupted when this method is called unless the application has
 made a copy of it.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -547,9 +551,8 @@ could not be decoded or there are no more video frames.</td>
 <dt id="pyglet.media.Source.get_next_video_timestamp">
 <code class="descname">get_next_video_timestamp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.media.Source.get_next_video_timestamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the timestamp of the next video frame.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -587,11 +590,6 @@ this source and plays it immediately.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pyglet.media.Source.audio_format">
-<code class="descname">audio_format</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.media.Source.audio_format" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
 <dt id="pyglet.media.Source.duration">
 <code class="descname">duration</code><a class="headerlink" href="#pyglet.media.Source.duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The length of the source, in seconds.</p>
@@ -607,16 +605,6 @@ is None.</p>
 </tbody>
 </table>
 </dd></dl>
-
-<dl class="attribute">
-<dt id="pyglet.media.Source.info">
-<code class="descname">info</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.media.Source.info" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="pyglet.media.Source.video_format">
-<code class="descname">video_format</code><em class="property"> = None</em><a class="headerlink" href="#pyglet.media.Source.video_format" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -635,7 +623,7 @@ queued once.</p>
 <dt id="pyglet.media.StreamingSource.is_queued">
 <code class="descname">is_queued</code><a class="headerlink" href="#pyglet.media.StreamingSource.is_queued" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this source has been queued
-on a <cite>Player</cite> yet.</p>
+on a <a class="reference internal" href="#pyglet.media.player.Player" title="pyglet.media.player.Player"><code class="xref py py-class docutils literal"><span class="pre">Player</span></code></a> yet.</p>
 <p>Read-only.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -671,7 +659,7 @@ sources must share the same audio format.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><a class="reference internal" href="#pyglet.media.Source.audio_format" title="pyglet.media.Source.audio_format"><strong>audio_format</strong></a> – Required audio format for queued sources.</td>
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>audio_format</strong> (<a class="reference internal" href="#pyglet.media.AudioFormat" title="pyglet.media.AudioFormat"><em>AudioFormat</em></a>) – Required audio format for queued sources.</td>
 </tr>
 </tbody>
 </table>
@@ -787,6 +775,84 @@ frames.</td>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pyglet.media.listener.AbstractListener">
+<em class="property">class </em><code class="descname">AbstractListener</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener" title="Permalink to this definition">¶</a></dt>
+<dd><p>The listener properties for positional audio.</p>
+<p>You can obtain the singleton instance of this class by calling
+<cite>AbstractAudioDriver.get_listener</cite>.</p>
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.forward_orientation">
+<code class="descname">forward_orientation</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.forward_orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A vector giving the direction the
+listener is facing.</p>
+<p>The orientation is given as a tuple of floats (x, y, z), and has
+no unit.  The forward orientation should be orthagonal to the
+up orientation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">3-tuple of float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.position">
+<code class="descname">position</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>The position of the listener in 3D space.</p>
+<p>The position is given as a tuple of floats (x, y, z).  The unit
+defaults to meters, but can be modified with the listener
+properties.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">3-tuple of float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.up_orientation">
+<code class="descname">up_orientation</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.up_orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A vector giving the “up” orientation
+of the listener.</p>
+<p>The orientation is given as a tuple of floats (x, y, z), and has
+no unit.  The up orientation should be orthagonal to the
+forward orientation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">3-tuple of float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyglet.media.listener.AbstractListener.volume">
+<code class="descname">volume</code><a class="headerlink" href="#pyglet.media.listener.AbstractListener.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>The master volume for sound playback.</p>
+<p>All sound volumes are multiplied by this master volume before being
+played.  A value of 0 will silence playback (but still consume
+resources).  The nominal volume is 1.0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
@@ -794,6 +860,31 @@ frames.</td>
 <dt id="pyglet.media.get_audio_driver">
 <code class="descname">get_audio_driver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.media.get_audio_driver" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="pyglet.media.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>filename</em>, <em>file=None</em>, <em>streaming=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.media.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a source from a file.</p>
+<p>Currently the <cite>file</cite> argument is not supported; media files must exist
+as real paths.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filename</strong> (<em>str</em>) – Filename of the media file to load.</li>
+<li><strong>file</strong> (<em>file-like object</em>) – Not yet supported.</li>
+<li><strong>streaming</strong> (<em>bool</em>) – If False, a <a class="reference internal" href="#pyglet.media.StaticSource" title="pyglet.media.StaticSource"><code class="xref py py-class docutils literal"><span class="pre">StaticSource</span></code></a> will be returned; otherwise (default) a
+<cite>StreamingSource</cite> is created.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><cite>Source</cite></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </div>
 <div class="section" id="module-pyglet.media.exceptions">
@@ -839,8 +930,8 @@ frames.</td>
   <p class="topless"><a href="input.html"
                         title="previous chapter">pyglet.input</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="resource.html"
-                        title="next chapter">pyglet.resource</a></p>
+  <p class="topless"><a href="media_procedural.html"
+                        title="next chapter">pyglet.media.procedural</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -865,7 +956,7 @@ frames.</td>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="resource.html" title="pyglet.resource"
+          <a href="media_procedural.html" title="pyglet.media.procedural"
              >next</a> |</li>
         <li class="right" >
           <a href="input.html" title="pyglet.input"

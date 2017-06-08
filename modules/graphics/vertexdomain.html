@@ -115,7 +115,7 @@ that list will be drawn.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>mode</strong> (<em>int</em>) – OpenGL drawing mode, e.g. <code class="docutils literal"><span class="pre">GL_POINTS</span></code>, <code class="docutils literal"><span class="pre">GL_LINES</span></code>, etc.</li>
-<li><strong>vertex_list</strong> – Vertex list to draw, or <code class="docutils literal"><span class="pre">None</span></code> for all lists in this domain.</li>
+<li><strong>vertex_list</strong> (<a class="reference internal" href="#pyglet.graphics.vertexdomain.IndexedVertexList" title="pyglet.graphics.vertexdomain.IndexedVertexList"><em>IndexedVertexList</em></a>) – Vertex list to draw, or <code class="docutils literal"><span class="pre">None</span></code> for all lists in this domain.</li>
 </ul>
 </td>
 </tr>
@@ -172,7 +172,7 @@ to change parent state of some vertices).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>domain</strong> – Indexed domain to migrate this vertex list to.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>domain</strong> (<a class="reference internal" href="#pyglet.graphics.vertexdomain.IndexedVertexDomain" title="pyglet.graphics.vertexdomain.IndexedVertexDomain"><em>IndexedVertexDomain</em></a>) – Indexed domain to migrate this vertex list to.</td>
 </tr>
 </tbody>
 </table>
@@ -240,7 +240,7 @@ that list will be drawn.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>mode</strong> (<em>int</em>) – OpenGL drawing mode, e.g. <code class="docutils literal"><span class="pre">GL_POINTS</span></code>, <code class="docutils literal"><span class="pre">GL_LINES</span></code>, etc.</li>
-<li><strong>vertex_list</strong> – Vertex list to draw, or <code class="docutils literal"><span class="pre">None</span></code> for all lists in this domain.</li>
+<li><strong>vertex_list</strong> (<a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexList" title="pyglet.graphics.vertexdomain.VertexList"><em>VertexList</em></a>) – Vertex list to draw, or <code class="docutils literal"><span class="pre">None</span></code> for all lists in this domain.</li>
 </ul>
 </td>
 </tr>
@@ -313,7 +313,7 @@ parent state of some vertices).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>domain</strong> – Domain to migrate this vertex list to.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>domain</strong> (<a class="reference internal" href="#pyglet.graphics.vertexdomain.VertexDomain" title="pyglet.graphics.vertexdomain.VertexDomain"><em>VertexDomain</em></a>) – Domain to migrate this vertex list to.</td>
 </tr>
 </tbody>
 </table>

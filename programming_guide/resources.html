@@ -27,7 +27,6 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="up" title="pyglet Programming Guide" href="index.html" />
     <link rel="next" title="pyglet options" href="options.html" />
     <link rel="prev" title="Sound and video" href="media.html" /> 
   </head>
@@ -48,8 +47,7 @@
           <a href="media.html" title="Sound and video"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -59,7 +57,7 @@
           <div class="body">
             
   <div class="section" id="application-resources">
-<h1>Application resources<a class="headerlink" href="#application-resources" title="Permalink to this headline">¶</a></h1>
+<span id="guide-resources"></span><h1>Application resources<a class="headerlink" href="#application-resources" title="Permalink to this headline">¶</a></h1>
 <p>Previous sections in this guide have described how to load images, media and
 text documents using pyglet.  Applications also usually have the need to load
 other data files: for example, level descriptions in a game, internationalised
@@ -91,7 +89,7 @@ file instead of the working directory:</p>
 </div>
 <p>This, besides being tedious to write, still does not work for resources within
 ZIP files, and can be troublesome in projects that span multiple packages.</p>
-<p>The <cite>pyglet.resource</cite> module solves this problem elegantly:</p>
+<p>The <a class="reference internal" href="../modules/resource.html#module-pyglet.resource" title="pyglet.resource"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.resource</span></code></a> module solves this problem elegantly:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;logo.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -99,7 +97,7 @@ ZIP files, and can be troublesome in projects that span multiple packages.</p>
 the behaviour can be customised.</p>
 <div class="section" id="loading-resources">
 <h2>Loading resources<a class="headerlink" href="#loading-resources" title="Permalink to this headline">¶</a></h2>
-<p>Use the <cite>pyglet.resource</cite> module when files shipped with the application need
+<p>Use the <a class="reference internal" href="../modules/resource.html#module-pyglet.resource" title="pyglet.resource"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.resource</span></code></a> module when files shipped with the application need
 to be loaded.  For example, instead of writing:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">)</span>
 </pre></div>
@@ -126,70 +124,70 @@ functions.</p>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">open</span></code></td>
-<td><cite>pyglet.resource.file</cite></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.file" title="pyglet.resource.file"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.file()</span></code></a></td>
 <td>File-like object</td>
 </tr>
-<tr class="row-odd"><td><cite>pyglet.image.load</cite></td>
-<td><cite>pyglet.resource.image</cite></td>
-<td><cite>Texture</cite> or <cite>TextureRegion</cite></td>
+<tr class="row-odd"><td><a class="reference internal" href="../modules/image/index.html#pyglet.image.load" title="pyglet.image.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.image.load()</span></code></a></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.image" title="pyglet.resource.image"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.image()</span></code></a></td>
+<td><a class="reference internal" href="../modules/image/index.html#pyglet.image.Texture" title="pyglet.image.Texture"><code class="xref py py-class docutils literal"><span class="pre">Texture</span></code></a> or <a class="reference internal" href="../modules/image/index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a></td>
 </tr>
-<tr class="row-even"><td><cite>pyglet.image.load</cite></td>
-<td><cite>pyglet.resource.texture</cite></td>
-<td><cite>Texture</cite></td>
+<tr class="row-even"><td><a class="reference internal" href="../modules/image/index.html#pyglet.image.load" title="pyglet.image.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.image.load()</span></code></a></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.texture" title="pyglet.resource.texture"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.texture()</span></code></a></td>
+<td><a class="reference internal" href="../modules/image/index.html#pyglet.image.Texture" title="pyglet.image.Texture"><code class="xref py py-class docutils literal"><span class="pre">Texture</span></code></a></td>
 </tr>
 <tr class="row-odd"><td><cite>pyglet.image.load_animation</cite></td>
-<td><cite>pyglet.resource.animation</cite></td>
-<td><cite>Animation</cite></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.animation" title="pyglet.resource.animation"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.animation()</span></code></a></td>
+<td><a class="reference internal" href="../modules/image/index.html#pyglet.image.Animation" title="pyglet.image.Animation"><code class="xref py py-class docutils literal"><span class="pre">Animation</span></code></a></td>
 </tr>
-<tr class="row-even"><td><cite>pyglet.media.load</cite></td>
-<td><cite>pyglet.resource.media</cite></td>
+<tr class="row-even"><td><a class="reference internal" href="../modules/media.html#pyglet.media.load" title="pyglet.media.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.media.load()</span></code></a></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.media" title="pyglet.resource.media"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.media()</span></code></a></td>
 <td><cite>Source</cite></td>
 </tr>
 <tr class="row-odd"><td><div class="first last line-block">
-<div class="line"><cite>pyglet.text.load</cite></div>
+<div class="line"><a class="reference internal" href="../modules/text/index.html#pyglet.text.load" title="pyglet.text.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.text.load()</span></code></a></div>
 <div class="line">mimetype = <code class="docutils literal"><span class="pre">text/plain</span></code></div>
 </div>
 </td>
-<td><cite>pyglet.resource.text</cite></td>
-<td><cite>UnformattedDocument</cite></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.text" title="pyglet.resource.text"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.text()</span></code></a></td>
+<td><a class="reference internal" href="../modules/text/document.html#pyglet.text.document.UnformattedDocument" title="pyglet.text.document.UnformattedDocument"><code class="xref py py-class docutils literal"><span class="pre">UnformattedDocument</span></code></a></td>
 </tr>
 <tr class="row-even"><td><div class="first last line-block">
-<div class="line"><cite>pyglet.text.load</cite></div>
+<div class="line"><a class="reference internal" href="../modules/text/index.html#pyglet.text.load" title="pyglet.text.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.text.load()</span></code></a></div>
 <div class="line">mimetype = <code class="docutils literal"><span class="pre">text/html</span></code></div>
 </div>
 </td>
-<td><cite>pyglet.resource.html</cite></td>
-<td><cite>FormattedDocument</cite></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.html" title="pyglet.resource.html"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.html()</span></code></a></td>
+<td><a class="reference internal" href="../modules/text/document.html#pyglet.text.document.FormattedDocument" title="pyglet.text.document.FormattedDocument"><code class="xref py py-class docutils literal"><span class="pre">FormattedDocument</span></code></a></td>
 </tr>
 <tr class="row-odd"><td><div class="first last line-block">
-<div class="line"><cite>pyglet.text.load</cite></div>
+<div class="line"><a class="reference internal" href="../modules/text/index.html#pyglet.text.load" title="pyglet.text.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.text.load()</span></code></a></div>
 <div class="line">mimetype = <code class="docutils literal"><span class="pre">text/vnd.pyglet-attributed</span></code></div>
 </div>
 </td>
-<td><cite>pyglet.resource.attributed</cite></td>
-<td><cite>FormattedDocument</cite></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.attributed" title="pyglet.resource.attributed"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.attributed()</span></code></a></td>
+<td><a class="reference internal" href="../modules/text/document.html#pyglet.text.document.FormattedDocument" title="pyglet.text.document.FormattedDocument"><code class="xref py py-class docutils literal"><span class="pre">FormattedDocument</span></code></a></td>
 </tr>
-<tr class="row-even"><td><cite>pyglet.font.add_file</cite></td>
-<td><cite>pyglet.resource.add_font</cite></td>
+<tr class="row-even"><td><a class="reference internal" href="../modules/font.html#pyglet.font.add_file" title="pyglet.font.add_file"><code class="xref py py-func docutils literal"><span class="pre">pyglet.font.add_file()</span></code></a></td>
+<td><a class="reference internal" href="../modules/resource.html#pyglet.resource.add_font" title="pyglet.resource.add_font"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.add_font()</span></code></a></td>
 <td><code class="docutils literal"><span class="pre">None</span></code></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
-<p><cite>pyglet.resource.texture</cite> is for loading stand-alone textures, and would be
+<p><a class="reference internal" href="../modules/resource.html#pyglet.resource.texture" title="pyglet.resource.texture"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.texture()</span></code></a> is for loading stand-alone textures, and would be
 required when using the texture for a 3D model.</p>
-<p><cite>pyglet.resource.image</cite> is optimised for loading sprite-like images that can
+<p><a class="reference internal" href="../modules/resource.html#pyglet.resource.image" title="pyglet.resource.image"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.image()</span></code></a> is optimised for loading sprite-like images that can
 have their texture coordinates adjusted.  The resource module attempts to pack
 small images into larger textures (called an atlas) for efficient rendering
-(which is why the return type of this function can be <cite>TextureRegion</cite>).</p>
+(which is why the return type of this function can be <a class="reference internal" href="../modules/image/index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a>).</p>
 <div class="section" id="resource-locations">
 <h3>Resource locations<a class="headerlink" href="#resource-locations" title="Permalink to this headline">¶</a></h3>
 <p>Some resource files reference other files by name.  For example, an HTML
 document can contain <code class="docutils literal"><span class="pre">&lt;img</span> <span class="pre">src=&quot;image.png&quot;</span> <span class="pre">/&gt;</span></code> elements.  In this case your
 application needs to locate <code class="docutils literal"><span class="pre">image.png</span></code> relative to the original HTML file.</p>
-<p>Use <cite>pyglet.resource.location</cite> to get a <cite>Location</cite> object describing the
+<p>Use <a class="reference internal" href="../modules/resource.html#pyglet.resource.location" title="pyglet.resource.location"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.location()</span></code></a> to get a <a class="reference internal" href="../modules/resource.html#pyglet.resource.Location" title="pyglet.resource.Location"><code class="xref py py-class docutils literal"><span class="pre">Location</span></code></a> object describing the
 location of an application resource.  This location might be a file system
-directory or a directory within a ZIP file.  The <cite>Location</cite> object can
+directory or a directory within a ZIP file.  The <a class="reference internal" href="../modules/resource.html#pyglet.resource.Location" title="pyglet.resource.Location"><code class="xref py py-class docutils literal"><span class="pre">Location</span></code></a> object can
 directly open files by name, so your application does not need to distinguish
 between these cases.</p>
 <p>In the following example, a <code class="docutils literal"><span class="pre">thumbnails.txt</span></code> file is assumed to contain a
@@ -212,9 +210,9 @@ appear elsewhere on the resource path.</p>
 <div class="section" id="specifying-the-resource-path">
 <h2>Specifying the resource path<a class="headerlink" href="#specifying-the-resource-path" title="Permalink to this headline">¶</a></h2>
 <p>By default, only the script home directory is searched (the directory
-containing the <code class="docutils literal"><span class="pre">__main__</span></code> module).  You can set <cite>pyglet.resource.path</cite> to a
+containing the <code class="docutils literal"><span class="pre">__main__</span></code> module).  You can set <a class="reference internal" href="../modules/resource.html#pyglet.resource.path" title="pyglet.resource.path"><code class="xref py py-attr docutils literal"><span class="pre">pyglet.resource.path</span></code></a> to a
 list of locations to search in order.  This list is indexed, so after
-modifying it you will need to call <cite>pyglet.resource.reindex</cite>.</p>
+modifying it you will need to call <a class="reference internal" href="../modules/resource.html#pyglet.resource.reindex" title="pyglet.resource.reindex"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.reindex()</span></code></a>.</p>
 <p>Each item in the path list is either a path relative to the script home, or
 the name of a Python module preceded with an ampersand (<code class="docutils literal"><span class="pre">&#64;</span></code>).  For example,
 if you would like to package all your resources in a <code class="docutils literal"><span class="pre">res</span></code> directory:</p>
@@ -240,19 +238,19 @@ following example uses the directory containing the hypothetical
 </div>
 <div class="section" id="multiple-loaders">
 <h2>Multiple loaders<a class="headerlink" href="#multiple-loaders" title="Permalink to this headline">¶</a></h2>
-<p>A <cite>Loader</cite> encapsulates a complete resource path and cache.  This lets your
+<p>A <a class="reference internal" href="../modules/resource.html#pyglet.resource.Loader" title="pyglet.resource.Loader"><code class="xref py py-class docutils literal"><span class="pre">Loader</span></code></a> encapsulates a complete resource path and cache.  This lets your
 application cleanly separate resource loading of different modules.  Loaders
 are constructed for a given search path, and exposes the same methods as the
-global <cite>pyglet.resource</cite> module functions.</p>
+global <a class="reference internal" href="../modules/resource.html#module-pyglet.resource" title="pyglet.resource"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.resource</span></code></a> module functions.</p>
 <p>For example, if a module needs to load its own graphics but does not want to
 interfere with the rest of the application’s resource loading, it would create
-its own <cite>Loader</cite> with a local search path:</p>
+its own <a class="reference internal" href="../modules/resource.html#pyglet.resource.Loader" title="pyglet.resource.Loader"><code class="xref py py-class docutils literal"><span class="pre">Loader</span></code></a> with a local search path:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">loader</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">Loader</span><span class="p">([</span><span class="s1">&#39;@&#39;</span> <span class="o">+</span> <span class="vm">__name__</span><span class="p">])</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">&#39;logo.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This is particularly suitable for “plugin” modules.</p>
-<p>You can also use a <cite>Loader</cite> instance to load a set of resources relative to
+<p>You can also use a <a class="reference internal" href="../modules/resource.html#pyglet.resource.Loader" title="pyglet.resource.Loader"><code class="xref py py-class docutils literal"><span class="pre">Loader</span></code></a> instance to load a set of resources relative to
 some user-specified document directory.  The following example creates a
 loader for a directory specified on the command line:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -261,7 +259,7 @@ loader for a directory specified on the command line:</p>
 </pre></div>
 </div>
 <p>This is the only way that absolute directories and resources not bundled with
-an application should be used with <cite>pyglet.resource</cite>.</p>
+an application should be used with <a class="reference internal" href="../modules/resource.html#module-pyglet.resource" title="pyglet.resource"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.resource</span></code></a>.</p>
 </div>
 <div class="section" id="saving-user-preferences">
 <h2>Saving user preferences<a class="headerlink" href="#saving-user-preferences" title="Permalink to this headline">¶</a></h2>
@@ -269,7 +267,7 @@ an application should be used with <cite>pyglet.resource</cite>.</p>
 within ZIP files, it is usually not feasible to save user preferences, high
 score lists, and so on within the application directory (or worse, the working
 directory).</p>
-<p>The <cite>pyglet.resource.get_settings_path</cite> function returns a directory suitable
+<p>The <a class="reference internal" href="../modules/resource.html#pyglet.resource.get_settings_path" title="pyglet.resource.get_settings_path"><code class="xref py py-func docutils literal"><span class="pre">pyglet.resource.get_settings_path()</span></code></a> function returns a directory suitable
 for writing arbitrary user-centric data.  The directory used follows the
 operating system’s convention:</p>
 <ul class="simple">
@@ -351,8 +349,7 @@ score list file for a game called “SuperGame” into the settings directory:</
           <a href="media.html" title="Sound and video"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" >pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

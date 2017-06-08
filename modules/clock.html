@@ -83,7 +83,7 @@ taking the reciprocal of <code class="docutils literal"><span class="pre">dt</sp
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">clock</span><span class="o">.</span><span class="n">set_fps_limit</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This causes <cite>clock</cite> to sleep during each <cite>tick</cite> in an attempt to keep the
+<p>This causes <a class="reference internal" href="#pyglet.clock.Clock" title="pyglet.clock.Clock"><code class="xref py py-class docutils literal"><span class="pre">Clock</span></code></a> to sleep during each <cite>tick</cite> in an attempt to keep the
 number of ticks (frames) per second below 60.</p>
 <p>The implementation uses platform-dependent high-resolution sleep functions
 to achieve better accuracy with busy-waiting than would be possible using
@@ -138,7 +138,7 @@ within the __init__ method.</p>
 </div>
 <div class="section" id="using-multiple-clocks">
 <h2>Using multiple clocks<a class="headerlink" href="#using-multiple-clocks" title="Permalink to this headline">¶</a></h2>
-<p>The clock functions are all relayed to an instance of <cite>Clock</cite> which is
+<p>The clock functions are all relayed to an instance of <a class="reference internal" href="#pyglet.clock.Clock" title="pyglet.clock.Clock"><code class="xref py py-class docutils literal"><span class="pre">Clock</span></code></a> which is
 initialised with the module.  You can get this instance to use directly:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">clk</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">get_default</span><span class="p">()</span>
 </pre></div>
@@ -161,9 +161,8 @@ functions.</p>
 <dt id="pyglet.clock.Clock.call_scheduled_functions">
 <code class="descname">call_scheduled_functions</code><span class="sig-paren">(</span><em>dt</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.clock.Clock.call_scheduled_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call scheduled functions that elapsed on the last <cite>update_time</cite>.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -246,9 +245,8 @@ if there is no event scheduled.</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 </dd></dl>
 
@@ -305,7 +303,7 @@ events.</p>
 clock will move the interval out of phase with other scheduled
 functions so as to distribute CPU more load evenly over time.</p>
 <p>This is useful for functions that need to be called regularly,
-but not relative to the initial start time.  <cite>pyglet.media</cite>
+but not relative to the initial start time.  <a class="reference internal" href="media.html#module-pyglet.media" title="pyglet.media"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.media</span></code></a>
 does this for scheduling audio buffer updates, which need to occur
 regularly – if all audio updates are scheduled at the same time
 (for example, mixing several tracks of a music score, or playing
@@ -315,9 +313,8 @@ the soft interval scheduling, the load is more evenly distributed.</p>
 <p>Soft interval scheduling can also be used as an easy way to schedule
 graphics animations out of phase; for example, multiple flags
 waving in the wind.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -420,9 +417,8 @@ are removed.  If the function was not scheduled, no error is raised.</p>
 <dd><p>Get the elapsed time since the last call to <cite>update_time</cite>.</p>
 <p>This updates the clock’s internal measure of time and returns
 the difference since the last update (or since the clock was created).</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.2</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.2.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -467,7 +463,7 @@ framerate.  See the module documentation for example usage.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>label</strong> – The label which is displayed.</td>
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>label</strong> (<a class="reference internal" href="font.html#pyglet.font.Text" title="pyglet.font.Text"><em>pyglet.font.Text</em></a>) – The label which is displayed.</td>
 </tr>
 </tbody>
 </table>
@@ -487,14 +483,13 @@ pyglet.window.FPSDisplay instead.</p>
 <dt id="pyglet.clock.ClockDisplay.unschedule">
 <code class="descname">unschedule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.clock.ClockDisplay.unschedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove the display from its clock’s schedule.</p>
-<p><cite>ClockDisplay</cite> uses <cite>Clock.schedule_interval</cite> to periodically update
+<p><a class="reference internal" href="#pyglet.clock.ClockDisplay" title="pyglet.clock.ClockDisplay"><code class="xref py py-class docutils literal"><span class="pre">ClockDisplay</span></code></a> uses <cite>Clock.schedule_interval</cite> to periodically update
 its display label.  Even if the ClockDisplay is not being used any
 more, its update method will still be scheduled, which can be a
 resource drain.  Call this method to unschedule the update method
 and allow the ClockDisplay to be garbage collected.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 </dd></dl>
 
@@ -509,7 +504,7 @@ and allow the ClockDisplay to be garbage collected.</p>
 <dl class="function">
 <dt id="pyglet.clock.get_default">
 <code class="descname">get_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.clock.get_default" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the <cite>Clock</cite> instance that is used by all module-level
+<dd><p>Return the <a class="reference internal" href="#pyglet.clock.Clock" title="pyglet.clock.Clock"><code class="xref py py-class docutils literal"><span class="pre">Clock</span></code></a> instance that is used by all module-level
 clock functions.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -572,9 +567,8 @@ if there is no event scheduled.</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 </dd></dl>
 
@@ -631,9 +625,8 @@ followed by any <code class="docutils literal"><span class="pre">*args</span></c
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -676,7 +669,7 @@ on the default clock as soon as it is created.</p>
 <dt id="pyglet.clock.set_default">
 <code class="descname">set_default</code><span class="sig-paren">(</span><em>default</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.clock.set_default" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the default clock to use for all module-level functions.</p>
-<p>By default an instance of <cite>Clock</cite> is used.</p>
+<p>By default an instance of <a class="reference internal" href="#pyglet.clock.Clock" title="pyglet.clock.Clock"><code class="xref py py-class docutils literal"><span class="pre">Clock</span></code></a> is used.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

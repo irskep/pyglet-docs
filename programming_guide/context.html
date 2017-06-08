@@ -27,7 +27,6 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="up" title="pyglet Programming Guide" href="index.html" />
     <link rel="next" title="The OpenGL interface" href="gl.html" />
     <link rel="prev" title="Writing a pyglet application" href="quickstart.html" /> 
   </head>
@@ -48,8 +47,7 @@
           <a href="quickstart.html" title="Writing a pyglet application"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -64,31 +62,14 @@
 applications the information described here is far too low-level to be of any
 concern, however more advanced applications can take advantage of the complete
 control pyglet provides.</p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#displays-screens-configs-and-contexts" id="id4">Displays, screens, configs and contexts</a><ul>
-<li><a class="reference internal" href="#contexts-and-configs" id="id5">Contexts and configs</a></li>
-<li><a class="reference internal" href="#displays" id="id6">Displays</a></li>
-<li><a class="reference internal" href="#screens" id="id7">Screens</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#opengl-configuration-options" id="id8">OpenGL configuration options</a><ul>
-<li><a class="reference internal" href="#the-default-configuration" id="id9">The default configuration</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#simple-context-configuration" id="id10">Simple context configuration</a></li>
-<li><a class="reference internal" href="#selecting-the-best-configuration" id="id11">Selecting the best configuration</a></li>
-<li><a class="reference internal" href="#sharing-objects-between-contexts" id="id12">Sharing objects between contexts</a></li>
-</ul>
-</div>
 <div class="section" id="displays-screens-configs-and-contexts">
-<h2><a class="toc-backref" href="#id4">Displays, screens, configs and contexts</a><a class="headerlink" href="#displays-screens-configs-and-contexts" title="Permalink to this headline">¶</a></h2>
+<h2>Displays, screens, configs and contexts<a class="headerlink" href="#displays-screens-configs-and-contexts" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id2">
 <img alt="../_images/context_flow.svg" src="../_images/context_flow.svg" /><p class="caption"><span class="caption-text">Flow of construction, from the singleton Platform to a newly
 created Window with its Context.</span></p>
 </div>
 <div class="section" id="contexts-and-configs">
-<h3><a class="toc-backref" href="#id5">Contexts and configs</a><a class="headerlink" href="#contexts-and-configs" title="Permalink to this headline">¶</a></h3>
+<h3>Contexts and configs<a class="headerlink" href="#contexts-and-configs" title="Permalink to this headline">¶</a></h3>
 <p>When you draw on a window in pyglet, you are drawing to an OpenGL context.
 Every window has its own context, which is created when the window is created.
 You can access the window’s context via its
@@ -119,10 +100,10 @@ make no guarantee that a given config is valid on a system unless it was
 provided to you by the system.</p>
 <p>pyglet simplifies the process of selecting one of the system’s configs by
 allowing you to create a “template” config which specifies only the values you
-are interested in.  See <cite>Simple context configuration</cite> for details.</p>
+are interested in.  See <a class="reference internal" href="#guide-simple-context-configuration"><span class="std std-ref">Simple context configuration</span></a> for details.</p>
 </div>
 <div class="section" id="displays">
-<span id="guide-displays"></span><h3><a class="toc-backref" href="#id6">Displays</a><a class="headerlink" href="#displays" title="Permalink to this headline">¶</a></h3>
+<span id="guide-displays"></span><h3>Displays<a class="headerlink" href="#displays" title="Permalink to this headline">¶</a></h3>
 <p>The system may actually support several different sets of configs, depending
 on which display device is being used.  For example, a computer with two video
 cards would have not support the same configs on each card.  Another example
@@ -153,7 +134,7 @@ by the <code class="docutils literal"><span class="pre">DISPLAY</span></code> en
 </div>
 </div>
 <div class="section" id="screens">
-<span id="guide-screens"></span><h3><a class="toc-backref" href="#id7">Screens</a><a class="headerlink" href="#screens" title="Permalink to this headline">¶</a></h3>
+<span id="guide-screens"></span><h3>Screens<a class="headerlink" href="#screens" title="Permalink to this headline">¶</a></h3>
 <p>Once you have obtained a display, you can enumerate the screens that are
 connected.  A screen is the physical display medium connected to the display
 device; for example a computer monitor, TV or projector.  Most computers will
@@ -195,8 +176,8 @@ select a screen in the same manner as for Windows and Mac OS X.</td></tr>
 </div>
 </div>
 <div class="section" id="opengl-configuration-options">
-<span id="guide-glconfig"></span><h2><a class="toc-backref" href="#id8">OpenGL configuration options</a><a class="headerlink" href="#opengl-configuration-options" title="Permalink to this headline">¶</a></h2>
-<p>When configuring or selecting a <code class="xref py py-class docutils literal"><span class="pre">Config</span></code>, you do so based on
+<span id="guide-glconfig"></span><h2>OpenGL configuration options<a class="headerlink" href="#opengl-configuration-options" title="Permalink to this headline">¶</a></h2>
+<p>When configuring or selecting a <a class="reference internal" href="../modules/gl.html#pyglet.gl.Config" title="pyglet.gl.Config"><code class="xref py py-class docutils literal"><span class="pre">Config</span></code></a>, you do so based on
 the properties of that config.  pyglet supports a fixed subset of the options
 provided by AGL, GLX, WGL and their extensions.  In particular, these
 constraints are placed on all OpenGL configs:</p>
@@ -317,7 +298,7 @@ to disable the pyglet shadow context. To do this, set the pyglet option
 <code class="docutils literal"><span class="pre">pyglet.options['shadow_window']</span></code> to <code class="docutils literal"><span class="pre">False</span></code> before creating a Window.</p>
 </div>
 <div class="section" id="the-default-configuration">
-<h3><a class="toc-backref" href="#id9">The default configuration</a><a class="headerlink" href="#the-default-configuration" title="Permalink to this headline">¶</a></h3>
+<h3>The default configuration<a class="headerlink" href="#the-default-configuration" title="Permalink to this headline">¶</a></h3>
 <p>If you create a <a class="reference internal" href="../modules/window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">Window</span></code></a> without specifying the context
 or config, pyglet will use a template config with the following properties:</p>
 <blockquote>
@@ -344,13 +325,13 @@ or config, pyglet will use a template config with the following properties:</p>
 </div>
 </div>
 <div class="section" id="simple-context-configuration">
-<h2><a class="toc-backref" href="#id10">Simple context configuration</a><a class="headerlink" href="#simple-context-configuration" title="Permalink to this headline">¶</a></h2>
+<span id="guide-simple-context-configuration"></span><h2>Simple context configuration<a class="headerlink" href="#simple-context-configuration" title="Permalink to this headline">¶</a></h2>
 <p>A context can only be created from a config that was provided by the system.
 Enumerating and comparing the attributes of all the possible configs is
 a complicated process, so pyglet provides a simpler interface based on
 “template” configs.</p>
 <p>To get the config with the attributes you need, construct a
-<code class="xref py py-class docutils literal"><span class="pre">Config</span></code> and set only the attributes you are interested in.
+<a class="reference internal" href="../modules/gl.html#pyglet.gl.Config" title="pyglet.gl.Config"><code class="xref py py-class docutils literal"><span class="pre">Config</span></code></a> and set only the attributes you are interested in.
 You can then supply this config to the <a class="reference internal" href="../modules/window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">Window</span></code></a>
 constructor to create the context.</p>
 <p>For example, to create a window with an alpha channel:</p>
@@ -359,8 +340,8 @@ constructor to create the context.</p>
 </pre></div>
 </div>
 <p>It is sometimes necessary to create the context yourself, rather than letting
-the <a class="reference internal" href="../modules/window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">Window</span></code></a> constructor do this for you.  In this case
-use <code class="xref py py-meth docutils literal"><span class="pre">get_best_config()</span></code> to obtain a “complete”
+the :py:<a class="reference internal" href="../modules/window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">Window</span></code></a> constructor do this for you.  In this case
+use :py:<a class="reference internal" href="../modules/canvas.html#pyglet.canvas.Screen.get_best_config" title="pyglet.canvas.Screen.get_best_config"><code class="xref py py-meth docutils literal"><span class="pre">get_best_config()</span></code></a> to obtain a “complete”
 config, which you can then use to create the context:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">platform</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">get_platform</span><span class="p">()</span>
 <span class="n">display</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">get_default_display</span><span class="p">()</span>
@@ -373,7 +354,7 @@ config, which you can then use to create the context:</p>
 </pre></div>
 </div>
 <p>Note that you cannot create a context directly from a template (any
-<code class="xref py py-class docutils literal"><span class="pre">Config</span></code> you constructed yourself).  The
+<a class="reference internal" href="../modules/gl.html#pyglet.gl.Config" title="pyglet.gl.Config"><code class="xref py py-class docutils literal"><span class="pre">Config</span></code></a> you constructed yourself).  The
 <a class="reference internal" href="../modules/window.html#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">Window</span></code></a> constructor performs a similar process to the
 above to create the context if a template config is given.</p>
 <p>Not all configs will be possible on all machines.  The call to
@@ -395,7 +376,7 @@ a window with multisampling if possible, otherwise leaves multisampling off:</p>
 </div>
 </div>
 <div class="section" id="selecting-the-best-configuration">
-<h2><a class="toc-backref" href="#id11">Selecting the best configuration</a><a class="headerlink" href="#selecting-the-best-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Selecting the best configuration<a class="headerlink" href="#selecting-the-best-configuration" title="Permalink to this headline">¶</a></h2>
 <p>Allowing pyglet to select the best configuration based on a template is
 sufficient for most applications, however some complex programs may want to
 specify their own algorithm for selecting a set of OpenGL attributes.</p>
@@ -421,7 +402,7 @@ enumeration allows you to efficiently find the maximum value of an attribute
 configurations to the user.</p>
 </div>
 <div class="section" id="sharing-objects-between-contexts">
-<h2><a class="toc-backref" href="#id12">Sharing objects between contexts</a><a class="headerlink" href="#sharing-objects-between-contexts" title="Permalink to this headline">¶</a></h2>
+<h2>Sharing objects between contexts<a class="headerlink" href="#sharing-objects-between-contexts" title="Permalink to this headline">¶</a></h2>
 <p>Every window in pyglet has its own OpenGL context.  Each context has its own
 OpenGL state, including the matrix stacks and current flags.  However,
 contexts can optionally share their objects with one or more other contexts.
@@ -470,7 +451,7 @@ space) in the <a class="reference internal" href="../modules/gl.html#pyglet.gl.C
 <p>It can be useful to keep track of which object space an object was created in.
 For example, when you load a font, pyglet caches the textures used and reuses
 them; but only if the font is being loaded on the same object space.  The
-easiest way to do this is to set your own attributes on the <cite>ObjectSpace</cite>
+easiest way to do this is to set your own attributes on the <a class="reference internal" href="../modules/gl.html#pyglet.gl.ObjectSpace" title="pyglet.gl.ObjectSpace"><code class="xref py py-class docutils literal"><span class="pre">ObjectSpace</span></code></a>
 object.</p>
 <p>In the following example, an attribute is set on the object space indicating
 that game objects have been loaded.  This way, if the context is recreated,
@@ -481,7 +462,7 @@ you can check for this attribute to determine if you need to load them again:</p
 </pre></div>
 </div>
 <p>Avoid using attribute names on <a class="reference internal" href="../modules/gl.html#pyglet.gl.ObjectSpace" title="pyglet.gl.ObjectSpace"><code class="xref py py-class docutils literal"><span class="pre">ObjectSpace</span></code></a> that begin with
-<code class="docutils literal"><span class="pre">&quot;pyglet&quot;</span></code>,they may conflict with an internal module.</p>
+<code class="docutils literal"><span class="pre">&quot;pyglet&quot;</span></code>, as they may conflict with an internal module.</p>
 </div>
 </div>
 
@@ -550,8 +531,7 @@ you can check for this attribute to determine if you need to load them again:</p
           <a href="quickstart.html" title="Writing a pyglet application"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" >pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

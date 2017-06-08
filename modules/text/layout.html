@@ -63,7 +63,7 @@
 <p>Render simple text and formatted documents efficiently.</p>
 <p>Three layout classes are provided:</p>
 <dl class="docutils">
-<dt><cite>TextLayout</cite></dt>
+<dt><a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-class docutils literal"><span class="pre">TextLayout</span></code></a></dt>
 <dd><p class="first">The entire document is laid out before it is rendered.  The layout will
 be grouped with other layouts in the same batch (allowing for efficient
 rendering of multiple layouts).</p>
@@ -71,15 +71,15 @@ rendering of multiple layouts).</p>
 and even querying some properties, will cause the entire document
 to be laid out again.</p>
 </dd>
-<dt><cite>ScrollableTextLayout</cite></dt>
-<dd><p class="first">Based on <cite>TextLayout</cite>.</p>
+<dt><a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout" title="pyglet.text.layout.ScrollableTextLayout"><code class="xref py py-class docutils literal"><span class="pre">ScrollableTextLayout</span></code></a></dt>
+<dd><p class="first">Based on <a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a>.</p>
 <p class="last">A separate group is used for layout which crops the contents of the
 layout to the layout rectangle.  Additionally, the contents of the
 layout can be “scrolled” within that rectangle with the <code class="docutils literal"><span class="pre">view_x</span></code> and
 <code class="docutils literal"><span class="pre">view_y</span></code> properties.</p>
 </dd>
-<dt><cite>IncrementalTextLayout</cite></dt>
-<dd><p class="first">Based on <cite>ScrollableTextLayout</cite>.</p>
+<dt><a class="reference internal" href="#pyglet.text.layout.IncrementalTextLayout" title="pyglet.text.layout.IncrementalTextLayout"><code class="xref py py-class docutils literal"><span class="pre">IncrementalTextLayout</span></code></a></dt>
+<dd><p class="first">Based on <a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout" title="pyglet.text.layout.ScrollableTextLayout"><code class="xref py py-class docutils literal"><span class="pre">ScrollableTextLayout</span></code></a>.</p>
 <p>When the layout or document are modified, only the affected regions
 are laid out again.  This permits efficient interactive editing and
 styling of text.</p>
@@ -90,8 +90,8 @@ required.  This permits efficient viewing and editing of large documents.</p>
 caret in the document, and for displaying interactive text selections.</p>
 </dd>
 </dl>
-<p>All three layout classes can be used with either <cite>UnformattedDocument</cite> or
-<cite>FormattedDocument</cite>, and can be either single-line or <code class="docutils literal"><span class="pre">multiline</span></code>.  The
+<p>All three layout classes can be used with either <a class="reference internal" href="document.html#pyglet.text.document.UnformattedDocument" title="pyglet.text.document.UnformattedDocument"><code class="xref py py-class docutils literal"><span class="pre">UnformattedDocument</span></code></a> or
+<a class="reference internal" href="document.html#pyglet.text.document.FormattedDocument" title="pyglet.text.document.FormattedDocument"><code class="xref py py-class docutils literal"><span class="pre">FormattedDocument</span></code></a>, and can be either single-line or <code class="docutils literal"><span class="pre">multiline</span></code>.  The
 combinations of these options effectively provides 12 different text display
 possibilities.</p>
 <div class="section" id="style-attributes">
@@ -107,7 +107,7 @@ of <code class="docutils literal"><span class="pre">&quot;px&quot;</span></code>
 is 18 pixels.</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">font_name</span></code></dt>
-<dd>Font family name, as given to <cite>pyglet.font.load</cite>.</dd>
+<dd>Font family name, as given to <a class="reference internal" href="../font.html#pyglet.font.load" title="pyglet.font.load"><code class="xref py py-func docutils literal"><span class="pre">pyglet.font.load()</span></code></a>.</dd>
 <dt><code class="docutils literal"><span class="pre">font_size</span></code></dt>
 <dd>Font size, in points.</dd>
 <dt><code class="docutils literal"><span class="pre">bold</span></code></dt>
@@ -168,16 +168,15 @@ since pyglet 1.2.</dd>
 </dl>
 <p>Other attributes can be used to store additional style information within the
 document; they will be ignored by the built-in text classes.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <dl class="class">
 <dt id="pyglet.text.layout.IncrementalTextLayout">
 <em class="property">class </em><code class="descname">IncrementalTextLayout</code><span class="sig-paren">(</span><em>document</em>, <em>width</em>, <em>height</em>, <em>multiline=False</em>, <em>dpi=None</em>, <em>batch=None</em>, <em>group=None</em>, <em>wrap_lines=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.layout.IncrementalTextLayout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Displayed text suitable for interactive editing and/or scrolling
 large documents.</p>
-<p>Unlike <cite>TextLayout</cite> and <cite>ScrollableTextLayout</cite>, this class generates
+<p>Unlike <a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a> and <a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout" title="pyglet.text.layout.ScrollableTextLayout"><code class="xref py py-class docutils literal"><span class="pre">ScrollableTextLayout</span></code></a>, this class generates
 vertex lists only for lines of text that are visible.  As the document is
 scrolled, vertex lists are deleted and created as appropriate to keep
 video memory usage to a minimum and improve rendering speed.</p>
@@ -185,7 +184,7 @@ video memory usage to a minimum and improve rendering speed.</p>
 affected line(s) are reflowed.  Use <cite>begin_update</cite> and <cite>end_update</cite> to
 further reduce the amount of processing required.</p>
 <p>The layout can also display a text selection (text with a different
-background color).  The <cite>Caret</cite> class implements a visible text cursor and
+background color).  The <a class="reference internal" href="caret.html#pyglet.text.caret.Caret" title="pyglet.text.caret.Caret"><code class="xref py py-class docutils literal"><span class="pre">Caret</span></code></a> class implements a visible text cursor and
 provides event handlers for scrolling, selecting and editing text in an
 incremental text layout.</p>
 <dl class="method">
@@ -515,7 +514,7 @@ selection.</p>
 <em class="property">class </em><code class="descname">ScrollableTextLayout</code><span class="sig-paren">(</span><em>document</em>, <em>width</em>, <em>height</em>, <em>multiline=False</em>, <em>dpi=None</em>, <em>batch=None</em>, <em>group=None</em>, <em>wrap_lines=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display text in a scrollable viewport.</p>
 <p>This class does not display a scrollbar or handle scroll events; it merely
-clips the text that would be drawn in <cite>TextLayout</cite> to the bounds of the
+clips the text that would be drawn in <a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a> to the bounds of the
 layout given by <cite>x</cite>, <cite>y</cite>, <cite>width</cite> and <cite>height</cite>; and offsets the text by a
 scroll offset.</p>
 <p>Use <cite>view_x</cite> and <cite>view_y</cite> to scroll the text within the viewport.</p>
@@ -592,7 +591,7 @@ range.</p>
 <dl class="class">
 <dt id="pyglet.text.layout.ScrollableTextLayoutGroup">
 <em class="property">class </em><code class="descname">ScrollableTextLayoutGroup</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.layout.ScrollableTextLayoutGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Top-level rendering group for <cite>ScrollableTextLayout</cite>.</p>
+<dd><p>Top-level rendering group for <a class="reference internal" href="#pyglet.text.layout.ScrollableTextLayout" title="pyglet.text.layout.ScrollableTextLayout"><code class="xref py py-class docutils literal"><span class="pre">ScrollableTextLayout</span></code></a>.</p>
 <p>The group maintains internal state for setting the clipping planes and
 view transform for scrolling.  Because the group has internal state
 specific to the text layout, the group is never shared.</p>
@@ -711,23 +710,23 @@ bottom of the graphics viewport).</p>
 regularly – any change will cost some time to lay out the complete
 document again and regenerate all vertex lists.</p>
 <p>The benefit of this class is that texture state is shared between
-all layouts of this class.  The time to draw one <cite>TextLayout</cite> may be
-roughly the same as the time to draw one <cite>IncrementalTextLayout</cite>; but
-drawing ten <cite>TextLayout</cite> objects in one batch is much faster than drawing
+all layouts of this class.  The time to draw one <a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a> may be
+roughly the same as the time to draw one <a class="reference internal" href="#pyglet.text.layout.IncrementalTextLayout" title="pyglet.text.layout.IncrementalTextLayout"><code class="xref py py-class docutils literal"><span class="pre">IncrementalTextLayout</span></code></a>; but
+drawing ten <a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a> objects in one batch is much faster than drawing
 ten incremental or scrollable text layouts.</p>
-<p><cite>Label</cite> and <cite>HTMLLabel</cite> provide a convenient interface to this class.</p>
+<p><a class="reference internal" href="index.html#pyglet.text.Label" title="pyglet.text.Label"><code class="xref py py-func docutils literal"><span class="pre">Label()</span></code></a> and <a class="reference internal" href="index.html#pyglet.text.HTMLLabel" title="pyglet.text.HTMLLabel"><code class="xref py py-func docutils literal"><span class="pre">HTMLLabel()</span></code></a> provide a convenient interface to this class.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>content_width</strong> – Calculated width of the text in the layout.  This may overflow
+<li><strong>content_width</strong> (<em>int</em>) – Calculated width of the text in the layout.  This may overflow
 the desired width if word-wrapping failed.</li>
-<li><strong>content_height</strong> – Calculated height of the text in the layout.</li>
-<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.top_group" title="pyglet.text.layout.TextLayout.top_group"><strong>top_group</strong></a> – Top-level rendering group.</li>
-<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.background_group" title="pyglet.text.layout.TextLayout.background_group"><strong>background_group</strong></a> – Rendering group for background color.</li>
-<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_group" title="pyglet.text.layout.TextLayout.foreground_group"><strong>foreground_group</strong></a> – Rendering group for glyphs.</li>
-<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_decoration_group" title="pyglet.text.layout.TextLayout.foreground_decoration_group"><strong>foreground_decoration_group</strong></a> – Rendering group for glyph underlines.</li>
+<li><strong>content_height</strong> (<em>int</em>) – Calculated height of the text in the layout.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.top_group" title="pyglet.text.layout.TextLayout.top_group"><strong>top_group</strong></a> (<a class="reference internal" href="../graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><em>Group</em></a>) – Top-level rendering group.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.background_group" title="pyglet.text.layout.TextLayout.background_group"><strong>background_group</strong></a> (<a class="reference internal" href="../graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><em>Group</em></a>) – Rendering group for background color.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_group" title="pyglet.text.layout.TextLayout.foreground_group"><strong>foreground_group</strong></a> (<a class="reference internal" href="../graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><em>Group</em></a>) – Rendering group for glyphs.</li>
+<li><a class="reference internal" href="#pyglet.text.layout.TextLayout.foreground_decoration_group" title="pyglet.text.layout.TextLayout.foreground_decoration_group"><strong>foreground_decoration_group</strong></a> (<a class="reference internal" href="../graphics/index.html#pyglet.graphics.Group" title="pyglet.graphics.Group"><em>Group</em></a>) – Rendering group for glyph underlines.</li>
 </ul>
 </td>
 </tr>
@@ -865,7 +864,7 @@ created and used.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><cite>Batch</cite></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../graphics/index.html#pyglet.graphics.Batch" title="pyglet.graphics.Batch"><code class="xref py py-class docutils literal"><span class="pre">Batch</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -905,7 +904,7 @@ dimension).</p>
 <dt id="pyglet.text.layout.TextLayout.document">
 <code class="descname">document</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Document to display.</p>
-<p>For <cite>IncrementalTextLayout</cite> it is far more efficient to modify a document
+<p>For <a class="reference internal" href="#pyglet.text.layout.IncrementalTextLayout" title="pyglet.text.layout.IncrementalTextLayout"><code class="xref py py-class docutils literal"><span class="pre">IncrementalTextLayout</span></code></a> it is far more efficient to modify a document
 in-place than to replace the document instance on the layout.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -997,7 +996,7 @@ If True, the text is word-wrapped only if the <cite>wrap_lines</cite> is True.</
 <dt id="pyglet.text.layout.TextLayout.x">
 <code class="descname">x</code><a class="headerlink" href="#pyglet.text.layout.TextLayout.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>X coordinate of the layout.</p>
-<p>See also <cite>anchor_x</cite>.</p>
+<p>See also <a class="reference internal" href="#pyglet.text.layout.TextLayout.anchor_x" title="pyglet.text.layout.TextLayout.anchor_x"><code class="xref py py-attr docutils literal"><span class="pre">anchor_x</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1053,9 +1052,9 @@ text layouts.</p>
 <dl class="class">
 <dt id="pyglet.text.layout.TextLayoutGroup">
 <em class="property">class </em><code class="descname">TextLayoutGroup</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.text.layout.TextLayoutGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Top-level rendering group for <cite>TextLayout</cite>.</p>
+<dd><p>Top-level rendering group for <a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a>.</p>
 <p>The blend function is set for glyph rendering (<code class="docutils literal"><span class="pre">GL_SRC_ALPHA</span></code> /
-<code class="docutils literal"><span class="pre">GL_ONE_MINUS_SRC_ALPHA</span></code>).  The group is shared by all <cite>TextLayout</cite>
+<code class="docutils literal"><span class="pre">GL_ONE_MINUS_SRC_ALPHA</span></code>).  The group is shared by all <a class="reference internal" href="#pyglet.text.layout.TextLayout" title="pyglet.text.layout.TextLayout"><code class="xref py py-func docutils literal"><span class="pre">TextLayout()</span></code></a>
 instances as it has no internal state.</p>
 <dl class="method">
 <dt id="pyglet.text.layout.TextLayoutGroup.set_state">

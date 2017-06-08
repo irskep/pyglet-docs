@@ -62,7 +62,7 @@
 <span id="pyglet-image-atlas"></span><h1>pyglet.image.atlas<a class="headerlink" href="#module-pyglet.image.atlas" title="Permalink to this headline">¶</a></h1>
 <p>Group multiple small images into larger textures.</p>
 <p>This module is used by <a class="reference internal" href="../resource.html#module-pyglet.resource" title="pyglet.resource"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.resource</span></code></a> to efficiently pack small
-images into larger textures.  <cite>TextureAtlas</cite> maintains one texture;
+images into larger textures.  <a class="reference internal" href="#pyglet.image.atlas.TextureAtlas" title="pyglet.image.atlas.TextureAtlas"><code class="xref py py-class docutils literal"><span class="pre">TextureAtlas</span></code></a> maintains one texture;
 <a class="reference internal" href="#pyglet.image.atlas.TextureBin" title="pyglet.image.atlas.TextureBin"><code class="xref py py-class docutils literal"><span class="pre">TextureBin</span></code></a> manages a collection of atlases of a given size.</p>
 <p>Example usage:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Load images from disk</span>
@@ -80,9 +80,8 @@ containing the image. Once added, an image cannot be removed from a bin (or an
 atlas); nor can a list of images be obtained from a given bin or atlas – it is 
 the application’s responsibility to keep track of the regions returned by the
 <code class="docutils literal"><span class="pre">add</span></code> methods.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 <dl class="exception">
 <dt id="pyglet.image.atlas.AllocatorException">
@@ -171,7 +170,7 @@ current allocation behaviour.</p>
 <dd><p>Add an image to the atlas.</p>
 <p>This method will fail if the given image cannot be transferred
 directly to a texture (for example, if it is another texture).
-<cite>ImageData</cite> is the usual image type for this method.</p>
+<a class="reference internal" href="index.html#pyglet.image.ImageData" title="pyglet.image.ImageData"><code class="xref py py-class docutils literal"><span class="pre">ImageData</span></code></a> is the usual image type for this method.</p>
 <p><cite>AllocatorException</cite> will be raised if there is no room in the atlas
 for the image.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -180,7 +179,7 @@ for the image.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>img</strong> (<a class="reference internal" href="index.html#pyglet.image.AbstractImage" title="pyglet.image.AbstractImage"><em>AbstractImage</em></a>) – The image to add.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>TextureRegion</cite></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a></td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The region of the atlas containing the newly added image.</td>
 </tr>
@@ -194,7 +193,7 @@ for the image.</p>
 <dt id="pyglet.image.atlas.TextureBin">
 <em class="property">class </em><code class="descname">TextureBin</code><span class="sig-paren">(</span><em>texture_width=2048</em>, <em>texture_height=2048</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.image.atlas.TextureBin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection of texture atlases.</p>
-<p><cite>TextureBin</cite> maintains a collection of texture atlases, and creates new
+<p><a class="reference internal" href="#pyglet.image.atlas.TextureBin" title="pyglet.image.atlas.TextureBin"><code class="xref py py-class docutils literal"><span class="pre">TextureBin</span></code></a> maintains a collection of texture atlases, and creates new
 ones as necessary to accommodate images added to the bin.</p>
 <dl class="method">
 <dt id="pyglet.image.atlas.TextureBin.add">
@@ -210,7 +209,7 @@ for the image.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>img</strong> (<a class="reference internal" href="index.html#pyglet.image.AbstractImage" title="pyglet.image.AbstractImage"><em>AbstractImage</em></a>) – The image to add.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><cite>TextureRegion</cite></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#pyglet.image.TextureRegion" title="pyglet.image.TextureRegion"><code class="xref py py-class docutils literal"><span class="pre">TextureRegion</span></code></a></td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The region of an atlas containing the newly added image.</td>
 </tr>

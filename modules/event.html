@@ -59,7 +59,7 @@
   <div class="section" id="module-pyglet.event">
 <span id="pyglet-event"></span><h1>pyglet.event<a class="headerlink" href="#module-pyglet.event" title="Permalink to this headline">¶</a></h1>
 <p>Event dispatch framework.</p>
-<p>All objects that produce events in pyglet implement <cite>EventDispatcher</cite>,
+<p>All objects that produce events in pyglet implement <a class="reference internal" href="#pyglet.event.EventDispatcher" title="pyglet.event.EventDispatcher"><code class="xref py py-class docutils literal"><span class="pre">EventDispatcher</span></code></a>,
 providing a consistent interface for registering and manipulating event
 handlers.  A commonly used event dispatcher is <cite>pyglet.window.Window</cite>.</p>
 <div class="section" id="event-types">
@@ -67,7 +67,7 @@ handlers.  A commonly used event dispatcher is <cite>pyglet.window.Window</cite>
 <p>For each event dispatcher there is a set of events that it dispatches; these
 correspond with the type of event handlers you can attach.  Event types are
 identified by their name, for example, ”on_resize”.  If you are creating a
-new class which implements <cite>EventDispatcher</cite>, you must call
+new class which implements <a class="reference internal" href="#pyglet.event.EventDispatcher" title="pyglet.event.EventDispatcher"><code class="xref py py-class docutils literal"><span class="pre">EventDispatcher</span></code></a>, you must call
 <cite>EventDispatcher.register_event_type</cite> for each event type.</p>
 </div>
 <div class="section" id="attaching-event-handlers">
@@ -167,7 +167,7 @@ the particular class documentation.</p>
 <dd><p>Dispatch a single event to the attached handlers.</p>
 <p>The event is propagated to all handlers from from the top of the stack
 until one returns <cite>EVENT_HANDLED</cite>.  This method should be used only by
-<cite>EventDispatcher</cite> implementors; applications should call
+<a class="reference internal" href="#pyglet.event.EventDispatcher" title="pyglet.event.EventDispatcher"><code class="xref py py-class docutils literal"><span class="pre">EventDispatcher</span></code></a> implementors; applications should call
 the <code class="docutils literal"><span class="pre">dispatch_events</span></code> method.</p>
 <p>Since pyglet 1.2, the method returns <cite>EVENT_HANDLED</cite> if an event
 handler returned <cite>EVENT_HANDLED</cite> or <cite>EVENT_UNHANDLED</cite> if all events
@@ -257,7 +257,7 @@ suitable handlers.</p>
 <dd><p>Remove a single event handler.</p>
 <p>The given event handler is removed from the first handler stack frame
 it appears in.  The handler must be the exact same callable as passed
-to <cite>set_handler</cite>, <cite>set_handlers</cite> or <cite>push_handlers</cite>; and the name
+to <cite>set_handler</cite>, <cite>set_handlers</cite> or <a class="reference internal" href="#pyglet.event.EventDispatcher.push_handlers" title="pyglet.event.EventDispatcher.push_handlers"><code class="xref py py-meth docutils literal"><span class="pre">push_handlers()</span></code></a>; and the name
 must match the event type it is bound to.</p>
 <p>No error is raised if the event handler is not set.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -278,13 +278,13 @@ must match the event type it is bound to.</p>
 <dt id="pyglet.event.EventDispatcher.remove_handlers">
 <code class="descname">remove_handlers</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.event.EventDispatcher.remove_handlers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove event handlers from the event stack.</p>
-<p>See <cite>push_handlers</cite> for the accepted argument types.  All handlers
+<p>See <a class="reference internal" href="#pyglet.event.EventDispatcher.push_handlers" title="pyglet.event.EventDispatcher.push_handlers"><code class="xref py py-meth docutils literal"><span class="pre">push_handlers()</span></code></a> for the accepted argument types.  All handlers
 are removed from the first stack frame that contains any of the given
 handlers.  No error is raised if any handler does not appear in that
 frame, or if no stack frame contains any of the given handlers.</p>
 <p>If the stack frame is empty after removing the handlers, it is 
 removed from the stack.  Note that this interferes with the expected
-symmetry of <cite>push_handlers</cite> and <cite>pop_handlers</cite>.</p>
+symmetry of <a class="reference internal" href="#pyglet.event.EventDispatcher.push_handlers" title="pyglet.event.EventDispatcher.push_handlers"><code class="xref py py-meth docutils literal"><span class="pre">push_handlers()</span></code></a> and <a class="reference internal" href="#pyglet.event.EventDispatcher.pop_handlers" title="pyglet.event.EventDispatcher.pop_handlers"><code class="xref py py-meth docutils literal"><span class="pre">pop_handlers()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -310,7 +310,7 @@ symmetry of <cite>push_handlers</cite> and <cite>pop_handlers</cite>.</p>
 <code class="descname">set_handlers</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.event.EventDispatcher.set_handlers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attach one or more event handlers to the top level of the handler
 stack.</p>
-<p>See <cite>push_handlers</cite> for the accepted argument types.</p>
+<p>See <a class="reference internal" href="#pyglet.event.EventDispatcher.push_handlers" title="pyglet.event.EventDispatcher.push_handlers"><code class="xref py py-meth docutils literal"><span class="pre">push_handlers()</span></code></a> for the accepted argument types.</p>
 </dd></dl>
 
 </dd></dl>

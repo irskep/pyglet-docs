@@ -27,7 +27,6 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="up" title="pyglet Programming Guide" href="index.html" />
     <link rel="next" title="Displaying text" href="text.html" />
     <link rel="prev" title="Working with other input devices" href="input.html" /> 
   </head>
@@ -48,8 +47,7 @@
           <a href="input.html" title="Working with other input devices"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -60,22 +58,11 @@
             
   <div class="section" id="keeping-track-of-time">
 <h1>Keeping track of time<a class="headerlink" href="#keeping-track-of-time" title="Permalink to this headline">¶</a></h1>
-<p>pyglet’s <cite>clock</cite> module provides functionality for scheduling functions for
+<p>pyglet’s <a class="reference internal" href="../modules/clock.html#module-pyglet.clock" title="pyglet.clock"><code class="xref py py-mod docutils literal"><span class="pre">clock</span></code></a> module provides functionality for scheduling functions for
 periodic or one-shot future execution and for calculating and displaying
 the application frame rate.</p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#calling-functions-periodically" id="id1">Calling functions periodically</a></li>
-<li><a class="reference internal" href="#animation-techniques" id="id2">Animation techniques</a></li>
-<li><a class="reference internal" href="#the-frame-rate" id="id3">The frame rate</a><ul>
-<li><a class="reference internal" href="#displaying-the-frame-rate" id="id4">Displaying the frame rate</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#user-defined-clocks" id="id5">User-defined clocks</a></li>
-</ul>
-</div>
 <div class="section" id="calling-functions-periodically">
-<h2><a class="toc-backref" href="#id1">Calling functions periodically</a><a class="headerlink" href="#calling-functions-periodically" title="Permalink to this headline">¶</a></h2>
+<span id="guide-calling-functions-periodically"></span><h2>Calling functions periodically<a class="headerlink" href="#calling-functions-periodically" title="Permalink to this headline">¶</a></h2>
 <p>pyglet applications begin execution with:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
@@ -110,7 +97,7 @@ in time.</p>
 schedule all your update functions for no less than the minimum period your
 application or game requires.  For example, most games need not run at more
 than 60Hz (60 times a second) for imperceptibly smooth animation, so the
-interval given to <cite>schedule_interval</cite> would be <code class="docutils literal"><span class="pre">1/60.0</span></code> (or more).</p>
+interval given to <a class="reference internal" href="../modules/clock.html#pyglet.clock.schedule_interval" title="pyglet.clock.schedule_interval"><code class="xref py py-func docutils literal"><span class="pre">schedule_interval()</span></code></a> would be <code class="docutils literal"><span class="pre">1/60.0</span></code> (or more).</p>
 <p>If you are writing a benchmarking program or otherwise wish to simply run at
 the highest possible frequency, use <cite>schedule</cite>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
@@ -119,8 +106,8 @@ the highest possible frequency, use <cite>schedule</cite>:</p>
 </pre></div>
 </div>
 <p>By default pyglet window buffer swaps are synchronised to the display refresh
-rate, so you may also want to disable <cite>set_vsync</cite>.</p>
-<p>For one-shot events, use <cite>schedule_once</cite>:</p>
+rate, so you may also want to disable vsync.</p>
+<p>For one-shot events, use <a class="reference internal" href="../modules/clock.html#pyglet.clock.schedule_once" title="pyglet.clock.schedule_once"><code class="xref py py-func docutils literal"><span class="pre">schedule_once()</span></code></a>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dismiss_dialog</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
@@ -129,10 +116,10 @@ rate, so you may also want to disable <cite>set_vsync</cite>.</p>
 </pre></div>
 </div>
 <p>To stop a scheduled function from being called, including cancelling a
-periodic function, use <cite>pyglet.clock.unschedule</cite>.</p>
+periodic function, use <a class="reference internal" href="../modules/clock.html#pyglet.clock.unschedule" title="pyglet.clock.unschedule"><code class="xref py py-func docutils literal"><span class="pre">pyglet.clock.unschedule()</span></code></a>.</p>
 </div>
 <div class="section" id="animation-techniques">
-<h2><a class="toc-backref" href="#id2">Animation techniques</a><a class="headerlink" href="#animation-techniques" title="Permalink to this headline">¶</a></h2>
+<h2>Animation techniques<a class="headerlink" href="#animation-techniques" title="Permalink to this headline">¶</a></h2>
 <p>Every scheduled function takes a <cite>dt</cite> parameter, giving the actual “wall
 clock” time that passed since the previous invocation (or the time the
 function was scheduled, if it’s the first period).  This parameter can be
@@ -186,7 +173,7 @@ below.</p>
 </div></blockquote>
 </div>
 <div class="section" id="the-frame-rate">
-<h2><a class="toc-backref" href="#id3">The frame rate</a><a class="headerlink" href="#the-frame-rate" title="Permalink to this headline">¶</a></h2>
+<h2>The frame rate<a class="headerlink" href="#the-frame-rate" title="Permalink to this headline">¶</a></h2>
 <p>Game performance is often measured in terms of the number of times the display
 is updated every second; that is, the frames-per-second or FPS.  You can
 determine your application’s FPS with a single function call:</p>
@@ -197,10 +184,10 @@ determine your application’s FPS with a single function call:</p>
 from a period function, as it is averaged over a sliding window of several
 frames.</p>
 <div class="section" id="displaying-the-frame-rate">
-<h3><a class="toc-backref" href="#id4">Displaying the frame rate</a><a class="headerlink" href="#displaying-the-frame-rate" title="Permalink to this headline">¶</a></h3>
+<h3>Displaying the frame rate<a class="headerlink" href="#displaying-the-frame-rate" title="Permalink to this headline">¶</a></h3>
 <p>A simple way to profile your application performance is to display the frame
 rate while it is running.  Printing it to the console is not ideal as this
-will have a severe impact on performance.  pyglet provides the <cite>ClockDisplay</cite>
+will have a severe impact on performance.  pyglet provides the <a class="reference internal" href="../modules/clock.html#pyglet.clock.ClockDisplay" title="pyglet.clock.ClockDisplay"><code class="xref py py-class docutils literal"><span class="pre">ClockDisplay</span></code></a>
 class for displaying the frame rate with very little effort:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fps_display</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">ClockDisplay</span><span class="p">()</span>
 
@@ -211,20 +198,20 @@ class for displaying the frame rate with very little effort:</p>
 </pre></div>
 </div>
 <p>By default the frame rate will be drawn in the bottom-right corner of the
-window in a semi-translucent large font.  See the <cite>ClockDisplay</cite> documentation
+window in a semi-translucent large font.  See the <a class="reference internal" href="../modules/clock.html#pyglet.clock.ClockDisplay" title="pyglet.clock.ClockDisplay"><code class="xref py py-class docutils literal"><span class="pre">ClockDisplay</span></code></a> documentation
 for details on how to customise this, or even display another clock value
 (such as the current time) altogether.</p>
 </div>
 </div>
 <div class="section" id="user-defined-clocks">
-<h2><a class="toc-backref" href="#id5">User-defined clocks</a><a class="headerlink" href="#user-defined-clocks" title="Permalink to this headline">¶</a></h2>
+<h2>User-defined clocks<a class="headerlink" href="#user-defined-clocks" title="Permalink to this headline">¶</a></h2>
 <p>The default clock used by pyglet uses the system clock to determine the time
 (i.e., <code class="docutils literal"><span class="pre">time.time()</span></code>).  Separate clocks can be created, however, allowing
 you to use another time source.  This can be useful for implementing a
 separate “game time” to the real-world time, or for synchronising to a network
 time source or a sound device.</p>
-<p>Each of the <cite>clock</cite> functions are aliases for the methods on a global instance
-of <cite>clock.Clock</cite>.  You can construct or subclass your own <cite>Clock</cite>, which can
+<p>Each of the <code class="docutils literal"><span class="pre">clock_*</span></code> functions are aliases for the methods on a global instance
+of <a class="reference internal" href="../modules/clock.html#pyglet.clock.Clock" title="pyglet.clock.Clock"><code class="xref py py-class docutils literal"><span class="pre">Clock</span></code></a>.  You can construct or subclass your own <a class="reference internal" href="../modules/clock.html#pyglet.clock.Clock" title="pyglet.clock.Clock"><code class="xref py py-class docutils literal"><span class="pre">Clock</span></code></a>, which can
 then maintain its own schedule and framerate calculation.  See the class
 documentation for more details.</p>
 </div>
@@ -289,8 +276,7 @@ documentation for more details.</p>
           <a href="input.html" title="Working with other input devices"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" >pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

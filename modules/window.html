@@ -101,9 +101,9 @@ returns when all open windows are closed):</p>
 </div>
 <div class="section" id="creating-a-game-window">
 <h2>Creating a game window<a class="headerlink" href="#creating-a-game-window" title="Permalink to this headline">¶</a></h2>
-<p>Use <cite>Window.set_exclusive_mouse</cite> to hide the mouse cursor and receive relative
+<p>Use <a class="reference internal" href="#pyglet.window.Window.set_exclusive_mouse" title="pyglet.window.Window.set_exclusive_mouse"><code class="xref py py-meth docutils literal"><span class="pre">set_exclusive_mouse()</span></code></a> to hide the mouse cursor and receive relative
 mouse movement events.  Specify <code class="docutils literal"><span class="pre">fullscreen=True</span></code> as a keyword argument to
-the <cite>Window</cite> constructor to render to the entire screen rather than opening a
+the <a class="reference internal" href="#pyglet.window.Window" title="pyglet.window.Window"><code class="xref py py-class docutils literal"><span class="pre">Window</span></code></a> constructor to render to the entire screen rather than opening a
 window:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">win</span> <span class="o">=</span> <span class="n">Window</span><span class="p">(</span><span class="n">fullscreen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">win</span><span class="o">.</span><span class="n">set_exclusive_mouse</span><span class="p">()</span>
@@ -171,21 +171,6 @@ and appears on an appropriate screen for the user.</p>
 <p>To render into a window, you must first call <cite>switch_to</cite>, to make
 it the current OpenGL context.  If you use only one window in the
 application, there is no need to do this.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><a class="reference internal" href="app.html#pyglet.app.EventLoop.has_exit" title="pyglet.app.EventLoop.has_exit"><strong>has_exit</strong></a> – <p>True if the user has attempted to close the window.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Deprecated. Windows are closed immediately by the default
-<cite>on_close</cite> handler when <cite>pyglet.app.event_loop</cite> is being
-used.</p>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
 <p class="rubric">Methods</p>
 <dl class="method">
 <dt id="pyglet.window.Window.activate">
@@ -253,7 +238,7 @@ is affected.</p>
 visible display with the back buffer.  The contents of the back buffer
 is undefined after this operation.</p>
 <p>Windows are double-buffered by default.  This method is called
-automatically by <cite>EventLoop</cite> after the <cite>on_draw</cite> event.</p>
+automatically by <cite>EventLoop</cite> after the <a class="reference internal" href="#pyglet.window.Window.on_draw" title="pyglet.window.Window.on_draw"><code class="xref py py-meth docutils literal"><span class="pre">on_draw()</span></code></a> event.</p>
 </dd></dl>
 
 <dl class="method">
@@ -412,11 +397,11 @@ None, an appropriate mode will be selected from the given
 <li><strong>width</strong> (<em>int</em>) – Optional width of the window.  If unspecified, defaults to the
 previous window size when windowed, or the screen size if
 fullscreen.
-<strong>Since:</strong> pyglet 1.2</li>
+.. versionadded:: 1.2</li>
 <li><strong>height</strong> (<em>int</em>) – Optional height of the window.  If unspecified, defaults to
 the previous window size when windowed, or the screen size if
 fullscreen.
-<strong>Since:</strong> pyglet 1.2</li>
+.. versionadded:: 1.2</li>
 </ul>
 </td>
 </tr>
@@ -676,9 +661,8 @@ be called after this event, so your event handler should not.</p>
 <p>You should make no assumptions about the window contents when
 this event is triggered; a resize or expose event may have
 invalidated the framebuffer since the last time it was drawn.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Since pyglet 1.1</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
 </div>
 </dd></dl>
 
@@ -709,7 +693,7 @@ hidden by the user.</p>
 <dd><p>A key on the keyboard was pressed (and held down).</p>
 <p>In pyglet 1.0 the default handler sets <cite>has_exit</cite> to <code class="docutils literal"><span class="pre">True</span></code> if
 the <code class="docutils literal"><span class="pre">ESC</span></code> key is pressed.</p>
-<p>In pyglet 1.1 the default handler dispatches the <cite>on_close</cite>
+<p>In pyglet 1.1 the default handler dispatches the <a class="reference internal" href="#pyglet.window.Window.on_close" title="pyglet.window.Window.on_close"><code class="xref py py-meth docutils literal"><span class="pre">on_close()</span></code></a>
 event if the <code class="docutils literal"><span class="pre">ESC</span></code> key is pressed.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -948,8 +932,8 @@ minimised, or after being displayed for the first time.</p>
 <dt id="pyglet.window.Window.on_text">
 <code class="descname">on_text</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.window.Window.on_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user input some text.</p>
-<p>Typically this is called after <cite>on_key_press</cite> and before
-<cite>on_key_release</cite>, but may also be called multiple times if the key
+<p>Typically this is called after <a class="reference internal" href="#pyglet.window.Window.on_key_press" title="pyglet.window.Window.on_key_press"><code class="xref py py-meth docutils literal"><span class="pre">on_key_press()</span></code></a> and before
+<a class="reference internal" href="#pyglet.window.Window.on_key_release" title="pyglet.window.Window.on_key_release"><code class="xref py py-meth docutils literal"><span class="pre">on_key_release()</span></code></a>, but may also be called multiple times if the key
 is held down (key repeating); or called without key presses if
 another input method was used (e.g., a pen input).</p>
 <p>You should always use this method for interpreting text, as the
@@ -969,14 +953,14 @@ representation which this event takes care of.</p>
 <dt id="pyglet.window.Window.on_text_motion">
 <code class="descname">on_text_motion</code><span class="sig-paren">(</span><em>motion</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.window.Window.on_text_motion" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user moved the text input cursor.</p>
-<p>Typically this is called after <cite>on_key_press</cite> and before
-<cite>on_key_release</cite>, but may also be called multiple times if the key
+<p>Typically this is called after <a class="reference internal" href="#pyglet.window.Window.on_key_press" title="pyglet.window.Window.on_key_press"><code class="xref py py-meth docutils literal"><span class="pre">on_key_press()</span></code></a> and before
+<a class="reference internal" href="#pyglet.window.Window.on_key_release" title="pyglet.window.Window.on_key_release"><code class="xref py py-meth docutils literal"><span class="pre">on_key_release()</span></code></a>, but may also be called multiple times if the key
 is help down (key repeating).</p>
 <p>You should always use this method for moving the text input cursor
 (caret), as different platforms have different default keyboard
 mappings, and key repeats are handled correctly.</p>
 <p>The values that <cite>motion</cite> can take are defined in
-<cite>pyglet.window.key</cite>:</p>
+<a class="reference internal" href="window_key.html#module-pyglet.window.key" title="pyglet.window.key"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.window.key</span></code></a>:</p>
 <ul class="simple">
 <li>MOTION_UP</li>
 <li>MOTION_RIGHT</li>
@@ -1008,14 +992,14 @@ mappings, and key repeats are handled correctly.</p>
 <code class="descname">on_text_motion_select</code><span class="sig-paren">(</span><em>motion</em><span class="sig-paren">)</span><a class="headerlink" href="#pyglet.window.Window.on_text_motion_select" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user moved the text input cursor while extending the
 selection.</p>
-<p>Typically this is called after <cite>on_key_press</cite> and before
-<cite>on_key_release</cite>, but may also be called multiple times if the key
+<p>Typically this is called after <a class="reference internal" href="#pyglet.window.Window.on_key_press" title="pyglet.window.Window.on_key_press"><code class="xref py py-meth docutils literal"><span class="pre">on_key_press()</span></code></a> and before
+<a class="reference internal" href="#pyglet.window.Window.on_key_release" title="pyglet.window.Window.on_key_release"><code class="xref py py-meth docutils literal"><span class="pre">on_key_release()</span></code></a>, but may also be called multiple times if the key
 is help down (key repeating).</p>
 <p>You should always use this method for responding to text selection
-events rather than the raw <cite>on_key_press</cite>, as different platforms
+events rather than the raw <a class="reference internal" href="#pyglet.window.Window.on_key_press" title="pyglet.window.Window.on_key_press"><code class="xref py py-meth docutils literal"><span class="pre">on_key_press()</span></code></a>, as different platforms
 have different default keyboard mappings, and key repeats are
 handled correctly.</p>
-<p>The values that <cite>motion</cite> can take are defined in <cite>pyglet.window.key</cite>:</p>
+<p>The values that <cite>motion</cite> can take are defined in <a class="reference internal" href="window_key.html#module-pyglet.window.key" title="pyglet.window.key"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.window.key</span></code></a>:</p>
 <ul class="simple">
 <li>MOTION_UP</li>
 <li>MOTION_RIGHT</li>
@@ -1465,7 +1449,7 @@ all the attached screens.</p>
 <p>Display of a window’s framerate.</p>
 <p>This is a convenience class to aid in profiling and debugging.  Typical
 usage is to create an <cite>FPSDisplay</cite> for each window, and draw the display
-at the end of the windows’ <cite>on_draw</cite> event handler:</p>
+at the end of the windows’ <a class="reference internal" href="#pyglet.window.Window.on_draw" title="pyglet.window.Window.on_draw"><code class="xref py py-meth docutils literal"><span class="pre">on_draw()</span></code></a> event handler:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
 <span class="n">fps_display</span> <span class="o">=</span> <span class="n">FPSDisplay</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
 
@@ -1476,7 +1460,7 @@ at the end of the windows’ <cite>on_draw</cite> event handler:</p>
     <span class="n">fps_display</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The style and position of the display can be modified via the <cite>label</cite>
+<p>The style and position of the display can be modified via the <a class="reference internal" href="text/index.html#pyglet.text.Label" title="pyglet.text.Label"><code class="xref py py-func docutils literal"><span class="pre">Label()</span></code></a>
 attribute.  Different text can be substituted by overriding the
 <cite>set_fps</cite> method.  The display can be set to update more or less often 
 by setting the <cite>update_period</cite> attribute.</p>
@@ -1484,7 +1468,7 @@ by setting the <cite>update_period</cite> attribute.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>label</strong> – The text label displaying the framerate.</td>
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>label</strong> (<a class="reference internal" href="text/index.html#pyglet.text.Label" title="pyglet.text.Label"><em>Label</em></a>) – The text label displaying the framerate.</td>
 </tr>
 </tbody>
 </table>
@@ -1574,7 +1558,7 @@ for all mouse cursors except system cursors.</p>
 <dt id="pyglet.window.DefaultMouseCursor">
 <em class="property">class </em><code class="descname">DefaultMouseCursor</code><a class="headerlink" href="#pyglet.window.DefaultMouseCursor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pyglet.window.MouseCursor" title="pyglet.window.MouseCursor"><code class="xref py py-class docutils literal"><span class="pre">pyglet.window.MouseCursor</span></code></a></p>
-<p>The default mouse cursor used by the operating system.</p>
+<p>The default mouse cursor #sed by the operating system.</p>
 </dd></dl>
 
 <dl class="class">

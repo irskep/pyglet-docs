@@ -27,7 +27,6 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="pyglet v1.2.2" href="../index.html" />
-    <link rel="up" title="pyglet Programming Guide" href="index.html" />
     <link rel="next" title="Working with the mouse" href="mouse.html" />
     <link rel="prev" title="The pyglet event framework" href="events.html" /> 
   </head>
@@ -48,8 +47,7 @@
           <a href="events.html" title="The pyglet event framework"
              accesskey="P">previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -59,7 +57,7 @@
           <div class="body">
             
   <div class="section" id="working-with-the-keyboard">
-<h1>Working with the keyboard<a class="headerlink" href="#working-with-the-keyboard" title="Permalink to this headline">¶</a></h1>
+<span id="guide-working-with-the-keyboard"></span><h1>Working with the keyboard<a class="headerlink" href="#working-with-the-keyboard" title="Permalink to this headline">¶</a></h1>
 <p>pyglet has support for low-level keyboard input suitable for games as well as
 locale- and device-independent Unicode text entry.</p>
 <p>Keyboard input requires a window which has focus.  The operating system
@@ -67,33 +65,19 @@ usually decides which application window has keyboard focus.  Typically this
 window appears above all others and may be decorated differently, though this
 is platform-specific (for example, Unix window managers sometimes couple
 keyboard focus with the mouse pointer).</p>
-<p>You can request keyboard focus for a window with the <cite>activate</cite> method, but
+<p>You can request keyboard focus for a window with the <a class="reference internal" href="../modules/window.html#pyglet.window.Window.activate" title="pyglet.window.Window.activate"><code class="xref py py-meth docutils literal"><span class="pre">activate()</span></code></a> method, but
 you should not rely on this – it may simply provide a visual cue to the user
 indicating that the window requires user input, without actually getting
 focus.</p>
-<p>Windows created with the <cite>WINDOW_STYLE_BORDERLESS</cite> or <cite>WINDOW_STYLE_TOOL</cite>
+<p>Windows created with the
+<a class="reference internal" href="../modules/window.html#pyglet.window.Window.WINDOW_STYLE_BORDERLESS" title="pyglet.window.Window.WINDOW_STYLE_BORDERLESS"><code class="xref py py-attr docutils literal"><span class="pre">WINDOW_STYLE_BORDERLESS</span></code></a> or
+<a class="reference internal" href="../modules/window.html#pyglet.window.Window.WINDOW_STYLE_TOOL" title="pyglet.window.Window.WINDOW_STYLE_TOOL"><code class="xref py py-attr docutils literal"><span class="pre">WINDOW_STYLE_TOOL</span></code></a>
 style cannot receive keyboard focus.</p>
 <p>It is not possible to use pyglet’s keyboard or text events without a window;
 consider using Python built-in functions such as <code class="docutils literal"><span class="pre">raw_input</span></code> instead.</p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#keyboard-events" id="id1">Keyboard events</a><ul>
-<li><a class="reference internal" href="#defined-key-symbols" id="id2">Defined key symbols</a></li>
-<li><a class="reference internal" href="#modifiers" id="id3">Modifiers</a></li>
-<li><a class="reference internal" href="#user-defined-key-symbols" id="id4">User-defined key symbols</a></li>
-<li><a class="reference internal" href="#remembering-key-state" id="id5">Remembering key state</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#text-and-motion-events" id="id6">Text and motion events</a><ul>
-<li><a class="reference internal" href="#motion-events" id="id7">Motion events</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#keyboard-exclusivity" id="id8">Keyboard exclusivity</a></li>
-</ul>
-</div>
 <div class="section" id="keyboard-events">
-<h2><a class="toc-backref" href="#id1">Keyboard events</a><a class="headerlink" href="#keyboard-events" title="Permalink to this headline">¶</a></h2>
-<p>The <cite>Window.on_key_press</cite> and <cite>Window.on_key_release</cite> events are fired when
+<h2>Keyboard events<a class="headerlink" href="#keyboard-events" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_key_press" title="pyglet.window.Window.on_key_press"><code class="xref py py-meth docutils literal"><span class="pre">on_key_press()</span></code></a> and <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_key_release" title="pyglet.window.Window.on_key_release"><code class="xref py py-meth docutils literal"><span class="pre">on_key_release()</span></code></a> events are fired when
 any key on the keyboard is pressed or released, respectively.  These events
 are not affected by “key repeat” – once a key is pressed there are no more
 events for that key until it is released.</p>
@@ -106,12 +90,12 @@ events for that key until it is released.</p>
 </pre></div>
 </div>
 <div class="section" id="defined-key-symbols">
-<h3><a class="toc-backref" href="#id2">Defined key symbols</a><a class="headerlink" href="#defined-key-symbols" title="Permalink to this headline">¶</a></h3>
+<h3>Defined key symbols<a class="headerlink" href="#defined-key-symbols" title="Permalink to this headline">¶</a></h3>
 <p>The <cite>symbol</cite> argument is an integer that represents a “virtual” key code.
-It does //not// correspond to any particular numbering scheme; in particular
-the symbol is //not// an ASCII character code.</p>
+It does <em>not</em> correspond to any particular numbering scheme; in particular
+the symbol is <em>not</em> an ASCII character code.</p>
 <p>pyglet has key symbols that are hardware and platform independent
-for many types of keyboard.  These are defined in <cite>pyglet.window.key</cite> as
+for many types of keyboard.  These are defined in <a class="reference internal" href="../modules/window_key.html#module-pyglet.window.key" title="pyglet.window.key"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.window.key</span></code></a> as
 constants.  For example, the Latin-1 alphabet is simply the letter itself:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">key</span><span class="o">.</span><span class="n">A</span>
 <span class="n">key</span><span class="o">.</span><span class="n">B</span>
@@ -177,10 +161,10 @@ lower-case and upper-case letters both generate the <cite>A</cite> symbol.  This
 true of the number keypad.</p>
 </div>
 <div class="section" id="modifiers">
-<h3><a class="toc-backref" href="#id3">Modifiers</a><a class="headerlink" href="#modifiers" title="Permalink to this headline">¶</a></h3>
+<h3>Modifiers<a class="headerlink" href="#modifiers" title="Permalink to this headline">¶</a></h3>
 <p>The modifiers that are held down when the event is generated are combined in a
 bitwise fashion and provided in the <code class="docutils literal"><span class="pre">modifiers</span></code> parameter.  The modifier
-constants defined in <cite>pyglet.window.key</cite> are:</p>
+constants defined in <a class="reference internal" href="../modules/window_key.html#module-pyglet.window.key" title="pyglet.window.key"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.window.key</span></code></a> are:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MOD_SHIFT</span>
 <span class="n">MOD_CTRL</span>
 <span class="n">MOD_ALT</span>         <span class="n">Not</span> <span class="n">available</span> <span class="n">on</span> <span class="n">Mac</span> <span class="n">OS</span> <span class="n">X</span>
@@ -203,11 +187,12 @@ the left or right modifier is held down (though you could emulate this
 behaviour by keeping track of the key states yourself).</p>
 </div>
 <div class="section" id="user-defined-key-symbols">
-<h3><a class="toc-backref" href="#id4">User-defined key symbols</a><a class="headerlink" href="#user-defined-key-symbols" title="Permalink to this headline">¶</a></h3>
+<h3>User-defined key symbols<a class="headerlink" href="#user-defined-key-symbols" title="Permalink to this headline">¶</a></h3>
 <p>pyglet does not define key symbols for every keyboard ever made.  For example,
 non-Latin languages will have many keys not recognised by pyglet (however,
-their Unicode representation will still be valid, see <cite>Text and motion
-events</cite>).  Even English keyboards often have additional so-called “OEM” keys
+their Unicode representation will still be valid, see
+<a class="reference internal" href="#guide-text-and-motion-events"><span class="std std-ref">Text and motion events</span></a>).
+Even English keyboards often have additional so-called “OEM” keys
 added by the manufacturer, which might be labelled “Media”, “Volume” or
 “Shopping”, for example.</p>
 <p>In these cases pyglet will create a key symbol at runtime based on the
@@ -219,8 +204,8 @@ prompt, and then check for that same key symbol.  Many commercial games have
 similar functionality in allowing players to set up their own key bindings.</p>
 </div>
 <div class="section" id="remembering-key-state">
-<h3><a class="toc-backref" href="#id5">Remembering key state</a><a class="headerlink" href="#remembering-key-state" title="Permalink to this headline">¶</a></h3>
-<p>pyglet provides the convenience class <cite>KeyStateHandler</cite> for storing the
+<h3>Remembering key state<a class="headerlink" href="#remembering-key-state" title="Permalink to this headline">¶</a></h3>
+<p>pyglet provides the convenience class <a class="reference internal" href="../modules/window_key.html#pyglet.window.key.KeyStateHandler" title="pyglet.window.key.KeyStateHandler"><code class="xref py py-class docutils literal"><span class="pre">KeyStateHandler</span></code></a> for storing the
 current keyboard state.  This can be pushed onto the event handler stack of
 any window and subsequently queried as a dict:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyglet.window</span> <span class="k">import</span> <span class="n">key</span>
@@ -237,7 +222,7 @@ any window and subsequently queried as a dict:</p>
 </div>
 </div>
 <div class="section" id="text-and-motion-events">
-<h2><a class="toc-backref" href="#id6">Text and motion events</a><a class="headerlink" href="#text-and-motion-events" title="Permalink to this headline">¶</a></h2>
+<span id="guide-text-and-motion-events"></span><h2>Text and motion events<a class="headerlink" href="#text-and-motion-events" title="Permalink to this headline">¶</a></h2>
 <p>pyglet decouples the keys that the user presses from the Unicode text that is
 input.  There are several benefits to this:</p>
 <ul class="simple">
@@ -255,7 +240,7 @@ voice recognition.</li>
 <p>The actual source of input (i.e., which keys were pressed, or what input
 method was used) should be considered outside of the scope of the application
 – the operating system provides the necessary services.</p>
-<p>When text is entered into a window, the <cite>on_text</cite> event is fired:</p>
+<p>When text is entered into a window, the <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_text" title="pyglet.window.Window.on_text"><code class="xref py py-meth docutils literal"><span class="pre">on_text()</span></code></a> event is fired:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
@@ -263,19 +248,19 @@ method was used) should be considered outside of the scope of the application
 <p>The only parameter provided is a Unicode string.  For keyboard input this will
 usually be one character long, however more complex input methods such as an
 input palette may provide an entire word or phrase at once.</p>
-<p>You should always use the <cite>on_text</cite> event when you need to determine a string
-from a sequence of keystrokes.  Conversely, you never use <cite>on_text</cite> when you
+<p>You should always use the <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_text" title="pyglet.window.Window.on_text"><code class="xref py py-meth docutils literal"><span class="pre">on_text()</span></code></a> event when you need to determine a string
+from a sequence of keystrokes.  Conversely, you never use <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_text" title="pyglet.window.Window.on_text"><code class="xref py py-meth docutils literal"><span class="pre">on_text()</span></code></a> when you
 require keys to be pressed (for example, to control the movement of the player
 in a game).</p>
 <div class="section" id="motion-events">
-<h3><a class="toc-backref" href="#id7">Motion events</a><a class="headerlink" href="#motion-events" title="Permalink to this headline">¶</a></h3>
+<h3>Motion events<a class="headerlink" href="#motion-events" title="Permalink to this headline">¶</a></h3>
 <p>In addition to entering text, users press keys on the keyboard to navigate
 around text widgets according to well-ingrained conventions.  For example,
 pressing the left arrow key moves the cursor one character to the left.</p>
-<p>While you might be tempted to use the <cite>on_key_press</cite> event to capture these
+<p>While you might be tempted to use the <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_key_press" title="pyglet.window.Window.on_key_press"><code class="xref py py-meth docutils literal"><span class="pre">on_key_press()</span></code></a> event to capture these
 events, there are a couple of problems:</p>
 <ul class="simple">
-<li>Key repeat events are not generated for <cite>on_key_press</cite>, yet users expect
+<li>Key repeat events are not generated for <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_key_press" title="pyglet.window.Window.on_key_press"><code class="xref py py-meth docutils literal"><span class="pre">on_key_press()</span></code></a>, yet users expect
 that holding down the left arrow key will eventually move the character to
 the beginning of the line.</li>
 <li>Different operating systems have different conventions for the behaviour of
@@ -283,14 +268,14 @@ keys.  For example, on Windows it is customary for the Home key to move the
 cursor to the beginning of the line, whereas on Mac OS X the same key moves
 to the beginning of the document.</li>
 </ul>
-<p>pyglet windows provide the <cite>on_text_motion</cite> event, which takes care of these
+<p>pyglet windows provide the <a class="reference internal" href="../modules/window.html#pyglet.window.Window.on_text_motion" title="pyglet.window.Window.on_text_motion"><code class="xref py py-meth docutils literal"><span class="pre">on_text_motion()</span></code></a> event, which takes care of these
 problems by abstracting away the key presses and providing your application
 only with the intended cursor motion:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_text_motion</span><span class="p">(</span><span class="n">motion</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p><cite>motion</cite> is an integer which is a constant defined in <cite>pyglet.window.key</cite>.
+<p><cite>motion</cite> is an integer which is a constant defined in <a class="reference internal" href="../modules/window_key.html#module-pyglet.window.key" title="pyglet.window.key"><code class="xref py py-mod docutils literal"><span class="pre">pyglet.window.key</span></code></a>.
 The following table shows the defined text motions and their keyboard mapping
 on each operating system.</p>
 <blockquote>
@@ -385,7 +370,7 @@ on each operating system.</p>
 </div>
 </div>
 <div class="section" id="keyboard-exclusivity">
-<h2><a class="toc-backref" href="#id8">Keyboard exclusivity</a><a class="headerlink" href="#keyboard-exclusivity" title="Permalink to this headline">¶</a></h2>
+<h2>Keyboard exclusivity<a class="headerlink" href="#keyboard-exclusivity" title="Permalink to this headline">¶</a></h2>
 <p>Some keystrokes or key combinations normally bypass applications and are
 handled by the operating system.  Some examples are Alt+Tab (Command+Tab on
 Mac OS X) to switch applications and the keys mapped to Expose on Mac OS X.</p>
@@ -393,7 +378,7 @@ Mac OS X) to switch applications and the keys mapped to Expose on Mac OS X.</p>
 your application.  This can be useful if you are developing a kiosk
 application which should not be closed, or a game in which it is possible for
 a user to accidentally press one of these keys.</p>
-<p>To enable this mode, call <cite>set_exclusive_keyboard</cite> for the window on which it
+<p>To enable this mode, call <a class="reference internal" href="../modules/window.html#pyglet.window.Window.set_exclusive_keyboard" title="pyglet.window.Window.set_exclusive_keyboard"><code class="xref py py-meth docutils literal"><span class="pre">set_exclusive_keyboard()</span></code></a> for the window on which it
 should apply.  On Mac OS X the dock and menu bar will slide out of view while
 exclusive keyboard is activated.</p>
 <p>The following restrictions apply on Windows:</p>
@@ -475,8 +460,7 @@ games as it violates user-interface conventions.</p>
           <a href="events.html" title="The pyglet event framework"
              >previous</a> |</li>
 		<li><a href="http://pyglet.org/">pyglet.org</a> |</li>
-		<li><a href="../index.html">Documentation Index</a> &raquo;</li>
-          <li><a href="index.html" >pyglet Programming Guide</a> &raquo;</li> 
+		<li><a href="../index.html">Documentation Index</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
